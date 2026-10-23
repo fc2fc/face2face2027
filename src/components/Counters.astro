@@ -1,0 +1,76 @@
+---
+import { site } from '../lib/content';
+
+interface Props {
+  headingLevel?: 'h1' | 'h2';
+}
+const { headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const counters = site.counters as { value: string; label: string }[];
+---
+
+<section class="section section--dark counters">
+  <div class="container">
+    <Heading class="section-title">במספרים</Heading>
+    <div class="row">
+      {
+        counters.map((c) => (
+          <div class="stat">
+            <span class="num" data-to={c.value}>
+              {Number(c.value).toLocaleString('he-IL')}
+            </span>
+            <span class="plus">+</span>
+            <span class="label">{c.label}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const nums = document.querySelectorAll<HTMLElement>('.counters .num');
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      io.unobserve(entry.target);
+      const el = entry.target as HTMLElement;
+      const to = Number(el.dataset.to);
+      const start = performance.now();
+      const tick = (t: number) => {
+        const p = Math.min((t - start) / 1600, 1);
+        el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('he-IL');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+  });
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) nums.forEach((n) => io.observe(n));
+</script>
+
+<style>
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+  .stat {
+    text-align: center;
+  }
+  .num,
+  .plus {
+    font-size: clamp(3.5rem, 9vw, 6rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+  .plus {
+    color: var(--brand);
+  }
+  .label {
+    display: block;
+    margin-top: 8px;
+    font-size: 1.25rem;
+    color: #d9d6e2;
+  }
+</style>

@@ -1,0 +1,158 @@
+---
+import { site } from '../lib/content';
+
+interface Props {
+  current: string;
+}
+const { current } = Astro.props;
+const nav = site.navigation as { label: string; old_url: string }[];
+const isActive = (url: string) => (url === '/' ? current === '/' : current === url || current.startsWith(url + '/'));
+---
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo" aria-label="Face2Face – דף הבית">
+      <img src={site.logo} srcset={`${site.logo} 1x, ${site.logo_2x} 2x`} alt="Face2Face" width="170" height="40" />
+    </a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="visually-hidden">תפריט</span>
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+    <nav id="site-nav" class="header__nav" aria-label="ניווט ראשי">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.old_url} aria-current={isActive(item.old_url) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('header')!;
+  const toggle = header.querySelector<HTMLButtonElement>('.header__toggle')!;
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    header.classList.toggle('is-open', !open);
+  });
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    transition: box-shadow 0.2s;
+  }
+  .header.is-scrolled {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 24px;
+  }
+  .header__logo img {
+    width: 170px;
+    height: auto;
+  }
+  .header__nav ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__nav a {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 999px;
+    transition: color 0.2s;
+  }
+  .header__nav a:hover,
+  .header__nav a[aria-current='page'] {
+    color: var(--brand);
+  }
+  .header__toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: relative;
+  }
+  .bars,
+  .bars::before,
+  .bars::after {
+    position: absolute;
+    left: 11px;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .bars {
+    top: 21px;
+  }
+  .bars::before,
+  .bars::after {
+    content: '';
+    left: 0;
+  }
+  .bars::before {
+    top: -7px;
+  }
+  .bars::after {
+    top: 7px;
+  }
+  .is-open .bars {
+    background: transparent;
+  }
+  .is-open .bars::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .is-open .bars::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  @media (max-width: 860px) {
+    .header__toggle {
+      display: block;
+    }
+    .header__nav {
+      position: absolute;
+      top: 100%;
+      inset-inline: 0;
+      background: #fff;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+    .is-open .header__nav {
+      display: block;
+    }
+    .header__nav ul {
+      flex-direction: column;
+      padding: 8px 16px 16px;
+    }
+    .header__nav a {
+      padding: 12px 8px;
+      border-radius: 8px;
+    }
+  }
+</style>

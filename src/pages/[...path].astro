@@ -1,0 +1,51 @@
+---
+// Every page of the old Site123 site, rendered at exactly the same URL.
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Gallery from '../components/Gallery.astro';
+import About from '../components/About.astro';
+import Clients from '../components/Clients.astro';
+import Counters from '../components/Counters.astro';
+import Contact from '../components/Contact.astro';
+import Legal from '../components/Legal.astro';
+import PortfolioItem from '../components/PortfolioItem.astro';
+import { pages } from '../lib/content';
+
+export function getStaticPaths() {
+  return pages.map((page) => ({
+    params: { path: page.old_path === '/' ? undefined : page.old_path.slice(1) },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const SINGLE: Record<string, any> = {
+  '/שירותים': Services,
+  '/עבודות': Gallery,
+  '/אודות': About,
+  '/בין-לקוחותינו': Clients,
+  '/במספרים': Counters,
+  '/צרו-קשר': Contact,
+};
+const Single = SINGLE[page.old_path];
+---
+
+<Base page={page}>
+  {
+    page.type === 'home' && (
+      <>
+        <Hero />
+        <Services />
+        <Gallery limit={12} />
+        <About />
+        <Clients />
+        <Counters />
+        <Contact />
+      </>
+    )
+  }
+  {Single && <Single headingLevel="h1" />}
+  {page.type === 'legal' && <Legal page={page} />}
+  {page.type === 'portfolio-item' && <PortfolioItem page={page} />}
+</Base>

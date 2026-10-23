@@ -1,0 +1,108 @@
+---
+import { site, size, youtubeIdFromThumb } from '../lib/content';
+
+interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const item = page.item;
+const title = item.title || page.seo.title.split(/ [-|–] /)[0];
+
+// Locate this item in the portfolio to show its category and prev/next links.
+let category: string | undefined;
+let prev: string | undefined;
+let next: string | undefined;
+for (const c of site.portfolio) {
+  const list = c.items.map((i: any) => i.old_item_page).filter(Boolean);
+  const idx = list.indexOf(page.old_path);
+  if (idx !== -1) {
+    category = c.category;
+    prev = list[idx - 1];
+    next = list[idx + 1];
+    break;
+  }
+}
+---
+
+<section class="section item">
+  <div class="container">
+    <nav class="crumbs" aria-label="פירורי לחם">
+      <a href="/">בית</a> / <a href="/עבודות">עבודות</a>{category && <> / <span>{category}</span></>}
+    </nav>
+    <h1>{title}</h1>
+    <div class="media">
+      {
+        item.images.map((img: any) => {
+          const yt = youtubeIdFromThumb(img.src);
+          return yt ? (
+            <div class="video">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${yt}?rel=0`}
+                title={title}
+                loading="lazy"
+                allow="encrypted-media; picture-in-picture; fullscreen"
+                allowfullscreen
+              />
+            </div>
+          ) : (
+            <img src={img.src} alt={img.alt || title} {...size(img.src)} />
+          );
+        })
+      }
+    </div>
+    <div class="pager">
+      {prev ? <a class="btn btn--ghost" href={prev} rel="prev">→ הקודם</a> : <span />}
+      <a class="btn" href="/עבודות">לגלריה המלאה</a>
+      {next ? <a class="btn btn--ghost" href={next} rel="next">הבא ←</a> : <span />}
+    </div>
+  </div>
+</section>
+
+<style>
+  .item {
+    padding-top: 40px;
+  }
+  .crumbs {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .crumbs a {
+    text-decoration: none;
+  }
+  .crumbs a:hover {
+    color: var(--brand);
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+  .media {
+    display: grid;
+    gap: 16px;
+    justify-items: center;
+  }
+  .media img {
+    max-height: 80vh;
+    width: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .video {
+    width: 100%;
+    max-width: 960px;
+  }
+  .video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--radius);
+  }
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+</style>

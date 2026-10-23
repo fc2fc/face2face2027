@@ -1,0 +1,67 @@
+---
+// Same JSON-LD that was injected through Site123 "Custom Code", with image URLs moved to the new media paths.
+const SITE = 'https://www.fc2fc.co.il';
+const sameAs = [
+  'https://www.facebook.com/Face2FaceNM',
+  'https://www.instagram.com/face2face.il/',
+  'https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q',
+];
+const image = `${SITE}/assets/media/og/6883cf3ad224c.jpg`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#naga-malasa`,
+      name: 'נגה מלסה',
+      alternateName: ['Naga Malasa'],
+      jobTitle: 'צלם ומעצב גרפי',
+      description:
+        'נגה מלסה הוא צלם ומעצב גרפי, פעיל מאז 2010 ומייסד סטודיו Face2Face (2016), המתמחה בפורטרטים עסקיים, צילום תדמית, תיעוד כנסים ואירועים, הפקת סרטוני תדמית ועיצוב גרפי. (Naga Malasa)',
+      image,
+      url: `${SITE}/`,
+      email: 'face2faceprint@gmail.com',
+      telephone: '+972-52-813-3633',
+      worksFor: { '@id': `${SITE}/#business` },
+      knowsAbout: ['צילום פורטרט עסקי', 'צילום תדמית', 'צילום אירועים וכנסים', 'סרטוני תדמית', 'עיצוב גרפי', 'מיתוג'],
+      nationality: { '@type': 'Country', name: 'ישראל' },
+      sameAs,
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE}/#business`,
+      name: 'Face2Face',
+      alternateName: ['Face2Face – נגה מלסה', 'Face2Face – Naga Malasa', 'פייס טו פייס'],
+      description: 'סטודיו לצילום סטילס, צילום וידאו, עריכה, עיצוב גרפי ומיתוג לעסקים, לאנשי ציבור ולפרטיים, בניהולו של נגה מלסה.',
+      url: `${SITE}/`,
+      logo: `${SITE}/assets/media/og/6887d8a3748cc.jpg`,
+      image,
+      telephone: '+972-52-813-3633',
+      email: 'face2faceprint@gmail.com',
+      foundingDate: '2016',
+      founder: { '@id': `${SITE}/#naga-malasa` },
+      areaServed: { '@type': 'Country', name: 'ישראל' },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+          opens: '08:00',
+          closes: '17:00',
+        },
+        { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '08:00', closes: '12:00' },
+      ],
+      sameAs,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: 'נגה מלסה – Face2Face',
+      publisher: { '@id': `${SITE}/#business` },
+      inLanguage: 'he',
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

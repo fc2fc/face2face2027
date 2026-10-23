@@ -1,0 +1,149 @@
+FACE2FACE – סקריפטים, קודי מעקב וטפסים מהאתר הישן (Site123)
+==================================================================
+מקור: https://www.fc2fc.co.il  |  Site123 website ID: 2963728  |  נשלף: 2026-10-23
+מקורות: ה-HTML החי של כל 182 העמודים + עמוד "הגדרות > תוספים וקוד" בפאנל הניהול (קריאה בלבד, לא שונה דבר).
+
+
+1. סיכום – מה פעיל ומה לא
+--------------------------
+| כלי                         | מזהה                                          | סטטוס ב-Site123 |
+|-----------------------------|-----------------------------------------------|-----------------|
+| Google Tag Manager          | GTM-PV57PGLL                                  | פעיל            |
+| Facebook (Meta) Pixel       | 130381808053594                               | פעיל            |
+| Google Search Console       | 5Sw7hDf_lk-VEjnxIwE6X296VZb9XwRbKhzZoAyodig   | פעיל (meta tag) |
+| Google Analytics 4          | G-EQ2TG14LY2                                  | כבוי            |
+| Google Analytics (ישן)      | G-EQ2TG14LY2                                  | כבוי            |
+| Google AdSense              | –                                             | כבוי            |
+| Free Accessibility Plugin   | (סקריפט של Site123)                           | פעיל            |
+| Custom Code: WhatsApp       | כפתור צף ל-wa.me/972528133633                  | פעיל            |
+| Custom Code: Schema         | JSON-LD (Person + ProfessionalService + WebSite) | פעיל          |
+| Custom Code: שיפורי אתר     | JS שמתקן נגישות לטופס/תמונות של Site123        | פעיל            |
+
+הערות:
+- GA4 כבוי ב-Site123. אם ה-GA4 מוגדר בתוך GTM-PV57PGLL – הוא ימשיך לעבוד דרך GTM. אם לא, וצריך אנליטיקס, להוסיף את G-EQ2TG14LY2 (עדיף כתג בתוך GTM).
+- Search Console: ההעברה ל-Astro שומרת על אותו דומיין, ולכן האימות נשמר כל עוד ה-meta tag נשאר ב-<head>. אחרי העלייה – להגיש מחדש sitemap.
+- הסקריפט "שיפורי אתר" קיים רק כדי לתקן את ה-HTML של Site123. באתר Astro אין בו צורך – לבנות את הטופס והתמונות נכון מלכתחילה (ראו סעיף 4).
+
+
+2. קוד להטמעה ב-Astro (ב-<head> של ה-Layout הראשי)
+---------------------------------------------------
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="5Sw7hDf_lk-VEjnxIwE6X296VZb9XwRbKhzZoAyodig" />
+
+<!-- Google Tag Manager -->
+<script is:inline>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PV57PGLL');
+</script>
+
+<!-- Meta (Facebook) Pixel -->
+<script is:inline>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '130381808053594');
+fbq('track', 'PageView');
+</script>
+
+--- מיד אחרי פתיחת <body> ---
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV57PGLL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Meta Pixel (noscript) – ב-Site123 היה כאן באג: {{app_id}} במקום המזהה. זה התיקון: -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=130381808053594&ev=PageView&noscript=1" /></noscript>
+
+הערה: באתר הישן Site123 שם את ה-Pixel ואת GTM בנפרד. אם ה-Pixel מוגדר גם בתוך GTM, יש להשאיר רק אחד מהם כדי לא לספור כפול.
+
+
+3. Schema (JSON-LD) – כפי שהוגדר ב-Custom Code
+----------------------------------------------
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://www.fc2fc.co.il/#naga-malasa","name":"נגה מלסה","alternateName":["Naga Malasa"],
+  "jobTitle":"צלם ומעצב גרפי",
+  "description":"נגה מלסה הוא צלם ומעצב גרפי, פעיל מאז 2010 ומייסד סטודיו Face2Face (2016), המתמחה בפורטרטים עסקיים, צילום תדמית, תיעוד כנסים ואירועים, הפקת סרטוני תדמית ועיצוב גרפי. (Naga Malasa)",
+  "image":"https://www.fc2fc.co.il/assets/media/og/6883cf3ad224c.jpg",
+  "url":"https://www.fc2fc.co.il/","email":"face2faceprint@gmail.com","telephone":"+972-52-813-3633",
+  "worksFor":{"@id":"https://www.fc2fc.co.il/#business"},
+  "knowsAbout":["צילום פורטרט עסקי","צילום תדמית","צילום אירועים וכנסים","סרטוני תדמית","עיצוב גרפי","מיתוג"],
+  "nationality":{"@type":"Country","name":"ישראל"},
+  "sameAs":["https://www.facebook.com/Face2FaceNM","https://www.instagram.com/face2face.il/","https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"]},
+ {"@type":"ProfessionalService","@id":"https://www.fc2fc.co.il/#business","name":"Face2Face",
+  "alternateName":["Face2Face – נגה מלסה","Face2Face – Naga Malasa","פייס טו פייס"],
+  "description":"סטודיו לצילום סטילס, צילום וידאו, עריכה, עיצוב גרפי ומיתוג לעסקים, לאנשי ציבור ולפרטיים, בניהולו של נגה מלסה.",
+  "url":"https://www.fc2fc.co.il/",
+  "logo":"https://www.fc2fc.co.il/assets/media/og/6887d8a3748cc.jpg",
+  "image":"https://www.fc2fc.co.il/assets/media/og/6883cf3ad224c.jpg",
+  "telephone":"+972-52-813-3633","email":"face2faceprint@gmail.com","foundingDate":"2016",
+  "founder":{"@id":"https://www.fc2fc.co.il/#naga-malasa"},"areaServed":{"@type":"Country","name":"ישראל"},
+  "openingHoursSpecification":[
+   {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"17:00"},
+   {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"12:00"}],
+  "sameAs":["https://www.facebook.com/Face2FaceNM","https://www.instagram.com/face2face.il/","https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"]},
+ {"@type":"WebSite","@id":"https://www.fc2fc.co.il/#website","url":"https://www.fc2fc.co.il/","name":"נגה מלסה – Face2Face",
+  "publisher":{"@id":"https://www.fc2fc.co.il/#business"},"inLanguage":"he"}
+]}
+</script>
+(כתובות התמונות כבר עודכנו לנתיבים החדשים ב-/assets/media. המקור ב-Site123 הצביע על files.cdn-files-a.com/uploads/2963728/800_….)
+
+
+4. טופס "צרו קשר" (בעמוד הבית ובעמוד /צרו-קשר)
+----------------------------------------------
+כותרת: צרו קשר
+טקסט פתיחה: רוצים לתאם צילום או לקבל הצעת מחיר? השאירו פרטים בטופס או שלחו הודעה ב-WhatsApp, ואחזור אליכם בהקדם. הפרטים שתמסרו ישמשו ליצירת קשר בלבד, בהתאם למדיניות הפרטיות של האתר.
+
+| # | שדה                         | סוג (מומלץ ב-Astro) | חובה | autocomplete |
+|---|-----------------------------|---------------------|------|--------------|
+| 1 | שם מלא                      | text                | כן   | name         |
+| 2 | טלפון                       | tel                 | כן   | tel          |
+| 3 | כתובת הדואר האלקטרוני שלך   | email               | כן   | email        |
+| 4 | הודעה                       | textarea            | לא   | –            |
+כפתור: "שליחה"
+הגנה: Google reCAPTCHA (שדה נסתר recaptchaToken)
+יעד ההודעות: face2faceprint@gmail.com (ההודעות נשמרו גם ב"הודעות" בפאנל של Site123)
+שמות השדות המקוריים: text-63e5680acd270, text-63e5680acd277, email-63e5680acd27d, textarea-63e5680acd281
+
+לצד הטופס:
+- טלפון / WhatsApp: +972-52-813-3633  →  https://wa.me/972528133633
+- אימייל: face2faceprint@gmail.com
+- שעות פעילות: א'-ה' 08:00-17:00 | ו' וערבי חג 08:00-12:00
+
+חשוב: ב-Site123 הטופס נשלח לשרתים של Site123. ב-Astro (אתר סטטי) צריך שירות שליחה, למשל
+Netlify Forms / Formspree / Web3Forms / Cloudflare Worker / API route עם adapter. הטופס לא יעבוד עד שיוגדר אחד מהם.
+
+
+5. טופס קופץ (Popup) – מוצג בכל העמודים, פעם ב-3 ימים
+-----------------------------------------------------
+כותרת: הנוכחות שלכם בדיגיטל מתחילה כאן.
+תת-כותרת: השאירו הודעה ונחזור בהקדם
+תמונה: /assets/media/uploads/6886c2b0cf0c2.webp
+| # | שדה               | סוג              | חובה |
+|---|-------------------|------------------|------|
+| 1 | שם מלא            | text             | כן   |
+| 2 | הודעה             | textarea (2 שורות)| לא  |
+| 3 | מספר טלפון לחזרה  | tel (ב-Site123: number – שגוי לטלפון) | כן |
+כפתור: "שליחה"  |  נשלח אל: face2faceprint@gmail.com
+
+
+6. רכיבים נוספים שהוזרקו לאתר
+------------------------------
+- כפתור WhatsApp צף (Custom Code, לפני </body>), פינה ימנית-תחתונה, 52x52, ירוק #25D366:
+  <a href="https://wa.me/972528133633" target="_blank" rel="noopener" aria-label="שליחת הודעה ב-WhatsApp לנגה מלסה"
+     style="position:fixed;bottom:20px;right:20px;z-index:9999;display:block;width:52px;height:52px;line-height:0;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="52" height="52" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#fff" d="M23.4 8.6A10.3 10.3 0 0 0 7.2 21l-1.4 5.2 5.3-1.4a10.3 10.3 0 0 0 4.9 1.2 10.3 10.3 0 0 0 7.4-17.4zM16 24.3a8.5 8.5 0 0 1-4.4-1.2l-.3-.2-3.1.8.8-3.1-.2-.3a8.6 8.6 0 1 1 7.2 4zm4.7-6.4c-.3-.1-1.5-.8-1.8-.8-.2-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.2-.6.1a7 7 0 0 1-3.5-3c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4z"/></svg>
+  </a>
+- תוסף נגישות של Site123:
+  https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=en&place=bottom-right&distance=90&v=1
+  (תלוי ב-Site123 – מומלץ להחליף בפתרון עצמאי ולעדכן את הצהרת הנגישות בעמוד /accessibility.)
+- באנר Cookies: "אתר זה משתמש בקובצי Cookie כדי להבטיח לך את חוויית הגלישה הטובה ביותר באתר שלנו" | כפתור "הבנתי!" | בתחתית המסך.
+  שימו לב: עם Meta Pixel ו-GTM פעילים, מומלץ באנר הסכמה שחוסם אותם עד לאישור.
+- רשתות חברתיות: https://www.facebook.com/Face2FaceNM | https://www.instagram.com/face2face.il/ | https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q

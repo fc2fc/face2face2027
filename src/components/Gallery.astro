@@ -1,0 +1,253 @@
+---
+import { site, size } from '../lib/content';
+
+interface Props {
+  /** Items per category; omit to show everything. */
+  limit?: number;
+  /** Full gallery only: tiles shown per category before "הצג עוד" (all tiles stay in the HTML for SEO). */
+  pageSize?: number;
+  headingLevel?: 'h1' | 'h2';
+}
+const { limit, headingLevel = 'h2', pageSize = 24 } = Astro.props;
+const paged = !limit;
+const Heading = headingLevel;
+const categories = site.portfolio as { category: string; items: any[] }[];
+---
+
+<section class="section" id="works">
+  <div class="container">
+    <Heading class="section-title">עבודות</Heading>
+    <div class="tabs" role="tablist" aria-label="קטגוריות עבודות">
+      {
+        categories.map((c, i) => (
+          <button type="button" role="tab" id={`tab-${i}`} aria-controls={`panel-${i}`} aria-selected={i === 0 ? 'true' : 'false'}>
+            {c.category}
+          </button>
+        ))
+      }
+    </div>
+    {
+      categories.map((c, i) => (
+        <div class="grid" role="tabpanel" id={`panel-${i}`} aria-labelledby={`tab-${i}`} hidden={i !== 0}>
+          {(limit ? c.items.slice(0, limit) : c.items).map((item, n) =>
+            item.type === 'video' ? (
+              <a class:list={['tile tile--video', paged && n >= pageSize && 'is-more']} href={item.old_item_page ?? item.url} data-youtube={item.youtube_id} data-title={item.title}>
+                <img src={item.thumbnail} alt={item.title ?? 'סרטון'} loading="lazy" {...size(item.thumbnail)} />
+                <span class="play" aria-hidden="true" />
+                {item.title && <span class="caption">{item.title}</span>}
+              </a>
+            ) : (
+              <a class:list={['tile', paged && n >= pageSize && 'is-more']} href={item.old_item_page ?? item.src} data-full={item.src} data-title={item.title}>
+                <img src={item.src} alt={item.title || `${c.category} – Face2Face`} loading="lazy" decoding="async" {...size(item.src)} />
+                {item.title && <span class="caption">{item.title}</span>}
+              </a>
+            ),
+          )}
+          {paged && c.items.length > pageSize && (
+            <p class="more more--panel">
+              <button type="button" class="btn btn--ghost" data-more>
+                הצג עוד <span class="more__count">({c.items.length - pageSize})</span>
+              </button>
+            </p>
+          )}
+        </div>
+      ))
+    }
+    {
+      limit && (
+        <p class="more">
+          <a class="btn btn--ghost" href="/עבודות">
+            לכל העבודות
+          </a>
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<dialog class="lightbox" aria-label="תצוגה מוגדלת">
+  <button type="button" class="lightbox__close" aria-label="סגירה">×</button>
+  <div class="lightbox__stage"></div>
+  <p class="lightbox__title"></p>
+</dialog>
+
+<script>
+  document.querySelectorAll<HTMLElement>('#works').forEach((root) => {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+    tabs.forEach((tab) =>
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => {
+          const on = t === tab;
+          t.setAttribute('aria-selected', String(on));
+          document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
+        });
+      }),
+    );
+  });
+
+  // "הצג עוד": reveal the next batch of tiles in the same tab.
+  document.querySelectorAll<HTMLButtonElement>('#works [data-more]').forEach((btn) => {
+    const panel = btn.closest<HTMLElement>('[role=tabpanel]')!;
+    const step = 24;
+    btn.addEventListener('click', () => {
+      const hidden = [...panel.querySelectorAll<HTMLElement>('.tile.is-more')];
+      hidden.slice(0, step).forEach((t) => t.classList.remove('is-more'));
+      const left = hidden.length - step;
+      if (left <= 0) btn.closest('p')!.remove();
+      else btn.querySelector('.more__count')!.textContent = `(${left})`;
+      hidden[0]?.focus();
+    });
+  });
+
+  const box = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
+  const stage = box.querySelector<HTMLElement>('.lightbox__stage')!;
+  const title = box.querySelector<HTMLElement>('.lightbox__title')!;
+  box.querySelector('.lightbox__close')!.addEventListener('click', () => box.close());
+  box.addEventListener('click', (e) => {
+    if (e.target === box) box.close();
+  });
+  box.addEventListener('close', () => (stage.innerHTML = ''));
+
+  // Tiles link to the old item pages (kept for SEO); on click, open a lightbox instead.
+  document.querySelectorAll<HTMLAnchorElement>('#works .tile').forEach((tile) =>
+    tile.addEventListener('click', (e) => {
+      e.preventDefault();
+      stage.innerHTML = '';
+      if (tile.dataset.youtube) {
+        const f = document.createElement('iframe');
+        f.src = `https://www.youtube-nocookie.com/embed/${tile.dataset.youtube}?autoplay=1&rel=0`;
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        f.title = tile.dataset.title || 'סרטון';
+        stage.append(f);
+      } else {
+        const img = document.createElement('img');
+        img.src = tile.dataset.full!;
+        img.alt = tile.dataset.title || '';
+        stage.append(img);
+      }
+      title.textContent = tile.dataset.title || '';
+      box.showModal();
+    }),
+  );
+</script>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .grid[hidden],
+  .tile.is-more {
+    display: none;
+  }
+  .more--panel {
+    grid-column: 1 / -1;
+  }
+  .tile {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--bg-soft);
+  }
+  .tile--video {
+    aspect-ratio: 16 / 9;
+    grid-column: span 2;
+  }
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .tile:hover img {
+    transform: scale(1.05);
+  }
+  .caption {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 28px 12px 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .tile:hover .caption,
+  .tile:focus-visible .caption,
+  .tile--video .caption {
+    opacity: 1;
+  }
+  .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border-radius: 50%;
+    background: var(--brand);
+  }
+  .play::after {
+    content: '';
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    border-style: solid;
+    border-width: 12px 0 12px 18px;
+    border-color: transparent transparent transparent #fff;
+  }
+  .more {
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+  .lightbox {
+    width: min(1100px, 100% - 24px);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    overflow: visible;
+  }
+  .lightbox::backdrop {
+    background: rgba(10, 8, 14, 0.92);
+  }
+  .lightbox__stage :global(img) {
+    max-height: 82vh;
+    width: auto;
+    margin-inline: auto;
+    border-radius: 8px;
+  }
+  .lightbox__stage :global(iframe) {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+  }
+  .lightbox__title {
+    text-align: center;
+    margin: 12px 0 0;
+  }
+  .lightbox__close {
+    position: absolute;
+    top: -48px;
+    inset-inline-end: 0;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+  @media (max-width: 520px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

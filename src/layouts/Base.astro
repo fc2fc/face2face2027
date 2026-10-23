@@ -1,0 +1,206 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Schema from '../components/Schema.astro';
+import Popup from '../components/Popup.astro';
+import { site, absolute, SITE_URL } from '../lib/content';
+
+interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const seo = page.seo;
+const canonical = SITE_URL + (page.old_path === '/' ? '/' : encodeURI(page.old_path));
+const ogImage = absolute(seo.og?.image) ?? absolute(site.og_logo);
+const GTM_ID = 'GTM-PV57PGLL';
+const PIXEL_ID = '130381808053594';
+---
+
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{seo.title}</title>
+    {seo.description && <meta name="description" content={seo.description} />}
+    <meta name="robots" content={seo.robots ?? 'index, follow'} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content={seo.og?.type ?? 'website'} />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:site_name" content={seo.og?.site_name ?? 'Face2Face'} />
+    <meta property="og:title" content={seo.og?.title ?? seo.title} />
+    {(seo.og?.description ?? seo.description) && <meta property="og:description" content={seo.og?.description ?? seo.description} />}
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={seo.twitter?.card ?? 'summary_large_image'} />
+    <meta name="twitter:title" content={seo.twitter?.title ?? seo.title} />
+    {(seo.twitter?.description ?? seo.description) && <meta name="twitter:description" content={seo.twitter?.description ?? seo.description} />}
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+    <link rel="icon" href="/assets/media/uploads/688c23bdeffc2.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/media/icons/180_180_63ea95b0eb841.png" />
+    <meta name="theme-color" content="#e10085" />
+    <meta name="google-site-verification" content="5Sw7hDf_lk-VEjnxIwE6X296VZb9XwRbKhzZoAyodig" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+    <Schema />
+
+    <!-- Google Tag Manager -->
+    <script is:inline define:vars={{ GTM_ID }}>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', GTM_ID);
+    </script>
+    <!-- Meta Pixel -->
+    <script is:inline define:vars={{ PIXEL_ID }}>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', PIXEL_ID);
+      fbq('track', 'PageView');
+    </script>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"></iframe></noscript
+    >
+    <noscript
+      ><img height="1" width="1" style="display:none" alt="" src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`} /></noscript
+    >
+    <a class="skip-link" href="#main">דילוג לתוכן</a>
+    <Header current={page.old_path} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+
+    <a
+      class="wa-float"
+      href={site.contact.whatsapp}
+      target="_blank"
+      rel="noopener"
+      aria-label="שליחת הודעה ב-WhatsApp לנגה מלסה"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="52" height="52" aria-hidden="true" focusable="false"
+        ><circle cx="16" cy="16" r="16" fill="#25D366"></circle><path
+          fill="#fff"
+          d="M23.4 8.6A10.3 10.3 0 0 0 7.2 21l-1.4 5.2 5.3-1.4a10.3 10.3 0 0 0 4.9 1.2 10.3 10.3 0 0 0 7.4-17.4zM16 24.3a8.5 8.5 0 0 1-4.4-1.2l-.3-.2-3.1.8.8-3.1-.2-.3a8.6 8.6 0 1 1 7.2 4zm4.7-6.4c-.3-.1-1.5-.8-1.8-.8-.2-.1-.4-.1-.6.1l-.8 1c-.2.2-.3.2-.6.1a7 7 0 0 1-3.5-3c-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.2-.3-.2-.6-.4z"
+        ></path></svg
+      >
+    </a>
+
+    <div class="cookie" id="cookie" hidden>
+      <p>{site.cookie_consent.text}</p>
+      <button class="btn" type="button" id="cookie-ok">{site.cookie_consent.button}</button>
+    </div>
+
+    <Popup />
+
+    <script>
+      const banner = document.getElementById('cookie')!;
+      let ok = false;
+      try {
+        ok = localStorage.getItem('f2f-cookie') === '1';
+      } catch {}
+      if (!ok) banner.hidden = false;
+      document.getElementById('cookie-ok')!.addEventListener('click', () => {
+        banner.hidden = true;
+        try {
+          localStorage.setItem('f2f-cookie', '1');
+        } catch {}
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    inset-inline-start: 12px;
+    top: -60px;
+    background: var(--brand);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    z-index: 100;
+  }
+  .skip-link:focus {
+    top: 12px;
+  }
+  .wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 60;
+    width: 52px;
+    height: 52px;
+    line-height: 0;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s;
+  }
+  .wa-float:hover {
+    transform: scale(1.08);
+  }
+  .cookie {
+    position: fixed;
+    inset-inline: 16px;
+    bottom: 16px;
+    z-index: 70;
+    max-width: 640px;
+    margin-inline: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark);
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+  }
+  .cookie[hidden] {
+    display: none;
+  }
+  .cookie p {
+    margin: 0;
+  }
+  @media (max-width: 560px) {
+    .cookie {
+      flex-direction: column;
+      text-align: center;
+      bottom: 84px;
+    }
+  }
+</style>

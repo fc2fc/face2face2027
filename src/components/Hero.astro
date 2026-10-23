@@ -1,0 +1,82 @@
+---
+import { site } from '../lib/content';
+
+const hero = site.hero;
+const words = hero.h1.split(' ');
+---
+
+<section class="hero">
+  <img class="hero__bg" src={hero.background} alt="" width="1920" height="1080" fetchpriority="high" />
+  <div class="container hero__content">
+    <h1>
+      {words.map((w: string) => <span>{w}</span>)}
+    </h1>
+    <p class="hero__sub">{hero.h2}</p>
+    <div class="hero__cta">
+      <a class="btn" href="/צרו-קשר">לתיאום צילום</a>
+      <a class="btn btn--ghost hero__ghost" href="/עבודות">לעבודות שלנו</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: min(88vh, 820px);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    background: var(--dark);
+  }
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% center;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(270deg, rgba(15, 13, 22, 0.85) 0%, rgba(15, 13, 22, 0.55) 45%, rgba(15, 13, 22, 0.1) 100%);
+  }
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    padding-block: 64px;
+  }
+  h1 {
+    font-size: clamp(3.4rem, 11vw, 8.5rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.25em;
+  }
+  h1 span {
+    display: block;
+  }
+  h1 span:nth-child(2) {
+    color: var(--brand);
+  }
+  .hero__sub {
+    font-size: clamp(1.3rem, 2.6vw, 2rem);
+    font-weight: 500;
+    margin: 0 0 1.5em;
+  }
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hero__ghost {
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+  .hero__ghost:hover {
+    background: #fff;
+    color: var(--ink);
+  }
+</style>

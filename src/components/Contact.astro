@@ -1,0 +1,101 @@
+---
+import { site } from '../lib/content';
+import LeadForm from './LeadForm.astro';
+
+interface Props {
+  headingLevel?: 'h1' | 'h2';
+}
+const { headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const c = site.contact;
+// Same four fields as the Site123 form, with proper input types.
+const fields = [
+  { type: 'text', name: 'full_name', label: 'שם מלא', required: true },
+  { type: 'tel', name: 'phone', label: 'טלפון', required: true },
+  { type: 'email', name: 'email', label: 'כתובת הדואר האלקטרוני שלך', required: true },
+  { type: 'textarea', name: 'message', label: 'הודעה', required: false },
+];
+---
+
+<section class="section section--soft" id="contact">
+  <div class="container">
+    <Heading class="section-title">צרו קשר</Heading>
+    <div class="contact">
+      <div class="info">
+        <p>{c.intro}</p>
+        <ul>
+          <li>
+            <strong>טלפון / WhatsApp</strong>
+            <a href={c.whatsapp} target="_blank" rel="noopener" dir="ltr">{c.phone}</a>
+          </li>
+          <li>
+            <strong>אימייל</strong>
+            <a href={`mailto:${c.email}`}>{c.email}</a>
+          </li>
+          <li>
+            <strong>שעות פעילות</strong>
+            {
+              c.hours.map((h: { days: string; hours: string }) => (
+                <span>
+                  {h.days}: <span dir="ltr">{h.hours}</span>
+                </span>
+              ))
+            }
+          </li>
+        </ul>
+      </div>
+      <div class="form-card">
+        <LeadForm fields={fields} submitLabel="שליחה" formName="contact" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .info p {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    display: grid;
+    gap: 18px;
+  }
+  li {
+    display: grid;
+    gap: 2px;
+  }
+  strong {
+    color: var(--brand);
+  }
+  li a {
+    font-weight: 600;
+    text-decoration: none;
+    justify-self: start;
+  }
+  li a:hover {
+    text-decoration: underline;
+  }
+  .form-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 800px) {
+    .contact {
+      grid-template-columns: 1fr;
+    }
+    .form-card {
+      padding: 22px;
+    }
+  }
+</style>

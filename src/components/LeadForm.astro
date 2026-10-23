@@ -1,0 +1,136 @@
+---
+interface Field {
+  type: string;
+  name: string;
+  label: string;
+  required?: boolean;
+  rows?: number;
+}
+interface Props {
+  fields: Field[];
+  submitLabel: string;
+  formName: string;
+}
+const { fields, submitLabel, formName } = Astro.props;
+const AUTOCOMPLETE: Record<string, string> = { text: 'name', tel: 'tel', email: 'email' };
+// Set PUBLIC_FORM_ENDPOINT in .env (e.g. a Formspree URL). See README.
+const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
+---
+
+<form class="lead-form" method="post" action={endpoint || undefined} data-endpoint={endpoint} data-form-name={formName} novalidate>
+  <input type="hidden" name="form" value={formName} />
+  {
+    fields.map((f) => {
+      const id = `${formName}-${f.name}`;
+      return (
+        <div class="field">
+          <label for={id}>
+            {f.label}
+            {f.required && <span aria-hidden="true"> *</span>}
+          </label>
+          {f.type === 'textarea' ? (
+            <textarea id={id} name={f.name} rows={f.rows ?? 4} required={f.required} />
+          ) : (
+            <input
+              id={id}
+              name={f.name}
+              type={f.type}
+              required={f.required}
+              autocomplete={AUTOCOMPLETE[f.type]}
+              inputmode={f.type === 'tel' ? 'tel' : f.type === 'email' ? 'email' : undefined}
+              dir={f.type === 'tel' || f.type === 'email' ? 'ltr' : undefined}
+            />
+          )}
+        </div>
+      );
+    })
+  }
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" />
+  <button class="btn" type="submit">{submitLabel}</button>
+  <p class="lead-form__status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form.lead-form').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('.lead-form__status')!;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const endpoint = form.dataset.endpoint;
+      if (!endpoint) {
+        status.textContent = 'הטופס עדיין לא מחובר. אפשר לפנות ב-WhatsApp או במייל face2faceprint@gmail.com';
+        status.dataset.state = 'error';
+        return;
+      }
+      const btn = form.querySelector('button')!;
+      btn.disabled = true;
+      status.textContent = 'שולח…';
+      status.dataset.state = '';
+      try {
+        const res = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        status.textContent = 'תודה! ההודעה נשלחה ונחזור אליכם בהקדם.';
+        status.dataset.state = 'ok';
+        (window as any).fbq?.('track', 'Lead');
+        (window as any).dataLayer?.push({ event: 'form_submit', form_name: form.dataset.formName });
+      } catch {
+        status.textContent = 'השליחה נכשלה. נסו שוב או פנו ב-WhatsApp.';
+        status.dataset.state = 'error';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .lead-form {
+    display: grid;
+    gap: 14px;
+  }
+  .field {
+    display: grid;
+    gap: 4px;
+  }
+  label {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  input,
+  textarea {
+    font: inherit;
+    width: 100%;
+    padding: 0.7em 0.9em;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus,
+  textarea:focus {
+    border-color: var(--brand);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(225, 0, 133, 0.15);
+  }
+  [dir='ltr'] {
+    text-align: right;
+  }
+  .btn {
+    justify-self: start;
+  }
+  .lead-form__status {
+    margin: 0;
+    min-height: 1.5em;
+    font-weight: 600;
+  }
+  .lead-form__status[data-state='ok'] {
+    color: #127a3a;
+  }
+  .lead-form__status[data-state='error'] {
+    color: #b00020;
+  }
+</style>

@@ -1,0 +1,105 @@
+---
+import { site } from '../lib/content';
+
+const links = site.footer.links as { label: string; old_url: string }[];
+const main = links.filter((l) => !['/terms', '/privacy', '/accessibility'].includes(l.old_url));
+const legal = links.filter((l) => ['/terms', '/privacy', '/accessibility'].includes(l.old_url));
+const social = [
+  { href: 'https://www.facebook.com/Face2FaceNM', label: 'Facebook' },
+  { href: 'https://www.instagram.com/face2face.il/', label: 'Instagram' },
+  { href: 'https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q', label: 'YouTube' },
+];
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <img src={site.logo_2x} alt="Face2Face" width="180" height="42" class="footer__logo" loading="lazy" />
+      <p class="footer__tag"><strong>נגה מלסה</strong> – צלם ומעצב גרפי, מייסד Face2Face. צילום, וידאו ועיצוב גרפי לעסקים, לאנשי ציבור ולפרטיים.</p>
+    </div>
+    <nav aria-label="ניווט תחתון">
+      <ul>{main.map((l) => <li><a href={l.old_url}>{l.label}</a></li>)}</ul>
+    </nav>
+    <div>
+      <ul class="footer__contact">
+        <li><a href={site.contact.whatsapp} target="_blank" rel="noopener" dir="ltr">{site.contact.phone}</a></li>
+        <li><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
+      </ul>
+      <ul class="footer__social">
+        {social.map((s) => <li><a href={s.href} target="_blank" rel="noopener">{s.label}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>זכויות יוצרים © {new Date().getFullYear()} כל הזכויות שמורות – Face2Face</span>
+    <ul>{legal.map((l) => <li><a href={l.old_url}>{l.label}</a></li>)}</ul>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--dark);
+    color: #d9d6e2;
+    padding: 56px 0 24px;
+    font-size: 0.95rem;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+  .footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0;
+  }
+  /* Comfortable tap targets on phones (≥ 32px tall, WCAG 2.5.8 asks for at least 24px). */
+  .footer li a {
+    display: inline-block;
+    padding-block: 6px;
+    min-height: 32px;
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+  }
+  .footer__logo {
+    filter: brightness(0) invert(1);
+    width: 180px;
+    margin-bottom: 12px;
+  }
+  .footer__tag {
+    margin: 0;
+    max-width: 320px;
+  }
+  .footer__social {
+    margin-top: 16px !important;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 16px !important;
+  }
+  .footer__bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+  .footer__bottom ul {
+    grid-auto-flow: column;
+    gap: 16px;
+  }
+  @media (max-width: 760px) {
+    .footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

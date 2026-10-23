@@ -1,0 +1,106 @@
+---
+import { site } from '../lib/content';
+import LeadForm from './LeadForm.astro';
+
+const popup = site.popup;
+---
+
+<dialog class="popup" id="lead-popup" aria-labelledby="popup-title">
+  <button class="popup__close" type="button" aria-label="סגירה" data-close>×</button>
+  <img src={popup.image} alt="" width="787" height="694" loading="lazy" class="popup__img" />
+  <div class="popup__body">
+    <h2 id="popup-title">{popup.title}</h2>
+    <p>{popup.subtitle}</p>
+    <LeadForm fields={popup.fields} submitLabel={popup.submit_label} formName="popup" />
+  </div>
+</dialog>
+
+<script>
+  // Same rule as the old Site123 popup after the October 2026 fix: open only once the visitor has
+  // scrolled 70% of the page, at most once every 3 days, never on the contact page (it already has
+  // the form) and never over another open dialog. A popup on entry hurts mobile rankings
+  // (Google's "intrusive interstitials" guideline).
+  const KEY = 'f2f-popup-seen';
+  const THREE_DAYS = 3 * 24 * 60 * 60 * 1000;
+  const SCROLL_RATIO = 0.7;
+  const dialog = document.getElementById('lead-popup') as HTMLDialogElement;
+  const onContactPage = decodeURI(location.pathname).replace(/\.html$/, '').startsWith('/צרו-קשר');
+  let last = 0;
+  try {
+    last = Number(localStorage.getItem(KEY) || 0);
+  } catch {}
+
+  if (!onContactPage && Date.now() - last > THREE_DAYS) {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable <= 0 || (window.scrollY + window.innerHeight) / doc.scrollHeight < SCROLL_RATIO) return;
+      if (document.querySelector('dialog[open]')) return; // e.g. the gallery lightbox – try again on the next scroll
+      window.removeEventListener('scroll', onScroll);
+      dialog.showModal();
+      try {
+        localStorage.setItem(KEY, String(Date.now()));
+      } catch {}
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+  dialog.querySelector('[data-close]')!.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+</script>
+
+<style>
+  .popup {
+    width: min(760px, 100% - 32px);
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  }
+  .popup[open] {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+  }
+  .popup::backdrop {
+    background: rgba(15, 13, 22, 0.6);
+  }
+  .popup__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--bg-soft);
+  }
+  .popup__body {
+    padding: 32px 28px;
+  }
+  .popup__body h2 {
+    font-size: 1.6rem;
+  }
+  .popup__body p {
+    color: var(--muted);
+    margin-top: 0;
+  }
+  .popup__close {
+    position: absolute;
+    top: 8px;
+    inset-inline-end: 8px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  @media (max-width: 640px) {
+    .popup[open] {
+      grid-template-columns: 1fr;
+    }
+    .popup__img {
+      display: none;
+    }
+  }
+</style>

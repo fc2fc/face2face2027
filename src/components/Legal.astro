@@ -1,0 +1,48 @@
+---
+interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const section = page.sections[0];
+const title = page.headings.h1[0];
+const levels = new Map<string, string>();
+for (const h of section.headings) if (h.tag !== 'h1' && !levels.has(h.text)) levels.set(h.text, h.tag);
+// Old pages repeat the title as an h2 right under the h1; drop that duplicate.
+const lines = (section.text as string[]).filter((l, i) => !(i < 2 && l === title));
+---
+
+<section class="section">
+  <div class="container legal">
+    <h1 class="section-title">{title}</h1>
+    {
+      lines.map((line) => {
+        const tag = levels.get(line);
+        if (tag === 'h2') return <h2>{line}</h2>;
+        if (tag === 'h3') return <h3>{line}</h3>;
+        if (tag) return <h4>{line}</h4>;
+        return <p>{line}</p>;
+      })
+    }
+  </div>
+</section>
+
+<style>
+  .legal {
+    max-width: 820px;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 1.6em;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.4em;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-top: 1em;
+  }
+  p {
+    margin: 0 0 0.8em;
+  }
+</style>

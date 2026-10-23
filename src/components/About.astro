@@ -1,0 +1,61 @@
+---
+import { site, size, toParagraphs } from '../lib/content';
+
+interface Props {
+  headingLevel?: 'h1' | 'h2';
+}
+const { headingLevel = 'h2' } = Astro.props;
+const Heading = headingLevel;
+const about = site.about;
+const paragraphs = toParagraphs(about.paragraphs);
+---
+
+<section class="section" id="about">
+  <div class="container about">
+    <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" class="about__img" />
+    <div>
+      <Heading class="section-title about__title">אודות</Heading>
+      {paragraphs.map((p, i) => (i === 0 ? <p class="about__hello">{p}</p> : <p>{p}</p>))}
+      <a class="btn" href="/צרו-קשר">בואו נדבר</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) 1.2fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+  }
+  .about__img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 96px;
+  }
+  .about__title {
+    text-align: start;
+  }
+  .about__title::after {
+    margin-inline: 0;
+  }
+  .about__hello {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand);
+  }
+  p {
+    margin: 0 0 1em;
+  }
+  @media (max-width: 760px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+    .about__img {
+      position: static;
+      max-width: 360px;
+    }
+  }
+</style>
