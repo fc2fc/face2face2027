@@ -23,12 +23,19 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
         {
           nav.map((item) => (
             <li>
-              <a href={item.old_url} aria-current={isActive(item.old_url) ? 'page' : undefined}>
+              <a
+                href={item.old_url}
+                class:list={[isActive(item.old_url) && 'is-active']}
+                aria-current={isActive(item.old_url) ? 'page' : undefined}
+              >
                 {item.label}
               </a>
             </li>
           ))
         }
+        <li class="nav__cta">
+          <a href="/צרו-קשר" class="btn-cta">צרו קשר</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -42,7 +49,12 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     toggle.setAttribute('aria-expanded', String(!open));
     header.classList.toggle('is-open', !open);
   });
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+  // סגירת תפריט בלחיצה על לינק
+  header.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => {
+    toggle.setAttribute('aria-expanded', 'false');
+    header.classList.remove('is-open');
+  }));
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 </script>
@@ -52,42 +64,75 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(8px);
-    transition: box-shadow 0.2s;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border-bottom: 1px solid rgba(231, 229, 236, 0.6);
+    transition: box-shadow 0.3s, background 0.3s;
   }
   .header.is-scrolled {
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 24px rgba(15, 13, 22, 0.08);
   }
   .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 72px;
-    gap: 24px;
+    min-height: 70px;
+    gap: 20px;
   }
   .header__logo img {
-    width: 170px;
+    width: 150px;
     height: auto;
+    transition: opacity 0.2s;
   }
+  .header__logo:hover img { opacity: 0.85; }
   .header__nav ul {
     display: flex;
-    gap: 4px;
+    align-items: center;
+    gap: 2px;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .header__nav a {
+  .header__nav a:not(.btn-cta) {
     display: block;
-    padding: 8px 14px;
+    padding: 7px 14px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     border-radius: 999px;
-    transition: color 0.2s;
+    color: var(--ink);
+    transition: color 0.2s, background 0.2s;
+    position: relative;
   }
-  .header__nav a:hover,
-  .header__nav a[aria-current='page'] {
+  .header__nav a:not(.btn-cta):hover {
     color: var(--brand);
+    background: rgba(225, 0, 133, 0.06);
+  }
+  .header__nav a.is-active {
+    color: var(--brand);
+    background: rgba(225, 0, 133, 0.08);
+  }
+  .nav__cta {
+    margin-inline-start: 8px;
+  }
+  .btn-cta {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--brand);
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 999px;
+    text-decoration: none !important;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 14px rgba(225, 0, 133, 0.3);
+  }
+  .btn-cta:hover {
+    background: var(--brand-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(225, 0, 133, 0.4);
   }
   .header__toggle {
     display: none;
@@ -97,7 +142,10 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     background: none;
     cursor: pointer;
     position: relative;
+    border-radius: 10px;
+    transition: background 0.2s;
   }
+  .header__toggle:hover { background: rgba(225,0,133,0.06); }
   .bars,
   .bars::before,
   .bars::after {
@@ -106,53 +154,37 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     width: 22px;
     height: 2px;
     background: var(--ink);
-    transition: transform 0.2s, opacity 0.2s;
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
   }
-  .bars {
-    top: 21px;
-  }
-  .bars::before,
-  .bars::after {
-    content: '';
-    left: 0;
-  }
-  .bars::before {
-    top: -7px;
-  }
-  .bars::after {
-    top: 7px;
-  }
-  .is-open .bars {
-    background: transparent;
-  }
-  .is-open .bars::before {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .is-open .bars::after {
-    transform: translateY(-7px) rotate(-45deg);
-  }
+  .bars { top: 21px; }
+  .bars::before, .bars::after { content: ''; left: 0; }
+  .bars::before { top: -7px; }
+  .bars::after { top: 7px; }
+  .is-open .bars { background: transparent; }
+  .is-open .bars::before { transform: translateY(7px) rotate(45deg); }
+  .is-open .bars::after { transform: translateY(-7px) rotate(-45deg); }
   @media (max-width: 860px) {
-    .header__toggle {
-      display: block;
-    }
+    .header__toggle { display: block; }
     .header__nav {
       position: absolute;
-      top: 100%;
+      top: calc(100% + 1px);
       inset-inline: 0;
-      background: #fff;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
       display: none;
+      border-radius: 0 0 16px 16px;
     }
-    .is-open .header__nav {
-      display: block;
-    }
+    .is-open .header__nav { display: block; }
     .header__nav ul {
       flex-direction: column;
-      padding: 8px 16px 16px;
+      align-items: stretch;
+      padding: 12px 16px 20px;
+      gap: 4px;
     }
-    .header__nav a {
-      padding: 12px 8px;
-      border-radius: 8px;
-    }
+    .header__nav a:not(.btn-cta) { padding: 13px 12px; border-radius: 10px; }
+    .nav__cta { margin-inline-start: 0; margin-top: 8px; }
+    .btn-cta { display: block; text-align: center; padding: 12px; }
   }
 </style>

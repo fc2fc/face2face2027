@@ -7,70 +7,90 @@ interface Props {
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
 const counters = site.counters as { value: string; label: string }[];
+
+const icons = ['📸', '🏆', '⭐', '🎬'];
 ---
 
-<section class="section section--dark counters">
+<section class="section section--dark" id="numbers">
   <div class="container">
-    <Heading class="section-title">במספרים</Heading>
-    <div class="row">
+    <Heading class="section-title">Face2Face במספרים</Heading>
+    <ul class="counters">
       {
-        counters.map((c) => (
-          <div class="stat">
-            <span class="num" data-to={c.value}>
-              {Number(c.value).toLocaleString('he-IL')}
-            </span>
-            <span class="plus">+</span>
-            <span class="label">{c.label}</span>
-          </div>
+        counters.map((c, i) => (
+          <li class="counter">
+            <span class="counter__icon" aria-hidden="true">{icons[i] ?? '✨'}</span>
+            <strong class="counter__val" data-target={c.value.replace(/\D/g, '')} data-suffix={c.value.replace(/\d/g, '')}>0</strong>
+            <span class="counter__label">{c.label}</span>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </div>
 </section>
 
 <script>
-  const nums = document.querySelectorAll<HTMLElement>('.counters .num');
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      io.unobserve(entry.target);
-      const el = entry.target as HTMLElement;
-      const to = Number(el.dataset.to);
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target as HTMLElement;
+      const target = parseInt(el.dataset.target || '0');
+      const suffix = el.dataset.suffix || '';
+      const dur = 1800;
       const start = performance.now();
-      const tick = (t: number) => {
-        const p = Math.min((t - start) / 1600, 1);
-        el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('he-IL');
+      const tick = (now: number) => {
+        const p = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target).toLocaleString('he-IL') + suffix;
         if (p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
-    }
-  });
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) nums.forEach((n) => io.observe(n));
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter__val').forEach(el => obs.observe(el));
 </script>
 
 <style>
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 48px;
+  .section--dark .section-title::after {
+    background: var(--brand);
   }
-  .stat {
+  .counters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+  }
+  .counter {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 32px 24px;
     text-align: center;
+    transition: background 0.3s, transform 0.3s;
   }
-  .num,
-  .plus {
-    font-size: clamp(3.5rem, 9vw, 6rem);
+  .counter:hover {
+    background: rgba(255,255,255,0.07);
+    transform: translateY(-4px);
+  }
+  .counter__icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .counter__val {
+    display: block;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
     font-weight: 900;
+    color: var(--brand);
     line-height: 1;
   }
-  .plus {
-    color: var(--brand);
-  }
-  .label {
+  .counter__label {
     display: block;
     margin-top: 8px;
-    font-size: 1.25rem;
-    color: #d9d6e2;
+    color: rgba(255,255,255,0.65);
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 </style>

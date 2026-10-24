@@ -7,6 +7,8 @@ interface Props {
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
 const services = site.services as { category: string; title: string; text: string; icon: string }[];
+
+const numbers = ['01', '02', '03', '04'];
 ---
 
 <section class="section section--soft" id="services">
@@ -15,11 +17,15 @@ const services = site.services as { category: string; title: string; text: strin
     <p class="section-lead">צילום, וידאו, עיצוב ודיגיטל – הכל תחת קורת גג אחת, מותאם לשפת המותג שלכם.</p>
     <div class="grid">
       {
-        services.map((s) => (
-          <article class="card">
-            <span class="icon" style={`--icon: url('${s.icon}')`} aria-hidden="true" />
+        services.map((s, i) => (
+          <article class="card" style={`--n:${i}`}>
+            <div class="card__num">{numbers[i]}</div>
+            <div class="card__icon-wrap">
+              <span class="icon" style={`--icon: url('${s.icon}')`} aria-hidden="true" />
+            </div>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
+            <div class="card__bar" aria-hidden="true"></div>
           </article>
         ))
       }
@@ -31,32 +37,98 @@ const services = site.services as { category: string; title: string; text: strin
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 24px;
   }
   .card {
     background: #fff;
     border-radius: var(--radius);
-    padding: 32px 26px;
-    box-shadow: var(--shadow);
-    transition: transform 0.25s;
+    padding: 36px 28px 32px;
+    box-shadow: 0 2px 20px rgba(15,13,22,0.06);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  .card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.55s calc(var(--n) * 0.1s) ease,
+                transform 0.55s calc(var(--n) * 0.1s) ease,
+                box-shadow 0.3s ease;
   }
   .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15,13,22,0.12);
+  }
+  .card__num {
+    position: absolute;
+    top: 18px;
+    left: 22px; /* RTL: ימין */
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(225,0,133,0.06);
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.3s;
+  }
+  .card:hover .card__num {
+    color: rgba(225,0,133,0.12);
+  }
+  .card__icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(225,0,133,0.12) 0%, rgba(225,0,133,0.06) 100%);
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+  }
+  .card:hover .card__icon-wrap {
+    background: linear-gradient(135deg, rgba(225,0,133,0.22) 0%, rgba(225,0,133,0.1) 100%);
   }
   .icon {
     display: block;
-    width: 56px;
-    height: 56px;
-    margin-bottom: 18px;
+    width: 32px;
+    height: 32px;
     background: var(--brand);
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
+    transition: transform 0.3s;
+  }
+  .card:hover .icon {
+    transform: scale(1.15);
   }
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
   }
   p {
     margin: 0;
     color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .card__bar {
+    position: absolute;
+    bottom: 0;
+    inset-inline-start: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--brand);
+    border-radius: 0 0 0 var(--radius);
+    transition: width 0.4s ease;
+  }
+  .card:hover .card__bar {
+    width: 100%;
   }
 </style>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach(e => { if (e.isIntersecting) { (e.target as HTMLElement).classList.add('is-visible'); observer.unobserve(e.target); } }),
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll('#services .card').forEach(c => observer.observe(c));
+</script>

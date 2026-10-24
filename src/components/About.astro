@@ -12,11 +12,23 @@ const paragraphs = toParagraphs(about.paragraphs);
 
 <section class="section" id="about">
   <div class="container about">
-    <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" class="about__img" />
-    <div>
+    <div class="about__visual">
+      <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" class="about__img" />
+      <div class="about__card" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        <div>
+          <strong>4,950+</strong>
+          <span>פרויקטים מוצלחים</span>
+        </div>
+      </div>
+    </div>
+    <div class="about__text">
       <Heading class="section-title about__title">אודות</Heading>
       {paragraphs.map((p, i) => (i === 0 ? <p class="about__hello">{p}</p> : <p>{p}</p>))}
-      <a class="btn" href="/צרו-קשר">בואו נדבר</a>
+      <div class="about__actions">
+        <a class="btn" href="/צרו-קשר">בואו נדבר</a>
+        <a class="btn btn--ghost" href="/עבודות">לעבודות שלנו</a>
+      </div>
     </div>
   </div>
 </section>
@@ -28,13 +40,33 @@ const paragraphs = toParagraphs(about.paragraphs);
     gap: clamp(32px, 5vw, 72px);
     align-items: start;
   }
-  .about__img {
-    width: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+  .about__visual {
     position: sticky;
     top: 96px;
   }
+  .about__img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 24px 60px rgba(15,13,22,0.15);
+    display: block;
+  }
+  .about__card {
+    position: absolute;
+    bottom: -16px;
+    inset-inline-end: -16px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(15,13,22,0.12);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--line);
+  }
+  .about__card svg { flex-shrink: 0; }
+  .about__card div { display: flex; flex-direction: column; }
+  .about__card strong { font-size: 1.3rem; font-weight: 900; color: var(--ink); line-height: 1; }
+  .about__card span { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
   .about__title {
     text-align: start;
   }
@@ -42,20 +74,26 @@ const paragraphs = toParagraphs(about.paragraphs);
     margin-inline: 0;
   }
   .about__hello {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--brand);
+    line-height: 1.4;
   }
   p {
     margin: 0 0 1em;
+    color: var(--muted);
+  }
+  p:first-of-type { color: var(--ink); }
+  .about__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 0.5rem;
   }
   @media (max-width: 760px) {
-    .about {
-      grid-template-columns: 1fr;
-    }
-    .about__img {
-      position: static;
-      max-width: 360px;
-    }
+    .about { grid-template-columns: 1fr; }
+    .about__visual { position: static; }
+    .about__img { max-width: 360px; }
+    .about__card { bottom: -10px; inset-inline-end: -10px; }
   }
 </style>
