@@ -133,13 +133,10 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     stroke-linejoin: round;
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
-    animation: tag-draw 1.1s 3.4s cubic-bezier(.65,0,.35,1) forwards;
   }
-  .tag__dot { transform-box: fill-box; transform-origin: center; transform: scale(0); animation: tag-pop 0.5s cubic-bezier(.3,1.6,.5,1) forwards; }
+  .tag__dot { transform-box: fill-box; transform-origin: center; transform: scale(0); }
   .tag__dot circle { fill: rgba(255,255,255,0.12); stroke: #fff; stroke-width: 2.4; }
   .tag__dot .tag__core { fill: #fff; stroke: none; }
-  .tag__dot--a { animation-delay: 3s; }
-  .tag__dot--b { animation-delay: 4.4s; }
   .tag__name {
     position: absolute;
     right: calc(100% - 48.4%);
@@ -151,15 +148,19 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     color: #fff;
     white-space: nowrap;
     clip-path: inset(0 0 0 100%);
-    animation: tag-name 0.8s 4.7s cubic-bezier(.2,.7,.2,1) forwards;
   }
+  /* .tag-on is toggled by script: added 3s after the page loads / after returning to the top, removed when scrolling away */
+  .hero.tag-on .tag__dot--a { animation: tag-pop 0.5s cubic-bezier(.3,1.6,.5,1) forwards; }
+  .hero.tag-on .tag__line { animation: tag-draw 1.1s 0.4s cubic-bezier(.65,0,.35,1) forwards; }
+  .hero.tag-on .tag__dot--b { animation: tag-pop 0.5s 1.4s cubic-bezier(.3,1.6,.5,1) forwards; }
+  .hero.tag-on .tag__name { animation: tag-name 0.8s 1.7s cubic-bezier(.2,.7,.2,1) forwards; }
   @keyframes tag-draw { to { stroke-dashoffset: 0; } }
   @keyframes tag-pop { to { transform: scale(1); } }
   @keyframes tag-name { to { clip-path: inset(0 0 0 0); } }
   @media (prefers-reduced-motion: reduce) {
-    .tag__line { animation: none; stroke-dashoffset: 0; }
-    .tag__dot { animation: none; transform: none; }
-    .tag__name { animation: none; clip-path: none; }
+    .hero .tag__line, .hero.tag-on .tag__line { animation: none; stroke-dashoffset: 0; }
+    .hero .tag__dot, .hero.tag-on .tag__dot { animation: none; transform: none; }
+    .hero .tag__name, .hero.tag-on .tag__name { animation: none; clip-path: none; }
   }
 
   @media (max-width: 768px) {
@@ -206,9 +207,9 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   }
   h1 {
     position: relative;
-    font-size: clamp(3.4rem, 11.2vw, 225px);
+    font-size: clamp(3.4rem, calc((min(100vw, 1248px) - 48px) * 0.175), 210px);
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.05;
     letter-spacing: -0.03em;
     word-spacing: -0.05em;
     margin: 0;
@@ -216,6 +217,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   }
   .t { display: block; }
   .t1, .t3 { color: var(--brand); opacity: 0; animation: fade-up 0.7s 0.2s ease forwards; }
+  .t1 { translate: 0 0.11em; } /* sits lower so the lam of "צילום" touches the top of the handwritten word */
   .t3 { animation-delay: 0.45s; }
   /* handwritten word sits between the two pink lines, overlapping both, revealed right-to-left like a pen stroke */
   .t2 {
@@ -225,7 +227,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     z-index: 1;
     font-family: 'Fb Melatef', var(--font);
     font-weight: 400;
-    font-size: 2.45em;
+    font-size: 2.65em;
     line-height: 1;
     letter-spacing: 0;
     text-align: center;
@@ -237,11 +239,11 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   }
   @keyframes pen { to { clip-path: inset(-20% -10% -20% -10%); } }
   .hero__sub {
-    font-size: clamp(1.5rem, 3.2vw, 66px);
+    font-size: clamp(1.5rem, calc((min(100vw, 1248px) - 48px) * 0.053), 64px);
     font-weight: 900;
     line-height: 1.2;
     letter-spacing: -0.02em;
-    margin: 0.35em 0 1.2em;
+    margin: -0.2em 0 0.95em;
     opacity: 0;
     animation: fade-up 0.7s 0.7s ease forwards;
     color: #fff;
@@ -420,10 +422,26 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   const heroEl = document.querySelector<HTMLElement>('.hero');
   const video = document.getElementById('hero-video') as HTMLVideoElement | null;
   if (heroEl) {
-    // The name tag fades out as soon as the page starts scrolling (the head is turning by then)
-    const fadeTag = () => heroEl.style.setProperty('--tag-o', String(Math.max(0, 1 - window.scrollY / (heroEl.offsetHeight * 0.12))));
-    window.addEventListener('scroll', fadeTag, { passive: true });
-    fadeTag();
+    // Name tag: plays 3s after load; fades while scrolling away, resets, and plays again 3s after returning to the top.
+    let tagTimer = 0;
+    const armTag = () => {
+      if (tagTimer || heroEl.classList.contains('tag-on')) return;
+      tagTimer = window.setTimeout(() => {
+        tagTimer = 0;
+        if (window.scrollY < heroEl.offsetHeight * 0.05) heroEl.classList.add('tag-on');
+      }, 3000);
+    };
+    const onTagScroll = () => {
+      const h = heroEl.offsetHeight;
+      heroEl.style.setProperty('--tag-o', String(Math.max(0, 1 - window.scrollY / (h * 0.12))));
+      if (window.scrollY > h * 0.12) {
+        heroEl.classList.remove('tag-on'); // fully faded: reset to the hidden state
+        window.clearTimeout(tagTimer); tagTimer = 0;
+      } else if (window.scrollY < h * 0.03) armTag();
+    };
+    window.addEventListener('scroll', onTagScroll, { passive: true });
+    onTagScroll();
+    armTag();
   }
   if (heroEl && video) {
     const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
