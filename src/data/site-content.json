@@ -160,6 +160,38 @@
         "items": [
           {
             "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-01.webp",
+            "feature": true
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-02.webp"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-03.webp"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-04.webp"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-05.webp",
+            "feature": true
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-06.webp"
+          },
+          {
+            "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/696ac5cce30db.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"

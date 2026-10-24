@@ -2,6 +2,7 @@
 import Icon from './Icon.astro';
 import { Picture } from 'astro:assets';
 import { site, asset, imageUrl } from '../lib/content';
+import focalData from '../data/focal.json';
 
 interface Props {
   limit?: number;
@@ -15,88 +16,120 @@ const categories = site.portfolio as { category: string; items: any[] }[];
 // On the home page the gallery is far below the fold; on /עבודות the first row is on screen.
 const aboveFold = headingLevel === 'h1';
 
+const focal = focalData as Record<string, { x: number; y: number; n: number; w?: number }>;
+// Small faces in wide shots get a gentle pre-zoom anchored on the face, so the subject — not empty space — fills the tile.
+const zoomOf = (src?: string) => {
+  const f = src ? focal[src] : undefined;
+  return f && f.n && f.w ? Math.min(2, Math.max(1, 17 / f.w)).toFixed(2) : '1';
+};
+
 // Lightbox shows a 1600px WebP instead of the 2000px source.
 const shown = categories.flatMap((c) => (limit ? c.items.slice(0, limit) : c.items)).filter((i) => i.src);
 const fullUrl = new Map(await Promise.all(shown.map(async (i) => [i.src, await imageUrl(i.src, 1600)] as const)));
 
-// Matches the CSS mosaic: every 7th tile (7n + 1) and video tiles span two columns.
-const isWide = (item: any, n: number) => item.type === 'video' || n % 7 === 0;
-const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' : '(max-width: 640px) 50vw, 300px');
+/**
+ * Tile shape from the photo itself:
+ *  - portrait            → tall   (1 col × 2 rows)  – faces stay big and centred
+ *  - landscape + faces ≥2 / group → wide (2 cols × 2 rows)
+ *  - landscape, single subject    → std  (1 col × 1 row)
+ *  - videos                       → wide
+ */
+function shapeOf(item: any): 'tall' | 'wide' | 'std' {
+  if (item.type === 'video' || item.feature) return 'wide';
+  let meta: ImageMetadata | undefined;
+  try { meta = asset(item.src); } catch { /* ignore */ }
+  const ratio = meta ? meta.width / meta.height : 1;
+  const f = focal[item.src];
+  if (ratio < 0.95) return 'tall';
+  if (ratio >= 0.95 && ratio < 1.2) return 'tall';
+  if (f && f.n >= 2) return 'wide';
+  return 'std';
+}
+const sizesFor = (shape: string) =>
+  shape === 'wide' ? '(max-width: 640px) 100vw, 600px' : shape === 'tall' ? '(max-width: 640px) 50vw, 300px' : '(max-width: 640px) 50vw, 300px';
+const pos = (src?: string) => {
+  const f = src ? focal[src] : undefined;
+  return f ? `${f.x}% ${f.y}%` : '50% 30%';
+};
 ---
 
-<section class="section" id="works">
+<section class="section works" id="works">
   <div class="container">
     <Heading class="section-title">עבודות</Heading>
     <p class="section-lead">מבחר מהעבודות שלנו – לחצו על כל תמונה לצפייה מורחבת</p>
+
     <div class="tabs" role="tablist" aria-label="קטגוריות עבודות">
-      {
-        categories.map((c, i) => (
-          <button type="button" role="tab" id={`tab-${i}`} aria-controls={`panel-${i}`} aria-selected={i === 0 ? 'true' : 'false'}>
-            {c.category}
-            <span class="tab__count">{c.items.length}</span>
-          </button>
-        ))
-      }
+      <div class="tabs__track">
+        <span class="tabs__ind" aria-hidden="true"></span>
+        {
+          categories.map((c, i) => (
+            <button type="button" role="tab" id={`tab-${i}`} aria-controls={`panel-${i}`} aria-selected={i === 0 ? 'true' : 'false'}>
+              <span class="tab__label">{c.category}</span>
+              <span class="tab__count">{c.items.length}</span>
+            </button>
+          ))
+        }
+      </div>
     </div>
 
     {
       categories.map((c, i) => {
+        const items = limit ? c.items.slice(0, limit) : c.items;
         return (
           <div role="tabpanel" id={`panel-${i}`} aria-labelledby={`tab-${i}`} hidden={i !== 0}>
-            {/* Grid of tiles */}
             <div class="grid">
-              {(limit ? c.items.slice(0, limit) : c.items).map((item, n) =>
-                item.type === 'video' ? (
-                  <a class:list={['tile tile--video', paged && n >= pageSize && 'is-more']}
-                    href={item.old_item_page ?? item.url}
-                    data-youtube={item.youtube_id}
-                    data-title={item.title}
-                    data-n={n}>
-                    <Picture
-                      src={asset(item.thumbnail)}
-                      alt={item.title ?? 'סרטון'}
-                      widths={[300, 600, 900, 1200]}
-                      sizes={tileSizes(true)}
-                      formats={['avif']}
-                      fallbackFormat="webp"
-                      loading={aboveFold && i === 0 && n < 4 ? 'eager' : 'lazy'}
-                      decoding="async"
-                    />
-                    <span class="play" aria-hidden="true" />
-                    {item.title && <span class="caption">{item.title}</span>}
-                    <span class="tile__overlay" aria-hidden="true"></span>
-                  </a>
-                ) : (
-                  <a class:list={['tile', paged && n >= pageSize && 'is-more']}
-                    href={item.old_item_page ?? fullUrl.get(item.src)}
-                    data-full={fullUrl.get(item.src)}
+              {items.map((item, n) => {
+                const shape = shapeOf(item);
+                const isVideo = item.type === 'video';
+                const src = isVideo ? item.thumbnail : item.src;
+                const f = focal[src];
+                const eager = aboveFold && i === 0 && n < 4;
+                return (
+                  <a
+                    class:list={['tile', `tile--${shape}`, isVideo && 'tile--video', paged && n >= pageSize && 'is-more']}
+                    href={isVideo ? item.old_item_page ?? item.url : item.old_item_page ?? fullUrl.get(item.src)}
+                    data-full={isVideo ? undefined : fullUrl.get(item.src)}
+                    data-youtube={isVideo ? item.youtube_id : undefined}
                     data-title={item.title}
                     data-item-page={item.old_item_page}
-                    data-n={n}>
+                    data-n={n}
+                    style={`--fx:${f ? f.x : 50}%;--fy:${f ? f.y : 30}%;--z:${isVideo ? 1 : zoomOf(src)}`}
+                  >
                     <Picture
-                      src={asset(item.src)}
-                      alt={item.alt || item.title || `${c.category} – Face2Face`}
+                      src={asset(src)}
+                      alt={item.alt || item.title || (isVideo ? 'סרטון' : `${c.category} – Face2Face`)}
                       widths={[300, 450, 600, 900, 1200]}
-                      sizes={tileSizes(isWide(item, n))}
+                      sizes={sizesFor(shape)}
                       formats={['avif']}
                       fallbackFormat="webp"
-                      loading={aboveFold && i === 0 && n < 4 ? 'eager' : 'lazy'}
+                      loading={eager ? 'eager' : 'lazy'}
                       fetchpriority={aboveFold && i === 0 && n === 0 ? 'high' : undefined}
                       decoding="async"
+                      style={`object-position:${pos(src)}`}
                     />
+                    <span class="tile__shade" aria-hidden="true"></span>
+                    {isVideo && (
+                      <span class="play" aria-hidden="true">
+                        <Icon name="play-fill" size={26} />
+                      </span>
+                    )}
+                    {!isVideo && (
+                      <span class="tile__zoom" aria-hidden="true">
+                        <Icon name="arrows-out-simple" size={18} />
+                      </span>
+                    )}
                     {item.title && <span class="caption">{item.title}</span>}
-                    <span class="tile__overlay" aria-hidden="true"></span>
                   </a>
-                ),
-              )}
-              {paged && c.items.length > pageSize && (
-                <p class="more more--panel">
-                  <button type="button" class="btn btn--ghost" data-more>
-                    הצג עוד <span class="more__count">({c.items.length - pageSize})</span>
-                  </button>
-                </p>
-              )}
+                );
+              })}
             </div>
+            {paged && c.items.length > pageSize && (
+              <p class="more more--panel">
+                <button type="button" class="btn btn--ghost" data-more>
+                  הצג עוד <span class="more__count">({c.items.length - pageSize})</span>
+                </button>
+              </p>
+            )}
           </div>
         );
       })
@@ -115,136 +148,79 @@ const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' :
 </section>
 
 <dialog class="lightbox" aria-label="תצוגה מוגדלת">
-  <div class="lightbox__header">
+  <div class="lightbox__bar">
+    <span class="lightbox__count" aria-live="polite"></span>
     <p class="lightbox__title"></p>
     <div class="lightbox__actions">
-      <a class="lightbox__link btn btn--ghost" href="#" target="_blank" rel="noopener" aria-label="פתח דף הפרויקט">
-        <Icon name="download-simple" size={16} />
+      <a class="lightbox__link" href="#" target="_blank" rel="noopener">
         לדף הפרויקט
+        <Icon name="arrow-left" size={16} />
       </a>
-      <button type="button" class="lightbox__close" aria-label="סגירה">
+      <button type="button" class="lightbox__btn lightbox__close" aria-label="סגירה">
         <Icon name="x" size={20} />
       </button>
     </div>
   </div>
   <div class="lightbox__stage"></div>
+  <button type="button" class="lightbox__btn lightbox__nav lightbox__nav--prev" aria-label="הקודם">
+    <Icon name="arrow-right" size={22} />
+  </button>
+  <button type="button" class="lightbox__btn lightbox__nav lightbox__nav--next" aria-label="הבא">
+    <Icon name="arrow-left" size={22} />
+  </button>
 </dialog>
 
 <script>
-  // ── Per-category 3D parallax ─────────────────────────────────────────────
-  function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
-  function clamp(v: number, lo: number, hi: number) { return Math.max(lo, Math.min(hi, v)); }
-  function easeInOut(t: number) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+  const root = document.querySelector<HTMLElement>('#works')!;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Respect user motion preference
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ── Tabs with sliding indicator ──────────────────────────────────────────
+  const track = root.querySelector<HTMLElement>('.tabs__track')!;
+  const ind = root.querySelector<HTMLElement>('.tabs__ind')!;
+  const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
 
-  function initCatParallax(wrapper: HTMLElement) {
-    if (prefersReducedMotion) return; // skip all parallax
-    const banner = wrapper.querySelector<HTMLElement>('.cat-parallax__banner')!;
-    const grid   = wrapper.querySelector<HTMLElement>('.cat-parallax__grid')!;
-    const cols   = [...wrapper.querySelectorAll<HTMLElement>('.cat-parallax__col')];
-    if (!banner || !grid) return;
-
-    let progress = 0;
-    let target   = 0;
-    let raf      = 0;
-    let started  = false;
-
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting && !started) {
-          started = true;
-          tick();
-        }
-      });
-    }, { threshold: 0.05 });
-    io.observe(wrapper);
-
-    function tick() {
-      // Get scroll progress within this section
-      const rect = wrapper.getBoundingClientRect();
-      const vh = window.innerHeight;
-      // 0 when banner top hits viewport bottom, 1 when banner bottom leaves viewport top
-      target = clamp((vh - rect.top) / (rect.height + vh), 0, 1);
-      progress = lerp(progress, target, 0.06);
-      const p = easeInOut(progress);
-
-      // Phase 1 (0→0.15): banner open (compact→full)
-      const p1 = clamp(p / 0.15, 0, 1);
-      const bw = lerp(88, 100, p1);
-      const bh = lerp(72, 100, p1);
-      const br = lerp(32, 0, p1);
-      banner.style.width  = `${bw}%`;
-      banner.style.height = `${bh}%`;
-      banner.style.borderRadius = `${br}px`;
-      banner.style.margin = `0 auto`;
-
-      // Phase 2 (0.15→1): 3D rotation
-      const p2 = clamp((p - 0.15) / 0.85, 0, 1);
-      const rY  = lerp(-40, -6, p2);
-      const rX  = lerp(22, 3, p2);
-      const rZ  = lerp(12, 1, p2);
-      const tZ  = lerp(-700, 0, p2);
-      grid.style.transform = `rotateY(${rY}deg) rotateX(${rX}deg) rotateZ(${rZ}deg) translateZ(${tZ}px)`;
-
-      // Column parallax offsets
-      const offsets = [
-        lerp(0, -35, p2),
-        lerp(-30, 8, p2),
-        lerp(0, -40, p2),
-        lerp(-25, 18, p2),
-      ];
-      cols.forEach((col, ci) => {
-        col.style.transform = `translateY(${offsets[ci] ?? 0}%)`;
-      });
-
-      raf = requestAnimationFrame(tick);
-    }
-
-    // Stop when panel becomes hidden
-    const panel = wrapper.closest<HTMLElement>('[role=tabpanel]');
-    if (panel) {
-      const panelObs = new MutationObserver(() => {
-        if (panel.hidden) cancelAnimationFrame(raf);
-        else if (started) tick();
-      });
-      panelObs.observe(panel, { attributes: true, attributeFilter: ['hidden'] });
-    }
+  function moveInd(animate = true) {
+    const on = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
+    if (!on) return;
+    const tr = track.getBoundingClientRect();
+    const r = on.getBoundingClientRect();
+    if (!animate) ind.style.transition = 'none';
+    ind.style.width = `${r.width}px`;
+    ind.style.height = `${r.height}px`;
+    ind.style.transform = `translate(${r.left - tr.left}px, ${r.top - tr.top}px)`;
+    if (!animate) { void ind.offsetWidth; ind.style.transition = ''; }
   }
-
-  document.querySelectorAll<HTMLElement>('[data-cat-parallax]').forEach(initCatParallax);
-
-  // ── Tabs ─────────────────────────────────────────────────────────────────
-  document.querySelectorAll<HTMLElement>('#works').forEach((root) => {
-    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
-    tabs.forEach((tab) =>
-      tab.addEventListener('click', () => {
-        tabs.forEach((t) => {
-          const on = t === tab;
-          t.setAttribute('aria-selected', String(on));
-          document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
-        });
-        tab.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
-        observeVisible();
-      }),
-    );
-    // Arrow-key navigation (RTL: right = previous)
-    tabs.forEach((tab, i) =>
-      tab.addEventListener('keydown', (e) => {
-        const k = (e as KeyboardEvent).key;
-        const dir = k === 'ArrowLeft' ? 1 : k === 'ArrowRight' ? -1 : 0;
-        if (!dir) return;
-        e.preventDefault();
-        const next = tabs[(i + dir + tabs.length) % tabs.length];
-        next.focus();
-        next.click();
-      }),
-    );
-  });
+  tabs.forEach((tab) =>
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
+      });
+      moveInd();
+      tab.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+      observeVisible();
+    }),
+  );
+  // Arrow-key navigation (RTL: right = previous)
+  tabs.forEach((tab, i) =>
+    tab.addEventListener('keydown', (e) => {
+      const k = (e as KeyboardEvent).key;
+      const dir = k === 'ArrowLeft' ? 1 : k === 'ArrowRight' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      const next = tabs[(i + dir + tabs.length) % tabs.length];
+      next.focus();
+      next.click();
+    }),
+  );
+  moveInd(false);
+  addEventListener('resize', () => moveInd(false));
+  document.fonts?.ready.then(() => moveInd(false));
+  setTimeout(() => moveInd(false), 400);
 
   // ── "הצג עוד" ─────────────────────────────────────────────────────────────
-  document.querySelectorAll<HTMLButtonElement>('#works [data-more]').forEach((btn) => {
+  root.querySelectorAll<HTMLButtonElement>('[data-more]').forEach((btn) => {
     const panel = btn.closest<HTMLElement>('[role=tabpanel]')!;
     const step = 24;
     btn.addEventListener('click', () => {
@@ -258,76 +234,104 @@ const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' :
     });
   });
 
-  // ── Scroll reveal ─────────────────────────────────────────────────────────
+  // ── Staggered reveal as tiles scroll in ───────────────────────────────────
+  let revealObs: IntersectionObserver | null = null;
   function observeVisible() {
-    const revealObs = new IntersectionObserver(
-      (entries) => entries.forEach(e => {
-        if (e.isIntersecting) {
+    revealObs ??= new IntersectionObserver(
+      (entries) => {
+        let k = 0;
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
           const el = e.target as HTMLElement;
-          const n = parseInt(el.dataset.n || '0');
-          el.style.transitionDelay = `${(n % 6) * 0.06}s`;
+          el.style.transitionDelay = reduce ? '0s' : `${Math.min(k++, 8) * 0.07}s`;
           el.classList.add('is-visible');
-          revealObs.unobserve(el);
-        }
-      }),
-      { threshold: 0.1 }
+          revealObs!.unobserve(el);
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -4% 0px' },
     );
-    document.querySelectorAll<HTMLElement>('#works .tile:not(.is-visible):not(.is-more)').forEach(t => revealObs.observe(t));
+    root.querySelectorAll<HTMLElement>('.tile:not(.is-visible):not(.is-more)').forEach((t) => revealObs!.observe(t));
   }
   observeVisible();
 
-  // ── Lightbox ──────────────────────────────────────────────────────────────
+  // ── Lightbox with prev / next, keyboard and swipe ─────────────────────────
   const box = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
   const stage = box.querySelector<HTMLElement>('.lightbox__stage')!;
   const titleEl = box.querySelector<HTMLElement>('.lightbox__title')!;
+  const countEl = box.querySelector<HTMLElement>('.lightbox__count')!;
   const linkEl = box.querySelector<HTMLAnchorElement>('.lightbox__link')!;
+  let list: HTMLAnchorElement[] = [];
+  let idx = 0;
 
-  box.querySelector('.lightbox__close')!.addEventListener('click', () => box.close());
-  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
-  box.addEventListener('close', () => { stage.innerHTML = ''; });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && box.open) box.close(); });
+  function show(i: number, dir = 0) {
+    idx = (i + list.length) % list.length;
+    const tile = list[idx];
+    const title = tile.dataset.title || '';
+    stage.innerHTML = '';
+    let el: HTMLElement;
+    if (tile.dataset.youtube) {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${tile.dataset.youtube}?autoplay=1&rel=0`;
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.title = title || 'סרטון';
+      el = f;
+    } else {
+      const img = document.createElement('img');
+      img.src = tile.dataset.full!;
+      img.alt = title;
+      img.decoding = 'async';
+      el = img;
+      // warm the neighbours
+      [1, -1].forEach((d) => {
+        const n = list[(idx + d + list.length) % list.length];
+        if (n?.dataset.full) { const p = new Image(); p.src = n.dataset.full; }
+      });
+    }
+    if (dir && !reduce) {
+      el.style.animation = `lb-in 0.4s cubic-bezier(.2,.7,.2,1)`;
+      el.style.setProperty('--from', dir > 0 ? '-40px' : '40px');
+    }
+    stage.append(el);
+    titleEl.textContent = title;
+    countEl.textContent = `${idx + 1} / ${list.length}`;
+    const itemPage = tile.dataset.itemPage;
+    if (itemPage) { linkEl.href = itemPage; linkEl.style.display = ''; } else linkEl.style.display = 'none';
+  }
 
-  document.querySelectorAll<HTMLAnchorElement>('#works .tile').forEach((tile) =>
+  root.querySelectorAll<HTMLAnchorElement>('.tile').forEach((tile) =>
     tile.addEventListener('click', (e) => {
       e.preventDefault();
-      stage.innerHTML = '';
-      const title = tile.dataset.title || '';
-      const itemPage = tile.dataset.itemPage;
-
-      if (tile.dataset.youtube) {
-        const f = document.createElement('iframe');
-        f.src = `https://www.youtube-nocookie.com/embed/${tile.dataset.youtube}?autoplay=1&rel=0`;
-        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-        f.allowFullscreen = true;
-        f.title = title || 'סרטון';
-        stage.append(f);
-      } else {
-        const img = document.createElement('img');
-        img.src = tile.dataset.full!;
-        img.alt = title;
-        stage.append(img);
-      }
-
-      titleEl.textContent = title;
-      if (itemPage) {
-        linkEl.href = itemPage;
-        linkEl.style.display = '';
-      } else {
-        linkEl.style.display = 'none';
-      }
+      const panel = tile.closest<HTMLElement>('[role=tabpanel]')!;
+      list = [...panel.querySelectorAll<HTMLAnchorElement>('.tile')];
+      show(list.indexOf(tile));
       box.showModal();
     }),
   );
+  // RTL: "next" is visually on the left
+  box.querySelector('.lightbox__nav--next')!.addEventListener('click', () => show(idx + 1, 1));
+  box.querySelector('.lightbox__nav--prev')!.addEventListener('click', () => show(idx - 1, -1));
+  box.querySelector('.lightbox__close')!.addEventListener('click', () => box.close());
+  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+  box.addEventListener('close', () => { stage.innerHTML = ''; });
+  box.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx + 1, 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(idx - 1, -1); }
+  });
+  let sx = 0;
+  stage.addEventListener('pointerdown', (e) => { sx = e.clientX; });
+  stage.addEventListener('pointerup', (e) => {
+    const dx = e.clientX - sx;
+    if (Math.abs(dx) > 60) show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+  });
 
-  // Subtle 3D tilt on hover (pointer devices only)
-  if (matchMedia('(hover: hover)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll<HTMLElement>('#works .tile').forEach((t) => {
+  // Hover: gentle tilt toward the pointer (fine pointers only)
+  if (matchMedia('(hover: hover)').matches && !reduce) {
+    root.querySelectorAll<HTMLElement>('.tile').forEach((t) => {
       t.addEventListener('pointermove', (e) => {
         const r = t.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        t.style.setProperty('--ry', `${x * 7}deg`);
-        t.style.setProperty('--rx', `${-y * 7}deg`);
+        t.style.setProperty('--ry', `${((e.clientX - r.left) / r.width - 0.5) * 6}deg`);
+        t.style.setProperty('--rx', `${-((e.clientY - r.top) / r.height - 0.5) * 6}deg`);
       });
       t.addEventListener('pointerleave', () => {
         t.style.setProperty('--rx', '0deg');
@@ -348,389 +352,351 @@ const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' :
     font-size: 1rem;
   }
 
-  /* ── Per-category parallax ─────────────────────────────────────── */
-  .cat-parallax {
-    perspective: 1200px;
-    perspective-origin: 50% 40%;
-    width: 100%;
-    height: 380px;
-    margin-bottom: 3rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .cat-parallax__banner {
-    position: absolute;
-    inset: 0;
-    width: 88%;
-    height: 72%;
-    margin: 0 auto;
-    border-radius: 32px;
-    overflow: hidden;
-    transition: width 0.05s linear, height 0.05s linear, border-radius 0.05s linear;
-    will-change: width, height, border-radius;
-  }
-  .cat-parallax__grid {
-    display: flex;
-    gap: 8px;
-    height: 160%;
-    margin-top: -30%;
-    transform-origin: center center;
-    will-change: transform;
-  }
-  .cat-parallax__col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    will-change: transform;
-  }
-  .cat-parallax__item {
-    flex: none;
-    height: 200px;
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--bg-soft, #1a1725);
-  }
-  .cat-parallax__item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .cat-parallax__overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: linear-gradient(
-      to bottom,
-      rgba(20,20,20,0.66) 0%,
-      rgba(20,20,20,0.82) 60%,
-      rgba(20,20,20,0.9) 100%
-    );
-    pointer-events: none;
-  }
-  .cat-parallax__label {
-    font-size: clamp(1.6rem, 4vw, 2.8rem);
-    font-weight: 900;
-    color: #fff;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
-    letter-spacing: -0.02em;
-  }
-  .cat-parallax__count {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background: rgba(20,20,20,0.85);
-    border: 1px solid rgba(208,0,127,0.5);
-    border-radius: 999px;
-    padding: 2px 14px;
-  }
-  @media (max-width: 640px) {
-    .cat-parallax { height: 220px; border-radius: 14px; }
-    .cat-parallax__item { height: 120px; border-radius: 8px; }
-    .cat-parallax__grid { gap: 4px; margin-top: -20%; }
-    .cat-parallax__label { font-size: 0.85rem; padding: 3px 10px 3px 6px; }
-    .cat-parallax__count { font-size: 0.85rem; padding: 2px 10px; }
-  }
-  @media (max-width: 380px) {
-    .cat-parallax { height: 190px; }
-    .cat-parallax__item { height: 105px; }
-  }
-
-  /* ── Tabs ───────────────────────────────────────────────────────── */
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin: 0 0 2.5rem;
-    padding: 0;
-    list-style: none;
-  }
-  .tabs button {
-    font: inherit;
-    font-weight: 600;
-    border: 1.5px solid var(--line);
-    background: var(--surface);
-    color: var(--ink);
-    border-radius: 999px;
-    padding: 0.5em 1.3em;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-height: 44px;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .tabs button:hover {
-    border-color: var(--brand);
-    color: #fff;
-  }
-  .tabs button[aria-selected='true'] {
-    background: var(--brand-ink);
-    border-color: var(--brand);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(208,0,127,0.3);
-  }
-  .tab__count {
-    background: rgba(0,0,0,0.08);
-    border-radius: 999px;
-    padding: 1px 7px;
-    font-size: 0.78rem;
-    font-weight: 700;
-  }
-  button[aria-selected='true'] .tab__count {
-    background: rgba(0,0,0,0.28);
-  }
-
-  /* ── Grid ────────────────────────────────────────────────────────── */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-auto-flow: dense;
-    gap: 14px;
-  }
-  /* Mosaic rhythm: a large feature tile every 7 items */
-  .grid > .tile:not(.tile--video):nth-child(7n + 1) {
-    grid-column: span 2;
-    grid-row: span 2;
-    aspect-ratio: auto;
-  }
-  .grid[hidden],
-  .tile.is-more {
-    display: none;
-  }
-  [role=tabpanel][hidden] { display: none; }
-  .more--panel {
-    grid-column: 1 / -1;
-  }
-  .tile {
-    position: relative;
-    display: block;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    border-radius: 18px;
-    background: var(--surface);
-    --rx: 0deg; --ry: 0deg;
-    opacity: 0;
-    transform: scale(0.96) translateY(12px);
-    transition: opacity 0.5s ease, transform 0.35s ease, box-shadow 0.3s ease;
-  }
-  .tile.is-visible {
-    opacity: 1;
-    transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
-  }
-  .tile--video {
-    aspect-ratio: 16 / 9;
-    grid-column: span 2;
-  }
-  .tile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transition: transform 0.5s ease;
-  }
-  .tile:hover img {
-    transform: scale(1.07);
-  }
-  .tile:hover {
-    box-shadow: 0 0 0 2px var(--brand), 0 18px 44px rgba(0,0,0,0.6);
-    z-index: 1;
-  }
-  .tile__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(208,0,127,0) 50%, rgba(208,0,127,0.65) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .tile:hover .tile__overlay {
-    opacity: 1;
-  }
-  .caption {
-    position: absolute;
-    inset-inline: 0;
-    bottom: 0;
-    padding: 32px 14px 12px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.9rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-    opacity: 0;
-    transition: opacity 0.25s;
-    z-index: 1;
-  }
-  .tile:hover .caption,
-  .tile:focus-visible .caption,
-  .tile--video .caption {
-    opacity: 1;
-  }
-  .play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 64px;
-    height: 64px;
-    margin: -32px 0 0 -32px;
-    border-radius: 50%;
-    background: var(--brand);
-    z-index: 1;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(208,0,127,0.4);
-  }
-  .tile:hover .play {
-    transform: scale(1.1);
-    box-shadow: 0 8px 28px rgba(208,0,127,0.55);
-  }
-  .play::after {
-    content: '';
-    position: absolute;
-    left: 26px;
-    top: 20px;
-    border-style: solid;
-    border-width: 12px 0 12px 18px;
-    border-color: transparent transparent transparent #fff;
-  }
-  .more {
-    text-align: center;
-    margin: 2rem 0 0;
-  }
-
-  /* ── Lightbox ────────────────────────────────────────────────────── */
-  .lightbox {
-    width: min(1100px, 100% - 24px);
-    max-height: 95vh;
-    padding: 0;
-    border: 0;
-    background: rgba(14,14,14, 0.97);
-    border-radius: 16px;
-    color: #fff;
-    overflow: hidden;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
-  }
-  .lightbox::backdrop {
-    background: rgba(8, 6, 14, 0.88);
-    backdrop-filter: blur(4px);
-  }
-  .lightbox__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    gap: 12px;
-  }
-  .lightbox__title {
-    margin: 0;
-    font-weight: 700;
-    font-size: 1rem;
-    color: rgba(255,255,255,0.9);
-  }
-  .lightbox__actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-  .lightbox__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    font-size: 0.85rem;
-    color: #fff;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 999px;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .lightbox__link:hover {
-    background: rgba(255,255,255,0.1);
-  }
-  .lightbox__close {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 0;
-    background: rgba(255,255,255,0.1);
-    color: #fff;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    transition: background 0.2s;
-    flex-shrink: 0;
-  }
-  .lightbox__close:hover { background: rgba(255,255,255,0.2); }
-  .lightbox__stage {
-    padding: 16px;
-    display: grid;
-    place-items: center;
-    min-height: 200px;
-    max-height: calc(95vh - 80px);
-    overflow: auto;
-  }
-  .lightbox__stage :global(img) {
-    max-height: calc(95vh - 120px);
-    max-width: 100%;
-    width: auto;
-    border-radius: 8px;
-  }
-  .lightbox__stage :global(iframe) {
-    width: min(860px, 100%);
-    aspect-ratio: 16 / 9;
-    border: 0;
-    border-radius: 8px;
-  }
-  @media (max-width: 640px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-    .tile--video { grid-column: span 2; }
-    .grid > .tile:not(.tile--video):nth-child(7n + 1) { grid-column: span 2; grid-row: span 1; aspect-ratio: 4 / 3; }
-    .tile__actions { gap: 6px; }
-    .tile__actions button,
-    .tile__actions a {
-      width: 34px;
-      height: 34px;
-      font-size: 0.78rem;
-    }
-  }
-  @media (max-width: 380px) {
-    .grid { gap: 6px; }
-  }
-
-  /* Sticky, swipeable category tabs */
+  /* ── Category switcher ───────────────────────────────────────────── */
   .tabs {
     position: sticky;
     top: 84px;
     z-index: 20;
-    padding: 10px 0;
-    background: rgba(18,18,18,0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 18px;
     transition: top 0.35s cubic-bezier(.2,.7,.2,1);
+    pointer-events: none;
   }
-  :global(.hdr-hidden) .tabs { top: 0; }
+  :global(.hdr-hidden) .tabs { top: 8px; }
+  .tabs__track {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    padding: 6px;
+    border-radius: 999px;
+    background: rgba(24, 24, 24, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px) saturate(1.3);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    pointer-events: auto;
+    max-width: 100%;
+  }
+  .tabs__ind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 999px;
+    background: var(--brand-ink);
+    box-shadow: 0 6px 22px rgba(208, 0, 127, 0.45);
+    transition: transform 0.5s cubic-bezier(.2,.8,.2,1), width 0.5s cubic-bezier(.2,.8,.2,1), height 0.5s cubic-bezier(.2,.8,.2,1);
+    will-change: transform, width;
+  }
+  .tabs button {
+    position: relative;
+    z-index: 1;
+    font: inherit;
+    font-weight: 700;
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.78);
+    border-radius: 999px;
+    padding: 0.55em 1.25em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    white-space: nowrap;
+    transition: color 0.25s;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tabs button:hover { color: #fff; }
+  .tabs button[aria-selected='true'] { color: #fff; }
+  .tabs button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .tab__count {
+    min-width: 1.9em;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-align: center;
+    transition: background 0.25s;
+  }
+  button[aria-selected='true'] .tab__count { background: rgba(0, 0, 0, 0.28); }
+
+  /* ── Mosaic ──────────────────────────────────────────────────────── */
+  [role='tabpanel'][hidden] { display: none; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: clamp(150px, 15.5vw, 215px);
+    grid-auto-flow: dense;
+    gap: 14px;
+  }
+  .tile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--surface);
+    isolation: isolate;
+    --rx: 0deg;
+    --ry: 0deg;
+    --fx: 50%;
+    --fy: 30%;
+    opacity: 0;
+    transform: translateY(26px) scale(0.97);
+    transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tile.is-more { display: none; }
+  .tile.is-visible {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry));
+  }
+  .tile--tall { grid-row: span 2; }
+  .tile--wide { grid-column: span 2; grid-row: span 2; }
+  .tile--std { grid-row: span 1; }
+
+  .tile :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(var(--z, 1));
+    transform-origin: var(--fx) var(--fy);
+    transition: transform 0.9s cubic-bezier(.2,.7,.2,1), filter 0.4s;
+  }
+  .tile:hover :global(img),
+  .tile:focus-visible :global(img) { transform: scale(calc(var(--z, 1) * 1.09)); }
+
+  .tile__shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg, transparent 45%, rgba(10, 10, 10, 0.78) 100%),
+      linear-gradient(135deg, rgba(208, 0, 127, 0.0), rgba(4, 168, 241, 0.0));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .tile:hover .tile__shade,
+  .tile:focus-visible .tile__shade { opacity: 1; }
+  .tile:hover,
+  .tile:focus-visible {
+    z-index: 2;
+    box-shadow: 0 0 0 2px var(--brand), 0 24px 54px rgba(0, 0, 0, 0.6);
+    outline: none;
+  }
+
+  .tile__zoom {
+    position: absolute;
+    top: 12px;
+    inset-inline-start: 12px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--blue);
+    color: #00131c;
+    opacity: 0;
+    transform: scale(0.6) rotate(-30deg);
+    transition: opacity 0.3s, transform 0.4s cubic-bezier(.2,.9,.3,1.4);
+  }
+  .tile:hover .tile__zoom,
+  .tile:focus-visible .tile__zoom { opacity: 1; transform: none; }
+
+  .caption {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 20px 16px 14px;
+    color: #fff;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s, transform 0.4s cubic-bezier(.2,.7,.2,1);
+  }
+  .tile:hover .caption,
+  .tile:focus-visible .caption,
+  .tile--video .caption { opacity: 1; transform: none; }
+  .tile--video .tile__shade { opacity: 1; }
+
+  .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 68px;
+    height: 68px;
+    margin: -34px 0 0 -34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(208, 0, 127, 0.55), 0 8px 28px rgba(208, 0, 127, 0.45);
+    animation: pulse 2.4s ease-out infinite;
+    transition: transform 0.3s;
+  }
+  .play :global(svg) { margin-inline-start: 3px; }
+  .tile:hover .play { transform: scale(1.12); }
+  @keyframes pulse {
+    70% { box-shadow: 0 0 0 18px rgba(208, 0, 127, 0), 0 8px 28px rgba(208, 0, 127, 0.45); }
+    100% { box-shadow: 0 0 0 0 rgba(208, 0, 127, 0), 0 8px 28px rgba(208, 0, 127, 0.45); }
+  }
+
+  .more { text-align: center; margin: 2.2rem 0 0; }
+
+  /* ── Lightbox ────────────────────────────────────────────────────── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    background: rgba(8, 8, 8, 0.94);
+    overflow: hidden;
+  }
+  .lightbox[open] { display: grid; grid-template-rows: auto 1fr; animation: lb-fade 0.3s ease; }
+  .lightbox::backdrop { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); }
+  .lightbox__bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px clamp(14px, 3vw, 28px);
+  }
+  .lightbox__count {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    direction: ltr;
+    flex: none;
+  }
+  .lightbox__title {
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.92);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lightbox__actions { display: flex; align-items: center; gap: 10px; flex: none; }
+  .lightbox__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 16px;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .lightbox__link:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--blue); }
+  .lightbox__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  .lightbox__btn:hover { background: var(--brand); border-color: var(--brand); transform: scale(1.06); }
+  .lightbox__btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .lightbox__nav {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    width: 52px;
+    height: 52px;
+    backdrop-filter: blur(8px);
+  }
+  .lightbox__nav--prev { right: clamp(10px, 2.5vw, 28px); }
+  .lightbox__nav--next { left: clamp(10px, 2.5vw, 28px); }
+  .lightbox__stage {
+    display: grid;
+    place-items: center;
+    min-height: 0;
+    padding: 0 clamp(64px, 8vw, 120px) clamp(14px, 3vw, 28px);
+    touch-action: pan-y;
+  }
+  .lightbox__stage :global(img) {
+    max-width: 100%;
+    max-height: calc(100vh - 110px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .lightbox__stage :global(iframe) {
+    width: min(1100px, 100%);
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 14px;
+  }
+  @keyframes lb-fade { from { opacity: 0; } }
+  @keyframes lb-in { from { opacity: 0; transform: translateX(var(--from, 30px)) scale(0.97); } }
+
+  /* ── Responsive ──────────────────────────────────────────────────── */
+  @media (max-width: 980px) {
+    .grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: clamp(140px, 22vw, 200px); gap: 12px; }
+    .tile { border-radius: 16px; }
+  }
   @media (max-width: 640px) {
-    .tabs {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      overflow-x: auto;
-      scroll-snap-type: x proximity;
-      scrollbar-width: none;
-      top: 60px;
-      margin-inline: -12px;
-      padding-inline: 12px;
-    }
-    .tabs::-webkit-scrollbar { display: none; }
-    .tabs button { flex: none; scroll-snap-align: center; white-space: nowrap; }
+    .grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 38vw; gap: 8px; }
+    .tile { border-radius: 14px; }
+    .tabs { top: 62px; padding-bottom: 12px; }
+    .tabs__track { max-width: calc(100% - 8px); overflow-x: auto; scrollbar-width: none; }
+    .tabs__track::-webkit-scrollbar { display: none; }
+    .tabs__track { gap: 2px; padding: 5px; }
+    .tabs button { padding: 0.4em 0.62em; font-size: 0.82rem; gap: 5px; }
+    .tab__count { padding: 0 6px; min-width: 1.6em; font-size: 0.72rem; }
+    .caption { opacity: 1; transform: none; padding-top: 28px; font-size: 0.82rem; }
+    .tile__shade { opacity: 1; background: linear-gradient(180deg, transparent 60%, rgba(10, 10, 10, 0.7)); }
+    .tile__zoom { display: none; }
+    .lightbox__bar { padding: 10px 12px; gap: 8px; }
+    .lightbox__link { display: none; }
+    .lightbox__stage { padding: 0 8px 12px; }
+    .lightbox__nav { top: auto; bottom: 18px; margin: 0; width: 46px; height: 46px; background: rgba(0, 0, 0, 0.55); }
+    .lightbox__nav--prev { right: 16px; }
+    .lightbox__nav--next { left: 16px; }
+    .lightbox__stage :global(img) { max-height: calc(100vh - 150px); }
+  }
+  @media (hover: none) {
+    .tile:hover :global(img) { transform: scale(var(--z, 1)); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tile { opacity: 1; transform: none; transition: none; }
+    .play { animation: none; }
+    .tabs__ind { transition: none; }
   }
 </style>
