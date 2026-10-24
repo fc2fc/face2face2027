@@ -162,33 +162,39 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/f2f-new-01.webp",
-            "feature": true
+            "feature": true,
+            "alt": "פורטרט עסקי של אשת ציבור בחליפה שחורה ליד שולחן עבודה ודגל ישראל"
           },
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/f2f-new-02.webp"
+            "src": "/assets/media/uploads/f2f-new-02.webp",
+            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים מדברת בטלפון ומהלכת במסדרון בהיר"
           },
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/f2f-new-03.webp"
+            "src": "/assets/media/uploads/f2f-new-03.webp",
+            "alt": "פורטרט רשמי של אשה בחליפה שחורה מאחורי מיקרופון, לצד דגל ישראל ודגל הכנסת"
           },
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/f2f-new-04.webp"
+            "src": "/assets/media/uploads/f2f-new-04.webp",
+            "alt": "פורטרט של אשה בחליפה שחורה על רקע וילון כחול כהה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/f2f-new-05.webp",
-            "feature": true
+            "feature": true,
+            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים בין דגלי ישראל באולם עם שטיח"
           },
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/f2f-new-06.webp"
+            "src": "/assets/media/uploads/f2f-new-06.webp",
+            "alt": "פורטרט של אשה בז'קט לבן ליד שולחן עבודה, יד אל הסנטר, ודגל ישראל מאחוריה"
           },
           {
             "type": "image",
@@ -218,7 +224,8 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/696ac38eeac63.webp",
-            "old_item_page": "/עבודות/item-id-696ac39138e0f"
+            "old_item_page": "/עבודות/item-id-696ac39138e0f",
+            "alt": "אשה נואמת על במה בכנס לקידום שוויון הזדמנויות ומעמד נשים בישראל"
           },
           {
             "type": "image",
@@ -302,13 +309,15 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6413324.webp",
-            "old_item_page": "/עבודות/item-id-688bed656124c"
+            "old_item_page": "/עבודות/item-id-688bed656124c",
+            "alt": "תמונה קבוצתית של נשים בשורה מול בניין הכנסת"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c02e9400c6.webp",
-            "old_item_page": "/עבודות/item-id-688c02eb8ab7d"
+            "old_item_page": "/עבודות/item-id-688c02eb8ab7d",
+            "alt": "אשה בז'קט לבן יושבת בחוץ באירוע עם מטריה ואנשים ברקע"
           },
           {
             "type": "image",
@@ -344,73 +353,85 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004895881.webp",
-            "old_item_page": "/עבודות/item-id-688c004e5165d"
+            "old_item_page": "/עבודות/item-id-688c004e5165d",
+            "alt": "פורטרט חיצוני של אשה צעירה מחייכת עם תג כנס, ברקע מטושטש בצבעי כחול"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d98a174.webp",
-            "old_item_page": "/עבודות/item-id-688c01daea16f"
+            "old_item_page": "/עבודות/item-id-688c01daea16f",
+            "alt": "פורטרט של אשה צעירה מחייכת בחולצה לבנה על רקע כחול"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c0047528ff.webp",
-            "old_item_page": "/עבודות/item-id-688c004bcecc1"
+            "old_item_page": "/עבודות/item-id-688c004bcecc1",
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה ליד שולחן ודגל ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c022896304.webp",
-            "old_item_page": "/עבודות/item-id-688c022c88d01"
+            "old_item_page": "/עבודות/item-id-688c022c88d01",
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה וכיפה, יושב ליד שולחן עם דגל ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c02128927c.webp",
-            "old_item_page": "/עבודות/item-id-688c02144b2b0"
+            "old_item_page": "/עבודות/item-id-688c02144b2b0",
+            "alt": "פורטרט עסקי של גבר עם משקפיים וזקן בחליפה כחולה ליד שולחן ודגל ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d96376f.webp",
-            "old_item_page": "/עבודות/item-id-688c01da9d0bf"
+            "old_item_page": "/עבודות/item-id-688c01da9d0bf",
+            "alt": "גבר עם זקן ותג כנס מסדר את הז'קט על רקע דגל ישראל גדול"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c0047077b4.webp",
-            "old_item_page": "/עבודות/item-id-688c0049c416e"
+            "old_item_page": "/עבודות/item-id-688c0049c416e",
+            "alt": "אשה בחליפה שחורה יושבת על במה בפאנל של מועצה אמריקאית-ישראלית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bc80a6d.webp",
-            "old_item_page": "/עבודות/item-id-688b84c122054"
+            "old_item_page": "/עבודות/item-id-688b84c122054",
+            "alt": "ישיבה סביב שולחן עגול בחדר עם דגלים וחלונות"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7ebc4.webp",
-            "old_item_page": "/עבודות/item-id-688bed63443d6"
+            "old_item_page": "/עבודות/item-id-688bed63443d6",
+            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה, ברקע שלט בעברית ובאמהרית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9ab14.webp",
-            "old_item_page": "/עבודות/item-id-688bed6384b72"
+            "old_item_page": "/עבודות/item-id-688bed6384b72",
+            "alt": "אדם מניח זר פרחים בטקס רשמי, ברקע חיילים ומשתתפים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9d9ea.webp",
-            "old_item_page": "/עבודות/item-id-688bed622d1db"
+            "old_item_page": "/עבודות/item-id-688bed622d1db",
+            "alt": "קהל רב בטקס ממלכתי תחת כיפת שמיים, אנשים עומדים בצורה חגיגית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7cf9c.webp",
-            "old_item_page": "/עבודות/item-id-688bed61e5102"
+            "old_item_page": "/עבודות/item-id-688bed61e5102",
+            "alt": "אנשים עומדים בטקס זיכרון ליד כלי הדלקת אש בצורת מגן דוד"
           },
           {
             "type": "image",
@@ -434,43 +455,50 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004291d24.webp",
-            "old_item_page": "/עבודות/item-id-688c004402d03"
+            "old_item_page": "/עבודות/item-id-688c004402d03",
+            "alt": "אשה במעיל אדום צועדת על המסלול בשדה תעופה, מטוס ברקע"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004893227.webp",
-            "old_item_page": "/עבודות/item-id-688c004c90a8e"
+            "old_item_page": "/עבודות/item-id-688c004c90a8e",
+            "alt": "אשה בכובע וחולצה לבנה עם תיק חום צועדת ליד מטוס אל על"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63cffca.webp",
-            "old_item_page": "/עבודות/item-id-688bed651bcd1"
+            "old_item_page": "/עבודות/item-id-688bed651bcd1",
+            "alt": "שתי דמויות עם דגלים קטנים ליד מנוע מטוס בנמל תעופה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6403107.webp",
-            "old_item_page": "/עבודות/item-id-688bed651440f"
+            "old_item_page": "/עבודות/item-id-688bed651440f",
+            "alt": "סלפי של קבוצת אנשים עם דגלי ישראל ליד מטוס"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b1e1676.webp",
-            "old_item_page": "/עבודות/item-id-688b84b66fde1"
+            "old_item_page": "/עבודות/item-id-688b84b66fde1",
+            "alt": "עולים חדשים יורדים בגרם מדרגות ממטוס אל על, משפחות עם ילדים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63f1faa.webp",
-            "old_item_page": "/עבודות/item-id-688bed651e738"
+            "old_item_page": "/עבודות/item-id-688bed651e738",
+            "alt": "אשה מחייכת עם דגל ישראל על מדרגות מטוס אל על, עולים יורדים מאחוריה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d9b0647.webp",
-            "old_item_page": "/עבודות/item-id-688c01dbb41d6"
+            "old_item_page": "/עבודות/item-id-688c01dbb41d6",
+            "alt": "אדם כורע ברך ומנשק את האדמה בנחיתה בישראל, אנשים עם דגלים סביבו"
           },
           {
             "type": "image",
@@ -494,427 +522,498 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b19a59f.webp",
-            "old_item_page": "/עבודות/item-id-688b84b62d622"
+            "old_item_page": "/עבודות/item-id-688b84b62d622",
+            "alt": "שתי נשים מקיימות שיחה באולם עם דגלי ישראל וסמל המדינה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83951fc93.webp",
-            "old_item_page": "/עבודות/item-id-688b8395ef0ba"
+            "old_item_page": "/עבודות/item-id-688b8395ef0ba",
+            "alt": "פאנל נשים באולם הרצאות, מסך עם כותרת על נושא החטופים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393f1d69.webp",
-            "old_item_page": "/עבודות/item-id-688b8395138ad"
+            "old_item_page": "/עבודות/item-id-688b8395138ad",
+            "alt": "מצעד ברחוב בניו יורק, משתתפים עם דגלי ישראל וסרטים כחולים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83938f222.webp",
-            "old_item_page": "/עבודות/item-id-688b839487b85"
+            "old_item_page": "/עבודות/item-id-688b839487b85",
+            "alt": "קהל במצעד חגיגי ברחוב בניו יורק עם דגלי ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393f1e0a.webp",
-            "old_item_page": "/עבודות/item-id-688b83952af1b"
+            "old_item_page": "/עבודות/item-id-688b83952af1b",
+            "alt": "נואמת על במה בכנס חוץ עם מסך צבעוני וקהל יושב"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393eb332.webp",
-            "old_item_page": "/עבודות/item-id-688b8394d319e"
+            "old_item_page": "/עבודות/item-id-688b8394d319e",
+            "alt": "שלושה אנשים מצטלמים עם גביע וכדורסל באירוע ספורט"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf53d94.webp",
-            "old_item_page": "/עבודות/item-id-688b84c17a2d2"
+            "old_item_page": "/עבודות/item-id-688b84c17a2d2",
+            "alt": "גזירת סרט חגיגית במסדרון עם קבוצת אנשים ואדם בכיסא גלגלים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393cfd72.webp",
-            "old_item_page": "/עבודות/item-id-688b8394be1be"
+            "old_item_page": "/עבודות/item-id-688b8394be1be",
+            "alt": "שולחן ראשי בכנס על חינוך בריאותי עם זר פרחים וצוות מרצים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83955f332.webp",
-            "old_item_page": "/עבודות/item-id-688b839628070"
+            "old_item_page": "/עבודות/item-id-688b839628070",
+            "alt": "גבר מבוגר בחליפה מדבר בכנס עם שלט ועדה ודגל ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849674c71.webp",
-            "old_item_page": "/עבודות/item-id-688b84a103b41"
+            "old_item_page": "/עבודות/item-id-688b84a103b41",
+            "alt": "אשה שחורת שיער בחולצה לבנה מקשיבה בכנס עם אנשים סביבה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e6f61.webp",
-            "old_item_page": "/עבודות/item-id-688b849ea06a7"
+            "old_item_page": "/עבודות/item-id-688b849ea06a7",
+            "alt": "גבר בחליפה מדבר בכנס ממול דוכנים של רשות הכנסת הלאומית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849620d21.webp",
-            "old_item_page": "/עבודות/item-id-688b84a00997c"
+            "old_item_page": "/עבודות/item-id-688b84a00997c",
+            "alt": "גבר בחליפה וחולצה כחולה יושב בקהל בכנס"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a0bee36.webp",
-            "old_item_page": "/עבודות/item-id-688b84aa1833a"
+            "old_item_page": "/עבודות/item-id-688b84aa1833a",
+            "alt": "ישיבת ועדה בחדר ישיבות מעוגל עם דגלי ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393cb804.webp",
-            "old_item_page": "/עבודות/item-id-688b8394ab2ec"
+            "old_item_page": "/עבודות/item-id-688b8394ab2ec",
+            "alt": "אשה במעיל לבן ומשקפיים עומדת במסדרון ליד שלטי ועדות"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8394d279a.webp",
-            "old_item_page": "/עבודות/item-id-688b8395d7520"
+            "old_item_page": "/עבודות/item-id-688b8395d7520",
+            "alt": "אשה במעיל צועדת במסדרון רחב עם קירות אבן"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed630d3bc.webp",
-            "old_item_page": "/עבודות/item-id-688bed65a23ea"
+            "old_item_page": "/עבודות/item-id-688bed65a23ea",
+            "alt": "אשה בחליפה כחולה מחזיקה מסמך ופוסעת ליד דגלי ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed629928e.webp",
-            "old_item_page": "/עבודות/item-id-688bed63cd8e4"
+            "old_item_page": "/עבודות/item-id-688bed63cd8e4",
+            "alt": "אשה בחליפה כחולה נואמת מאחורי דוכן באירוע לציון יום האשה הבינלאומי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed62aba0f.webp",
-            "old_item_page": "/עבודות/item-id-688bed6401bab"
+            "old_item_page": "/עבודות/item-id-688bed6401bab",
+            "alt": "פורטרט של אשה בחליפה כחולה על רקע עץ ודגל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed62663a5.webp",
-            "old_item_page": "/עבודות/item-id-688bed639addc"
+            "old_item_page": "/עבודות/item-id-688bed639addc",
+            "alt": "זמרת שחורת שיער שרה לתוך מיקרופון באירוע בהשתתפות תמונות חטופים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f96d0a.webp",
-            "old_item_page": "/עבודות/item-id-688bed635a236"
+            "old_item_page": "/עבודות/item-id-688bed635a236",
+            "alt": "זמרת עם מיקרופון באירוע לציון יום האשה, תמונות חטופים ברקע"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6124ae6.webp",
-            "old_item_page": "/עבודות/item-id-688bed628cb33"
+            "old_item_page": "/עבודות/item-id-688bed628cb33",
+            "alt": "זמרת שרה בהתלהבות עם מיקרופון, דגלי ישראל מאחוריה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9e8b3.webp",
-            "old_item_page": "/עבודות/item-id-688bed623db00"
+            "old_item_page": "/עבודות/item-id-688bed623db00",
+            "alt": "שיחה בכנס מדיני בין שני אנשים על במה אדומה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7bc62.webp",
-            "old_item_page": "/עבודות/item-id-688bed60aafb6"
+            "old_item_page": "/עבודות/item-id-688bed60aafb6",
+            "alt": "במה גדולה בכנס בינלאומי עם מסכי וידאו וקהל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5fa2794.webp",
-            "old_item_page": "/עבודות/item-id-688bed638b362"
+            "old_item_page": "/עבודות/item-id-688bed638b362",
+            "alt": "גבר בחליפה מדבר למיקרופון בכנס עם רקע אדום"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839652e3e.webp",
-            "old_item_page": "/עבודות/item-id-688b83969d8ff"
+            "old_item_page": "/עבודות/item-id-688b83969d8ff",
+            "alt": "קבוצה של אנשים בחליפות עומדת ליד דוכן ועדת הבחירות המרכזית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63be0ff.webp",
-            "old_item_page": "/עבודות/item-id-688bed65134da"
+            "old_item_page": "/עבודות/item-id-688bed65134da",
+            "alt": "שתי נשים בחליפות מדברות לתקשורת באירוע מול מיקרופונים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63c688b.webp",
-            "old_item_page": "/עבודות/item-id-688bed651a249"
+            "old_item_page": "/עבודות/item-id-688bed651a249",
+            "alt": "שלושה אנשים בחליפות מצטלמים ליד דוכן ועדת הבחירות המרכזית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa9eff4.webp",
-            "old_item_page": "/עבודות/item-id-688b84b1c2908"
+            "old_item_page": "/עבודות/item-id-688b84b1c2908",
+            "alt": "שלט כנס על גנטיקה ותכנון משפחה בחברה הערבית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab7f0c9.webp",
-            "old_item_page": "/עבודות/item-id-688b84b159ebf"
+            "old_item_page": "/עבודות/item-id-688b84b159ebf",
+            "alt": "אשה עם תג כנס מחזיקה דפים בלובי כנס ובו קהל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393a7e60.webp",
-            "old_item_page": "/עבודות/item-id-688b839499705"
+            "old_item_page": "/עבודות/item-id-688b839499705",
+            "alt": "אשה בחולצה צהובה מדברת בכנס עם מיקרופון"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839551357.webp",
-            "old_item_page": "/עבודות/item-id-688b83960bb19"
+            "old_item_page": "/עבודות/item-id-688b83960bb19",
+            "alt": "בכירים בצבא ובמשטרה עומדים בטקס חיצוני"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839541bdc.webp",
-            "old_item_page": "/עבודות/item-id-688b8395f32da"
+            "old_item_page": "/עבודות/item-id-688b8395f32da",
+            "alt": "חיילת במדים ובכומתה עם אוזניית מיקרופון בטקס צבאי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839567853.webp",
-            "old_item_page": "/עבודות/item-id-688b839638527"
+            "old_item_page": "/עבודות/item-id-688b839638527",
+            "alt": "פורטרט של גבר מבוגר במשקפי שמש בחליפה בטקס"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849661127.webp",
-            "old_item_page": "/עבודות/item-id-688b84a022b08"
+            "old_item_page": "/עבודות/item-id-688b84a022b08",
+            "alt": "תערוכת מידע על מדינות בכנס מסחר חוץ, שלטים צבעוניים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e5896.webp",
-            "old_item_page": "/עבודות/item-id-688b849fe854a"
+            "old_item_page": "/עבודות/item-id-688b849fe854a",
+            "alt": "קבוצת אנשים משוחחת בכנס עסקי לצד דגל טורקיה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab38176.webp",
-            "old_item_page": "/עבודות/item-id-688b84af98a78"
+            "old_item_page": "/עבודות/item-id-688b84af98a78",
+            "alt": "אולם כנס עם שולחנות עגולים ואנשים יושבים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ba4b89c.webp",
-            "old_item_page": "/עבודות/item-id-688b84becec33"
+            "old_item_page": "/עבודות/item-id-688b84becec33",
+            "alt": "אנשים בחליפות צועדים על רצפה מוארת בצבעים באירוע"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a28f2ce.webp",
-            "old_item_page": "/עבודות/item-id-688b84aa75e4a"
+            "old_item_page": "/עבודות/item-id-688b84aa75e4a",
+            "alt": "קהל באולם אירוע חגיגי עם שלט ברוכים הבאים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e5889.webp",
-            "old_item_page": "/עבודות/item-id-688b849fe1a0b"
+            "old_item_page": "/עבודות/item-id-688b849fe1a0b",
+            "alt": "אדם מצטלם עם אשה בלבן-כחול ליד נציג האו\"ם"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2e740d.webp",
-            "old_item_page": "/עבודות/item-id-688b84a9d4645"
+            "old_item_page": "/עבודות/item-id-688b84a9d4645",
+            "alt": "שני גברים לוחצים ידיים ליד דגלי גרמניה וישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84be7ff89.webp",
-            "old_item_page": "/עבודות/item-id-688b84c2cec4d"
+            "old_item_page": "/עבודות/item-id-688b84c2cec4d",
+            "alt": "אנשים בחליפות עומדים בשורה בבניין מדינה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a296516.webp",
-            "old_item_page": "/עבודות/item-id-688b84a8dae60"
+            "old_item_page": "/עבודות/item-id-688b84a8dae60",
+            "alt": "משלחת בחליפות עומדת בגן מול דגלים בינלאומיים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a0672d0.webp",
-            "old_item_page": "/עבודות/item-id-688b84a7e7bc3"
+            "old_item_page": "/עבודות/item-id-688b84a7e7bc3",
+            "alt": "אדם בחליפה עומד לבד בגן מול תורן דגלים בינלאומיים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a28b751.webp",
-            "old_item_page": "/עבודות/item-id-688b84ab0390d"
+            "old_item_page": "/עבודות/item-id-688b84ab0390d",
+            "alt": "שני אנשים צועדים בשביל גינה מטופח ליד בניין ממשלתי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2c092a.webp",
-            "old_item_page": "/עבודות/item-id-688b84ac4bf34"
+            "old_item_page": "/עבודות/item-id-688b84ac4bf34",
+            "alt": "משלחת רשמית צועדת על שטיח אדום בבניין הכנסת"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a982d97.webp",
-            "old_item_page": "/עבודות/item-id-688b84b008553"
+            "old_item_page": "/עבודות/item-id-688b84b008553",
+            "alt": "לחיצת יד וחתימה בספר אורחים מול דגלי ישראל וארגנטינה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849666c39.webp",
-            "old_item_page": "/עבודות/item-id-688b84a290d01"
+            "old_item_page": "/עבודות/item-id-688b84a290d01",
+            "alt": "מליאת הכנסת בישיבה חגיגית, חברי הכנסת עומדים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b5e4985.webp",
-            "old_item_page": "/עבודות/item-id-688b84bb373b6"
+            "old_item_page": "/עבודות/item-id-688b84bb373b6",
+            "alt": "שתי צעירות עם חולצות מתנדבים בבסיס אירוע לחיילים בודדים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63c9da2.webp",
-            "old_item_page": "/עבודות/item-id-688bed6527ba5"
+            "old_item_page": "/עבודות/item-id-688bed6527ba5",
+            "alt": "קבוצת מתנדבים עם חולצות זהות מצטלמת עם אורח רשמי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b1afe26.webp",
-            "old_item_page": "/עבודות/item-id-688b84b58d94f"
+            "old_item_page": "/עבודות/item-id-688b84b58d94f",
+            "alt": "משפחה ומתנדבת מצטלמות ליד שלט של עמותת חיילים בודדים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a344086.webp",
-            "old_item_page": "/עבודות/item-id-688b84aa9f0a8"
+            "old_item_page": "/עבודות/item-id-688b84aa9f0a8",
+            "alt": "אם ובתה מצטלמות עם מתנדבת ליד שלט האירוע"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849616151.webp",
-            "old_item_page": "/עבודות/item-id-688b84a0c2624"
+            "old_item_page": "/עבודות/item-id-688b84a0c2624",
+            "alt": "אולם ענק מלא קהל באירוע הוקרה לחיילים בודדים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa7a4f7.webp",
-            "old_item_page": "/עבודות/item-id-688b84afee0ae"
+            "old_item_page": "/עבודות/item-id-688b84afee0ae",
+            "alt": "במה בכנס ארגונים בינלאומיים עם דגלי מדינות ושני מנחים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab155e0.webp",
-            "old_item_page": "/עבודות/item-id-688b84b1c47d1"
+            "old_item_page": "/עבודות/item-id-688b84b1c47d1",
+            "alt": "קהל בכנס פוליטי באולם, במה עם דגלי ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f76b61.webp",
-            "old_item_page": "/עבודות/item-id-688bed635aa2e"
+            "old_item_page": "/עבודות/item-id-688bed635aa2e",
+            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה על רקע שלט בעברית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aac4565.webp",
-            "old_item_page": "/עבודות/item-id-688b84b123ca5"
+            "old_item_page": "/עבודות/item-id-688b84b123ca5",
+            "alt": "במה גדולה בכנס בהשתתפות קהל רב ושני נואמים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa53da3.webp",
-            "old_item_page": "/עבודות/item-id-688b84b0891e7"
+            "old_item_page": "/עבודות/item-id-688b84b0891e7",
+            "alt": "אולם כנס מלא בקהל מעל במה כחולה עם נואמים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bb0da4b.webp",
-            "old_item_page": "/עבודות/item-id-688b84beca816"
+            "old_item_page": "/עבודות/item-id-688b84beca816",
+            "alt": "מוזיקאית וזמרים מובילים שירה משותפת על במה, מילות שיר על מסך"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b24fde9.webp",
-            "old_item_page": "/עבודות/item-id-688b84b6c4b61"
+            "old_item_page": "/עבודות/item-id-688b84b6c4b61",
+            "alt": "אנשים שרים ומנופפים על במה בסיום כנס"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b4cf3b3.webp",
-            "old_item_page": "/עבודות/item-id-688b84ba8ead6"
+            "old_item_page": "/עבודות/item-id-688b84ba8ead6",
+            "alt": "אדם עם כובע מחזיק דגלי ישראל קטנים בבית קברות צבאי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b10b4cc.webp",
-            "old_item_page": "/עבודות/item-id-688b84b68898c"
+            "old_item_page": "/עבודות/item-id-688b84b68898c",
+            "alt": "אדם עומד בין קברים מעוטרים בפרחים ודגלים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a898bb8.webp",
-            "old_item_page": "/עבודות/item-id-688b84b12b97f"
+            "old_item_page": "/עבודות/item-id-688b84b12b97f",
+            "alt": "גבר ואשה מחזיקים תעודה מוסגרת ליד דגל ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b245320.webp",
-            "old_item_page": "/עבודות/item-id-688b84b56f232"
+            "old_item_page": "/עבודות/item-id-688b84b56f232",
+            "alt": "מסיבת עיתונאים של בכירים מאחורי שולחן עם דגלי ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b7d1943.webp",
-            "old_item_page": "/עבודות/item-id-688b84ba7d0f5"
+            "old_item_page": "/עבודות/item-id-688b84ba7d0f5",
+            "alt": "שתי דמויות מצטלמות על שטיח אדום מול קיר חסויות עולים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84965d500.webp",
-            "old_item_page": "/עבודות/item-id-688b84a18d3c8"
+            "old_item_page": "/עבודות/item-id-688b84a18d3c8",
+            "alt": "עולים מאתיופיה לבושים לבן יורדים מהמטוס, שלט צור ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf4f5c9.webp",
-            "old_item_page": "/עבודות/item-id-688b84c143c63"
+            "old_item_page": "/עבודות/item-id-688b84c143c63",
+            "alt": "עולים מצטלמים בירידה ממטוס עם שרשרת קבלת פנים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bb06163.webp",
-            "old_item_page": "/עבודות/item-id-688b84bee11a0"
+            "old_item_page": "/עבודות/item-id-688b84bee11a0",
+            "alt": "קהל עולים מנופף בדגלי ישראל ליד מטוס אל על"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b7b2d47.webp",
-            "old_item_page": "/עבודות/item-id-688b84bcad685"
+            "old_item_page": "/עבודות/item-id-688b84bcad685",
+            "alt": "אשה עולה עם צעיף צבעוני ומנופפת בשמחה על רקע מטוס אל על"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2889bb.webp",
-            "old_item_page": "/עבודות/item-id-688b84a9b40b6"
+            "old_item_page": "/עבודות/item-id-688b84a9b40b6",
+            "alt": "קהל מתפלל בלבוש לבן עם ספרים ביד"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b60cf66.webp",
-            "old_item_page": "/עבודות/item-id-688b84bdd40f8"
+            "old_item_page": "/עבודות/item-id-688b84bdd40f8",
+            "alt": "אדם תוקע בשופר ליד קיר האבן בירושלים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf26b2c.webp",
-            "old_item_page": "/עבודות/item-id-688b84c1cdc8c"
+            "old_item_page": "/עבודות/item-id-688b84c1cdc8c",
+            "alt": "בניין עם שלט ברוכים הבאים לילדי בר ובת מצווה"
           }
         ]
       },
@@ -980,277 +1079,323 @@
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b814b71b6.webp",
-            "old_item_page": "/עבודות/item-id-6967b816e50d8"
+            "old_item_page": "/עבודות/item-id-6967b816e50d8",
+            "alt": "עיצוב גרפי: פוסט למודעות לסרטן השד עם סרט ורוד"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b7f621b9d.webp",
-            "old_item_page": "/עבודות/item-id-6967b7f8e187e"
+            "old_item_page": "/עבודות/item-id-6967b7f8e187e",
+            "alt": "אינפוגרפיקה: עלייה חדה ברצח נשים בישראל לפי שנים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b78f66ede.webp",
-            "old_item_page": "/עבודות/item-id-6967b79296ed4"
+            "old_item_page": "/עבודות/item-id-6967b79296ed4",
+            "alt": "עיצוב גרפי: פלייר למרכז טיפול ותמיכה בשפה האמהרית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b78f64d86.webp",
-            "old_item_page": "/עבודות/item-id-6967b79275c26"
+            "old_item_page": "/עבודות/item-id-6967b79275c26",
+            "alt": "עיצוב גרפי: פלייר מרכז לפסיכותרפיה מותאמת תרבות"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1eadb9f.webp",
-            "old_item_page": "/עבודות/item-id-68b5ff208136e"
+            "old_item_page": "/עבודות/item-id-68b5ff208136e",
+            "alt": "עיצוב גרפי: פלייר מטפלת רגשית עם רשימת טיפולים וכיסאות רכים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1ed021c.webp",
-            "old_item_page": "/עבודות/item-id-68b5ff22656c7"
+            "old_item_page": "/עבודות/item-id-68b5ff22656c7",
+            "alt": "עיצוב גרפי: באנר רחב למטפלת רגשית עם כיסאות ווילון"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1e5f864.webp",
-            "old_item_page": "/עבודות/item-id-68b5ff1f8cdb4"
+            "old_item_page": "/עבודות/item-id-68b5ff1f8cdb4",
+            "alt": "עיצוב לוגו של מטפלת רגשית עם סמל ראש ולב"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a564fd.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83b8f658"
+            "old_item_page": "/עבודות/item-id-68b5f83b8f658",
+            "alt": "עיצוב גרפי: באנר קבלת פנים ברוכים הבאים לישראל – מבצע צור ישראל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a4e4ba.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83ba8e5a"
+            "old_item_page": "/עבודות/item-id-68b5f83ba8e5a",
+            "alt": "עיצוב גרפי: באנר ברוכים הבאים לבני המנשה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe793d90e.webp",
-            "old_item_page": "/עבודות/item-id-68b5fe7c7deb2"
+            "old_item_page": "/עבודות/item-id-68b5fe7c7deb2",
+            "alt": "עיצוב גרפי: כרטיס ברכה לראש השנה עם רימונים ודבש"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe3b7417d.webp",
-            "old_item_page": "/עבודות/item-id-68b5fe3d37627"
+            "old_item_page": "/עבודות/item-id-68b5fe3d37627",
+            "alt": "עיצוב גרפי: מודעת מרכז מסחרי בבניין עזריאלי עם דגם בנייני תל אביב"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fd0c6699d.webp",
-            "old_item_page": "/עבודות/item-id-68b5fd0dc9ced"
+            "old_item_page": "/עבודות/item-id-68b5fd0dc9ced",
+            "alt": "עיצוב גרפי: פוסט יום הזיכרון הבינלאומי לשואה, #WeRemember"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a3dfa.webp",
-            "old_item_page": "/עבודות/item-id-68b5fcd92353b"
+            "old_item_page": "/עבודות/item-id-68b5fcd92353b",
+            "alt": "עיצוב גרפי: ברכת גמר חתימה טובה עם שופר וטלית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85674ef4.webp",
-            "old_item_page": "/עבודות/item-id-6967b858a15d0"
+            "old_item_page": "/עבודות/item-id-6967b858a15d0",
+            "alt": "עיצוב גרפי: הזמנה לאירוע יום האשה הבינלאומי בכנסת"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a5413.webp",
-            "old_item_page": "/עבודות/item-id-68b5fcd8ebe6f"
+            "old_item_page": "/עבודות/item-id-68b5fcd8ebe6f",
+            "alt": "עיצוב גרפי: ברכת שבת שלום עם אשה מחזיקה דגלים קטנים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe793696a.webp",
-            "old_item_page": "/עבודות/item-id-68b5fe7b8c9d2"
+            "old_item_page": "/עבודות/item-id-68b5fe7b8c9d2",
+            "alt": "עיצוב גרפי: ברכת יום ירושלים עם חומות העיר העתיקה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a50db.webp",
-            "old_item_page": "/עבודות/item-id-68b5fcd93763f"
+            "old_item_page": "/עבודות/item-id-68b5fcd93763f",
+            "alt": "עיצוב גרפי: ברכת פורים שמח עם מסיכה וקונפטי"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a75a07.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83d4f61e"
+            "old_item_page": "/עבודות/item-id-68b5f83d4f61e",
+            "alt": "עיצוב גרפי: לוגו וברכה ל-30 שנה למבצע שלמה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a5168c.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83bd13d2"
+            "old_item_page": "/עבודות/item-id-68b5f83bd13d2",
+            "alt": "עיצוב גרפי: פוסט קמפיין בחירות עם דגלי ישראל וארצות הברית"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a791d8.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83d38dae"
+            "old_item_page": "/עבודות/item-id-68b5f83d38dae",
+            "alt": "עיצוב גרפי: פוסט ביקור בארצות הברית על רקע דגלים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a73727.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83d243c5"
+            "old_item_page": "/עבודות/item-id-68b5f83d243c5",
+            "alt": "עיצוב גרפי: ברכה לשנת לימודים מוצלחת עם עפרונות ומחדד"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a55609.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83cd6d4e"
+            "old_item_page": "/עבודות/item-id-68b5f83cd6d4e",
+            "alt": "עיצוב גרפי: באנר מבצע צור ישראל לצד סמל מזל טוב"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a73814.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83cb55c1"
+            "old_item_page": "/עבודות/item-id-68b5f83cb55c1",
+            "alt": "עיצוב גרפי: ברכת יום העצמאות 74 עם פילם ותמונות עולים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85677267.webp",
-            "old_item_page": "/עבודות/item-id-6967b85803e55"
+            "old_item_page": "/עבודות/item-id-6967b85803e55",
+            "alt": "עיצוב גרפי: מבצע ערבות ישראל לחילוץ יהודי אוקראינה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a56ee2.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83bd81ee"
+            "old_item_page": "/עבודות/item-id-68b5f83bd81ee",
+            "alt": "עיצוב גרפי: באנר יום הזיכרון ליהודי אתיופיה עם להבה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a7d49c.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83d632cf"
+            "old_item_page": "/עבודות/item-id-68b5f83d632cf",
+            "alt": "עיצוב גרפי: פוסט יום הזיכרון ליהודי אתיופיה, אשה בתפילה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf143721.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf237023"
+            "old_item_page": "/עבודות/item-id-68b5fbf237023",
+            "alt": "עיצוב גרפי: הזמנת חתונה דו-לשונית עם עלים ופרחים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf12a643.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2089e1"
+            "old_item_page": "/עבודות/item-id-68b5fbf2089e1",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק לעסק, מוקאפ"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf24b069.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf335a05"
+            "old_item_page": "/עבודות/item-id-68b5fbf335a05",
+            "alt": "עיצוב גרפי: סט לוגואים בצורת פקקי בקבוק לבירה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf128897.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf22bea6"
+            "old_item_page": "/עבודות/item-id-68b5fbf22bea6",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג מוזיקה, מוקאפ"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf129822.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf20186d"
+            "old_item_page": "/עבודות/item-id-68b5fbf20186d",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של עמותה, מוקאפ"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf128b9e.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf20f737"
+            "old_item_page": "/עבודות/item-id-68b5fbf20f737",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג חיות מחמד, מוקאפ"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf275969.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3669b4"
+            "old_item_page": "/עבודות/item-id-68b5fbf3669b4",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מסעדה, מוקאפ"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf2a3d6b.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3b0b67"
+            "old_item_page": "/עבודות/item-id-68b5fbf3b0b67",
+            "alt": "עיצוב גרפי: מיתוג עסקי – כרטיסי ביקור, מעטפות ונייר מכתבים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf2f1699.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3db3c2"
+            "old_item_page": "/עבודות/item-id-68b5fbf3db3c2",
+            "alt": "עיצוב גרפי: לוגו למועדון מוזיקה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14e9d2.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf320682"
+            "old_item_page": "/עבודות/item-id-68b5fbf320682",
+            "alt": "עיצוב גרפי: מודעת עצרת זיכרון ליוסף מחבק את אחיו"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf151294.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2cca33"
+            "old_item_page": "/עבודות/item-id-68b5fbf2cca33",
+            "alt": "עיצוב גרפי: עיתון חומר מחאה עם כותרות ודמויות"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf27d721.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3e11c5"
+            "old_item_page": "/עבודות/item-id-68b5fbf3e11c5",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דמות ושלט"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf278ce5.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf422566"
+            "old_item_page": "/עבודות/item-id-68b5fbf422566",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם סמל כרזה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14e6b0.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2cd19d"
+            "old_item_page": "/עבודות/item-id-68b5fbf2cd19d",
+            "alt": "עיצוב גרפי: שני רולאפים לאירוע זיכרון עם תמונות ונרות"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf1483ce.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2a8cad"
+            "old_item_page": "/עבודות/item-id-68b5fbf2a8cad",
+            "alt": "עיצוב גרפי: מודעת הזמנה לאירוע זיכרון עם שמות הנופלים"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf336a73.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf495364"
+            "old_item_page": "/עבודות/item-id-68b5fbf495364",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דיוקן גבר"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf34a24a.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf4bb44f"
+            "old_item_page": "/עבודות/item-id-68b5fbf4bb44f",
+            "alt": "עיצוב גרפי: עמוד כפול בעיתון מחאה"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf32293f.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf444d80"
+            "old_item_page": "/עבודות/item-id-68b5fbf444d80",
+            "alt": "עיצוב גרפי: איור דיוקן עם סרט אבל"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14a906.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2bc8dd"
+            "old_item_page": "/עבודות/item-id-68b5fbf2bc8dd",
+            "alt": "עיצוב גרפי: מודעת קמפיין גיוס להצלה, פלייר כחול"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85678b6c.webp",
-            "old_item_page": "/עבודות/item-id-6967b8579227f"
+            "old_item_page": "/עבודות/item-id-6967b8579227f",
+            "alt": "עיצוב גרפי: מיתוג וחבילת אתר, לוגו, אתר ורשתות חברתיות"
           }
         ]
       }
