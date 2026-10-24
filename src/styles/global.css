@@ -167,11 +167,6 @@ h4 {
   outline: 3px solid var(--brand);
   outline-offset: 2px;
 }
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
 
 /* ═══════════════════════════════════════
    Mobile UX / Touch improvements
