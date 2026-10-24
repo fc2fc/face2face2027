@@ -1,192 +1,72 @@
 ---
-// ParallaxGallery3D.astro – גלריית 3D parallax, רק צילום סטילס (ללא עיצוב גרפי)
+// "הסיפורים שצילמנו" – גלריית parallax תלת-ממדית במסך מלא, צילום סטילס בלבד
 import { site, thumb } from '../lib/content';
-import type { SiteContent } from '../data/site-content.json';
 
-// שליפת כל פריטי הפורטפוליו, סינון לצילום סטילס בלבד
-const allPages = (site as any).__pages || [];
-// ניגש ל-site-content ישירות
-const rawContent = await import('../data/site-content.json');
-const pages = (rawContent as any).default?.pages || (rawContent as any).pages || [];
-const portfolio = pages.filter((p: any) => p.type === 'portfolio-item');
-
-const stillsImages = portfolio
-  .filter((p: any) => p.seo?.keywords !== 'עיצוב גרפי')
-  .map((p: any) => p.item?.images?.[0])
-  .filter(Boolean)
-  .slice(0, 20);
-
-// חלק ל-4 עמודות
-const col1 = stillsImages.filter((_: any, i: number) => i % 4 === 0);
-const col2 = stillsImages.filter((_: any, i: number) => i % 4 === 1);
-const col3 = stillsImages.filter((_: any, i: number) => i % 4 === 2);
-const col4 = stillsImages.filter((_: any, i: number) => i % 4 === 3);
-
+const stillsCat = (site.portfolio as any[]).find((c) => c.category === 'צילום סטילס');
+const stills = ((stillsCat?.items || []) as any[]).filter((i) => i.src).slice(0, 24);
+const cols = [0, 1, 2, 3].map((n) => stills.filter((_, i) => i % 4 === n));
 const double = (arr: any[]) => [...arr, ...arr];
 ---
 
-<section class="parallax3d" id="parallax-gallery" aria-label="גלריית עבודות תלת-מימדית">
-  <div class="parallax3d__sticky">
-    <div class="parallax3d__banner" id="pBanner">
-      <div class="parallax3d__vignette"></div>
+<section class="p3d" id="parallax-gallery" aria-label="גלריית צילום סטילס">
+  <div class="p3d__sticky">
+    <div class="p3d__grid" id="pGrid" aria-hidden="true">
+      {cols.map((col, n) => (
+        <div class="p3d__col" id={`col${n + 1}`}>
+          {double(col).map((img: any) => (
+            <div class="p3d__card">
+              <img src={thumb(img.src)} alt="" width="320" height="400" loading="lazy" decoding="async" />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+    <div class="p3d__shade" id="pShade"></div>
 
-      <div class="parallax3d__headline" id="pHeadline">
-        <span class="parallax3d__badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg> תיק עבודות</span>
-        <h2>הסיפורים<br/><em>שצילמנו</em></h2>
-        <p>מעל 4,950 פרויקטים – כל אחד עם נשמה</p>
-        <a href="/עבודות" class="parallax3d__cta">לכל העבודות ←</a>
-      </div>
-
-      <div class="parallax3d__grid" id="pGrid">
-        <div class="parallax3d__col" id="col1">
-          {double(col1).map((img: any) => (
-            <div class="parallax3d__card">
-              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
-            </div>
-          ))}
-        </div>
-        <div class="parallax3d__col" id="col2">
-          {double(col2).map((img: any) => (
-            <div class="parallax3d__card">
-              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
-            </div>
-          ))}
-        </div>
-        <div class="parallax3d__col" id="col3">
-          {double(col3).map((img: any) => (
-            <div class="parallax3d__card">
-              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
-            </div>
-          ))}
-        </div>
-        <div class="parallax3d__col" id="col4">
-          {double(col4).map((img: any) => (
-            <div class="parallax3d__card">
-              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div class="p3d__headline" id="pHeadline">
+      <span class="p3d__badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" /><circle cx="12" cy="13" r="4" /></svg>
+        צילום סטילס
+      </span>
+      <h2>הסיפורים<br /><em>שצילמנו</em></h2>
+      <p>מעל 4,950 פרויקטים – כל אחד עם נשמה</p>
+      <a href="/עבודות" class="p3d__cta">לכל העבודות</a>
     </div>
   </div>
 </section>
 
 <style>
-  .parallax3d {
+  .p3d {
     position: relative;
-    height: 300vh;
-    background: var(--dark, #141414);
+    height: 320vh;
+    background: var(--bg);
   }
-  .parallax3d__sticky {
+  .p3d__sticky {
     position: sticky;
     top: 0;
     height: 100vh;
+    height: 100svh;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    background: var(--dark);
   }
-  .parallax3d__banner {
-    position: relative;
-    width: 90vw;
-    height: 82vh;
-    border-radius: 40px;
-    border: 3px solid rgba(236,0,140,0.25);
-    background: #050308;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .parallax3d__vignette {
+  .p3d__grid {
     position: absolute;
-    inset: 0;
-    z-index: 10;
-    background:
-      radial-gradient(ellipse at center, transparent 30%, #050308 100%),
-      linear-gradient(to bottom, #050308 0%, transparent 15%, transparent 85%, #050308 100%),
-      linear-gradient(to right, #050308 0%, transparent 15%, transparent 85%, #050308 100%);
-    pointer-events: none;
-  }
-  .parallax3d__headline {
-    position: absolute;
-    z-index: 20;
-    isolation: isolate;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-    pointer-events: none;
-  }
-  /* Dark scrim keeps headline legible over any photo */
-  .parallax3d__headline::before {
-    content: '';
-    position: absolute;
-    inset: -70px -110px;
-    z-index: -1;
-    border-radius: 50%;
-    background: radial-gradient(ellipse at center, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.72) 50%, rgba(20,20,20,0) 78%);
-    pointer-events: none;
-  }
-  .parallax3d__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(20,20,20,0.85);
-    border: 1px solid rgba(236,0,140,0.6);
-    color: var(--brand-on-dark);
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 6px 16px;
-    border-radius: 100px;
-    letter-spacing: 0.05em;
-  }
-  .parallax3d__headline h2 {
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
-    font-weight: 900;
-    line-height: 1.1;
-    margin: 0;
-  }
-  .parallax3d__headline h2 em {
-    color: var(--brand-on-dark);
-    font-style: normal;
-  }
-  .parallax3d__headline p {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.92);
-    margin: 0;
-  }
-  .parallax3d__cta {
-    pointer-events: auto;
-    background: var(--brand-ink);
-    color: #fff;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background 0.2s, transform 0.2s;
-    margin-top: 8px;
-  }
-  .parallax3d__cta:hover { background: #b8006c; transform: scale(1.04); }
-  .parallax3d__grid {
-    position: absolute;
-    inset: 0;
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: flex-start;
-    width: 130%;
-    left: -15%;
+    direction: ltr;
+    width: 170%;
+    left: -35%;
     height: 200%;
     top: -50%;
     transform-style: preserve-3d;
-    transform: rotateY(-45deg) rotateX(25deg) rotateZ(15deg) translateZ(-800px);
+    transform: perspective(1000px) rotateY(-45deg) rotateX(25deg) rotateZ(15deg) translateZ(-800px);
     will-change: transform;
   }
-  .parallax3d__col {
+  .p3d__col {
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -195,94 +75,126 @@ const double = (arr: any[]) => [...arr, ...arr];
     flex-shrink: 0;
     will-change: transform;
   }
-  .parallax3d__card {
-    width: 100%;
-    height: 260px;
+  .p3d__card {
+    height: 270px;
     border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
-    background: #111;
+    background: #1a1a1a;
   }
-  .parallax3d__card:hover { transform: scale(1.02); transition: transform 0.3s; }
-  .parallax3d__card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-    transition: opacity 0.3s;
+  .p3d__card img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
+  /* Uniform darkening so the headline is always legible; fades out with the headline */
+  .p3d__shade {
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 12, 12, 0.7);
+    pointer-events: none;
   }
-  .parallax3d__card:hover img { opacity: 1; }
+  .p3d__headline {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    transition: opacity 0.9s cubic-bezier(.2,.7,.2,1), transform 0.9s cubic-bezier(.2,.7,.2,1);
+  }
+  .p3d__headline.is-in { opacity: var(--hop, 1); transform: none; }
+  .p3d__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand);
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 7px 18px;
+    border-radius: 100px;
+  }
+  .p3d__headline h2 {
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 0;
+    color: #fff;
+  }
+  .p3d__headline h2 em { color: var(--brand); font-style: normal; text-shadow: 0 0 40px rgba(0, 0, 0, 0.6); }
+  .p3d__headline p { font-size: 1.1rem; color: #fff; margin: 0; }
+  .p3d__cta {
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 100px;
+    text-decoration: none;
+    margin-top: 8px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .p3d__cta:hover { background: var(--brand-dark); transform: scale(1.05); }
   @media (max-width: 600px) {
-    .parallax3d__grid { gap: 8px; }
-    .parallax3d__card { height: 180px; }
-    .parallax3d { height: 240vh; }
+    .p3d { height: 260vh; }
+    .p3d__grid { gap: 8px; }
+    .p3d__card { height: 190px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .p3d__headline { transition: none; }
   }
 </style>
 
 <script>
-(function() {
   const section = document.getElementById('parallax-gallery');
-  const banner  = document.getElementById('pBanner');
-  const grid    = document.getElementById('pGrid');
+  const grid = document.getElementById('pGrid');
   const headline = document.getElementById('pHeadline');
-  const col1    = document.getElementById('col1');
-  const col2    = document.getElementById('col2');
-  const col3    = document.getElementById('col3');
-  const col4    = document.getElementById('col4');
-  if (!section || !banner || !grid) return;
+  const shade = document.getElementById('pShade');
+  const cols = [1, 2, 3, 4].map((n) => document.getElementById('col' + n));
+  if (section && grid && headline && shade) {
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+    const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
+    const ease = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+    const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
-  function clamp(v: number, min: number, max: number) { return Math.max(min, Math.min(max, v)); }
-  function easeInOut(t: number) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+    let cur = 0;
+    let raf = 0;
+    const target = () => {
+      const r = section.getBoundingClientRect();
+      return clamp(-r.top / Math.max(1, section.offsetHeight - innerHeight), 0, 1);
+    };
+    const apply = (p: number) => {
+      // headline stays for the first 12%, then fades; shade follows
+      const f = clamp((p - 0.12) / 0.25, 0, 1);
+      const op = 1 - f;
+      headline.style.setProperty('--hop', String(op));
+      if (headline.classList.contains('is-in')) headline.style.opacity = String(op);
+      headline.style.pointerEvents = op < 0.2 ? 'none' : 'auto';
+      shade.style.opacity = String(lerp(1, 0.05, ease(f)));
+      const e = ease(clamp(p / 0.9, 0, 1));
+      grid.style.transform = `perspective(1000px) rotateY(${lerp(-45, -8, e)}deg) rotateX(${lerp(25, 4, e)}deg) rotateZ(${lerp(15, 2, e)}deg) translateZ(${lerp(-800, 0, e)}px)`;
+      const move = [[0, -40], [-40, 10], [0, -40], [-30, 20]];
+      cols.forEach((c, i) => c && (c.style.transform = `translateY(${lerp(move[i][0], move[i][1], e)}%)`));
+    };
+    const tick = () => {
+      const t = target();
+      cur = still ? t : lerp(cur, t, 0.1);
+      apply(cur);
+      raf = Math.abs(cur - t) > 0.0005 ? requestAnimationFrame(tick) : 0;
+    };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+    addEventListener('resize', () => { if (!raf) raf = requestAnimationFrame(tick); });
+    apply(0);
 
-  let currentProgress = 0;
-  let targetProgress  = 0;
-  let rafId: number | null = null;
-
-  function getProgress() {
-    const rect = section!.getBoundingClientRect();
-    const total = section!.offsetHeight - window.innerHeight;
-    const scrolled = -rect.top;
-    return clamp(scrolled / total, 0, 1);
+    // Entrance: headline eases in once the section is on screen
+    new IntersectionObserver((es, o) => {
+      if (es.some((e) => e.isIntersecting)) { headline.classList.add('is-in'); o.disconnect(); }
+    }, { threshold: 0.05 }).observe(section);
   }
-
-  function applyStyles(p: number) {
-    const phase1 = clamp(p / 0.15, 0, 1);
-    const e1 = easeInOut(phase1);
-    banner!.style.width  = lerp(90, 100, e1) + 'vw';
-    banner!.style.height = lerp(82, 100, e1) + 'vh';
-    banner!.style.borderRadius = lerp(40, 0, e1) + 'px';
-    banner!.style.borderWidth  = lerp(3, 0, e1) + 'px';
-
-    if (headline) {
-      const op = clamp(1 - phase1 * 2, 0, 1);
-      headline.style.opacity = String(op);
-      headline.style.pointerEvents = op < 0.1 ? 'none' : 'auto';
-    }
-
-    const phase2 = clamp((p - 0.15) / 0.85, 0, 1);
-    const e2 = easeInOut(phase2);
-    grid!.style.transform = `perspective(1000px) rotateY(${lerp(-45,-8,e2)}deg) rotateX(${lerp(25,4,e2)}deg) rotateZ(${lerp(15,2,e2)}deg) translateZ(${lerp(-800,0,e2)}px)`;
-
-    if (col1) col1.style.transform = `translateY(${lerp(0,-40,e2)}%)`;
-    if (col2) col2.style.transform = `translateY(${lerp(-40,10,e2)}%)`;
-    if (col3) col3.style.transform = `translateY(${lerp(0,-40,e2)}%)`;
-    if (col4) col4.style.transform = `translateY(${lerp(-30,20,e2)}%)`;
-  }
-
-  function tick() {
-    targetProgress = getProgress();
-    currentProgress = lerp(currentProgress, targetProgress, 0.08);
-    applyStyles(currentProgress);
-    if (Math.abs(currentProgress - targetProgress) > 0.0005) {
-      rafId = requestAnimationFrame(tick);
-    } else {
-      applyStyles(targetProgress);
-      rafId = null;
-    }
-  }
-
-  window.addEventListener('scroll', () => { if (!rafId) rafId = requestAnimationFrame(tick); }, { passive: true });
-  applyStyles(0);
-})();
 </script>

@@ -7,25 +7,29 @@ interface Props {
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
 const services = site.services as { category: string; title: string; text: string; icon: string }[];
-
 const numbers = ['01', '02', '03', '04'];
+const accents = ['var(--brand)', 'var(--blue)', 'var(--yellow)', 'var(--brand)'];
 ---
 
 <section class="section section--soft" id="services">
   <div class="container">
-    <Heading class="section-title">שירותים</Heading>
+    <Heading class="section-title">מה אנחנו עושים</Heading>
     <p class="section-lead">צילום, וידאו, עיצוב ודיגיטל – הכל תחת קורת גג אחת, מותאם לשפת המותג שלכם.</p>
-    <div class="grid">
+    <div class="bento">
       {
         services.map((s, i) => (
-          <article class="card" style={`--n:${i}`}>
-            <div class="card__num">{numbers[i]}</div>
-            <div class="card__icon-wrap">
-              <span class="icon" style={`--icon: url('${s.icon}')`} aria-hidden="true" />
+          <article class={`card card--${i + 1}`} style={`--accent:${accents[i % accents.length]}`}>
+            <div class="card__glow" aria-hidden="true"></div>
+            <span class="card__num" aria-hidden="true">{numbers[i]}</span>
+            <div class="card__icon" aria-hidden="true">
+              <span class="icon" style={`--icon: url('${s.icon}')`} />
             </div>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
-            <div class="card__bar" aria-hidden="true"></div>
+            <a class="card__link" href="/עבודות">
+              לעבודות בתחום
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+            </a>
           </article>
         ))
       }
@@ -34,118 +38,131 @@ const numbers = ['01', '02', '03', '04'];
 </section>
 
 <style>
-  .grid {
+  .bento {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
   }
+  .card--1,
+  .card--4 { grid-column: span 4; }
+  .card--2,
+  .card--3 { grid-column: span 2; }
+
   .card {
-    background: #fff;
-    border-radius: var(--radius);
-    padding: 36px 28px 32px;
-    box-shadow: 0 2px 20px rgba(20,20,20,0.06);
+    --mx: 50%;
+    --my: 0%;
     position: relative;
+    isolation: isolate;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  .card.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.55s calc(var(--n) * 0.1s) ease,
-                transform 0.55s calc(var(--n) * 0.1s) ease,
-                box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 34px 30px 28px;
+    border-radius: 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    transition: transform 0.35s cubic-bezier(.2,.7,.2,1), border-color 0.3s, box-shadow 0.3s;
   }
   .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(20,20,20,0.12);
+    border-color: var(--accent);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5);
   }
+  /* Pointer-following spotlight */
+  .card__glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 26%, transparent), transparent 62%);
+  }
+  .card:hover .card__glow { opacity: 1; }
+
   .card__num {
     position: absolute;
-    top: 18px;
-    left: 22px; /* RTL: ימין */
-    font-size: 3.5rem;
+    top: 10px;
+    inset-inline-end: 22px;
+    font-family: var(--font);
     font-weight: 900;
-    color: rgba(236,0,140,0.06);
+    font-size: 4.6rem;
     line-height: 1;
+    color: rgba(255, 255, 255, 0.05);
     pointer-events: none;
-    transition: color 0.3s;
   }
-  .card:hover .card__num {
-    color: rgba(236,0,140,0.12);
-  }
-  .card__icon-wrap {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(236,0,140,0.12) 0%, rgba(236,0,140,0.06) 100%);
+  .card__icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
     display: grid;
     place-items: center;
-    margin-bottom: 20px;
-    transition: background 0.3s;
-  }
-  .card:hover .card__icon-wrap {
-    background: linear-gradient(135deg, rgba(236,0,140,0.22) 0%, rgba(236,0,140,0.1) 100%);
+    margin-bottom: 14px;
+    background: color-mix(in srgb, var(--accent) 16%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   }
   .icon {
     display: block;
     width: 32px;
     height: 32px;
-    background: var(--brand);
+    background: var(--accent);
     -webkit-mask: var(--icon) center / contain no-repeat;
     mask: var(--icon) center / contain no-repeat;
-    transition: transform 0.3s;
+    transition: transform 0.35s cubic-bezier(.2,.7,.2,1);
   }
-  .card:hover .icon {
-    transform: scale(1.15);
+  .card:hover .icon { transform: scale(1.14) rotate(-6deg); }
+
+  .card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #fff;
   }
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-  }
-  p {
+  .card p {
     margin: 0;
     color: var(--muted);
-    font-size: 0.95rem;
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 62ch;
   }
-  .card__bar {
-    position: absolute;
-    bottom: 0;
-    inset-inline-start: 0;
-    height: 3px;
-    width: 0%;
-    background: var(--brand);
-    border-radius: 0 0 0 var(--radius);
-    transition: width 0.4s ease;
+  .card__link {
+    margin-top: auto;
+    padding-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    color: #fff;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    text-decoration: none;
+    min-height: 44px;
   }
-  .card:hover .card__bar {
-    width: 100%;
+  .card__link svg { transition: transform 0.25s; color: var(--accent); }
+  .card__link:hover svg,
+  .card:hover .card__link svg { transform: translateX(-5px); }
+  .card__link:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+  @media (max-width: 860px) {
+    .bento { grid-template-columns: repeat(2, 1fr); }
+    .card--1, .card--4 { grid-column: span 2; }
+    .card--2, .card--3 { grid-column: span 1; }
   }
-  @media (max-width: 640px) {
-    .grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    .card {
-      padding: 28px 22px 24px;
-    }
-    .card__num { font-size: 2.8rem; top: 12px; left: 16px; }
+  @media (max-width: 600px) {
+    .bento { grid-template-columns: 1fr; gap: 14px; }
+    .card--1, .card--2, .card--3, .card--4 { grid-column: auto; }
+    .card { padding: 28px 22px 22px; border-radius: 18px; }
+    .card__num { font-size: 3.4rem; }
   }
-  @media (max-width: 480px) {
-    .grid { gap: 12px; }
-  }
-  .card:nth-child(3n+2) .icon { background: var(--blue); }
-  .card:nth-child(3n+2) .card__icon-wrap { background: rgba(4,168,241,0.12); }
-  .card:nth-child(3n) .icon { background: #e6c400; }
-  .card:nth-child(3n) .card__icon-wrap { background: rgba(247,231,26,0.2); }
 </style>
 
 <script>
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach(e => { if (e.isIntersecting) { (e.target as HTMLElement).classList.add('is-visible'); observer.unobserve(e.target); } }),
-    { threshold: 0.15 }
-  );
-  document.querySelectorAll('#services .card').forEach(c => observer.observe(c));
+  // Pointer-following spotlight on each card (skipped for touch / reduced motion)
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll<HTMLElement>('#services .card').forEach((card) => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+  }
 </script>

@@ -6,7 +6,8 @@ const words = hero.h1.split(' ');
 ---
 
 <section class="hero">
-  <img class="hero__bg" src={hero.background} alt="" width="1920" height="1080" fetchpriority="high" />
+  <img class="hero__bg hero__bg--screen" src={hero.background} alt="" width="1920" height="1080" decoding="async" />
+  <img class="hero__bg hero__bg--eye" src="/assets/media/uploads/hero-eye-contact.webp" alt="" width="1920" height="1080" fetchpriority="high" />
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="container hero__content">
     <div class="hero__badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>צלם ומעצב גרפי מוביל</div>
@@ -27,7 +28,7 @@ const words = hero.h1.split(' ');
     <div class="hero__stats">
       <div class="stat"><strong>4,950+</strong><span>עבודות</span></div>
       <div class="stat__div" aria-hidden="true"></div>
-      <div class="stat"><strong>10+</strong><span>שנות ניסיון</span></div>
+      <div class="stat"><strong>16+</strong><span>שנות ניסיון</span></div>
       <div class="stat__div" aria-hidden="true"></div>
       <div class="stat"><strong>100%</strong><span>שביעות רצון</span></div>
     </div>
@@ -54,12 +55,9 @@ const words = hero.h1.split(' ');
     height: 100%;
     object-fit: cover;
     object-position: 30% center;
-    transform: scale(1.06);
-    animation: hero-zoom 8s ease-out forwards;
+    will-change: opacity, transform;
   }
-  @keyframes hero-zoom {
-    to { transform: scale(1); }
-  }
+  .hero__bg--eye { opacity: 1; transform: translate3d(0,0,0); }
   .hero__overlay {
     position: absolute;
     inset: 0;
@@ -76,8 +74,8 @@ const words = hero.h1.split(' ');
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(236,0,140, 0.18);
-    border: 1px solid rgba(236,0,140, 0.4);
+    background: rgba(208,0,127, 0.18);
+    border: 1px solid rgba(208,0,127, 0.4);
     color: #fff;
     border-radius: 999px;
     padding: 6px 16px;
@@ -103,8 +101,13 @@ const words = hero.h1.split(' ');
     animation-delay: calc(0.35s + var(--i) * 0.12s);
   }
   h1 span:nth-child(2) {
-    color: var(--brand-on-dark);
-    text-shadow: 0 0 60px rgba(236,0,140, 0.4);
+    width: fit-content;
+    padding: 0 0.22em 0.04em;
+    margin-block: 0.04em;
+    background: var(--brand);
+    color: #fff;
+    border-radius: 0.16em;
+    box-shadow: 0 10px 40px rgba(208, 0, 127, 0.45);
   }
   .hero__sub {
     font-size: clamp(1.1rem, 2.2vw, 1.65rem);
@@ -113,7 +116,7 @@ const words = hero.h1.split(' ');
     margin: 0 0 1.8em;
     opacity: 0;
     animation: fade-up 0.7s 0.7s ease forwards;
-    color: rgba(255,255,255,0.85);
+    color: #fff;
     max-width: 520px;
   }
   .hero__cta {
@@ -135,12 +138,12 @@ const words = hero.h1.split(' ');
     text-decoration: none;
     font-size: 1rem;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 24px rgba(236,0,140,0.35);
+    box-shadow: 0 4px 24px rgba(208,0,127,0.35);
   }
   .btn--primary:hover {
     background: var(--brand-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(236,0,140,0.45);
+    box-shadow: 0 8px 32px rgba(208,0,127,0.45);
   }
   .btn--outline {
     display: inline-flex;
@@ -283,3 +286,28 @@ const words = hero.h1.split(' ');
     .hero__scroll { display: none; }
   }
 </style>
+
+<script>
+  // Gaze follows scroll: at the top he looks at the visitor; scrolling down his head turns to the screen,
+  // scrolling back up he returns to look at the visitor.
+  const heroEl = document.querySelector<HTMLElement>('.hero');
+  const eye = document.querySelector<HTMLElement>('.hero__bg--eye');
+  if (heroEl && eye) {
+    const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
+    const ease = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+    let cur = 0, target = 0, raf = 0;
+    const calc = () => clamp(window.scrollY / (heroEl.offsetHeight * 0.55), 0, 1);
+    const render = () => {
+      cur += (target - cur) * 0.14;
+      if (Math.abs(target - cur) < 0.001) cur = target;
+      const e = ease(cur);
+      eye.style.opacity = String(1 - e);
+      eye.style.transform = `translate3d(${(e * 11).toFixed(2)}%,0,0)`;
+      raf = cur === target ? 0 : requestAnimationFrame(render);
+    };
+    const onScroll = () => { target = calc(); if (!raf) raf = requestAnimationFrame(render); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    target = cur = calc();
+    render();
+  }
+</script>

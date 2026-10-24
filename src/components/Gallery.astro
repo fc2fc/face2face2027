@@ -38,7 +38,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     {
       categories.map((c, i) => {
         const catImages = getCatImages(c);
-        const hasParallax = catImages.length >= 4;
+        const hasParallax = false; // the big 3D story gallery above replaces the per-tab banner
         // Split into 4 columns
         const cols: typeof catImages[] = [[], [], [], []];
         catImages.forEach((img, idx) => cols[idx % 4].push(img));
@@ -337,6 +337,23 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
       box.showModal();
     }),
   );
+
+  // Subtle 3D tilt on hover (pointer devices only)
+  if (matchMedia('(hover: hover)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLElement>('#works .tile').forEach((t) => {
+      t.addEventListener('pointermove', (e) => {
+        const r = t.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        t.style.setProperty('--ry', `${x * 7}deg`);
+        t.style.setProperty('--rx', `${-y * 7}deg`);
+      });
+      t.addEventListener('pointerleave', () => {
+        t.style.setProperty('--rx', '0deg');
+        t.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
 </script>
 
 <style>
@@ -422,9 +439,9 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   .cat-parallax__count {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--brand-on-dark);
+    color: #fff;
     background: rgba(20,20,20,0.85);
-    border: 1px solid rgba(236,0,140,0.5);
+    border: 1px solid rgba(208,0,127,0.5);
     border-radius: 999px;
     padding: 2px 14px;
   }
@@ -454,7 +471,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     font: inherit;
     font-weight: 600;
     border: 1.5px solid var(--line);
-    background: #fff;
+    background: var(--surface);
     color: var(--ink);
     border-radius: 999px;
     padding: 0.5em 1.3em;
@@ -469,13 +486,13 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   }
   .tabs button:hover {
     border-color: var(--brand);
-    color: var(--brand-ink);
+    color: #fff;
   }
   .tabs button[aria-selected='true'] {
     background: var(--brand-ink);
     border-color: var(--brand);
     color: #fff;
-    box-shadow: 0 4px 16px rgba(236,0,140,0.3);
+    box-shadow: 0 4px 16px rgba(208,0,127,0.3);
   }
   .tab__count {
     background: rgba(0,0,0,0.08);
@@ -492,7 +509,14 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 12px;
+    grid-auto-flow: dense;
+    gap: 14px;
+  }
+  /* Mosaic rhythm: a large feature tile every 7 items */
+  .grid > .tile:not(.tile--video):nth-child(7n + 1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto;
   }
   .grid[hidden],
   .tile.is-more {
@@ -507,15 +531,16 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     display: block;
     aspect-ratio: 4 / 5;
     overflow: hidden;
-    border-radius: 12px;
-    background: var(--bg-soft);
+    border-radius: 18px;
+    background: var(--surface);
+    --rx: 0deg; --ry: 0deg;
     opacity: 0;
     transform: scale(0.96) translateY(12px);
-    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.35s ease, box-shadow 0.3s ease;
   }
   .tile.is-visible {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));
   }
   .tile--video {
     aspect-ratio: 16 / 9;
@@ -532,13 +557,13 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     transform: scale(1.07);
   }
   .tile:hover {
-    box-shadow: 0 12px 40px rgba(20,20,20,0.2);
+    box-shadow: 0 0 0 2px var(--brand), 0 18px 44px rgba(0,0,0,0.6);
     z-index: 1;
   }
   .tile__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(236,0,140,0) 50%, rgba(236,0,140,0.65) 100%);
+    background: linear-gradient(180deg, rgba(208,0,127,0) 50%, rgba(208,0,127,0.65) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -574,11 +599,11 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     background: var(--brand);
     z-index: 1;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(236,0,140,0.4);
+    box-shadow: 0 4px 20px rgba(208,0,127,0.4);
   }
   .tile:hover .play {
     transform: scale(1.1);
-    box-shadow: 0 8px 28px rgba(236,0,140,0.55);
+    box-shadow: 0 8px 28px rgba(208,0,127,0.55);
   }
   .play::after {
     content: '';
@@ -685,6 +710,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
       gap: 8px;
     }
     .tile--video { grid-column: span 2; }
+    .grid > .tile:not(.tile--video):nth-child(7n + 1) { grid-column: span 2; grid-row: span 1; aspect-ratio: 4 / 3; }
     .tile__actions { gap: 6px; }
     .tile__actions button,
     .tile__actions a {
@@ -703,7 +729,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     top: 70px;
     z-index: 20;
     padding: 10px 0;
-    background: rgba(255,255,255,0.88);
+    background: rgba(18,18,18,0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: top 0.35s cubic-bezier(.2,.7,.2,1);

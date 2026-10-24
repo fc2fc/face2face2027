@@ -12,7 +12,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="/" class="header__logo" aria-label="Face2Face – דף הבית">
-      <img src={site.logo} srcset={`${site.logo} 1x, ${site.logo_2x} 2x`} alt="Face2Face" width="170" height="40" />
+      <img src="/assets/media/brand/logo-light.webp" srcset="/assets/media/brand/logo-light.webp 1x, /assets/media/brand/logo-light@2x.webp 2x" alt="Face2Face" width="170" height="40" />
     </a>
     <button class="header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="visually-hidden">תפריט</span>
@@ -73,15 +73,15 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(14,14,14,0.82);
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
-    border-bottom: 1px solid rgba(231, 229, 236, 0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     transition: box-shadow 0.3s, background 0.3s, transform 0.35s cubic-bezier(.2,.7,.2,1);
   }
   .header.is-hidden { transform: translateY(-100%); }
   .header.is-scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(14,14,14,0.95);
     box-shadow: 0 4px 24px rgba(20,20,20, 0.08);
   }
   .header__inner {
@@ -117,12 +117,12 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     position: relative;
   }
   .header__nav a:not(.btn-cta):hover {
-    color: var(--brand-ink);
-    background: rgba(236,0,140, 0.06);
+    color: #fff;
+    background: rgba(208,0,127, 0.06);
   }
   .header__nav a.is-active {
-    color: var(--brand-ink);
-    background: rgba(236,0,140, 0.08);
+    color: #fff;
+    background: rgba(208,0,127, 0.08);
   }
   .nav__cta {
     margin-inline-start: 8px;
@@ -137,12 +137,12 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     border-radius: 999px;
     text-decoration: none !important;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 3px 14px rgba(236,0,140, 0.3);
+    box-shadow: 0 3px 14px rgba(208,0,127, 0.3);
   }
   .btn-cta:hover {
     background: var(--brand-dark);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(236,0,140, 0.4);
+    box-shadow: 0 6px 20px rgba(208,0,127, 0.4);
   }
   .header__toggle {
     display: none;
@@ -155,7 +155,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     border-radius: 10px;
     transition: background 0.2s;
   }
-  .header__toggle:hover { background: rgba(236,0,140,0.06); }
+  .header__toggle:hover { background: rgba(208,0,127,0.18); }
   .bars,
   .bars::before,
   .bars::after {
@@ -184,7 +184,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
       position: absolute;
       top: calc(100% + 1px);
       inset-inline: 0;
-      background: rgba(255,255,255,0.98);
+      background: rgba(14,14,14,0.98);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);

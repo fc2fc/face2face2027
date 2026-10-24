@@ -13,7 +13,7 @@ const rawCounters = site.counters as { value: string; label: string }[] || [];
 // מונים עם fallback ל-hardcoded אם חסרים
 const counters = rawCounters.length > 0 ? rawCounters : [
   { value: '4950+', label: 'עבודות מוצלחות' },
-  { value: '10+', label: 'שנות ניסיון' },
+  { value: '16+', label: 'שנות ניסיון' },
   { value: '100%', label: 'שביעות רצון' },
 ];
 
@@ -21,7 +21,7 @@ const counters = rawCounters.length > 0 ? rawCounters : [
 const displayCounters = counters.length === 1
   ? [
       counters[0],
-      { value: '10+', label: 'שנות ניסיון' },
+      { value: '16+', label: 'שנות ניסיון' },
       { value: '100%', label: 'שביעות רצון' },
     ]
   : counters;
@@ -42,7 +42,7 @@ function parseCounter(val: string) {
 
 <section class="section section--dark" id="numbers">
   <div class="container">
-    <Heading class="section-title">Face2Face במספרים</Heading>
+    <Heading class="section-title section-title--logo"><img class="title-logo" src="/assets/media/brand/logo-light@2x.webp" alt="Face2Face" width="200" height="47" /> <span>במספרים</span></Heading>
     <ul class="counters">
       {displayCounters.map((c, i) => {
         const { num, suffix } = parseCounter(c.value);
@@ -102,12 +102,12 @@ function parseCounter(val: string) {
     transition: background 0.3s, transform 0.3s;
   }
   .counter:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
-  .counter__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; background: rgba(236,0,140,0.14); color: var(--brand); }
+  .counter__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; background: rgba(208,0,127,0.14); color: var(--brand); }
   .counter__val {
     display: block;
     font-size: clamp(2.4rem, 5vw, 3.5rem);
     font-weight: 900;
-    color: var(--brand);
+    color: #fff;
     line-height: 1;
   }
   .counter__label { display: block; margin-top: 8px; color: rgba(255,255,255,0.65); font-size: 0.9rem; font-weight: 500; }
@@ -133,4 +133,6 @@ function parseCounter(val: string) {
   .counter:nth-child(2) .counter__val { color: var(--blue); }
   .counter:nth-child(3) .counter__icon { background: rgba(247,231,26,0.16); color: var(--yellow); }
   .counter:nth-child(3) .counter__val { color: var(--yellow); }
+  .section-title--logo { display: flex; align-items: center; justify-content: center; gap: 0.35em; flex-wrap: wrap; }
+  .title-logo { width: clamp(150px, 26vw, 230px); height: auto; display: inline-block; }
 </style>

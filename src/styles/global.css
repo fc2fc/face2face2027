@@ -1,21 +1,23 @@
 :root {
-  --brand: #ec008c;
+  --brand: #d0007f;
   --brand-ink: #d0007f;
-  --brand-dark: #b8006c;
-  --brand-on-dark: #ff5db1;
+  --brand-dark: #a8006a;
+  --brand-on-dark: #ffffff;
   --blue: #04a8f1;
   --yellow: #f7e71a;
-  --ink: #1b1b1b;
-  --muted: #5c5c5c;
-  --bg: #ffffff;
-  --bg-soft: #f4f4f4;
-  --dark: #141414;
-  --line: #e2e2e2;
+  --ink: #f2f2f2;
+  --muted: #b4b4b4;
+  --bg: #121212;
+  --bg-soft: #181818;
+  --surface: #1e1e1e;
+  --surface-2: #262626;
+  --dark: #0e0e0e;
+  --line: #2f2f2f;
   --radius: 14px;
   --container: 1200px;
   --font: 'Almoni DL', 'Almoni Tzar', Arial, sans-serif;
   --font-ui: 'Almoni Tzar', 'Almoni DL', Arial, sans-serif;
-  --shadow: 0 10px 30px rgba(20, 20, 20, 0.08);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
@@ -32,6 +34,8 @@
 }
 
 html {
+  color-scheme: dark;
+  background: var(--bg);
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
 }
@@ -130,7 +134,7 @@ h4 {
 
 .btn--ghost {
   background: transparent;
-  color: var(--brand-ink);
+  color: #fff;
   box-shadow: inset 0 0 0 2px var(--brand-ink);
 }
 
@@ -153,7 +157,7 @@ h4 {
   font: inherit;
   font-weight: 600;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--surface);
   color: var(--ink);
   border-radius: 999px;
   padding: 0.45em 1.3em;
@@ -266,7 +270,7 @@ button:active {
 /* ═══════════════════════════════════════
    Design polish: rhythm, reveal, progress
 ═══════════════════════════════════════ */
-::selection { background: var(--brand-ink); color: #fff; }
+::selection { background: var(--brand); color: #fff; }
 h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
 
@@ -302,7 +306,7 @@ p { text-wrap: pretty; }
 /* Typography: Almoni DL for headings/body, Almoni Tzar for compact UI */
 h1, h2, h3, h4 { font-family: var(--font); font-weight: 900; }
 .btn, .btn-cta, .btn--primary, .btn--outline, .tabs button, .header__nav a, .cookie,
-.tab__count, label, .caption, .section-lead, .hero__badge, .info__card strong, .footer__heading {
+.tab__count, label, .caption, .section-lead, .info__card strong, .footer__heading {
   font-family: var(--font-ui);
 }
 .section-lead { font-size: 1.15rem; }
@@ -312,3 +316,5 @@ h1, h2, h3, h4 { font-family: var(--font); font-weight: 900; }
   width: 72px;
   background: linear-gradient(90deg, var(--brand) 0 50%, var(--blue) 50% 75%, var(--yellow) 75% 100%);
 }
+
+.hero__badge { font-family: var(--font); font-weight: 700; }

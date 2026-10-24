@@ -13,14 +13,24 @@ const paragraphs = toParagraphs(about.paragraphs);
 <section class="section" id="about">
   <div class="container about">
     <div class="about__visual">
-      <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" class="about__img" />
-      <div class="about__card" aria-hidden="true">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-        <div>
-          <strong>4,950+</strong>
-          <span>פרויקטים מוצלחים</span>
-        </div>
+      <span class="ring ring--a" aria-hidden="true"></span>
+      <span class="ring ring--b" aria-hidden="true"></span>
+      <div class="arch">
+        <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" />
       </div>
+      <div class="chip chip--exp" aria-hidden="true">
+        <strong>16+</strong>
+        <span>שנות ניסיון</span>
+      </div>
+      <div class="chip chip--proj" aria-hidden="true">
+        <strong>4,950+</strong>
+        <span>פרויקטים</span>
+      </div>
+      <ul class="tags" aria-label="תחומי התמחות">
+        <li>צילום סטילס</li>
+        <li>הפקת וידאו</li>
+        <li>מיתוג ועיצוב</li>
+      </ul>
     </div>
     <div class="about__text">
       <Heading class="section-title about__title">אודות</Heading>
@@ -36,78 +46,118 @@ const paragraphs = toParagraphs(about.paragraphs);
 <style>
   .about {
     display: grid;
-    grid-template-columns: minmax(260px, 0.8fr) 1.2fr;
-    gap: clamp(32px, 5vw, 72px);
-    align-items: start;
+    grid-template-columns: minmax(280px, 0.85fr) 1.15fr;
+    gap: clamp(32px, 6vw, 88px);
+    align-items: center;
   }
   .about__visual {
-    position: sticky;
-    top: 96px;
-  }
-  .about__img {
+    position: relative;
+    max-width: 440px;
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 24px 60px rgba(20,20,20,0.15);
-    display: block;
+    margin-inline: auto;
+    padding: 18px;
   }
-  .about__card {
+  .arch {
+    position: relative;
+    z-index: 1;
+    border-radius: 999px 999px 28px 28px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    background: var(--surface);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+  }
+  .arch img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .ring {
     position: absolute;
-    bottom: -16px;
-    inset-inline-end: -16px;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 8px 32px rgba(20,20,20,0.12);
-    padding: 14px 18px;
+    border-radius: 999px 999px 28px 28px;
+    pointer-events: none;
+  }
+  .ring--a {
+    inset: 0 0 0 0;
+    border: 2px solid var(--brand);
+    transform: translate(14px, 14px);
+  }
+  .ring--b {
+    inset: 0;
+    border: 2px solid var(--blue);
+    transform: translate(-12px, -8px) scale(1.02);
+    opacity: 0.55;
+  }
+  .chip {
+    position: absolute;
+    z-index: 2;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 18px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+    animation: float 6s ease-in-out infinite;
+  }
+  .chip strong { font-size: 1.7rem; font-weight: 900; line-height: 1; }
+  .chip span { font-size: 0.85rem; }
+  .chip--exp { top: 14%; inset-inline-end: -4px; background: var(--brand); color: #fff; }
+  .chip--proj {
+    bottom: 16%;
+    inset-inline-start: -8px;
+    background: rgba(24, 24, 24, 0.9);
     border: 1px solid var(--line);
+    color: #fff;
+    animation-delay: -3s;
   }
-  .about__card svg { flex-shrink: 0; }
-  .about__card div { display: flex; flex-direction: column; }
-  .about__card strong { font-size: 1.3rem; font-weight: 900; color: var(--ink); line-height: 1; }
-  .about__card span { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
-  .about__title {
-    text-align: start;
+  .chip--proj span { color: var(--muted); }
+  .tags {
+    position: absolute;
+    z-index: 2;
+    bottom: -6px;
+    inset-inline: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .about__title::after {
-    margin-inline: 0;
-  }
-  .about__hello {
-    font-size: 1.35rem;
+  .tags li {
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
     font-weight: 700;
-    color: var(--brand-ink);
+    color: #fff;
+    background: #0e0e0e;
+    border: 1px solid var(--line);
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+  .tags li:nth-child(1) { border-color: var(--brand); }
+  .tags li:nth-child(2) { border-color: var(--blue); }
+  .tags li:nth-child(3) { border-color: var(--yellow); }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .chip { animation: none; } }
+
+  .about__title { text-align: start; }
+  .about__title::after { margin-inline: 0; }
+  .about__hello {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
     line-height: 1.4;
   }
-  p {
-    margin: 0 0 1em;
-    color: var(--muted);
-  }
-  p:first-of-type { color: var(--ink); }
-  .about__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 0.5rem;
-  }
+  p { margin: 0 0 1em; color: var(--muted); }
+  .about__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 0.5rem; }
   @media (max-width: 760px) {
-    .about { grid-template-columns: 1fr; gap: 32px; }
-    .about__visual { position: relative; max-width: 420px; margin-inline: auto; }
-    .about__img { max-width: 100%; border-radius: 16px; }
-    .about__card { bottom: -10px; inset-inline-end: 8px; }
+    .about { grid-template-columns: 1fr; gap: 44px; }
+    .about__visual { max-width: 360px; }
   }
   @media (max-width: 480px) {
-    .about__actions {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .about__actions .btn {
-      width: 100%;
-      justify-content: center;
-      min-height: 52px;
-    }
-    .about__card {
-      padding: 14px 16px;
-    }
+    .about__actions { flex-direction: column; gap: 10px; }
+    .about__actions .btn { width: 100%; justify-content: center; min-height: 52px; }
+    .chip--exp { inset-inline-end: -2px; }
+    .chip--proj { inset-inline-start: -2px; }
   }
 </style>
