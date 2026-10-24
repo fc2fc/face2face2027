@@ -103,12 +103,21 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
   input,
   textarea {
     font: inherit;
+    font-size: 16px; /* prevents iOS zoom on focus */
     width: 100%;
-    padding: 0.7em 0.9em;
+    padding: 0.75em 0.9em;
     border: 1px solid var(--line);
     border-radius: 10px;
     background: #fff;
     color: var(--ink);
+    min-height: 48px;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+  }
+  textarea {
+    min-height: 100px;
+    resize: vertical;
   }
   input:focus,
   textarea:focus {
@@ -121,6 +130,14 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
   }
   .btn {
     justify-self: start;
+  }
+  @media (max-width: 480px) {
+    .btn {
+      justify-self: stretch;
+      width: 100%;
+      min-height: 52px;
+      font-size: 1rem;
+    }
   }
   .lead-form__status {
     margin: 0;

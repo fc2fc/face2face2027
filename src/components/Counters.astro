@@ -107,4 +107,22 @@ function parseCounter(val: string) {
     line-height: 1;
   }
   .counter__label { display: block; margin-top: 8px; color: rgba(255,255,255,0.65); font-size: 0.9rem; font-weight: 500; }
+  @media (max-width: 640px) {
+    .counters {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .counter {
+      padding: 20px 12px;
+      border-radius: 12px;
+    }
+    .counter__icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .counter__val { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+    .counter__label { font-size: 0.78rem; }
+  }
+  @media (max-width: 380px) {
+    .counters { grid-template-columns: 1fr; gap: 10px; }
+    .counter { padding: 18px 16px; flex-direction: row; align-items: center; text-align: right; gap: 12px; display: flex; }
+    .counter__icon { margin-bottom: 0; }
+  }
 </style>

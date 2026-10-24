@@ -91,9 +91,23 @@ const paragraphs = toParagraphs(about.paragraphs);
     margin-top: 0.5rem;
   }
   @media (max-width: 760px) {
-    .about { grid-template-columns: 1fr; }
+    .about { grid-template-columns: 1fr; gap: 32px; }
     .about__visual { position: static; }
-    .about__img { max-width: 360px; }
+    .about__img { max-width: 100%; border-radius: 16px; }
     .about__card { bottom: -10px; inset-inline-end: -10px; }
+  }
+  @media (max-width: 480px) {
+    .about__actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .about__actions .btn {
+      width: 100%;
+      justify-content: center;
+      min-height: 52px;
+    }
+    .about__card {
+      padding: 14px 16px;
+    }
   }
 </style>

@@ -155,7 +155,11 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   function clamp(v: number, lo: number, hi: number) { return Math.max(lo, Math.min(hi, v)); }
   function easeInOut(t: number) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
 
+  // Respect user motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function initCatParallax(wrapper: HTMLElement) {
+    if (prefersReducedMotion) return; // skip all parallax
     const banner = wrapper.querySelector<HTMLElement>('.cat-parallax__banner')!;
     const grid   = wrapper.querySelector<HTMLElement>('.cat-parallax__grid')!;
     const cols   = [...wrapper.querySelectorAll<HTMLElement>('.cat-parallax__col')];
@@ -412,9 +416,15 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     padding: 2px 14px;
   }
   @media (max-width: 640px) {
-    .cat-parallax { height: 240px; }
-    .cat-parallax__item { height: 130px; }
-    .cat-parallax__grid { gap: 5px; margin-top: -20%; }
+    .cat-parallax { height: 220px; border-radius: 14px; }
+    .cat-parallax__item { height: 120px; border-radius: 8px; }
+    .cat-parallax__grid { gap: 4px; margin-top: -20%; }
+    .cat-parallax__label { font-size: 0.85rem; padding: 3px 10px 3px 6px; }
+    .cat-parallax__count { font-size: 0.85rem; padding: 2px 10px; }
+  }
+  @media (max-width: 380px) {
+    .cat-parallax { height: 190px; }
+    .cat-parallax__item { height: 105px; }
   }
 
   /* ── Tabs ───────────────────────────────────────────────────────── */
@@ -440,6 +450,9 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     display: flex;
     align-items: center;
     gap: 6px;
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .tabs button:hover {
     border-color: var(--brand);
@@ -653,10 +666,21 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     border: 0;
     border-radius: 8px;
   }
-  @media (max-width: 520px) {
+  @media (max-width: 640px) {
     .grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
     }
     .tile--video { grid-column: span 2; }
+    .tile__actions { gap: 6px; }
+    .tile__actions button,
+    .tile__actions a {
+      width: 34px;
+      height: 34px;
+      font-size: 0.78rem;
+    }
+  }
+  @media (max-width: 380px) {
+    .grid { gap: 6px; }
   }
 </style>

@@ -160,7 +160,27 @@ const fields = [
     border: 1px solid var(--line);
   }
   @media (max-width: 800px) {
-    .contact { grid-template-columns: 1fr; gap: 28px; }
-    .form-card { padding: 24px; }
+    .contact { grid-template-columns: 1fr; gap: 24px; }
+    .form-card { padding: 24px 20px; }
+  }
+  @media (max-width: 480px) {
+    .info__card {
+      padding: 14px 16px;
+      gap: 12px;
+    }
+    .info__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .social-link {
+      width: 48px;
+      height: 48px;
+    }
+    .form-card {
+      padding: 20px 16px;
+      border-radius: 16px;
+    }
   }
 </style>

@@ -167,13 +167,89 @@ h4 {
   outline: 3px solid var(--brand);
   outline-offset: 2px;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   * {
     transition: none !important;
     animation: none !important;
   }
 }
+
+/* ═══════════════════════════════════════
+   Mobile UX / Touch improvements
+═══════════════════════════════════════ */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  overscroll-behavior-y: contain;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch targets: touch-action on all interactive elements */
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+label,
+.tabs button,
+.social-link,
+.wa-float,
+.btn,
+.btn-cta {
+  touch-action: manipulation;
+}
+
+/* Tap feedback for iOS */
+a:active,
+button:active {
+  opacity: 0.85;
+}
+
+/* Ensure minimum touch target height on buttons */
+.btn,
+.btn-cta {
+  min-height: 44px;
+}
+
+/* Remove default outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Global mobile container padding */
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+  .section {
+    padding: clamp(40px, 6vw, 80px) 0;
+  }
+  .section-title {
+    font-size: clamp(1.7rem, 7vw, 2.5rem);
+  }
+  .tabs button {
+    padding: 0.55em 1.1em;
+    font-size: 0.88rem;
+    min-height: 44px;
+  }
+}
+
+/* prefers-reduced-motion - disable all animations/transitions */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
