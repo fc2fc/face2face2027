@@ -35,6 +35,17 @@ const clients = site.clients as { logo: string; link: string | null; alt?: strin
   </div>
 </section>
 
+<script>
+  // Fade/lift each logo tile in as it scrolls into view
+  const tiles = document.querySelectorAll<HTMLElement>('#clients .tile');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    tiles.forEach((t) => io.observe(t));
+  } else tiles.forEach((t) => t.classList.add('is-in'));
+</script>
+
 <style>
   .wall {
     list-style: none;
@@ -50,7 +61,7 @@ const clients = site.clients as { logo: string; link: string | null; alt?: strin
     min-width: 120px;
     aspect-ratio: 1;
     border-radius: 18px;
-    background: var(--surface);
+    background: #000;
     display: grid;
     place-items: center;
     padding: 18px;
@@ -69,7 +80,6 @@ const clients = site.clients as { logo: string; link: string | null; alt?: strin
     object-fit: contain;
     /* logos are opaque on white: flatten to one uniform light tone on the dark tile */
     filter: grayscale(1) brightness(0.7) contrast(4.2) invert(1);
-    mix-blend-mode: screen;
     opacity: 1;
     transition: transform 0.35s cubic-bezier(.2,.7,.2,1), opacity 0.3s;
   }
