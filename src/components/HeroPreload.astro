@@ -23,3 +23,5 @@ const avif = await getImage({
   imagesizes={HERO_POSTER.sizes}
   fetchpriority="high"
 />
+{/* The handwritten script word in the Hero headline; only the home page uses this font, so it is not preloaded site-wide */}
+<link rel="preload" href="/fonts/fb-melatef-regular.woff2" as="font" type="font/woff2" crossorigin />

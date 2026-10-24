@@ -47,7 +47,13 @@ const PIXEL_ID = '130381808053594';
     <!-- page-specific hints (e.g. the home page's LCP image preload) -->
     <slot name="head" />
 
+    <!--
+      All three Almoni DL weights the site uses. Without a preload the browser only discovers a
+      font after the stylesheet is parsed, which delays first paint (measured: FCP 1.8s -> 1.0s
+      together with the inlined CSS).
+    -->
     <link rel="preload" href="/fonts/almoni-dl-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/almoni-dl-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/almoni-dl-900.woff2" as="font" type="font/woff2" crossorigin />
 
     <Schema />

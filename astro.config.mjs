@@ -10,7 +10,10 @@ export default defineConfig({
   site: 'https://www.fc2fc.co.il',
   // Old URLs have no trailing slash (/שירותים, not /שירותים/), so build /x.html instead of /x/index.html
   trailingSlash: 'never',
-  build: { format: 'file' },
+  // inlineStylesheets: put the CSS in a <style> in every page instead of a render-blocking <link>.
+  // The CSS is ~12KB compressed, so the first visit costs the same bytes but one less round trip
+  // (the stylesheet used to block first paint, and fonts were only discovered after it arrived).
+  build: { format: 'file', inlineStylesheets: 'always' },
   redirects,
   integrations: [sitemap()],
 });
