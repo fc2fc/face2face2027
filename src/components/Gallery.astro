@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { Picture } from 'astro:assets';
 import { site, asset, imageUrl } from '../lib/content';
 
@@ -118,11 +119,11 @@ const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' :
     <p class="lightbox__title"></p>
     <div class="lightbox__actions">
       <a class="lightbox__link btn btn--ghost" href="#" target="_blank" rel="noopener" aria-label="פתח דף הפרויקט">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        <Icon name="download-simple" size={16} />
         לדף הפרויקט
       </a>
       <button type="button" class="lightbox__close" aria-label="סגירה">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <Icon name="x" size={20} />
       </button>
     </div>
   </div>

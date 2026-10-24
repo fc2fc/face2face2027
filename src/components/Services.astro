@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { site } from '../lib/content';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
 const services = site.services as { category: string; title: string; text: string; icon: string }[];
+const iconNames = ['camera', 'video-camera', 'pen-nib', 'megaphone'];
 const numbers = ['01', '02', '03', '04'];
 const accents = ['var(--brand)', 'var(--blue)', 'var(--yellow)', 'var(--brand)'];
 ---
@@ -22,13 +24,13 @@ const accents = ['var(--brand)', 'var(--blue)', 'var(--yellow)', 'var(--brand)']
             <div class="card__glow" aria-hidden="true"></div>
             <span class="card__num" aria-hidden="true">{numbers[i]}</span>
             <div class="card__icon" aria-hidden="true">
-              <span class="icon" style={`--icon: url('${s.icon}')`} />
+              <Icon name={iconNames[i] ?? 'camera'} size={34} />
             </div>
             <h3>{s.title}</h3>
             <p>{s.text}</p>
             <a class="card__link" href="/עבודות">
               לעבודות בתחום
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+              <Icon name="arrow-left" size={16} />
             </a>
           </article>
         ))
@@ -101,16 +103,14 @@ const accents = ['var(--brand)', 'var(--blue)', 'var(--yellow)', 'var(--brand)']
     background: color-mix(in srgb, var(--accent) 16%, transparent);
     border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   }
-  .icon {
+  .card__icon :global(svg) {
     display: block;
-    width: 32px;
-    height: 32px;
-    background: var(--accent);
-    -webkit-mask: var(--icon) center / contain no-repeat;
-    mask: var(--icon) center / contain no-repeat;
+    width: 34px;
+    height: 34px;
+    color: var(--accent);
     transition: transform 0.35s cubic-bezier(.2,.7,.2,1);
   }
-  .card:hover .icon { transform: scale(1.14) rotate(-6deg); }
+  .card:hover .card__icon :global(svg) { transform: scale(1.14) rotate(-6deg); }
 
   .card h3 {
     font-size: 1.5rem;

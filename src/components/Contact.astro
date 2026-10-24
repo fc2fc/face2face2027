@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { site } from '../lib/content';
 import LeadForm from './LeadForm.astro';
 
@@ -25,7 +26,7 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
     <div class="grid">
       <a class="b b--wa" href={c.whatsapp} target="_blank" rel="noopener">
         <span class="b__ico">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-12.4 7.4L3 20.5l1.6-5.400A8.400 8.400 0 1121 11.500z"/><path d="M8.500 9.500c.5 3 3 5.500 6 6l1.500-1.500-2-1-1 .8c-1-.4-2-1.400-2.500-2.500l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>
+          <Icon name="whatsapp-logo" size={26} />
         </span>
         <span class="b__t">
           <strong>דברו איתנו בוואטסאפ</strong>
@@ -37,7 +38,7 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
         <div class="radar" aria-hidden="true">
           <span class="pulse"></span><span class="pulse p2"></span>
           <span class="pin">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 00-8 8c0 5.7 8 12 8 12s8-6.3 8-12a8 8 0 00-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+            <Icon name="map-pin" size={30} />
           </span>
         </div>
         <div class="b__body">
@@ -52,14 +53,14 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
 
       <a class="b b--mail" href={`mailto:${c.email}`}>
         <span class="b__ico b__ico--blue">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <Icon name="envelope-simple" size={24} />
         </span>
         <span class="b__t"><strong>אימייל</strong><span>{c.email}</span></span>
       </a>
 
       <div class="b b--hours">
         <span class="b__ico b__ico--yellow">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <Icon name="clock" size={24} />
         </span>
         <span class="b__t">
           <strong>שעות פעילות</strong>
@@ -71,13 +72,13 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
 
       <div class="b b--social">
         <a href="https://www.facebook.com/Face2FaceNM" target="_blank" rel="noopener" aria-label="Facebook" class="soc">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          <Icon name="facebook-logo" size={22} />
         </a>
         <a href="https://www.instagram.com/face2face.il/" target="_blank" rel="noopener" aria-label="Instagram" class="soc">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          <Icon name="instagram-logo" size={22} />
         </a>
         <a href="https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q" target="_blank" rel="noopener" aria-label="YouTube" class="soc">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.540 6.420a2.780 2.780 0 00-1.950-1.960C18.880 4 12 4 12 4s-6.880 0-8.590.460a2.780 2.780 0 00-1.950 1.960A29 29 0 001 12a29 29 0 00.46 5.580A2.780 2.780 0 003.410 19.600C5.120 20 12 20 12 20s6.880 0 8.590-.4a2.780 2.780 0 001.950-1.950A29 29 0 0023 12a29 29 0 00-.46-5.580z"/><polygon fill="currentColor" stroke="none" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          <Icon name="youtube-logo" size={22} />
         </a>
       </div>
 
