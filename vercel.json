@@ -3,5 +3,181 @@
   "outputDirectory": "dist",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "fc2fc.co.il"
+        }
+      ],
+      "destination": "https://www.fc2fc.co.il/:path",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/אודות",
+      "permanent": true
+    },
+    {
+      "source": "/שירותים-1/צלום-וידאו",
+      "destination": "/שירותים",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/לוגאוים",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/רשתות-חברתיות",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/צלום-וידאו",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/צלום-סטילס",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות-1/פליירים",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/שירותים-1/עיצוב-גרפי",
+      "destination": "/שירותים",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/item-id-6884aa329b455",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/שירותים-1/צילום-סטילס",
+      "destination": "/שירותים",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות/item-id-6884834ed9cbb",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/שירותים-1/צילום-וידאו",
+      "destination": "/שירותים",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות-1/צילום-וידאו",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/face-2-face",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/צרו-קשר",
+      "permanent": true
+    },
+    {
+      "source": "/צור-קשר",
+      "destination": "/צרו-קשר",
+      "permanent": true
+    },
+    {
+      "source": "/מיקום",
+      "destination": "/צרו-קשר",
+      "permanent": true
+    },
+    {
+      "source": "/בין-לקוחותנו",
+      "destination": "/בין-לקוחותינו",
+      "permanent": true
+    },
+    {
+      "source": "/עבודות-1",
+      "destination": "/עבודות",
+      "permanent": true
+    },
+    {
+      "source": "/שירותים-1/דיגיטל-ומדיה",
+      "destination": "/שירותים",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/שירותים",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ]
 }

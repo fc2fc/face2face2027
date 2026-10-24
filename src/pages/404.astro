@@ -1,0 +1,98 @@
+---
+// Served by Vercel for any unknown URL (dist/404.html).
+import Base from '../layouts/Base.astro';
+
+const page = {
+  old_path: '/404',
+  type: 'not-found',
+  seo: {
+    title: 'העמוד לא נמצא | Face2Face',
+    description: 'העמוד שחיפשתם לא קיים. חזרו לדף הבית של Face2Face – נגה מלסה.',
+    robots: 'noindex, nofollow',
+  },
+};
+---
+
+<Base page={page}>
+  <section class="nf" aria-labelledby="nf-title">
+    <div class="nf__grid" aria-hidden="true"></div>
+    <div class="nf__glow" aria-hidden="true"></div>
+    <div class="container nf__inner">
+      <p class="nf__code" aria-hidden="true"><span>4</span><span class="nf__zero">0</span><span>4</span></p>
+      <h1 id="nf-title" class="nf__title">הקאדר ריק – העמוד לא נמצא</h1>
+      <p class="nf__text">הקישור ישן או שהכתובת הוקלדה לא נכון. אפשר לחזור לדף הבית או להמשיך לעבודות שלנו.</p>
+      <div class="nf__actions">
+        <a class="btn" href="/">חזרה לדף הבית</a>
+        <a class="btn btn--ghost" href="/עבודות">לעבודות שלנו</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: calc(var(--hdr-h) + 40px) 0 80px;
+    text-align: center;
+    background: var(--bg);
+  }
+  .nf__grid {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent 75%);
+    mask-image: radial-gradient(70% 70% at 50% 45%, #000, transparent 75%);
+  }
+  .nf__glow {
+    position: absolute;
+    z-index: -1;
+    width: min(720px, 90vw);
+    aspect-ratio: 1;
+    left: 50%;
+    top: 42%;
+    translate: -50% -50%;
+    background:
+      radial-gradient(closest-side, rgba(208, 0, 127, 0.28), transparent),
+      radial-gradient(closest-side at 70% 60%, rgba(4, 168, 241, 0.22), transparent);
+    filter: blur(20px);
+  }
+  .nf__code {
+    direction: ltr;
+    margin: 0 0 8px;
+    display: flex;
+    justify-content: center;
+    gap: 0.04em;
+    font-weight: 900;
+    font-size: clamp(6rem, 24vw, 14rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #fff;
+    text-shadow: 0 0 28px rgba(4, 168, 241, 0.45);
+  }
+  .nf__zero {
+    color: var(--brand);
+    text-shadow: 0 0 28px rgba(208, 0, 127, 0.7);
+    animation: nf-flicker 3.2s steps(1, end) infinite;
+  }
+  @keyframes nf-flicker {
+    0%, 6%, 9%, 100% { opacity: 1; }
+    7%, 10% { opacity: 0.35; }
+  }
+  .nf__title { margin: 0 0 12px; font-size: clamp(1.5rem, 4vw, 2.2rem); color: #fff; }
+  .nf__text { margin: 0 auto 28px; max-width: 34em; color: var(--muted); line-height: 1.8; }
+  .nf__actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  @media (max-width: 480px) {
+    .nf__actions { flex-direction: column; }
+    .nf__actions .btn { width: 100%; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { .nf__zero { animation: none; } }
+</style>

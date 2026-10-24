@@ -14,7 +14,7 @@ export const GET: APIRoute = () => {
   const today = new Date().toISOString().split('T')[0];
 
   const urls = pages
-    .filter((p: any) => !['legal', 'not-found'].includes(p.type))
+    .filter((p: any) => !['legal', 'not-found'].includes(p.type) && !String(p.seo?.robots ?? '').includes('noindex'))
     .map((p: any) => {
       const path = p.old_path === '/' ? '' : p.old_path;
       const { priority, freq } = meta(p);
