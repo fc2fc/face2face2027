@@ -11,12 +11,12 @@ const about = site.about;
 const paragraphs = toParagraphs(about.paragraphs);
 ---
 
-<section class="section" id="about">
+<section class="section" id="about" data-about>
   <div class="container about">
     <div class="about__visual">
-      <span class="ring ring--a" aria-hidden="true"></span>
-      <span class="ring ring--b" aria-hidden="true"></span>
-      <div class="arch">
+      <span class="ring ring--a" aria-hidden="true" style="--sp:-26px"></span>
+      <span class="ring ring--b" aria-hidden="true" style="--sp:34px"></span>
+      <div class="arch" style="--sp:12px">
         <Picture
           src={asset(about.image)}
           alt={about.image_alt}
@@ -28,15 +28,15 @@ const paragraphs = toParagraphs(about.paragraphs);
           fetchpriority={headingLevel === 'h1' ? 'high' : undefined}
         />
       </div>
-      <div class="chip chip--exp" aria-hidden="true">
+      <div class="chip chip--exp" aria-hidden="true" style="--sp:-70px">
         <strong>16+</strong>
         <span>שנות ניסיון</span>
       </div>
-      <div class="chip chip--proj" aria-hidden="true">
+      <div class="chip chip--proj" aria-hidden="true" style="--sp:60px">
         <strong>4,950+</strong>
         <span>פרויקטים</span>
       </div>
-      <ul class="tags" aria-label="תחומי התמחות">
+      <ul class="tags" aria-label="תחומי התמחות" style="--sp:-34px">
         <li>צילום סטילס</li>
         <li>הפקת וידאו</li>
         <li>מיתוג ועיצוב</li>
@@ -44,8 +44,8 @@ const paragraphs = toParagraphs(about.paragraphs);
     </div>
     <div class="about__text">
       <Heading class="section-title about__title">אודות</Heading>
-      {paragraphs.map((p, i) => (i === 0 ? <p class="about__hello">{p}</p> : <p>{p}</p>))}
-      <div class="about__actions">
+      {paragraphs.map((p, i) => <p class:list={['about__p', i === 0 && 'about__hello']} data-reveal>{p}</p>)}
+      <div class="about__actions" data-cta>
         <a class="btn" href="/צרו-קשר">בואו נדבר</a>
         <a class="btn btn--ghost" href="/עבודות">לעבודות שלנו</a>
       </div>
@@ -58,10 +58,12 @@ const paragraphs = toParagraphs(about.paragraphs);
     display: grid;
     grid-template-columns: minmax(280px, 0.85fr) 1.15fr;
     gap: clamp(32px, 6vw, 88px);
-    align-items: center;
+    align-items: start;
   }
   .about__visual {
-    position: relative;
+    position: sticky;
+    top: 96px;
+    align-self: start;
     max-width: 440px;
     width: 100%;
     margin-inline: auto;
@@ -150,19 +152,46 @@ const paragraphs = toParagraphs(about.paragraphs);
   }
   @media (prefers-reduced-motion: reduce) { .chip { animation: none; } }
 
+  /* Parallax: --p (-1..1) is set by script from the section's scroll position; each layer has its own speed (--sp) */
+  .ring, .chip, .tags, .arch { translate: 0 calc(var(--p, 0) * var(--sp, 0px)); will-change: translate; }
+  .arch :global(img) { transform: scale(1.08) translateY(calc(var(--p, 0) * -14px)); }
+  .about__text { padding-block: 0 clamp(24px, 6vh, 64px); }
   .about__title { text-align: start; }
   .about__title::after { margin-inline: 0; }
-  .about__hello {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.4;
+  .about__p {
+    margin: 0 0 clamp(34px, 7.5vh, 76px);
+    font-size: clamp(1.15rem, 1.55vw, 1.4rem);
+    line-height: 2;
+    max-width: 38em;
+    color: rgba(255, 255, 255, 0.55); /* dim, still >= 4.5:1 on the dark background */
+    transition: color 0.6s ease;
   }
-  p { margin: 0 0 1em; color: var(--muted); }
-  .about__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 0.5rem; }
+  .about__p.is-active { color: #fff; }
+  .about__hello { font-size: clamp(1.5rem, 2.3vw, 2rem); font-weight: 800; line-height: 1.5; }
+  .about__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: clamp(8px, 2vh, 24px);
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.8s cubic-bezier(.2,.7,.2,1);
+  }
+  .about__actions.is-in { opacity: 1; transform: none; }
+  .about__actions .btn { transition-delay: 0s; }
+  .about__actions.is-in .btn:nth-child(2) { animation: cta-in 0.7s 0.15s both cubic-bezier(.2,.7,.2,1); }
+  @keyframes cta-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .about__p { color: #fff; transition: none; }
+    .about__actions { opacity: 1; transform: none; transition: none; }
+    .ring, .chip, .tags, .arch { translate: none; }
+    .arch :global(img) { transform: none; }
+    .about__actions.is-in .btn:nth-child(2) { animation: none; }
+  }
   @media (max-width: 760px) {
     .about { grid-template-columns: 1fr; gap: 44px; }
-    .about__visual { max-width: 360px; }
+    .about__visual { max-width: 360px; position: relative; top: 0; }
+    .about__p { margin-bottom: 28px; line-height: 1.9; }
   }
   @media (max-width: 480px) {
     .about__actions { flex-direction: column; gap: 10px; }
@@ -171,3 +200,38 @@ const paragraphs = toParagraphs(about.paragraphs);
     .chip--proj { inset-inline-start: -2px; }
   }
 </style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-about]');
+  if (root) {
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const paras = [...root.querySelectorAll<HTMLElement>('[data-reveal]')];
+    const cta = root.querySelector<HTMLElement>('[data-cta]');
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const vh = innerHeight;
+      const r = root.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      // parallax progress: -1 (section entering) .. 1 (leaving)
+      const p = Math.max(-1, Math.min(1, (r.top + r.height / 2 - vh / 2) / (r.height / 2 + vh / 2)));
+      root.style.setProperty('--p', p.toFixed(3));
+      if (reduce) return;
+      // text reveal: the paragraph closest to the middle of the screen is lit
+      let best: HTMLElement | null = null, bd = Infinity;
+      for (const el of paras) {
+        const b = el.getBoundingClientRect();
+        const d = Math.abs(b.top + b.height / 2 - vh * 0.5);
+        if (d < bd) { bd = d; best = el; }
+      }
+      // before the first / after the last paragraph reaches the middle, keep the nearest one lit only if on screen
+      paras.forEach((el) => el.classList.toggle('is-active', el === best && bd < vh * 0.6));
+      if (cta && cta.getBoundingClientRect().top < vh * 0.9) cta.classList.add('is-in');
+    };
+    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    if (reduce) cta?.classList.add('is-in');
+    update();
+  }
+</script>

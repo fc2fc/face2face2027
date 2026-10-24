@@ -46,8 +46,8 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     <div class="hero__tag" aria-hidden="true">
       <svg viewBox="0 0 1918 1080" preserveAspectRatio="none">
         <polyline class="tag__line" points="1145,513 1053,130 955,130" pathLength="1" />
-        <g class="tag__dot tag__dot--a"><circle cx="1145" cy="513" r="13" /><circle class="tag__core" cx="1145" cy="513" r="4.5" /></g>
-        <g class="tag__dot tag__dot--b"><circle cx="955" cy="130" r="13" /><circle class="tag__core" cx="955" cy="130" r="4.5" /></g>
+        <g class="tag__dot tag__dot--a"><circle class="tag__halo" cx="1145" cy="513" r="13" /><circle cx="1145" cy="513" r="13" /><circle class="tag__core" cx="1145" cy="513" r="4.5" /><circle class="tag__hit" cx="1145" cy="513" r="40" /></g>
+        <g class="tag__dot tag__dot--b"><circle cx="955" cy="130" r="6.5" /><circle class="tag__core" cx="955" cy="130" r="2.25" /></g>
       </svg>
       <span class="tag__name">נגה מלסה</span>
     </div>
@@ -119,6 +119,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     transform: translate(calc(-50% - 10cqw), -50%) scale(0.84);
     transform-origin: center;
   }
+  .hero__stage--tag { z-index: 3; pointer-events: none; }
   .hero__stage :global(.hero__bg) {
     inset: 0;
     object-position: center;
@@ -130,20 +131,25 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   .hero__bg--video { opacity: 0; transition: opacity 0.4s; }
   .hero__bg--video.is-ready { opacity: 1; }
 
-  /* Name tag: dot on the shoulder -> line draws up -> second dot -> name reveals (starts 3s after load) */
-  .hero__tag { position: absolute; inset: 0; pointer-events: none; opacity: var(--tag-o, 1); }
+  /* Name tag (75% opacity): the shoulder dot slowly pulses like a call to action; hovering it lifts the line,
+     reveals the second dot and the name; leaving reverses it. .tag-on is toggled by script (3s after load). */
+  .hero__tag { position: absolute; inset: 0; pointer-events: none; opacity: calc(var(--tag-o, 1) * 0.75); }
   .hero__tag svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .tag__line {
     fill: none;
     stroke: #fff;
-    stroke-width: 2.4;
+    stroke-width: 1.2;
     stroke-linejoin: round;
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.9s cubic-bezier(.65,0,.35,1) 0s;
   }
   .tag__dot { transform-box: fill-box; transform-origin: center; transform: scale(0); }
   .tag__dot circle { fill: rgba(255,255,255,0.12); stroke: #fff; stroke-width: 2.4; }
   .tag__dot .tag__core { fill: #fff; stroke: none; }
+  .tag__dot .tag__hit { fill: transparent; stroke: none; pointer-events: all; cursor: pointer; }
+  .tag__dot--b { transition: transform 0.4s cubic-bezier(.3,1.6,.5,1) 0s; }
+  .tag__dot--a .tag__halo { transform-box: fill-box; transform-origin: center; fill: none; stroke-width: 1.6; opacity: 0; }
   .tag__name {
     position: absolute;
     right: calc(100% - 48.4%);
@@ -155,18 +161,24 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     color: #fff;
     white-space: nowrap;
     clip-path: inset(0 0 0 100%);
+    transition: clip-path 0.5s cubic-bezier(.2,.7,.2,1) 0s;
   }
-  /* .tag-on is toggled by script: added 3s after the page loads / after returning to the top, removed when scrolling away */
-  .hero.tag-on .tag__dot--a { animation: tag-pop 0.5s cubic-bezier(.3,1.6,.5,1) forwards; }
-  .hero.tag-on .tag__line { animation: tag-draw 1.1s 0.4s cubic-bezier(.65,0,.35,1) forwards; }
-  .hero.tag-on .tag__dot--b { animation: tag-pop 0.5s 1.4s cubic-bezier(.3,1.6,.5,1) forwards; }
-  .hero.tag-on .tag__name { animation: tag-name 0.8s 1.7s cubic-bezier(.2,.7,.2,1) forwards; }
-  @keyframes tag-draw { to { stroke-dashoffset: 0; } }
+  .hero.tag-on .tag__dot--a { animation: tag-pop 0.5s cubic-bezier(.3,1.6,.5,1) forwards, tag-breathe 3.6s 0.6s ease-in-out infinite; }
+  .hero.tag-on .tag__dot--a .tag__halo { animation: tag-halo 3.6s 0.6s ease-out infinite; }
+  .hero.tag-on .tag__hit { pointer-events: all; }
+  .hero__tag:not(.is-open) .tag__hit { cursor: pointer; }
+  /* open (hover): line draws up, then dot + name */
+  .hero.tag-on .hero__tag.is-open .tag__line { stroke-dashoffset: 0; }
+  .hero.tag-on .hero__tag.is-open .tag__dot--b { transform: scale(1); transition-delay: 0.8s; }
+  .hero.tag-on .hero__tag.is-open .tag__name { clip-path: inset(0 0 0 0); transition-delay: 1s; }
   @keyframes tag-pop { to { transform: scale(1); } }
-  @keyframes tag-name { to { clip-path: inset(0 0 0 0); } }
+  @keyframes tag-breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+  @keyframes tag-halo { 0% { transform: scale(1); opacity: 0.7; } 70%, 100% { transform: scale(2.4); opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
     .hero .tag__line, .hero.tag-on .tag__line { animation: none; stroke-dashoffset: 0; }
     .hero .tag__dot, .hero.tag-on .tag__dot { animation: none; transform: none; }
+    .hero .tag__dot--a .tag__halo { animation: none !important; }
+    .hero .tag__line, .hero .tag__name, .hero .tag__dot--b { transition: none; }
     .hero .tag__name, .hero.tag-on .tag__name { animation: none; clip-path: none; }
   }
 
@@ -475,9 +487,16 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
       heroEl.style.setProperty('--tag-o', String(Math.max(0, 1 - window.scrollY / (h * 0.12))));
       if (window.scrollY > h * 0.12) {
         heroEl.classList.remove('tag-on'); // fully faded: reset to the hidden state
+        heroEl.querySelector('.hero__tag')?.classList.remove('is-open');
         window.clearTimeout(tagTimer); tagTimer = 0;
       } else if (window.scrollY < h * 0.03) armTag();
     };
+    const tagEl = heroEl.querySelector<HTMLElement>('.hero__tag');
+    const hit = heroEl.querySelector<SVGElement>('.tag__hit');
+    if (tagEl && hit) {
+      hit.addEventListener('pointerenter', () => tagEl.classList.add('is-open'));
+      hit.addEventListener('pointerleave', () => tagEl.classList.remove('is-open'));
+    }
     window.addEventListener('scroll', onTagScroll, { passive: true });
     onTagScroll();
     armTag();
