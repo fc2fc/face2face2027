@@ -16,14 +16,20 @@
   --radius: 14px;
   --hdr-h: 84px;
   --container: 1200px;
-  --font: 'Almoni DL', Arial, sans-serif;
-  --font-ui: 'Almoni DL', Arial, sans-serif;
+  --font: 'Almoni DL', 'Almoni DL Fallback', Arial, sans-serif;
+  --font-ui: 'Almoni DL', 'Almoni DL Fallback', Arial, sans-serif;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-700.woff2') format('woff2'); font-weight: 600 800; font-display: swap; }
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-900.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+
+/* Metric-matched fallbacks (Arial resized to Almoni DL's Hebrew widths/ascent/descent) so the font swap does not reflow text.
+   Measured with fontTools: avg Hebrew advance Almoni/Arial = 85% (400), 89% (700), 91% (900). */
+@font-face { font-family: 'Almoni DL Fallback'; src: local('Arial'), local('ArialMT'), local('Liberation Sans'), local('Helvetica'); font-weight: 400; size-adjust: 85%; ascent-override: 95%; descent-override: 21%; line-gap-override: 3%; }
+@font-face { font-family: 'Almoni DL Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('Helvetica Bold'); font-weight: 600 800; size-adjust: 89%; ascent-override: 94%; descent-override: 20%; line-gap-override: 3%; }
+@font-face { font-family: 'Almoni DL Fallback'; src: local('Arial Bold'), local('Arial-BoldMT'), local('Liberation Sans Bold'), local('Helvetica Bold'); font-weight: 900; size-adjust: 91%; ascent-override: 93%; descent-override: 22%; line-gap-override: 3%; }
 
 *,
 *::before,

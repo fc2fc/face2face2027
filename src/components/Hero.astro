@@ -551,10 +551,19 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
       video.preload = 'auto';
       video.load();
     };
-    const whenIdle = () => ('requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 2000 }) : setTimeout(start, 200));
+    // The scroll-scrubbed video only matters once the visitor scrolls, so it is fetched on the first interaction
+    // (poster image stays until then). Nothing is downloaded on load: ~5MB less transfer for first paint / Lighthouse.
     if (!conn?.saveData && !/2g/.test(conn?.effectiveType ?? '')) {
-      if (document.readyState === 'complete') whenIdle();
-      else window.addEventListener('load', whenIdle, { once: true });
+      const evs = ['scroll', 'wheel', 'touchstart', 'pointerdown', 'keydown'];
+      let started = false;
+      const go = () => {
+        if (started) return;
+        started = true;
+        evs.forEach((e) => window.removeEventListener(e, go));
+        start();
+      };
+      evs.forEach((e) => window.addEventListener(e, go, { passive: true }));
+      if (window.scrollY > 0) go();
     }
   }
 
