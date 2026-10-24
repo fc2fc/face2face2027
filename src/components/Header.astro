@@ -238,9 +238,29 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
   .is-open .bars::after { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 860px) {
-    .header { padding-inline: 12px; }
-    .pill { width: 100%; max-width: 560px; justify-content: space-between; gap: 12px; }
+    .header { padding-inline: 13px; }
+    /* Slim glass pill (≈45px tall): hamburger on the left, logo on the right (RTL flex, space-between) */
+    .pill {
+      width: 100%;
+      max-width: 560px;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 8px 0 4px;
+      background: rgba(12, 12, 12, 0.72);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+    .is-scrolled .pill { padding-block: 0; gap: 12px; background: rgba(12, 12, 12, 0.88); }
+    .header__logo { padding-inline: 8px 0; }
+    .header__logo img, .is-scrolled .header__logo img { width: clamp(88px, 25.2vw, 126px); }
     .header__toggle { display: flex; align-items: center; justify-content: center; }
+    /* thinner, narrower hamburger bars */
+    .bars, .bars::before, .bars::after { left: 13.5px; width: 17px; }
+    .bars::before, .bars::after { left: 0; }
+    .bars { top: 21.5px; }
+    .bars::before { top: -5.5px; }
+    .bars::after { top: 5.5px; }
+    .is-open .bars::before { transform: translateY(5.5px) rotate(45deg); }
+    .is-open .bars::after { transform: translateY(-5.5px) rotate(-45deg); }
     .header__nav {
       position: absolute;
       top: calc(100% + 10px);

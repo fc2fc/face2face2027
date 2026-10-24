@@ -170,19 +170,6 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     .hero .tag__name, .hero.tag-on .tag__name { animation: none; clip-path: none; }
   }
 
-  @media (max-width: 768px) {
-    .hero__stage { display: contents; }
-    .hero__tag { display: none; }
-    .hero__stage :global(.hero__bg) {
-      inset: 64px 0 auto 0;
-      height: 44%;
-      object-position: 30% center;
-      -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
-      mask-image: linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
-      -webkit-mask-composite: source-over;
-      mask-composite: add;
-    }
-  }
   .hero__overlay {
     position: absolute;
     inset: 0;
@@ -380,98 +367,91 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     from { opacity: 0; transform: translateY(22px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  /* ── Mobile (≤768px) ───────────────────────────────────────────────────────────────────────
+     Layout from the approved mobile design: header pill, wide image, headline + script word on the
+     right, CTAs floating top-left, stats row bottom-right. It is drawn at 385px wide and scaled with
+     --k (1 unit = 1px at 385px, capped at 520px) so it keeps its proportions on any phone.
+     Desktop is untouched: everything here is inside this media query. */
   @media (max-width: 768px) {
     .hero {
+      --k: calc(min(100vw, 520px) / 385);
       container-type: normal;
-      height: auto;
-      min-height: calc(min(85vh, 700px) + var(--hdr-h));
-      min-height: min(85vh, 700px);
-      align-items: flex-end;
+      display: block;
+      height: calc(var(--k) * 304);
+      min-height: 0;
     }
-    .hero__content {
-      padding-block: 48px 64px;
+    .hero__stage { display: contents; }
+    .hero__tag { display: none; }
+    .hero__scroll { display: none; }
+
+    /* Poster + video: wide 3:2 frame under the header, object-fit: cover, soft top/bottom edges */
+    .hero__stage :global(.hero__bg) {
+      inset: calc(var(--k) * 44) 0 auto 0;
+      height: calc(var(--k) * 262);
+      object-fit: cover;
+      object-position: 100% 30%;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 80%, transparent 100%);
+      -webkit-mask-composite: source-over;
+      mask-composite: add;
     }
     .hero__overlay {
       background:
-        linear-gradient(180deg, rgba(20,20,20,0.5) 0%, rgba(20,20,20,0.2) 50%, rgba(20,20,20,0.8) 100%),
-        linear-gradient(270deg, rgba(20,20,20,0.4) 0%, rgba(20,20,20,0.1) 100%);
+        linear-gradient(180deg, rgba(18,18,18,0.15) 0%, rgba(18,18,18,0) 35%, rgba(18,18,18,0.55) 100%),
+        linear-gradient(270deg, rgba(18,18,18,0.5) 0%, rgba(18,18,18,0.12) 55%, rgba(18,18,18,0) 100%);
     }
-    h1 {
-      font-size: clamp(3rem, 15vw, 5rem);
-    }
-    .hero__sub {
-      font-size: clamp(1rem, 3.5vw, 1.3rem);
-      max-width: 100%;
-    }
-    .hero__stats { position: static; gap: 16px; margin-top: 2rem; }
-    .stat strong { font-size: 1.3rem; }
-  }
-  @media (max-width: 480px) {
-    .hero {
-      min-height: calc(100svh - 61px);
-    }
-    h1 {
-      font-size: clamp(2.9rem, 16vw, 4rem);
-    }
-    .hero__cta {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .btn--primary,
-    .btn--outline {
-      width: 100%;
-      justify-content: center;
-      min-height: 52px;
-      font-size: 1rem;
-    }
-    .hero__stats {
-      flex-wrap: wrap;
-      gap: 12px 20px;
-    }
-    .stat__div { display: none; }
-    .hero__scroll { display: none; }
-  }
 
-  /* ── Mobile layout: copy centred on the image (right side), CTAs bottom-right, stats bottom-left ── */
-  @media (max-width: 768px) {
-    .hero {
-      align-items: flex-start;
-      height: auto;
-      min-height: calc(var(--hdr-h) + 340px + 190px);
+    /* Everything on top of the image is positioned in --k units, RTL: "right" is the start side */
+    .hero__content { position: absolute; inset: 0; width: auto; max-width: none; margin: 0; padding: 0; }
+    .hero__copy { position: absolute; right: calc(var(--k) * 25); top: calc(var(--k) * 69); }
+    h1 { font-size: calc(var(--k) * 75.6); line-height: 1; letter-spacing: -0.05em; }
+    .t1 { translate: 0 0; }
+    /* Script word: large, ~12° diagonal across both pink lines, nudged toward the start side */
+    .t2 { font-size: 2em; letter-spacing: 0.05em; top: 43%; -webkit-text-stroke: calc(var(--k) * 0.5) #fff; transform: translate(calc(var(--k) * 17), -50%) rotate(-12deg); }
+    .hero__sub {
+      font-size: calc(var(--k) * 21.2);
+      margin: calc(var(--k) * -9) 0 0;
+      line-height: 1.15;
     }
-    .hero__stage :global(.hero__bg) { inset: 64px 0 auto 0; height: 340px; }
-    .hero__content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      grid-template-rows: 300px auto;
-      column-gap: 16px;
-      padding-block: 0 40px;
-      align-items: start;
-    }
-    .hero__copy { grid-column: 1 / -1; grid-row: 1; align-self: center; }
-    .hero__sub { margin-bottom: 0; }
+
+    /* CTAs: stacked, floating on the left (end side). Text/tap sizes keep a readable floor on small phones. */
     .hero__cta {
-      grid-column: 1; grid-row: 2;
-      flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 18px;
+      position: absolute;
+      left: calc(var(--k) * 17);
+      top: calc(var(--k) * 84);
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: calc(var(--k) * 6);
     }
+    /* Small pill buttons as in the design. Floors keep them usable: 26px tall (≥ WCAG 2.5.8's 24px) and ≥10.5px text. */
     .btn--primary, .btn--outline {
-      width: auto; min-height: 40px; padding: 0.5em 1.1em; font-size: 0.85rem; gap: 6px;
+      width: auto;
+      min-height: max(26px, calc(var(--k) * 26));
+      padding: 0 max(9px, calc(var(--k) * 9));
+      font-size: max(10.5px, calc(var(--k) * 10.5));
+      gap: max(4px, calc(var(--k) * 4));
+      box-shadow: none;
     }
-    .btn--primary svg, .btn--outline svg { width: 15px; height: 15px; }
+    .btn--primary :global(svg), .btn--outline :global(svg) { width: max(12px, calc(var(--k) * 12)); height: max(12px, calc(var(--k) * 12)); }
+
+    /* Stats: one row at the bottom-right, three columns separated by thin dividers */
     .hero__stats {
-      grid-column: 2; grid-row: 2;
-      flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 18px;
+      position: absolute;
+      left: auto;
+      bottom: auto;
+      right: calc(var(--k) * 48);
+      top: calc(var(--k) * 250);
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: calc(var(--k) * 9);
+      margin: 0;
     }
-    .stat__div { display: none; }
-    .stat strong { font-size: 1.15rem; }
-    .stat span { font-size: 0.72rem; }
-    .stat { animation-duration: 6s; }
-  }
-  @media (max-width: 480px) {
-    .hero { min-height: calc(var(--hdr-h) + 340px + 190px); }
-    .hero__cta { flex-direction: column; }
-    .btn--primary, .btn--outline { width: auto; min-height: 40px; font-size: 0.85rem; }
-    .hero__stats { flex-wrap: nowrap; gap: 10px; }
+    .stat { align-items: flex-start; gap: 1px; animation-duration: 6s; }
+    .stat strong { font-size: max(12.5px, calc(var(--k) * 12.5)); }
+    .stat span { font-size: max(10px, calc(var(--k) * 10)); }
+    .stat__div { display: block; width: 1px; height: calc(var(--k) * 20); background: rgba(255,255,255,0.28); }
   }
 </style>
 
