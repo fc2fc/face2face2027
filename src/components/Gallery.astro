@@ -340,7 +340,10 @@ const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' :
   .section-lead {
     text-align: center;
     color: var(--muted);
-    margin: -0.5rem 0 2rem;
+    margin: -0.5rem auto 2rem;
+    max-width: 640px;
+    width: 100%;
+    text-wrap: balance;
     font-size: 1rem;
   }
 

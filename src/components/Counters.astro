@@ -135,6 +135,7 @@ function parseCounter(val: string) {
   .counter:nth-child(2) .counter__val { color: var(--blue); }
   .counter:nth-child(3) .counter__icon { background: rgba(247,231,26,0.16); color: var(--yellow); }
   .counter:nth-child(3) .counter__val { color: var(--yellow); }
-  .section-title--logo { display: flex; align-items: center; justify-content: center; gap: 0.35em; flex-wrap: wrap; }
-  .title-logo { width: clamp(150px, 26vw, 230px); height: auto; display: inline-block; }
+  .section-title--logo { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0; }
+  .section-title--logo span { display: block; line-height: 1; margin-top: var(--logo-gap, -0.2em); }
+  .title-logo { width: clamp(150px, 26vw, 230px); height: auto; display: block; margin-inline: auto; }
 </style>
