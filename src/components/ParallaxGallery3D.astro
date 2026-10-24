@@ -1,6 +1,6 @@
 ---
 // ParallaxGallery3D.astro – גלריית 3D parallax, רק צילום סטילס (ללא עיצוב גרפי)
-import { site } from '../lib/content';
+import { site, thumb } from '../lib/content';
 import type { SiteContent } from '../data/site-content.json';
 
 // שליפת כל פריטי הפורטפוליו, סינון לצילום סטילס בלבד
@@ -41,28 +41,28 @@ const double = (arr: any[]) => [...arr, ...arr];
         <div class="parallax3d__col" id="col1">
           {double(col1).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
+              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col2">
           {double(col2).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
+              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col3">
           {double(col3).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
+              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col4">
           {double(col4).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
+              <img src={thumb(img.src)} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
             </div>
           ))}
         </div>

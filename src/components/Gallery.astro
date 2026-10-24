@@ -1,5 +1,5 @@
 ---
-import { site, size } from '../lib/content';
+import { site, size, thumb } from '../lib/content';
 
 interface Props {
   limit?: number;
@@ -15,7 +15,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
 function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   return cat.items
     .filter((item: any) => item.src)           // stills/design only (videos have thumbnail)
-    .map((item: any) => ({ src: item.src, alt: item.alt || item.title || cat.category }))
+    .map((item: any) => ({ src: thumb(item.src), alt: item.alt || item.title || cat.category }))
     .slice(0, max);
 }
 ---
@@ -98,7 +98,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
                     data-title={item.title}
                     data-item-page={item.old_item_page}
                     data-n={n}>
-                    <img src={item.src}
+                    <img src={thumb(item.src)}
                       alt={item.alt || item.title || `${c.category} – Face2Face`}
                       loading={n < 6 ? 'eager' : 'lazy'}
                       decoding="async"

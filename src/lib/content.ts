@@ -1,5 +1,7 @@
 import content from '../data/site-content.json';
 import dims from '../data/media-dims.json';
+import fs from 'node:fs';
+import nodePath from 'node:path';
 
 export const site = content.site as any;
 export const pages = content.pages as any[];
@@ -63,4 +65,12 @@ export function clientName(link?: string | null) {
   if (!link) return 'לקוח';
   const key = Object.keys(CLIENT_NAMES).find((k) => link.includes(k));
   return key ? CLIENT_NAMES[key] : 'לקוח';
+}
+
+/** 640px WebP thumbnail for a gallery image (generated into /assets/media/thumbs); falls back to the original. */
+export function thumb(src?: string): string | undefined {
+  if (!src) return src;
+  const name = nodePath.basename(src, nodePath.extname(src));
+  const rel = `/assets/media/thumbs/${name}.webp`;
+  return fs.existsSync(nodePath.join(process.cwd(), 'public', rel)) ? rel : src;
 }
