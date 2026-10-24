@@ -54,7 +54,15 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     toggle.setAttribute('aria-expanded', 'false');
     header.classList.remove('is-open');
   }));
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
+  let lastY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 20);
+    const menuOpen = header.classList.contains('is-open');
+    if (!menuOpen && y > 400 && y > lastY + 6) header.classList.add('is-hidden');
+    else if (y < lastY - 6 || y <= 400 || menuOpen) header.classList.remove('is-hidden');
+    lastY = y;
+  };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 </script>
@@ -68,8 +76,9 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
     border-bottom: 1px solid rgba(231, 229, 236, 0.6);
-    transition: box-shadow 0.3s, background 0.3s;
+    transition: box-shadow 0.3s, background 0.3s, transform 0.35s cubic-bezier(.2,.7,.2,1);
   }
+  .header.is-hidden { transform: translateY(-100%); }
   .header.is-scrolled {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 24px rgba(15, 13, 22, 0.08);

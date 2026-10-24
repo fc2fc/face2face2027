@@ -97,6 +97,7 @@ const PIXEL_ID = '130381808053594';
     <noscript
       ><img height="1" width="1" style="display:none" alt="" src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`} /></noscript
     >
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">דילוג לתוכן</a>
     <Header current={page.old_path} />
     <main id="main">
@@ -125,6 +126,34 @@ const PIXEL_ID = '130381808053594';
     </div>
 
     <Popup />
+
+    <script>
+      // Scroll progress bar + reveal-on-scroll
+      const bar = document.getElementById('scroll-progress') as HTMLElement | null;
+      if (bar) {
+        let ticking = false;
+        const upd = () => {
+          const h = document.documentElement.scrollHeight - innerHeight;
+          bar.style.transform = `scaleX(${h > 0 ? Math.min(scrollY / h, 1) : 0})`;
+          ticking = false;
+        };
+        addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, { passive: true });
+        upd();
+      }
+      const targets = document.querySelectorAll<HTMLElement>(
+        'main .section-title, main .section-lead, .about__visual, .about__text > *, .contact .info__card, .contact .social-row, .contact .form-card, .counter, .slider-wrap, .tabs'
+      );
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((es) => es.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        targets.forEach((el, i) => {
+          el.classList.add('reveal');
+          el.style.setProperty('--rd', `${(i % 4) * 0.07}s`);
+          io.observe(el);
+        });
+      }
+    </script>
 
     <script>
       const banner = document.getElementById('cookie')!;

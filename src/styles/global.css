@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -248,3 +249,39 @@ button:active {
   }
 }
 
+
+/* ═══════════════════════════════════════
+   Design polish: rhythm, reveal, progress
+═══════════════════════════════════════ */
+::selection { background: var(--brand); color: #fff; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+
+.section-title { letter-spacing: -0.015em; }
+.section-lead { font-size: 1.05rem; line-height: 1.75; }
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  height: 3px;
+  z-index: 80;
+  background: linear-gradient(90deg, var(--brand), #ff4fb4);
+  transform-origin: right center;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(.2,.7,.2,1) var(--rd, 0s), transform 0.7s cubic-bezier(.2,.7,.2,1) var(--rd, 0s);
+  will-change: opacity, transform;
+}
+.reveal.is-in { opacity: 1; transform: none; }
+.no-js .reveal { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .scroll-progress { display: none; }
+}

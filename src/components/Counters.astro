@@ -26,7 +26,12 @@ const displayCounters = counters.length === 1
     ]
   : counters;
 
-const icons = ['📸', '🏆', '⭐', '🎬'];
+const icons = [
+  '<path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/>',
+  '<circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/>',
+  '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+  '<path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/>',
+];
 
 function parseCounter(val: string) {
   const num = parseInt(val.replace(/\D/g, ''), 10) || 0;
@@ -43,7 +48,7 @@ function parseCounter(val: string) {
         const { num, suffix } = parseCounter(c.value);
         return (
           <li class="counter">
-            <span class="counter__icon" aria-hidden="true">{icons[i] ?? '✨'}</span>
+            <span class="counter__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={icons[i] ?? icons[2]} /></span>
             <strong class="counter__val" data-target={num} data-suffix={suffix}>0</strong>
             <span class="counter__label">{c.label}</span>
           </li>
@@ -98,7 +103,7 @@ function parseCounter(val: string) {
     transition: background 0.3s, transform 0.3s;
   }
   .counter:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
-  .counter__icon { display: block; font-size: 2rem; margin-bottom: 12px; }
+  .counter__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; background: rgba(225,0,133,0.14); color: var(--brand); }
   .counter__val {
     display: block;
     font-size: clamp(2.4rem, 5vw, 3.5rem);
