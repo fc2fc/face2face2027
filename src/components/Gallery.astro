@@ -108,6 +108,7 @@ const pos = (src?: string) => {
                       style={`object-position:${pos(src)}`}
                     />
                     <span class="tile__shade" aria-hidden="true"></span>
+                    <span class="tile__glow" aria-hidden="true"></span>
                     {isVideo && (
                       <span class="play" aria-hidden="true">
                         <Icon name="play-fill" size={26} />
@@ -118,7 +119,15 @@ const pos = (src?: string) => {
                         <Icon name="arrows-out-simple" size={18} />
                       </span>
                     )}
-                    {item.title && <span class="caption">{item.title}</span>}
+                    <span class:list={['info', !item.title && !isVideo && 'info--bare']}>
+                      <span class="info__text">
+                        <span class="info__cat">{c.category}</span>
+                        {item.title && <span class="info__title">{item.title}</span>}
+                      </span>
+                      <span class="info__go" aria-hidden="true">
+                        <Icon name="arrow-left" size={16} />
+                      </span>
+                    </span>
                   </a>
                 );
               })}
@@ -169,6 +178,11 @@ const pos = (src?: string) => {
     <Icon name="arrow-left" size={22} />
   </button>
 </dialog>
+
+<div class="gcursor" aria-hidden="true">
+  <span class="gcursor__dot"></span>
+  <span class="gcursor__view">צפה</span>
+</div>
 
 <script>
   const root = document.querySelector<HTMLElement>('#works')!;
@@ -312,6 +326,7 @@ const pos = (src?: string) => {
       const panel = tile.closest<HTMLElement>('[role=tabpanel]')!;
       list = [...panel.querySelectorAll<HTMLAnchorElement>('.tile')];
       show(list.indexOf(tile));
+      hideCursor();
       box.showModal();
     }),
   );
@@ -332,22 +347,85 @@ const pos = (src?: string) => {
     if (Math.abs(dx) > 60) show(idx + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
   });
 
-  // Hover: gentle tilt toward the pointer (fine pointers only)
-  if (matchMedia('(hover: hover)').matches && !reduce) {
-    root.querySelectorAll<HTMLElement>('.tile').forEach((t) => {
-      t.addEventListener('pointermove', (e) => {
-        const r = t.getBoundingClientRect();
-        t.style.setProperty('--ry', `${((e.clientX - r.left) / r.width - 0.5) * 14}deg`);
-        t.style.setProperty('--rx', `${-((e.clientY - r.top) / r.height - 0.5) * 14}deg`);
-        t.style.setProperty('--gx', `${((e.clientX - r.left) / r.width) * 100}%`);
-        t.style.setProperty('--gy', `${((e.clientY - r.top) / r.height) * 100}%`);
-      });
-      t.addEventListener('pointerleave', () => {
-        t.style.setProperty('--rx', '0deg');
-        t.style.setProperty('--ry', '0deg');
-      });
+  // ── Hover FX: cursor-tracking glow + gentle tilt + custom trailing cursor ───
+  // Mouse/pen only. Touch gets the plain states from the CSS (no listeners, no cursor).
+  // Pointer events only record coordinates; all DOM writes happen once per animation frame.
+  const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const cursorEl = document.querySelector<HTMLElement>('.gcursor')!;
+  const grids = [...root.querySelectorAll<HTMLElement>('.grid')];
+  let px = 0, py = 0;            // last pointer position (viewport)
+  let cx = 0, cy = 0;            // trailing cursor position
+  let over: HTMLElement | null = null;
+  let rect: DOMRect | null = null;
+  let paintRaf = 0, trailRaf = 0;
+  let rectStale = false;
+
+  function paint() {
+    paintRaf = 0;
+    if (!over) return;
+    if (rectStale) { rect = over.getBoundingClientRect(); rectStale = false; }
+    const x = px - rect!.left, y = py - rect!.top;
+    over.style.setProperty('--gx', `${x.toFixed(1)}px`);
+    over.style.setProperty('--gy', `${y.toFixed(1)}px`);
+    if (!reduce) {
+      over.style.setProperty('--ry', `${((x / rect!.width - 0.5) * 12).toFixed(2)}deg`);
+      over.style.setProperty('--rx', `${(-(y / rect!.height - 0.5) * 12).toFixed(2)}deg`);
+    }
+  }
+  function trail() {
+    trailRaf = 0;
+    const k = reduce ? 1 : 0.2; // reduced motion: follow instantly, no smoothing
+    cx += (px - cx) * k;
+    cy += (py - cy) * k;
+    cursorEl.style.transform = `translate3d(${cx.toFixed(1)}px, ${cy.toFixed(1)}px, 0)`;
+    if (Math.abs(px - cx) > 0.2 || Math.abs(py - cy) > 0.2) trailRaf = requestAnimationFrame(trail); // idle → loop stops
+  }
+  function setOver(tile: HTMLElement | null) {
+    if (tile === over) return;
+    if (over) { over.style.setProperty('--rx', '0deg'); over.style.setProperty('--ry', '0deg'); }
+    over = tile;
+    rect = tile ? tile.getBoundingClientRect() : null; // measured before the tilt starts
+    rectStale = false;
+    cursorEl.classList.toggle('is-view', !!tile);
+  }
+  function hideCursor() {
+    cursorEl.classList.remove('is-on', 'is-view');
+    setOver(null);
+  }
+  function onMove(e: PointerEvent) {
+    if (e.pointerType === 'touch') return;
+    px = e.clientX; py = e.clientY;
+    const wasHidden = !cursorEl.classList.contains('is-on');
+    if (wasHidden) { cx = px; cy = py; cursorEl.classList.add('is-on'); } // appear in place, don't fly in from the old spot
+    setOver((e.target as Element).closest<HTMLElement>('.tile'));
+    if (!paintRaf) paintRaf = requestAnimationFrame(paint);
+    if (!trailRaf) trailRaf = requestAnimationFrame(trail);
+  }
+  // Scrolling moves tiles under a still pointer: re-resolve the tile and refresh its rect
+  let scrollRaf = 0;
+  function onScroll() {
+    if (scrollRaf || !cursorEl.classList.contains('is-on')) return;
+    scrollRaf = requestAnimationFrame(() => {
+      scrollRaf = 0;
+      const el = document.elementFromPoint(px, py);
+      if (!el?.closest('.grid')) { hideCursor(); return; }
+      const t = el.closest<HTMLElement>('.tile');
+      if (t === over) { rectStale = true; if (!paintRaf) paintRaf = requestAnimationFrame(paint); } else setOver(t);
     });
   }
+  function syncFx() {
+    const on = finePointer.matches;
+    root.classList.toggle('has-cursor', on); // CSS hides the system cursor over the tiles only while this is set
+    if (!on) hideCursor();
+  }
+  grids.forEach((g) => {
+    g.addEventListener('pointermove', onMove, { passive: true });
+    g.addEventListener('pointerleave', hideCursor);
+  });
+  addEventListener('scroll', onScroll, { passive: true });
+  document.documentElement.addEventListener('mouseleave', hideCursor);
+  finePointer.addEventListener('change', syncFx);
+  syncFx();
 </script>
 
 <style>
@@ -487,45 +565,54 @@ const pos = (src?: string) => {
   .tile:hover :global(img),
   .tile:focus-visible :global(img) { transform: scale(calc(var(--z, 1) * 1.09)); }
 
-  @property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-  .tile::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 4;
-    border-radius: inherit;
-    padding: 2px;
-    background: conic-gradient(from var(--ang), #d0007f, #04a8f1, #f7e71a, #d0007f);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
-    opacity: 0;
-    transition: opacity 0.4s;
-    pointer-events: none;
-    animation: neon-spin 3.5s linear infinite;
-    filter: drop-shadow(0 0 6px rgba(208, 0, 127, 0.8)) drop-shadow(0 0 10px rgba(4, 168, 241, 0.6));
-  }
+  /* Cursor-tracking glow border.
+     ::before = hairline glass edge, always on (static, free).
+     ::after  = the glow: a radial gradient whose centre follows the pointer (--gx/--gy are set once per frame
+     by the script), cut into a 2px ring with a mask, so only the border near the cursor lights up.
+     Nothing animates on its own: no infinite animations, no work unless the pointer moves. */
+  .tile::before,
   .tile::after {
     content: '';
     position: absolute;
     inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+  .tile::before {
+    z-index: 4;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0.1));
+  }
+  .tile::after {
+    z-index: 5;
+    padding: 2px;
+    background: radial-gradient(190px circle at var(--gx, 50%) var(--gy, 50%), #fff 0%, #04a8f1 16%, #d0007f 42%, rgba(208, 0, 127, 0) 72%);
+    opacity: 0;
+    transition: opacity 0.35s;
+  }
+  .tile:hover::after, .tile:focus-visible::after { opacity: 1; }
+  /* soft inner light under the pointer */
+  .tile__glow {
+    position: absolute;
+    inset: 0;
     z-index: 3;
     pointer-events: none;
-    background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.16), transparent 55%);
+    background: radial-gradient(360px circle at var(--gx, 50%) var(--gy, 50%), rgba(4, 168, 241, 0.18), rgba(208, 0, 127, 0.1) 40%, transparent 68%);
     opacity: 0;
     transition: opacity 0.4s;
   }
-  .tile:hover::before, .tile:focus-visible::before, .tile:hover::after { opacity: 1; }
-  @keyframes neon-spin { to { --ang: 360deg; } }
+  .tile:hover .tile__glow, .tile:focus-visible .tile__glow { opacity: 1; }
 
   .tile__shade {
     position: absolute;
     inset: 0;
     z-index: 1;
     background:
-      linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-      linear-gradient(180deg, transparent 45%, rgba(10, 10, 10, 0.78) 100%),
-      linear-gradient(135deg, rgba(208, 0, 127, 0.0), rgba(4, 168, 241, 0.0));
+      linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14)),
+      linear-gradient(180deg, transparent 45%, rgba(10, 10, 10, 0.72) 100%);
     opacity: 0;
     transition: opacity 0.35s ease;
   }
@@ -534,9 +621,10 @@ const pos = (src?: string) => {
   .tile:hover,
   .tile:focus-visible {
     z-index: 2;
-    box-shadow: 0 0 0 2px var(--brand), 0 24px 54px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65), 0 0 46px -10px rgba(4, 168, 241, 0.3);
     outline: none;
   }
+  .tile:focus-visible { box-shadow: 0 0 0 2px var(--blue), 0 28px 60px rgba(0, 0, 0, 0.65); }
 
   .tile__zoom {
     position: absolute;
@@ -557,31 +645,121 @@ const pos = (src?: string) => {
   .tile:hover .tile__zoom,
   .tile:focus-visible .tile__zoom { opacity: 1; transform: none; }
 
-  .caption {
+  /* Liquid-glass info panel. Slides up on hover. 3D glass edge = bright top + left rim and a dim bottom/right,
+     as if lit from the top-left. backdrop-filter only exists while the panel is shown, so 50 hidden panels
+     don't each keep a blur layer alive. */
+  .info {
     position: absolute;
     inset-inline: 10px;
     bottom: 10px;
-    z-index: 5;
-    padding: 12px 16px;
-    border-radius: 14px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 12px 12px 14px;
+    border-radius: 16px;
     color: #fff;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 38%),
+      rgba(14, 14, 14, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top-color: rgba(255, 255, 255, 0.42);
+    border-left-color: rgba(255, 255, 255, 0.26);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.16), inset -1px -1px 0 rgba(0, 0, 0, 0.35), 0 12px 32px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(calc(100% + 16px));
+    transition: opacity 0.3s, transform 0.55s cubic-bezier(.2,.9,.25,1.05), visibility 0s 0.55s;
+  }
+  .tile:hover .info,
+  .tile:focus-visible .info,
+  .tile--video .info {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+    -webkit-backdrop-filter: blur(12px) saturate(165%);
+    backdrop-filter: blur(12px) saturate(165%);
+  }
+  .info__text { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+  .info__cat {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--blue);
+  }
+  .info__title {
     font-family: var(--font-ui);
     font-weight: 700;
     font-size: 0.95rem;
     line-height: 1.3;
-    background: rgba(10, 10, 10, 0.55);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
-    backdrop-filter: blur(14px) saturate(140%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.35s, transform 0.45s cubic-bezier(.2,.7,.2,1);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
-  .tile:hover .caption,
-  .tile:focus-visible .caption,
-  .tile--video .caption { opacity: 1; transform: none; }
+  .info__go {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    transition: background 0.25s, transform 0.35s cubic-bezier(.2,.9,.3,1.3);
+  }
+  .tile:hover .info__go { background: var(--brand-ink); border-color: transparent; transform: translateX(-3px); }
   .tile--video .tile__shade { opacity: 1; }
+
+  /* ── Custom trailing cursor (fine pointers only; the script toggles .is-on / .is-view) ── */
+  .gcursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 80;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+    will-change: transform;
+  }
+  .gcursor.is-on { opacity: 1; }
+  .gcursor__dot {
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 16px rgba(4, 168, 241, 0.75);
+    transition: transform 0.3s cubic-bezier(.2,.8,.2,1);
+  }
+  .gcursor__view {
+    position: absolute;
+    left: -44px;
+    top: -44px;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(208, 0, 127, 0.9);
+    color: #fff;
+    font-family: var(--font-ui);
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 12px 36px rgba(208, 0, 127, 0.5), inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    transition: transform 0.45s cubic-bezier(.2, 1.15, .3, 1);
+  }
+  .gcursor.is-view .gcursor__view { transform: scale(1); }
+  .gcursor.is-view .gcursor__dot { transform: scale(0); }
+  /* system cursor is hidden over the tiles only, and only while the custom one is running */
+  #works.has-cursor .grid,
+  #works.has-cursor .grid * { cursor: none; }
+  #works.has-cursor .tile__zoom { display: none; }  /* the "צפה" cursor replaces the corner icon */
 
   .play {
     position: absolute;
@@ -735,9 +913,6 @@ const pos = (src?: string) => {
     .tabs__track { gap: 2px; padding: 5px; }
     .tabs button { padding: 0.4em 0.62em; font-size: 0.82rem; gap: 5px; }
     .tab__count { padding: 0 6px; min-width: 1.6em; font-size: 0.72rem; }
-    .caption { opacity: 1; transform: none; padding-top: 28px; font-size: 0.82rem; }
-    .tile__shade { opacity: 1; background: linear-gradient(180deg, transparent 60%, rgba(10, 10, 10, 0.7)); }
-    .tile__zoom { display: none; }
     .lightbox__bar { padding: 10px 12px; gap: 8px; }
     .lightbox__link { display: none; }
     .lightbox__stage { padding: 0 8px 12px; }
@@ -746,13 +921,35 @@ const pos = (src?: string) => {
     .lightbox__nav--next { left: 16px; }
     .lightbox__stage :global(img) { max-height: calc(100vh - 150px); }
   }
-  @media (hover: none) {
+  /* Touch / narrow screens: no hover, no glow, no custom cursor. The tile keeps a quiet resting state instead:
+     a bottom gradient with a compact title (untitled tiles stay clean) and a press-down on tap. */
+  @media (hover: none), (max-width: 640px) {
     .tile:hover :global(img) { transform: scale(var(--z, 1)); }
+    .tile::after, .tile__glow { display: none; }
+    .tile__zoom { display: none; }
+    .tile__shade { opacity: 1; background: linear-gradient(180deg, transparent 58%, rgba(10, 10, 10, 0.72)); }
+    .info {
+      inset-inline: 0;
+      bottom: 0;
+      padding: 26px 12px 10px;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+    .info--bare, .info__cat, .info__go { display: none; }
+    .info__title { font-size: 0.82rem; }
+    .tile.is-visible:active { transform: perspective(900px) scale(0.985); }
   }
   @media (prefers-reduced-motion: reduce) {
     .tile { opacity: 1; transform: none; transition: none; }
     .play { animation: none; }
-    .tile::before { animation: none; }
     .tabs__ind { transition: none; }
+    .info, .info__go, .gcursor__view, .gcursor__dot, .tile::after, .tile__glow { transition: none; }
   }
 </style>
