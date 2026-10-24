@@ -34,7 +34,7 @@ npm run preview  # מציג את dist/
 
 ## לפני העלייה לאוויר
 
-1. **טופס צור קשר** – אתר סטטי לא שולח טפסים לבד. פתחו טופס ב-Formspree (או שירות דומה), העתיקו את `.env.example` ל-`.env` ושימו את הכתובת ב-`PUBLIC_FORM_ENDPOINT`. בלי זה הטופס מציג הודעה להשתמש ב-WhatsApp.
+1. **טופס צור קשר** – נשלח דרך Web3Forms. המשתנה `PUBLIC_FORM_ENDPOINT` (ב-Vercel וב-`.env` מקומי) מכיל את ה-Access Key. המשתנה נצרב בזמן build, לכן אחרי שינוי שלו צריך Redeploy.
 2. **הפניות 301** – `npm run dev` מחזיר 301 אמיתי. בבנייה סטטית Astro יוצר עמודי הפניה (meta refresh). לקבלת 301 אמיתי בשרת: Netlify / Vercel עם ה-adapter שלהם, או הגדרת הפניות בשרת לפי `redirects.json`.
 3. **כתובות ללא `/` בסוף** – האתר בנוי כ-`/שירותים.html`. רוב שירותי האחסון (Netlify, Vercel, Cloudflare Pages) מגישים אותו ב-`/שירותים` אוטומטית.
 4. **Search Console** – אחרי ההחלפה, להגיש את `https://www.fc2fc.co.il/sitemap-index.xml`.

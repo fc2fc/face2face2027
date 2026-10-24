@@ -13,11 +13,16 @@ interface Props {
 }
 const { fields, submitLabel, formName } = Astro.props;
 const AUTOCOMPLETE: Record<string, string> = { text: 'name', tel: 'tel', email: 'email' };
-// Set PUBLIC_FORM_ENDPOINT in .env (e.g. a Formspree URL). See README.
-const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
+// Web3Forms. PUBLIC_FORM_ENDPOINT (Vercel env / .env) holds the Web3Forms Access Key. Web3Forms keys are
+// designed to be public (they only allow sending to the mailbox registered with the key).
+const ENDPOINT = 'https://api.web3forms.com/submit';
+const accessKey = String(import.meta.env.PUBLIC_FORM_ENDPOINT ?? '').trim();
 ---
 
-<form class="lead-form" method="post" action={endpoint || undefined} data-endpoint={endpoint} data-form-name={formName} novalidate>
+<form class="lead-form" method="post" action={ENDPOINT} data-endpoint={ENDPOINT} data-has-key={accessKey ? 'true' : 'false'} data-form-name={formName} novalidate>
+  <input type="hidden" name="access_key" value={accessKey} />
+  <input type="hidden" name="subject" value="ליד חדש מהאתר Face2Face" />
+  <input type="hidden" name="from_name" value="אתר Face2Face" />
   <input type="hidden" name="form" value={formName} />
   {
     fields.map((f) => {
@@ -45,7 +50,8 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
       );
     })
   }
-  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" />
+  <!-- Web3Forms honeypot: bots tick it, people never see it -->
+  <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" style="display:none" />
   <button class="btn" type="submit">{submitLabel}</button>
   <p class="lead-form__status" role="status" aria-live="polite"></p>
 </form>
@@ -59,9 +65,9 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
         form.reportValidity();
         return;
       }
-      const endpoint = form.dataset.endpoint;
-      if (!endpoint) {
-        status.textContent = 'הטופס עדיין לא מחובר. אפשר לפנות ב-WhatsApp או במייל face2faceprint@gmail.com';
+      const endpoint = form.dataset.endpoint!;
+      if (form.dataset.hasKey !== 'true') {
+        status.textContent = 'הטופס אינו זמין כרגע. אפשר לפנות ב-WhatsApp או במייל face2faceprint@gmail.com';
         status.dataset.state = 'error';
         return;
       }
@@ -71,9 +77,10 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
       status.dataset.state = '';
       try {
         const res = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-        if (!res.ok) throw new Error(String(res.status));
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || data.success === false) throw new Error(data.message || String(res.status));
         form.reset();
-        status.textContent = 'תודה! ההודעה נשלחה ונחזור אליכם בהקדם.';
+        status.textContent = 'הפרטים נשלחו בהצלחה, נחזור אליך בהקדם!';
         status.dataset.state = 'ok';
         (window as any).fbq?.('track', 'Lead');
         (window as any).dataLayer?.push({ event: 'form_submit', form_name: form.dataset.formName });
