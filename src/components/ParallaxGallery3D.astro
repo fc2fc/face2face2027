@@ -1,0 +1,319 @@
+---
+// ParallaxGallery3D.astro – גלריית פרלקס תלת-מימדית בסגנון 21st.dev
+// תמונות אמיתיות מתיק העבודות, ללא React/framer-motion
+
+const images = [{"src": "/assets/media/uploads/696ac5cce30db.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"}, {"src": "/assets/media/uploads/696ac5cce7dd5.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"}, {"src": "/assets/media/uploads/696ac5cce9503.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"}, {"src": "/assets/media/uploads/696ac32eac87d.webp", "alt": "דניאל רוט-אבנרי", "path": "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99"}, {"src": "/assets/media/uploads/696ac38eeac63.webp", "alt": "עבודות צילום סטילס מקצועי | Face2Face – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-696ac39138e0f"}, {"src": "/assets/media/uploads/696ac4dab927e.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"}, {"src": "/assets/media/uploads/696ac4dabc7f9.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"}, {"src": "/assets/media/uploads/696ac4dabde12.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"}, {"src": "/assets/media/uploads/696ac4dabb275.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"}, {"src": "/assets/media/uploads/6967b814b71b6.webp", "alt": "עבודות עיצוב גרפי וצילום | Face2Face – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b816e50d8"}, {"src": "/assets/media/uploads/6967b7f621b9d.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b7f8e187e"}, {"src": "/assets/media/uploads/6967b78f66ede.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b79296ed4"}, {"src": "/assets/media/uploads/6967b78f64d86.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b79275c26"}, {"src": "/assets/media/uploads/68b5ff1eadb9f.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff208136e"}, {"src": "/assets/media/uploads/68b5ff1ed021c.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff22656c7"}, {"src": "/assets/media/uploads/68b5ff1e5f864.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff1f8cdb4"}];
+
+// חלק לארבעה עמודות
+const col1 = images.filter((_, i) => i % 4 === 0);
+const col2 = images.filter((_, i) => i % 4 === 1);
+const col3 = images.filter((_, i) => i % 4 === 2);
+const col4 = images.filter((_, i) => i % 4 === 3);
+
+// הכפל כל עמודה לאורך אינסופי
+const double = (arr: typeof images) => [...arr, ...arr];
+---
+
+<section class="parallax3d" id="parallax-gallery" aria-label="גלריית עבודות תלת-מימדית">
+  <div class="parallax3d__sticky">
+    <div class="parallax3d__banner" id="pBanner">
+      <!-- אפקט צל מסביב -->
+      <div class="parallax3d__vignette"></div>
+
+      <!-- כרטיס טקסט מרכזי -->
+      <div class="parallax3d__headline" id="pHeadline">
+        <span class="parallax3d__badge">🎬 תיק עבודות</span>
+        <h2>הסיפורים<br/><em>שצילמנו</em></h2>
+        <p>מעל 4,950 פרויקטים – כל אחד עם נשמה</p>
+        <a href="/עבודות" class="parallax3d__cta">לכל העבודות ←</a>
+      </div>
+
+      <!-- גריד תמונות 3D -->
+      <div class="parallax3d__grid" id="pGrid">
+        <div class="parallax3d__col" id="col1">
+          {double(col1).map((img) => (
+            <div class="parallax3d__card">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+        <div class="parallax3d__col" id="col2">
+          {double(col2).map((img) => (
+            <div class="parallax3d__card">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+        <div class="parallax3d__col" id="col3">
+          {double(col3).map((img) => (
+            <div class="parallax3d__card">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+        <div class="parallax3d__col" id="col4">
+          {double(col4).map((img) => (
+            <div class="parallax3d__card">
+              <img src={img.src} alt={img.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .parallax3d {
+    position: relative;
+    height: 500vh;
+    background: var(--dark, #0f0d16);
+  }
+  .parallax3d__sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .parallax3d__banner {
+    position: relative;
+    width: 90vw;
+    height: 82vh;
+    border-radius: 40px;
+    border: 3px solid rgba(225,0,133,0.25);
+    background: #050308;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-radius 0.1s linear, width 0.1s linear, height 0.1s linear;
+  }
+  .parallax3d__banner.expanded {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border-width: 0;
+  }
+
+  /* צל vignette */
+  .parallax3d__vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background:
+      radial-gradient(ellipse at center, transparent 30%, #050308 100%),
+      linear-gradient(to bottom, #050308 0%, transparent 15%, transparent 85%, #050308 100%),
+      linear-gradient(to right, #050308 0%, transparent 15%, transparent 85%, #050308 100%);
+    pointer-events: none;
+  }
+
+  /* כרטיס טקסט */
+  .parallax3d__headline {
+    position: absolute;
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .parallax3d__headline.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .parallax3d__badge {
+    background: rgba(225,0,133,0.15);
+    border: 1px solid rgba(225,0,133,0.4);
+    color: #e10085;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 100px;
+    letter-spacing: 0.05em;
+  }
+  .parallax3d__headline h2 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .parallax3d__headline h2 em {
+    color: #e10085;
+    font-style: normal;
+  }
+  .parallax3d__headline p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin: 0;
+  }
+  .parallax3d__cta {
+    pointer-events: auto;
+    background: #e10085;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 8px;
+  }
+  .parallax3d__cta:hover {
+    background: #b8006c;
+    transform: scale(1.04);
+  }
+
+  /* גריד 3D */
+  .parallax3d__grid {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 130%;
+    left: -15%;
+    height: 200%;
+    top: -50%;
+    transform-style: preserve-3d;
+    transform: rotateY(-45deg) rotateX(25deg) rotateZ(15deg) translateZ(-800px);
+    will-change: transform;
+    transition: transform 0.05s linear;
+  }
+  .parallax3d__col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 22%;
+    min-width: 160px;
+    flex-shrink: 0;
+    will-change: transform;
+  }
+  .parallax3d__card {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #111;
+    transition: transform 0.3s;
+  }
+  .parallax3d__card:hover { transform: scale(1.02); }
+  .parallax3d__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+  }
+  .parallax3d__card:hover img { opacity: 1; }
+
+  @media (max-width: 600px) {
+    .parallax3d__grid { gap: 8px; }
+    .parallax3d__card { height: 180px; }
+    .parallax3d { height: 400vh; }
+  }
+</style>
+
+<script>
+(function() {
+  const section = document.getElementById('parallax-gallery');
+  const banner  = document.getElementById('pBanner');
+  const grid    = document.getElementById('pGrid');
+  const headline = document.getElementById('pHeadline');
+  const col1    = document.getElementById('col1');
+  const col2    = document.getElementById('col2');
+  const col3    = document.getElementById('col3');
+  const col4    = document.getElementById('col4');
+
+  if (!section || !banner || !grid) return;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+  function easeInOut(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  let currentProgress = 0;
+  let targetProgress  = 0;
+  let rafId = null;
+
+  function getProgress() {
+    const rect = section.getBoundingClientRect();
+    const total = section.offsetHeight - window.innerHeight;
+    const scrolled = -rect.top;
+    return clamp(scrolled / total, 0, 1);
+  }
+
+  function applyStyles(p) {
+    // שלב 1 (0→0.15): הבאנר גדל למלוא המסך
+    const phase1 = clamp(p / 0.15, 0, 1);
+    const e1 = easeInOut(phase1);
+
+    const w = lerp(90, 100, e1);
+    const h = lerp(82, 100, e1);
+    const r = lerp(40, 0, e1);
+    const bw = lerp(3, 0, e1);
+
+    banner.style.width  = w + 'vw';
+    banner.style.height = h + 'vh';
+    banner.style.borderRadius = r + 'px';
+    banner.style.borderWidth  = bw + 'px';
+
+    // headline נעלם בשלב 1
+    if (headline) {
+      const headOpacity = clamp(1 - phase1 * 2, 0, 1);
+      headline.style.opacity = headOpacity;
+      headline.style.pointerEvents = headOpacity < 0.1 ? 'none' : 'auto';
+    }
+
+    // שלב 2 (0.15→1): גריד 3D מסתובב ומתקדם
+    const phase2 = clamp((p - 0.15) / 0.85, 0, 1);
+    const e2 = easeInOut(phase2);
+
+    const rotY  = lerp(-45, -8, e2);
+    const rotX  = lerp(25,   4, e2);
+    const rotZ  = lerp(15,   2, e2);
+    const transZ = lerp(-800, 0, e2);
+
+    grid.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) rotateZ(${rotZ}deg) translateZ(${transZ}px)`;
+    grid.style.perspective = '1000px';
+
+    // עמודות פרלקס
+    const y1 = lerp(0,   -40, e2);
+    const y2 = lerp(-40,  10, e2);
+    const y3 = lerp(0,   -40, e2);
+    const y4 = lerp(-30,  20, e2);
+
+    if (col1) col1.style.transform = `translateY(${y1}%)`;
+    if (col2) col2.style.transform = `translateY(${y2}%)`;
+    if (col3) col3.style.transform = `translateY(${y3}%)`;
+    if (col4) col4.style.transform = `translateY(${y4}%)`;
+  }
+
+  function tick() {
+    targetProgress = getProgress();
+    currentProgress = lerp(currentProgress, targetProgress, 0.08);
+
+    if (Math.abs(currentProgress - targetProgress) > 0.0005) {
+      applyStyles(currentProgress);
+      rafId = requestAnimationFrame(tick);
+    } else {
+      applyStyles(targetProgress);
+      rafId = null;
+    }
+  }
+
+  function onScroll() {
+    if (!rafId) rafId = requestAnimationFrame(tick);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  applyStyles(0);
+})();
+</script>
