@@ -1244,98 +1244,117 @@
     "clients": [
       {
         "logo": "/assets/media/uploads/6883cdec5db39.webp",
-        "alt": "",
-        "link": "https://www.wzo.org.il/"
+        "alt": "לוגו ההסתדרות הציונית העולמית – לקוח Face2Face",
+        "link": "https://www.wzo.org.il/",
+        "name": "ההסתדרות הציונית העולמית"
       },
       {
         "logo": "/assets/media/uploads/6883cdfc3286b.webp",
-        "alt": "",
-        "link": "https://www.thejoint.org.il/"
+        "alt": "לוגו הג'וינט ישראל – לקוח Face2Face",
+        "link": "https://www.thejoint.org.il/",
+        "name": "הג'וינט ישראל"
       },
       {
         "logo": "/assets/media/uploads/6883ce15a3159.webp",
-        "alt": "",
-        "link": "https://www.nbn.org.il/hebnew/"
+        "alt": "לוגו נתיב – עלייה מחו\"ל – לקוח Face2Face",
+        "link": "https://www.nbn.org.il/hebnew/",
+        "name": "נתיב – עלייה מחו\"ל"
       },
       {
         "logo": "/assets/media/uploads/6883ce23edf18.webp",
-        "alt": "",
-        "link": "https://mishpahot-hantzaha.mod.gov.il/Pages/default.aspx"
+        "alt": "לוגו משפחות הנצחה – משרד הביטחון – לקוח Face2Face",
+        "link": "https://mishpahot-hantzaha.mod.gov.il/Pages/default.aspx",
+        "name": "משפחות הנצחה – משרד הביטחון"
       },
       {
         "logo": "/assets/media/uploads/6883ce3073778.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_science_and_technology/govil-landing-page"
+        "alt": "לוגו משרד המדע והטכנולוגיה – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_science_and_technology/govil-landing-page",
+        "name": "משרד המדע והטכנולוגיה"
       },
       {
         "logo": "/assets/media/uploads/6883ce3db9718.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_health/govil-landing-page"
+        "alt": "לוגו משרד הבריאות – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_health/govil-landing-page",
+        "name": "משרד הבריאות"
       },
       {
         "logo": "/assets/media/uploads/6883ce4b13c29.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page"
+        "alt": "לוגו משרד החינוך – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry-of-education/govil-landing-page",
+        "name": "משרד החינוך"
       },
       {
         "logo": "/assets/media/uploads/6883ce569eeab.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_foreign_affairs/govil-landing-page"
+        "alt": "לוגו משרד החוץ – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_foreign_affairs/govil-landing-page",
+        "name": "משרד החוץ"
       },
       {
         "logo": "/assets/media/uploads/6883ce65e000a.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_finance/govil-landing-page"
+        "alt": "לוגו משרד האוצר – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_finance/govil-landing-page",
+        "name": "משרד האוצר"
       },
       {
         "logo": "/assets/media/uploads/6883ce70c98f0.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_economy/govil-landing-page"
+        "alt": "לוגו משרד הכלכלה – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_economy/govil-landing-page",
+        "name": "משרד הכלכלה"
       },
       {
         "logo": "/assets/media/uploads/6883ce7b585eb.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/ministry_of_transport_and_road_safety/govil-landing-page"
+        "alt": "לוגו משרד התחבורה – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/ministry_of_transport_and_road_safety/govil-landing-page",
+        "name": "משרד התחבורה"
       },
       {
         "logo": "/assets/media/uploads/6883ce84ed88e.webp",
-        "alt": "",
-        "link": "https://kachollavan.org.il/"
+        "alt": "לוגו כחול לבן – לקוח Face2Face",
+        "link": "https://kachollavan.org.il/",
+        "name": "כחול לבן"
       },
       {
         "logo": "/assets/media/uploads/6883ce940ca07.webp",
-        "alt": "",
-        "link": "https://www.gov.il/he/departments/government-press-office/govil-landing-page"
+        "alt": "לוגו לשכת העיתונות הממשלתית – לקוח Face2Face",
+        "link": "https://www.gov.il/he/departments/government-press-office/govil-landing-page",
+        "name": "לשכת העיתונות הממשלתית"
       },
       {
         "logo": "/assets/media/uploads/6883cea34eff8.webp",
-        "alt": "",
-        "link": "https://www.mt-law.co.il/"
+        "alt": "לוגו משרד עורכי דין – לקוח Face2Face",
+        "link": "https://www.mt-law.co.il/",
+        "name": "משרד עורכי דין"
       },
       {
         "logo": "/assets/media/uploads/688c3492c903b.webp",
-        "alt": "",
-        "link": "https://www.facebook.com/profile.php?id=100087509408112"
+        "alt": "לוגו facebook.com – לקוח Face2Face",
+        "link": "https://www.facebook.com/profile.php?id=100087509408112",
+        "name": "facebook.com"
       },
       {
         "logo": "/assets/media/uploads/6883ceae4a9f9.webp",
-        "alt": "",
-        "link": null
+        "alt": "לוגו לקוח – Face2Face",
+        "link": null,
+        "name": "לקוח – Face2Face"
       },
       {
         "logo": "/assets/media/uploads/6883cebb7da33.webp",
-        "alt": "",
-        "link": "https://www.jewsofethiopia.com/"
+        "alt": "לוגו אגודת יהודי אתיופיה – לקוח Face2Face",
+        "link": "https://www.jewsofethiopia.com/",
+        "name": "אגודת יהודי אתיופיה"
       },
       {
         "logo": "/assets/media/uploads/6883cec65469f.webp",
-        "alt": "",
-        "link": null
+        "alt": "לוגו לקוח – Face2Face",
+        "link": null,
+        "name": "לקוח – Face2Face"
       },
       {
         "logo": "/assets/media/uploads/6883ced13204a.webp",
-        "alt": "",
-        "link": "https://www.tefflee.co.il/"
+        "alt": "לוגו Tefflee – לקוח Face2Face",
+        "link": "https://www.tefflee.co.il/",
+        "name": "Tefflee"
       }
     ],
     "counters": [
@@ -4720,7 +4739,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/696ac38eeac63.webp",
-            "alt": "",
+            "alt": "עבודות צילום סטילס מקצועי | Face2Face – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_696ac38eeac63.jpg"
           }
         ],
@@ -5685,7 +5704,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b814b71b6.webp",
-            "alt": "",
+            "alt": "עבודות עיצוב גרפי וצילום | Face2Face – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b814b71b6.png"
           }
         ],
@@ -5870,7 +5889,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b7f621b9d.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b7f621b9d.png"
           }
         ],
@@ -6055,7 +6074,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b78f66ede.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b78f66ede.png"
           }
         ],
@@ -6240,7 +6259,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b78f64d86.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b78f64d86.png"
           }
         ],
@@ -6425,7 +6444,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5ff1eadb9f.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5ff1eadb9f.png"
           }
         ],
@@ -6610,7 +6629,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5ff1ed021c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5ff1ed021c.png"
           }
         ],
@@ -6795,7 +6814,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5ff1e5f864.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5ff1e5f864.png"
           }
         ],
@@ -6980,7 +6999,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a564fd.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a564fd.png"
           }
         ],
@@ -7165,7 +7184,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a4e4ba.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a4e4ba.png"
           }
         ],
@@ -7350,7 +7369,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fe793d90e.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fe793d90e.png"
           }
         ],
@@ -7535,7 +7554,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fe3b7417d.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fe3b7417d.png"
           }
         ],
@@ -7720,7 +7739,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fd0c6699d.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fd0c6699d.png"
           }
         ],
@@ -7905,7 +7924,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fcd7a3dfa.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fcd7a3dfa.png"
           }
         ],
@@ -8090,7 +8109,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b85674ef4.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b85674ef4.png"
           }
         ],
@@ -8275,7 +8294,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fcd7a5413.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fcd7a5413.png"
           }
         ],
@@ -8460,7 +8479,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fe793696a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fe793696a.png"
           }
         ],
@@ -8645,7 +8664,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fcd7a50db.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fcd7a50db.png"
           }
         ],
@@ -10585,7 +10604,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed6413324.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed6413324.png"
           }
         ],
@@ -10770,7 +10789,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c02e9400c6.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c02e9400c6.png"
           }
         ],
@@ -11930,7 +11949,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c004895881.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c004895881.png"
           }
         ],
@@ -12115,7 +12134,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c01d98a174.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c01d98a174.png"
           }
         ],
@@ -12300,7 +12319,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c0047528ff.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c0047528ff.png"
           }
         ],
@@ -12485,7 +12504,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c022896304.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c022896304.png"
           }
         ],
@@ -12670,7 +12689,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c02128927c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c02128927c.png"
           }
         ],
@@ -12855,7 +12874,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c01d96376f.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c01d96376f.png"
           }
         ],
@@ -13040,7 +13059,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c0047077b4.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c0047077b4.png"
           }
         ],
@@ -13225,7 +13244,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bc80a6d.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bc80a6d.png"
           }
         ],
@@ -13410,7 +13429,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f7ebc4.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f7ebc4.png"
           }
         ],
@@ -13595,7 +13614,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f9ab14.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f9ab14.png"
           }
         ],
@@ -13780,7 +13799,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f9d9ea.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f9d9ea.png"
           }
         ],
@@ -13965,7 +13984,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f7cf9c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f7cf9c.png"
           }
         ],
@@ -14735,7 +14754,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c004291d24.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c004291d24.png"
           }
         ],
@@ -14920,7 +14939,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c004893227.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c004893227.png"
           }
         ],
@@ -15105,7 +15124,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed63cffca.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed63cffca.png"
           }
         ],
@@ -15290,7 +15309,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed6403107.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed6403107.png"
           }
         ],
@@ -15475,7 +15494,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b1e1676.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b1e1676.png"
           }
         ],
@@ -15660,7 +15679,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed63f1faa.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed63f1faa.png"
           }
         ],
@@ -15845,7 +15864,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688c01d9b0647.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688c01d9b0647.png"
           }
         ],
@@ -16615,7 +16634,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b19a59f.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b19a59f.png"
           }
         ],
@@ -16800,7 +16819,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b83951fc93.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b83951fc93.jpg"
           }
         ],
@@ -16985,7 +17004,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393f1d69.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393f1d69.jpg"
           }
         ],
@@ -17170,7 +17189,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b83938f222.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b83938f222.jpg"
           }
         ],
@@ -17355,7 +17374,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393f1e0a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393f1e0a.jpg"
           }
         ],
@@ -17540,7 +17559,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393eb332.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393eb332.jpg"
           }
         ],
@@ -17725,7 +17744,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bf53d94.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bf53d94.png"
           }
         ],
@@ -17910,7 +17929,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393cfd72.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393cfd72.jpg"
           }
         ],
@@ -18095,7 +18114,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b83955f332.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b83955f332.jpg"
           }
         ],
@@ -18280,7 +18299,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b849674c71.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b849674c71.png"
           }
         ],
@@ -18465,7 +18484,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8495e6f61.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8495e6f61.png"
           }
         ],
@@ -18650,7 +18669,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b849620d21.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b849620d21.png"
           }
         ],
@@ -18835,7 +18854,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a0bee36.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a0bee36.png"
           }
         ],
@@ -19020,7 +19039,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393cb804.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393cb804.jpg"
           }
         ],
@@ -19205,7 +19224,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8394d279a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8394d279a.jpg"
           }
         ],
@@ -19390,7 +19409,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed630d3bc.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed630d3bc.png"
           }
         ],
@@ -19575,7 +19594,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed629928e.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed629928e.png"
           }
         ],
@@ -19760,7 +19779,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed62aba0f.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed62aba0f.png"
           }
         ],
@@ -19945,7 +19964,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed62663a5.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed62663a5.png"
           }
         ],
@@ -20130,7 +20149,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f96d0a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f96d0a.png"
           }
         ],
@@ -20315,7 +20334,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed6124ae6.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed6124ae6.png"
           }
         ],
@@ -20500,7 +20519,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f9e8b3.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f9e8b3.png"
           }
         ],
@@ -20685,7 +20704,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f7bc62.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f7bc62.png"
           }
         ],
@@ -20870,7 +20889,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5fa2794.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5fa2794.png"
           }
         ],
@@ -21055,7 +21074,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b839652e3e.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b839652e3e.jpg"
           }
         ],
@@ -21240,7 +21259,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed63be0ff.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed63be0ff.png"
           }
         ],
@@ -21425,7 +21444,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed63c688b.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed63c688b.png"
           }
         ],
@@ -21610,7 +21629,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84aa9eff4.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84aa9eff4.png"
           }
         ],
@@ -21795,7 +21814,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84ab7f0c9.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84ab7f0c9.png"
           }
         ],
@@ -21980,7 +21999,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8393a7e60.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8393a7e60.jpg"
           }
         ],
@@ -22165,7 +22184,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b839551357.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b839551357.jpg"
           }
         ],
@@ -22350,7 +22369,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b839541bdc.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b839541bdc.jpg"
           }
         ],
@@ -22535,7 +22554,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b839567853.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b839567853.jpg"
           }
         ],
@@ -22720,7 +22739,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b849661127.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b849661127.png"
           }
         ],
@@ -22905,7 +22924,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8495e5896.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8495e5896.png"
           }
         ],
@@ -23090,7 +23109,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84ab38176.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84ab38176.png"
           }
         ],
@@ -23275,7 +23294,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84ba4b89c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84ba4b89c.png"
           }
         ],
@@ -23460,7 +23479,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a28f2ce.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a28f2ce.png"
           }
         ],
@@ -23645,7 +23664,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b8495e5889.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b8495e5889.png"
           }
         ],
@@ -23830,7 +23849,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a2e740d.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a2e740d.png"
           }
         ],
@@ -24015,7 +24034,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84be7ff89.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84be7ff89.png"
           }
         ],
@@ -24200,7 +24219,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a296516.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a296516.png"
           }
         ],
@@ -24385,7 +24404,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a0672d0.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a0672d0.png"
           }
         ],
@@ -24570,7 +24589,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a28b751.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a28b751.png"
           }
         ],
@@ -24755,7 +24774,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a2c092a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a2c092a.png"
           }
         ],
@@ -24940,7 +24959,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a982d97.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a982d97.png"
           }
         ],
@@ -25125,7 +25144,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b849666c39.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b849666c39.png"
           }
         ],
@@ -25310,7 +25329,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b5e4985.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b5e4985.png"
           }
         ],
@@ -25495,7 +25514,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed63c9da2.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed63c9da2.png"
           }
         ],
@@ -25680,7 +25699,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b1afe26.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b1afe26.png"
           }
         ],
@@ -25865,7 +25884,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a344086.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a344086.png"
           }
         ],
@@ -26050,7 +26069,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b849616151.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b849616151.png"
           }
         ],
@@ -26235,7 +26254,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84aa7a4f7.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84aa7a4f7.png"
           }
         ],
@@ -26420,7 +26439,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84ab155e0.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84ab155e0.png"
           }
         ],
@@ -26605,7 +26624,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688bed5f76b61.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688bed5f76b61.png"
           }
         ],
@@ -26790,7 +26809,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84aac4565.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84aac4565.png"
           }
         ],
@@ -26975,7 +26994,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84aa53da3.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84aa53da3.png"
           }
         ],
@@ -27160,7 +27179,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bb0da4b.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bb0da4b.png"
           }
         ],
@@ -27345,7 +27364,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b24fde9.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b24fde9.png"
           }
         ],
@@ -27530,7 +27549,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b4cf3b3.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b4cf3b3.png"
           }
         ],
@@ -27715,7 +27734,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b10b4cc.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b10b4cc.png"
           }
         ],
@@ -27900,7 +27919,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a898bb8.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a898bb8.png"
           }
         ],
@@ -28085,7 +28104,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b245320.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b245320.png"
           }
         ],
@@ -28270,7 +28289,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b7d1943.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b7d1943.png"
           }
         ],
@@ -28455,7 +28474,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84965d500.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84965d500.png"
           }
         ],
@@ -28640,7 +28659,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bf4f5c9.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bf4f5c9.png"
           }
         ],
@@ -28825,7 +28844,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bb06163.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bb06163.png"
           }
         ],
@@ -29010,7 +29029,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b7b2d47.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b7b2d47.png"
           }
         ],
@@ -29195,7 +29214,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84a2889bb.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84a2889bb.png"
           }
         ],
@@ -29380,7 +29399,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84b60cf66.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84b60cf66.png"
           }
         ],
@@ -29565,7 +29584,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/688b84bf26b2c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_688b84bf26b2c.png"
           }
         ],
@@ -29750,7 +29769,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a75a07.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a75a07.png"
           }
         ],
@@ -29935,7 +29954,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a5168c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a5168c.png"
           }
         ],
@@ -30120,7 +30139,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a791d8.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a791d8.png"
           }
         ],
@@ -30305,7 +30324,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a73727.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a73727.png"
           }
         ],
@@ -30490,7 +30509,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a55609.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a55609.png"
           }
         ],
@@ -30675,7 +30694,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a73814.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a73814.png"
           }
         ],
@@ -30860,7 +30879,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b85677267.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b85677267.jpg"
           }
         ],
@@ -31045,7 +31064,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a56ee2.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a56ee2.png"
           }
         ],
@@ -31230,7 +31249,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5f83a7d49c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5f83a7d49c.png"
           }
         ],
@@ -31421,12 +31440,12 @@
         "images": [
           {
             "src": "/assets/media/youtube/wzrXU7ZEK9M.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 1",
             "original": "https://img.youtube.com/vi/wzrXU7ZEK9M/maxresdefault.jpg?site123=68b5f886cd72c"
           },
           {
             "src": "/assets/media/icons/play.svg",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 2",
             "original": "https://images.cdn-files-a.com/ready_uploads/svg/play.svg?v=3",
             "role": "background"
           }
@@ -31618,12 +31637,12 @@
         "images": [
           {
             "src": "/assets/media/youtube/XsQ1tfZkTYE.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 1",
             "original": "https://img.youtube.com/vi/XsQ1tfZkTYE/maxresdefault.jpg?site123=68b5f8ae4f3a1"
           },
           {
             "src": "/assets/media/icons/play.svg",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 2",
             "original": "https://images.cdn-files-a.com/ready_uploads/svg/play.svg?v=3",
             "role": "background"
           }
@@ -31815,12 +31834,12 @@
         "images": [
           {
             "src": "/assets/media/youtube/OiWesq_yTXY.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 1",
             "original": "https://img.youtube.com/vi/OiWesq_yTXY/0.jpg?site123=68b5f8fc1cf23"
           },
           {
             "src": "/assets/media/icons/play.svg",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 2",
             "original": "https://images.cdn-files-a.com/ready_uploads/svg/play.svg?v=3",
             "role": "background"
           }
@@ -32012,12 +32031,12 @@
         "images": [
           {
             "src": "/assets/media/youtube/ehX3m-ZdliM.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 1",
             "original": "https://img.youtube.com/vi/ehX3m-ZdliM/maxresdefault.jpg?site123=68b5fa1400ccf"
           },
           {
             "src": "/assets/media/icons/play.svg",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 2",
             "original": "https://images.cdn-files-a.com/ready_uploads/svg/play.svg?v=3",
             "role": "background"
           }
@@ -32209,12 +32228,12 @@
         "images": [
           {
             "src": "/assets/media/youtube/f_e_Uxa6qxI.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 1",
             "original": "https://img.youtube.com/vi/f_e_Uxa6qxI/maxresdefault.jpg?site123=68b5fa2ba4d43"
           },
           {
             "src": "/assets/media/icons/play.svg",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face – תמונה 2",
             "original": "https://images.cdn-files-a.com/ready_uploads/svg/play.svg?v=3",
             "role": "background"
           }
@@ -32400,7 +32419,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf143721.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf143721.png"
           }
         ],
@@ -32585,7 +32604,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf12a643.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf12a643.png"
           }
         ],
@@ -32770,7 +32789,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf24b069.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf24b069.png"
           }
         ],
@@ -32955,7 +32974,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf128897.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf128897.png"
           }
         ],
@@ -33140,7 +33159,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf129822.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf129822.png"
           }
         ],
@@ -33325,7 +33344,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf128b9e.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf128b9e.png"
           }
         ],
@@ -33510,7 +33529,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf275969.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf275969.png"
           }
         ],
@@ -33695,7 +33714,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf2a3d6b.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf2a3d6b.png"
           }
         ],
@@ -33880,7 +33899,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf2f1699.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf2f1699.png"
           }
         ],
@@ -34065,7 +34084,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf14e9d2.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf14e9d2.png"
           }
         ],
@@ -34250,7 +34269,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf151294.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf151294.png"
           }
         ],
@@ -34435,7 +34454,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf27d721.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf27d721.png"
           }
         ],
@@ -34620,7 +34639,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf278ce5.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf278ce5.png"
           }
         ],
@@ -34805,7 +34824,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf14e6b0.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf14e6b0.png"
           }
         ],
@@ -34990,7 +35009,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf1483ce.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf1483ce.png"
           }
         ],
@@ -35175,7 +35194,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf336a73.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf336a73.png"
           }
         ],
@@ -35360,7 +35379,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf34a24a.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf34a24a.png"
           }
         ],
@@ -35545,7 +35564,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf32293f.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf32293f.png"
           }
         ],
@@ -35730,7 +35749,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/68b5fbf14a906.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_68b5fbf14a906.png"
           }
         ],
@@ -35915,7 +35934,7 @@
         "images": [
           {
             "src": "/assets/media/uploads/6967b85678b6c.webp",
-            "alt": "",
+            "alt": "עבודות – צילום נגה מלסה, Face2Face",
             "original": "https://files.cdn-files-a.com/uploads/2963728/2000_6967b85678b6c.png"
           }
         ],

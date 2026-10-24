@@ -6,7 +6,7 @@ interface Props {
 }
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
-const clients = site.clients as { logo: string; link: string | null }[];
+const clients = site.clients as { logo: string; link: string | null; alt?: string; name?: string }[];
 ---
 
 <section class="section section--soft" id="clients">
@@ -15,7 +15,7 @@ const clients = site.clients as { logo: string; link: string | null }[];
     <ul class="logos">
       {
         clients.map((c) => {
-          const name = clientName(c.link);
+          const name = (c as any).alt || clientName(c.link);
           const img = <img src={c.logo} alt={name} width="200" height="200" loading="lazy" />;
           return (
             <li>
