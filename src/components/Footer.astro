@@ -15,8 +15,8 @@ const social = [
 ---
 
 <footer class="footer">
-  <!-- Big call-to-action -->
-  <div class="container">
+  <!-- Big call-to-action (stays in normal flow, slides over the rest) -->
+  <div class="footer__top"><div class="container">
     <div class="cta">
       <div class="cta__glow" aria-hidden="true"></div>
       <div class="cta__text">
@@ -31,8 +31,9 @@ const social = [
         <a class="cta__btn cta__btn--line" href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
       </div>
     </div>
-  </div>
+  </div></div>
 
+  <div class="footer__rest">
   <div class="footer__body">
     <div class="container footer__grid">
       <div class="footer__brand">
@@ -99,11 +100,33 @@ const social = [
       </button>
     </div>
   </div>
+  </div>
 </footer>
 
 <script>
+  const footerEl = document.querySelector<HTMLElement>('footer.footer .footer__rest');
   const cta = document.querySelector<HTMLElement>('.footer .cta');
-  if (cta && 'IntersectionObserver' in window) {
+  let reveal = false;
+  if (footerEl) {
+    const root = document.documentElement;
+    const fit = () => {
+      root.classList.remove('footer-reveal');
+      const h = footerEl.offsetHeight;
+      reveal = h <= innerHeight * 0.96 && innerWidth > 760;
+      if (reveal) { root.style.setProperty('--footer-h', `${h}px`); root.classList.add('footer-reveal'); }
+      onScrollReveal();
+    };
+    const onScrollReveal = () => {
+      if (!reveal || !cta) return;
+      const left = document.documentElement.scrollHeight - (scrollY + innerHeight);
+      if (left < footerEl.offsetHeight + 200) cta.classList.add('is-in');
+    };
+    addEventListener('scroll', onScrollReveal, { passive: true });
+    addEventListener('resize', fit);
+    fit();
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(footerEl);
+  }
+  if (cta && !reveal && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('is-in'); io.disconnect(); }
     }), { threshold: 0.2 });
@@ -120,16 +143,22 @@ const social = [
 </script>
 
 <style>
+  @font-face {
+    font-family: 'BrandFont';
+    src: url('/fonts/brandfont-heavy-italic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
   .footer {
     --fb: var(--blue);
     position: relative;
-    overflow: hidden;
-    background: #0a0a0a;
     color: rgba(240, 240, 240, 0.9);
     font-size: 0.94rem;
-    padding-top: clamp(56px, 8vw, 96px);
   }
-  .footer::before {
+  .footer__top { position: relative; z-index: 2; background: #0a0a0a; padding-top: clamp(32px, 4vw, 56px); }
+  .footer__rest { position: relative; overflow: hidden; background: #0a0a0a; }
+  .footer__rest::before {
     content: '';
     position: absolute;
     inset: auto -10% 0 -10%;
@@ -205,11 +234,11 @@ const social = [
   .cta__btn--line { color: #fff; border: 1px solid rgba(255,255,255,0.25); font-size: 0.92rem; }
   .cta__btn--line:hover { border-color: var(--fb); color: var(--fb); }
 
-  .footer__body { position: relative; padding: 64px 0 24px; }
+  .footer__body { position: relative; padding: clamp(32px, 4vw, 44px) 0 12px; margin-top: clamp(28px, 4vw, 44px); border-top: 1px solid rgba(255, 255, 255, 0.1); }
   .footer__grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1.2fr;
-    gap: 40px;
+    gap: clamp(32px, 5vw, 72px);
   }
   .footer__logo { width: 170px; display: block; margin-bottom: 16px; }
   .footer__tag { margin: 0 0 22px; line-height: 1.75; max-width: 340px; font-size: 0.92rem; color: rgba(235,235,235,0.85); }
@@ -225,9 +254,16 @@ const social = [
     display: grid;
     place-items: center;
     color: rgba(235,235,235,0.9);
-    transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.25s;
+    transition: all 0.3s ease;
   }
-    .social-btn:hover { background: var(--fb); color: #00131c; border-color: var(--fb); transform: translateY(-4px) rotate(-6deg); }
+  .social-btn:hover, .social-btn:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(4, 168, 241, 0.8);
+    box-shadow: 0 0 16px rgba(4, 168, 241, 0.45), 0 0 28px rgba(208, 0, 127, 0.35);
+    transform: translateY(-4px);
+    outline: none;
+  }
 
   .footer__heading {
     font-size: 0.82rem;
@@ -266,28 +302,32 @@ const social = [
   .footer__contact a:hover { color: var(--fb); }
   .footer__contact .hours { font-size: 0.88rem; }
 
-  /* ── Giant wordmark ── */
+  /* ── Giant wordmark: full width, BrandFont only, soft pink → blue gradient ── */
   .wordmark {
     position: relative;
+    container-type: inline-size;
     overflow: hidden;
-    line-height: 0.8;
+    line-height: 1;
     text-align: center;
     direction: ltr;
     user-select: none;
-    padding-top: 16px;
+    padding: 8px 0 0;
   }
   .wordmark span {
-    display: inline-block;
-    font-family: var(--font);
+    display: block;
+    font-family: 'BrandFont', sans-serif;
     font-weight: 900;
-    font-size: clamp(3.4rem, 17.5vw, 15rem);
-    letter-spacing: -0.03em;
-    color: transparent;
-    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--fb) 55%, transparent);
-    background: linear-gradient(180deg, color-mix(in srgb, var(--fb) 30%, transparent), transparent 75%);
+    font-style: italic;
+    font-size: 18.4cqw; /* 'FACE2FACE' is 5.33em wide in this font -> fills the width */
+    line-height: 0.95;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #d0007f, #04a8f1);
     -webkit-background-clip: text;
     background-clip: text;
-    transform: translateY(8%);
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.4;
+    padding-inline: 1cqw;
   }
 
   .footer__bottom {
@@ -329,6 +369,10 @@ const social = [
     .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
     .footer__legal { flex-wrap: wrap; gap: 10px 16px; }
   }
+  /* Footer reveal ("curtain"): enabled by script only when the footer fits in the viewport */
+  :global(html.footer-reveal) :global(main#main) { position: relative; z-index: 2; background: var(--bg); }
+  :global(html.footer-reveal) .footer { padding-bottom: var(--footer-h, 0px); }
+  :global(html.footer-reveal) .footer__rest { position: fixed; inset: auto 0 0 0; z-index: 0; }
   @media (prefers-reduced-motion: reduce) {
     .cta { opacity: 1; transform: none; transition: none; }
   }
