@@ -111,6 +111,7 @@ const double = (arr: any[]) => [...arr, ...arr];
   .parallax3d__headline {
     position: absolute;
     z-index: 20;
+    isolation: isolate;
     text-align: center;
     color: #fff;
     display: flex;
@@ -119,13 +120,23 @@ const double = (arr: any[]) => [...arr, ...arr];
     gap: 14px;
     pointer-events: none;
   }
+  /* Dark scrim keeps headline legible over any photo */
+  .parallax3d__headline::before {
+    content: '';
+    position: absolute;
+    inset: -70px -110px;
+    z-index: -1;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.72) 50%, rgba(20,20,20,0) 78%);
+    pointer-events: none;
+  }
   .parallax3d__badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(236,0,140,0.15);
-    border: 1px solid rgba(236,0,140,0.4);
-    color: #ec008c;
+    background: rgba(20,20,20,0.85);
+    border: 1px solid rgba(236,0,140,0.6);
+    color: var(--brand-on-dark);
     font-size: 0.8rem;
     font-weight: 700;
     padding: 6px 16px;
@@ -139,17 +150,17 @@ const double = (arr: any[]) => [...arr, ...arr];
     margin: 0;
   }
   .parallax3d__headline h2 em {
-    color: #ec008c;
+    color: var(--brand-on-dark);
     font-style: normal;
   }
   .parallax3d__headline p {
     font-size: 1rem;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.92);
     margin: 0;
   }
   .parallax3d__cta {
     pointer-events: auto;
-    background: #ec008c;
+    background: var(--brand-ink);
     color: #fff;
     font-weight: 700;
     padding: 12px 28px;
