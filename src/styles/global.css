@@ -15,17 +15,14 @@
   --line: #2f2f2f;
   --radius: 14px;
   --container: 1200px;
-  --font: 'Almoni DL', 'Almoni Tzar', Arial, sans-serif;
-  --font-ui: 'Almoni Tzar', 'Almoni DL', Arial, sans-serif;
+  --font: 'Almoni DL', Arial, sans-serif;
+  --font-ui: 'Almoni DL', Arial, sans-serif;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-700.woff2') format('woff2'); font-weight: 600 800; font-display: swap; }
 @font-face { font-family: 'Almoni DL'; src: url('/fonts/almoni-dl-900.woff2') format('woff2'); font-weight: 900; font-display: swap; }
-@font-face { font-family: 'Almoni Tzar'; src: url('/fonts/almoni-tzar-300.woff2') format('woff2'); font-weight: 300; font-display: swap; }
-@font-face { font-family: 'Almoni Tzar'; src: url('/fonts/almoni-tzar-400.woff2') format('woff2'); font-weight: 400 500; font-display: swap; }
-@font-face { font-family: 'Almoni Tzar'; src: url('/fonts/almoni-tzar-700.woff2') format('woff2'); font-weight: 600 900; font-display: swap; }
 
 *,
 *::before,
@@ -303,7 +300,7 @@ p { text-wrap: pretty; }
   .scroll-progress { display: none; }
 }
 
-/* Typography: Almoni DL for headings/body, Almoni Tzar for compact UI */
+/* Typography: Almoni DL only */
 h1, h2, h3, h4 { font-family: var(--font); font-weight: 900; }
 .btn, .btn-cta, .btn--primary, .btn--outline, .tabs button, .header__nav a, .cookie,
 .tab__count, label, .caption, .section-lead, .info__card strong, .footer__heading {
