@@ -406,9 +406,9 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     gap: 8px;
     background: linear-gradient(
       to bottom,
-      rgba(15,13,22,0.0) 0%,
-      rgba(15,13,22,0.45) 60%,
-      rgba(15,13,22,0.85) 100%
+      rgba(20,20,20,0.0) 0%,
+      rgba(20,20,20,0.45) 60%,
+      rgba(20,20,20,0.85) 100%
     );
     pointer-events: none;
   }
@@ -422,9 +422,9 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   .cat-parallax__count {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--brand, #e10085);
-    background: rgba(225,0,133,0.12);
-    border: 1px solid rgba(225,0,133,0.3);
+    color: var(--brand, #ec008c);
+    background: rgba(236,0,140,0.12);
+    border: 1px solid rgba(236,0,140,0.3);
     border-radius: 999px;
     padding: 2px 14px;
   }
@@ -469,13 +469,13 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   }
   .tabs button:hover {
     border-color: var(--brand);
-    color: var(--brand);
+    color: var(--brand-ink);
   }
   .tabs button[aria-selected='true'] {
-    background: var(--brand);
+    background: var(--brand-ink);
     border-color: var(--brand);
     color: #fff;
-    box-shadow: 0 4px 16px rgba(225,0,133,0.3);
+    box-shadow: 0 4px 16px rgba(236,0,140,0.3);
   }
   .tab__count {
     background: rgba(0,0,0,0.08);
@@ -532,13 +532,13 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     transform: scale(1.07);
   }
   .tile:hover {
-    box-shadow: 0 12px 40px rgba(15,13,22,0.2);
+    box-shadow: 0 12px 40px rgba(20,20,20,0.2);
     z-index: 1;
   }
   .tile__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(225,0,133,0) 50%, rgba(225,0,133,0.65) 100%);
+    background: linear-gradient(180deg, rgba(236,0,140,0) 50%, rgba(236,0,140,0.65) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -574,11 +574,11 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     background: var(--brand);
     z-index: 1;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 20px rgba(225,0,133,0.4);
+    box-shadow: 0 4px 20px rgba(236,0,140,0.4);
   }
   .tile:hover .play {
     transform: scale(1.1);
-    box-shadow: 0 8px 28px rgba(225,0,133,0.55);
+    box-shadow: 0 8px 28px rgba(236,0,140,0.55);
   }
   .play::after {
     content: '';
@@ -600,7 +600,7 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
     max-height: 95vh;
     padding: 0;
     border: 0;
-    background: rgba(12, 10, 18, 0.97);
+    background: rgba(14,14,14, 0.97);
     border-radius: 16px;
     color: #fff;
     overflow: hidden;

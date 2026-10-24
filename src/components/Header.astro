@@ -82,7 +82,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
   .header.is-hidden { transform: translateY(-100%); }
   .header.is-scrolled {
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 24px rgba(15, 13, 22, 0.08);
+    box-shadow: 0 4px 24px rgba(20,20,20, 0.08);
   }
   .header__inner {
     display: flex;
@@ -117,12 +117,12 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     position: relative;
   }
   .header__nav a:not(.btn-cta):hover {
-    color: var(--brand);
-    background: rgba(225, 0, 133, 0.06);
+    color: var(--brand-ink);
+    background: rgba(236,0,140, 0.06);
   }
   .header__nav a.is-active {
-    color: var(--brand);
-    background: rgba(225, 0, 133, 0.08);
+    color: var(--brand-ink);
+    background: rgba(236,0,140, 0.08);
   }
   .nav__cta {
     margin-inline-start: 8px;
@@ -130,19 +130,19 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
   .btn-cta {
     display: inline-block;
     padding: 8px 20px;
-    background: var(--brand);
+    background: var(--brand-ink);
     color: #fff !important;
     font-weight: 700;
     font-size: 0.9rem;
     border-radius: 999px;
     text-decoration: none !important;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 3px 14px rgba(225, 0, 133, 0.3);
+    box-shadow: 0 3px 14px rgba(236,0,140, 0.3);
   }
   .btn-cta:hover {
     background: var(--brand-dark);
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(225, 0, 133, 0.4);
+    box-shadow: 0 6px 20px rgba(236,0,140, 0.4);
   }
   .header__toggle {
     display: none;
@@ -155,7 +155,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     border-radius: 10px;
     transition: background 0.2s;
   }
-  .header__toggle:hover { background: rgba(225,0,133,0.06); }
+  .header__toggle:hover { background: rgba(236,0,140,0.06); }
   .bars,
   .bars::before,
   .bars::after {

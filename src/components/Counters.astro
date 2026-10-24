@@ -85,7 +85,6 @@ function parseCounter(val: string) {
 </script>
 
 <style>
-  .section--dark .section-title::after { background: var(--brand); }
   .counters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -103,7 +102,7 @@ function parseCounter(val: string) {
     transition: background 0.3s, transform 0.3s;
   }
   .counter:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
-  .counter__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; background: rgba(225,0,133,0.14); color: var(--brand); }
+  .counter__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; background: rgba(236,0,140,0.14); color: var(--brand); }
   .counter__val {
     display: block;
     font-size: clamp(2.4rem, 5vw, 3.5rem);
@@ -130,4 +129,8 @@ function parseCounter(val: string) {
     .counter { padding: 18px 16px; flex-direction: row; align-items: center; text-align: right; gap: 12px; display: flex; }
     .counter__icon { margin-bottom: 0; }
   }
+  .counter:nth-child(2) .counter__icon { background: rgba(4,168,241,0.16); color: var(--blue); }
+  .counter:nth-child(2) .counter__val { color: var(--blue); }
+  .counter:nth-child(3) .counter__icon { background: rgba(247,231,26,0.16); color: var(--yellow); }
+  .counter:nth-child(3) .counter__val { color: var(--yellow); }
 </style>

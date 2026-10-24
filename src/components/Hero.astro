@@ -64,8 +64,8 @@ const words = hero.h1.split(' ');
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(15,13,22,0.3) 0%, rgba(15,13,22,0.0) 40%, rgba(15,13,22,0.6) 100%),
-      linear-gradient(270deg, rgba(15,13,22,0.88) 0%, rgba(15,13,22,0.55) 50%, rgba(15,13,22,0.05) 100%);
+      linear-gradient(180deg, rgba(20,20,20,0.3) 0%, rgba(20,20,20,0.0) 40%, rgba(20,20,20,0.6) 100%),
+      linear-gradient(270deg, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.55) 50%, rgba(20,20,20,0.05) 100%);
   }
   .hero__content {
     position: relative;
@@ -76,8 +76,8 @@ const words = hero.h1.split(' ');
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(225, 0, 133, 0.18);
-    border: 1px solid rgba(225, 0, 133, 0.4);
+    background: rgba(236,0,140, 0.18);
+    border: 1px solid rgba(236,0,140, 0.4);
     color: #fff;
     border-radius: 999px;
     padding: 6px 16px;
@@ -93,7 +93,7 @@ const words = hero.h1.split(' ');
     font-size: clamp(3.4rem, 11vw, 8.5rem);
     font-weight: 900;
     line-height: 0.93;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.01em;
     margin: 0 0 0.3em;
   }
   h1 span {
@@ -104,7 +104,7 @@ const words = hero.h1.split(' ');
   }
   h1 span:nth-child(2) {
     color: var(--brand);
-    text-shadow: 0 0 60px rgba(225, 0, 133, 0.4);
+    text-shadow: 0 0 60px rgba(236,0,140, 0.4);
   }
   .hero__sub {
     font-size: clamp(1.1rem, 2.2vw, 1.65rem);
@@ -128,19 +128,19 @@ const words = hero.h1.split(' ');
     align-items: center;
     gap: 8px;
     padding: 0.85em 1.8em;
-    background: var(--brand);
+    background: var(--brand-ink);
     color: #fff;
     font-weight: 700;
     border-radius: 999px;
     text-decoration: none;
     font-size: 1rem;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 24px rgba(225,0,133,0.35);
+    box-shadow: 0 4px 24px rgba(236,0,140,0.35);
   }
   .btn--primary:hover {
     background: var(--brand-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(225,0,133,0.45);
+    box-shadow: 0 8px 32px rgba(236,0,140,0.45);
   }
   .btn--outline {
     display: inline-flex;
@@ -184,6 +184,8 @@ const words = hero.h1.split(' ');
     color: rgba(255,255,255,0.65);
     font-weight: 500;
   }
+  .stat:nth-child(3) strong { color: var(--blue); }
+  .stat:nth-child(5) strong { color: var(--yellow); }
   .stat__div {
     width: 1px;
     height: 36px;
@@ -238,8 +240,8 @@ const words = hero.h1.split(' ');
     }
     .hero__overlay {
       background:
-        linear-gradient(180deg, rgba(15,13,22,0.5) 0%, rgba(15,13,22,0.2) 50%, rgba(15,13,22,0.8) 100%),
-        linear-gradient(270deg, rgba(15,13,22,0.4) 0%, rgba(15,13,22,0.1) 100%);
+        linear-gradient(180deg, rgba(20,20,20,0.5) 0%, rgba(20,20,20,0.2) 50%, rgba(20,20,20,0.8) 100%),
+        linear-gradient(270deg, rgba(20,20,20,0.4) 0%, rgba(20,20,20,0.1) 100%);
     }
     h1 {
       font-size: clamp(2.8rem, 10vw, 4.5rem);
