@@ -92,9 +92,9 @@ const paragraphs = toParagraphs(about.paragraphs);
   }
   @media (max-width: 760px) {
     .about { grid-template-columns: 1fr; gap: 32px; }
-    .about__visual { position: static; }
+    .about__visual { position: relative; max-width: 420px; margin-inline: auto; }
     .about__img { max-width: 100%; border-radius: 16px; }
-    .about__card { bottom: -10px; inset-inline-end: -10px; }
+    .about__card { bottom: -10px; inset-inline-end: 8px; }
   }
   @media (max-width: 480px) {
     .about__actions {
