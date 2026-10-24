@@ -2,6 +2,7 @@
 // Every page of the old Site123 site, rendered at exactly the same URL.
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
+import HeroPreload from '../components/HeroPreload.astro';
 import ParallaxGallery3D from '../components/ParallaxGallery3D.astro';
 import Services from '../components/Services.astro';
 import Gallery from '../components/Gallery.astro';
@@ -33,6 +34,7 @@ const Single = SINGLE[page.old_path];
 ---
 
 <Base page={page}>
+  {page.type === 'home' && <HeroPreload slot="head" />}
   {
     page.type === 'home' && (
       <>

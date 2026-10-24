@@ -1,0 +1,25 @@
+---
+// Goes in <head> (slot="head") on the home page only: starts the Hero poster download as early as
+// possible, before the stylesheet, fonts and third-party scripts compete for bandwidth.
+import { getImage } from 'astro:assets';
+import { asset } from '../lib/content';
+import { HERO_POSTER } from '../lib/hero';
+
+const avif = await getImage({
+  src: asset(HERO_POSTER.src),
+  widths: [...HERO_POSTER.widths],
+  sizes: HERO_POSTER.sizes,
+  format: 'avif',
+});
+---
+
+{/* type=image/avif: browsers without AVIF skip this hint instead of downloading an image they won't use */}
+<link
+  rel="preload"
+  as="image"
+  type="image/avif"
+  href={avif.src}
+  imagesrcset={avif.srcSet.attribute}
+  imagesizes={HERO_POSTER.sizes}
+  fetchpriority="high"
+/>

@@ -1,10 +1,12 @@
 ---
 import { Picture, getImage } from 'astro:assets';
 import { site, asset } from '../lib/content';
+import { HERO_POSTER } from '../lib/hero';
 
 const hero = site.hero;
 // The poster image is the LCP element: serve it responsive (AVIF/WebP) and first.
-const poster = asset('/assets/media/uploads/hero-eye-contact.webp');
+// Never lazy: it is above the fold and preloaded from <head> (see HeroPreload.astro).
+const poster = asset(HERO_POSTER.src);
 const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', quality: 60 });
 ---
 
@@ -14,8 +16,8 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     class="hero__bg hero__bg--poster"
     src={poster}
     alt=""
-    widths={[480, 828, 1280, 1920]}
-    sizes="(max-width: 768px) 100vw, 84vw"
+    widths={[...HERO_POSTER.widths]}
+    sizes={HERO_POSTER.sizes}
     formats={['avif']}
     fallbackFormat="webp"
     loading="eager"

@@ -44,44 +44,70 @@ const PIXEL_ID = '130381808053594';
     <meta name="theme-color" content="#141414" />
     <meta name="google-site-verification" content="5Sw7hDf_lk-VEjnxIwE6X296VZb9XwRbKhzZoAyodig" />
 
+    <!-- page-specific hints (e.g. the home page's LCP image preload) -->
+    <slot name="head" />
+
     <link rel="preload" href="/fonts/almoni-dl-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/almoni-dl-900.woff2" as="font" type="font/woff2" crossorigin />
 
     <Schema />
 
-    <!-- Google Tag Manager -->
-    <script is:inline define:vars={{ GTM_ID }}>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', GTM_ID);
-    </script>
-    <!-- Meta Pixel -->
-    <script is:inline define:vars={{ PIXEL_ID }}>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = '2.0';
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', PIXEL_ID);
-      fbq('track', 'PageView');
+    <!--
+      Google Tag Manager + Meta Pixel.
+      The dataLayer / fbq queues are created immediately (no network), so every event is recorded
+      with its original order. Only the two library downloads (~230KB of third-party JS, which
+      competed with the Hero image for bandwidth and cost ~2s of LCP on mobile) wait until the page
+      has loaded and the browser is idle, or until the visitor first interacts.
+    -->
+    <script is:inline define:vars={{ GTM_ID, PIXEL_ID }}>
+      (function (w, d) {
+        // GTM queue
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        // Meta Pixel queue (standard stub; fbevents.js drains n.queue when it loads)
+        if (!w.fbq) {
+          var n = (w.fbq = function () {
+            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          });
+          if (!w._fbq) w._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+        }
+        w.fbq('init', PIXEL_ID);
+        w.fbq('track', 'PageView');
+
+        var started = false;
+        function add(src) {
+          var s = d.createElement('script');
+          s.async = true;
+          s.src = src;
+          d.head.appendChild(s);
+        }
+        function start() {
+          if (started) return;
+          started = true;
+          add('https://www.googletagmanager.com/gtm.js?id=' + GTM_ID);
+          add('https://connect.facebook.net/en_US/fbevents.js');
+        }
+        var interactions = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+        function onInteract() {
+          interactions.forEach(function (e) {
+            w.removeEventListener(e, onInteract);
+          });
+          start();
+        }
+        interactions.forEach(function (e) {
+          w.addEventListener(e, onInteract, { passive: true });
+        });
+        function afterLoad() {
+          if ('requestIdleCallback' in w) w.requestIdleCallback(start, { timeout: 3000 });
+          else setTimeout(start, 1500);
+        }
+        if (d.readyState === 'complete') afterLoad();
+        else w.addEventListener('load', afterLoad, { once: true });
+      })(window, document);
     </script>
   </head>
   <body>
