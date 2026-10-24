@@ -6,8 +6,19 @@ const words = hero.h1.split(' ');
 ---
 
 <section class="hero">
-  <img class="hero__bg hero__bg--screen" src={hero.background} alt="" width="1920" height="1080" decoding="async" />
-  <img class="hero__bg hero__bg--eye" src="/assets/media/uploads/hero-eye-contact.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+  <img class="hero__bg hero__bg--poster" src="/assets/media/uploads/hero-eye-contact.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+  <video
+    class="hero__bg hero__bg--video"
+    id="hero-video"
+    data-src="/assets/hero-scroll.mp4"
+    data-src-mobile="/assets/hero-scroll-m.mp4"
+    muted
+    playsinline
+    preload="auto"
+    disablepictureinpicture
+    aria-hidden="true"
+    tabindex="-1"
+  ></video>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="container hero__content">
     <div class="hero__badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>צלם ומעצב גרפי מוביל</div>
@@ -57,7 +68,15 @@ const words = hero.h1.split(' ');
     object-position: 30% center;
     will-change: opacity, transform;
   }
-  .hero__bg--eye { opacity: 1; transform: translate3d(0,0,0); }
+  /* The subject sits centre-frame in the video; shift the frame left so the RTL text column stays clear */
+  .hero__bg--video,
+  .hero__bg--poster { width: 118%; inset-inline: auto; right: 0; left: auto; object-position: center; }
+  .hero__bg--video { opacity: 0; transition: opacity 0.4s; }
+  .hero__bg--video.is-ready { opacity: 1; }
+  @media (max-width: 768px) {
+    .hero__bg--video,
+    .hero__bg--poster { width: 100%; right: 0; object-position: 42% center; }
+  }
   .hero__overlay {
     position: absolute;
     inset: 0;
@@ -288,26 +307,52 @@ const words = hero.h1.split(' ');
 </style>
 
 <script>
-  // Gaze follows scroll: at the top he looks at the visitor; scrolling down his head turns to the screen,
-  // scrolling back up he returns to look at the visitor.
+  // Scroll-linked video: top of page = frame 0 (eye contact); scrolling down scrubs to the last frame
+  // (looking at the screen); scrolling up rewinds. Video is never auto-played.
   const heroEl = document.querySelector<HTMLElement>('.hero');
-  const eye = document.querySelector<HTMLElement>('.hero__bg--eye');
-  if (heroEl && eye) {
+  const video = document.getElementById('hero-video') as HTMLVideoElement | null;
+  if (heroEl && video) {
     const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
-    const ease = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-    let cur = 0, target = 0, raf = 0;
-    const calc = () => clamp(window.scrollY / (heroEl.offsetHeight * 0.55), 0, 1);
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const small = matchMedia('(max-width: 768px)').matches;
+    video.src = (small ? video.dataset.srcMobile : video.dataset.src) as string;
+
+    let duration = 0;
+    let cur = 0; // smoothed progress 0..1
+    let target = 0; // raw progress 0..1
+    let raf = 0;
+    const SPAN = 0.6; // fraction of the hero height over which the video plays
+
+    const calc = () => clamp(window.scrollY / (heroEl.offsetHeight * SPAN), 0, 1);
     const render = () => {
-      cur += (target - cur) * 0.14;
-      if (Math.abs(target - cur) < 0.001) cur = target;
-      const e = ease(cur);
-      eye.style.opacity = String(1 - e);
-      eye.style.transform = `translate3d(${(e * 11).toFixed(2)}%,0,0)`;
-      raf = cur === target ? 0 : requestAnimationFrame(render);
+      cur += (target - cur) * 0.18;
+      if (Math.abs(target - cur) < 0.0015) cur = target;
+      const t = cur * duration;
+      // only seek when the previous seek finished and the change is at least ~1 frame
+      if (!video.seeking && Math.abs(video.currentTime - t) > 1 / 60) video.currentTime = t;
+      raf = cur === target && !video.seeking ? 0 : requestAnimationFrame(render);
     };
-    const onScroll = () => { target = calc(); if (!raf) raf = requestAnimationFrame(render); };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    target = cur = calc();
-    render();
+    const onScroll = () => {
+      target = calc();
+      if (!raf) raf = requestAnimationFrame(render);
+    };
+
+    const ready = () => {
+      duration = Math.max(0, video.duration - 0.04); // stay clear of the very last frame
+      video.pause();
+      video.classList.add('is-ready');
+      if (reduced) { video.currentTime = 0; return; }
+      target = cur = calc();
+      video.currentTime = cur * duration;
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+    };
+    video.addEventListener('loadeddata', () => {
+      // iOS Safari only decodes frames for seeking after a muted play() has been allowed once
+      const p = video.play();
+      if (p && p.then) p.then(ready, ready); else ready();
+    }, { once: true });
+    video.addEventListener('error', () => video.classList.remove('is-ready')); // poster image stays visible
+    video.load();
   }
 </script>
