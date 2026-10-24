@@ -33,6 +33,13 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
           <span dir="ltr">{c.phone}</span>
         </span>
       </a>
+      <a class="b b--tel" href={`tel:${c.phone.replace(/[^+\d]/g, '')}`}>
+        <span class="b__ico b__ico--blue"><Icon name="phone-call" size={26} /></span>
+        <span class="b__t">
+          <strong>התקשרו אלינו</strong>
+          <span dir="ltr">{c.phone}</span>
+        </span>
+      </a>
 
       <div class="b b--loc">
         <div class="radar" aria-hidden="true">
@@ -123,6 +130,7 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
   .b__t strong { font-size: 1.05rem; color: #fff; }
   .b__t span { color: var(--muted); font-size: 0.95rem; overflow-wrap: anywhere; }
 
+  .b--tel { grid-column: span 3; }
   .b--wa { grid-column: span 3; background: var(--brand); border-color: var(--brand); }
   .b--wa .b__ico { background: #fff; color: var(--brand); }
   .b--wa .b__t strong { font-size: 1.3rem; }
@@ -162,7 +170,7 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
 
   @media (max-width: 860px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
-    .b--wa, .b--loc, .b--form { grid-column: 1 / -1; }
+    .b--wa, .b--tel, .b--loc, .b--form { grid-column: 1 / -1; }
     .b--loc { grid-row: auto; }
     .b--mail, .b--hours, .b--social { grid-column: span 2; }
   }

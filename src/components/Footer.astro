@@ -69,7 +69,7 @@ const social = [
         <ul class="footer__contact">
           <li>
             <Icon name="phone-call" size={16} />
-            <a href={site.contact.whatsapp} target="_blank" rel="noopener" dir="ltr">{site.contact.phone}</a>
+            <a href={`tel:${site.contact.phone.replace(/[^+\d]/g, '')}`} dir="ltr">{site.contact.phone}</a>
           </li>
           <li>
             <Icon name="envelope-simple" size={16} />
