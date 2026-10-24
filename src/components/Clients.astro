@@ -14,83 +14,84 @@ const clients = site.clients as { logo: string; link: string | null; alt?: strin
   <div class="container">
     <Heading class="section-title">בין לקוחותינו</Heading>
     <p class="section-lead">ארגונים, משרדי ממשלה ועסקים שבחרו לעמוד מול המצלמה שלנו.</p>
-    <ul class="wall">
-      {
-        clients.map((c, i) => {
-          const name = c.alt || clientName(c.link);
-          // Source logos are 1181px; tiles show them at ~120px, so 1x/2x at 140px is plenty.
-          const img = <Image src={asset(c.logo)} alt={name} width={140} height={140} densities={[1, 2]} format="webp" loading="lazy" />;
-          return (
-            <li class="tile reveal" style={`--d:${(i % 6) * 70}ms`}>
-              {c.link ? (
-                <a href={c.link} target="_blank" rel="noopener" title={name} aria-label={name}>
-                  {img}
-                </a>
-              ) : (
-                img
-              )}
-            </li>
-          );
-        })
-      }
-    </ul>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <filter id="logo-white" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+        <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -0.34 -1.14 -0.12 0 1.5" />
+      </filter>
+    </svg>
+    <div class="marquee" aria-label="לוגואים של לקוחות">
+      <ul class="track">
+        {
+          [0, 1].map((copy) =>
+            clients.map((c) => {
+              const name = c.alt || clientName(c.link);
+              const img = <Image src={asset(c.logo)} alt={copy ? '' : name} width={200} height={200} densities={[1, 2]} format="webp" loading="eager" decoding="async" />;
+              return (
+                <li class="logo" aria-hidden={copy ? 'true' : undefined}>
+                  {c.link ? (
+                    <a href={c.link} target="_blank" rel="noopener" title={name} aria-label={name} tabindex={copy ? -1 : undefined}>
+                      {img}
+                    </a>
+                  ) : (
+                    img
+                  )}
+                </li>
+              );
+            })
+          )
+        }
+      </ul>
+    </div>
   </div>
 </section>
 
-<script>
-  // Fade/lift each logo tile in as it scrolls into view
-  const tiles = document.querySelectorAll<HTMLElement>('#clients .tile');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
-    }), { threshold: 0.1 });
-    tiles.forEach((t) => io.observe(t));
-  } else tiles.forEach((t) => t.classList.add('is-in'));
-</script>
-
 <style>
-  .wall {
+  .marquee {
+    --size: clamp(64px, 8.5vw, 120px);
+    --gap: clamp(18px, 3vw, 44px);
+    margin-top: 2.6rem;
+    overflow: hidden;
+    direction: ltr;
+    -webkit-mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .track {
     list-style: none;
-    margin: 2.2rem 0 0;
+    margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+    width: max-content;
+    gap: var(--gap);
+    padding-inline-end: var(--gap);
+    animation: scroll-logos 60s linear infinite;
+    will-change: transform;
   }
-  .tile {
-    width: calc((100% - 96px) / 7);
-    min-width: 120px;
-    aspect-ratio: 1;
-    border-radius: 18px;
-    background: #000;
+  .marquee:hover .track,
+  .marquee:focus-within .track { animation-play-state: paused; }
+  .logo {
+    flex: none;
+    width: var(--size);
+    height: var(--size);
     display: grid;
     place-items: center;
-    padding: 18px;
-    transition-delay: var(--d);
-    box-shadow: 0 0 0 1px var(--line);
-    overflow: hidden;
   }
-  .tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 0 2px var(--brand), 0 18px 36px rgba(0, 0, 0, 0.5);
-  }
-  .tile a { display: contents; }
-  .tile img {
+  .logo a { display: grid; place-items: center; width: 100%; height: 100%; }
+  .logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* logos are opaque on white: flatten to one uniform light tone on the dark tile */
-    filter: grayscale(1) brightness(0.7) contrast(4.2) invert(1);
-    opacity: 1;
+    /* logos are dark-on-white: luminance becomes alpha, so every logo is plain white with no box behind it */
+    filter: url(#logo-white);
+    opacity: 0.85;
     transition: transform 0.35s cubic-bezier(.2,.7,.2,1), opacity 0.3s;
   }
-  .tile:hover img { transform: scale(1.07); opacity: 1; }
-  @media (max-width: 640px) {
-    .wall { gap: 10px; }
-    .tile { width: calc((100% - 20px) / 3); min-width: 0; padding: 10px; border-radius: 14px; }
+  .logo:hover img, .logo a:focus-visible img { transform: scale(1.12); opacity: 1; }
+  .logo a:focus-visible { outline: 2px solid var(--brand); outline-offset: 6px; border-radius: 8px; }
+  @keyframes scroll-logos {
+    to { transform: translateX(-50%); }
   }
-  @media (max-width: 380px) {
-    .tile { width: calc((100% - 10px) / 2); }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee { overflow-x: auto; }
+    .track { animation: none; }
   }
 </style>
