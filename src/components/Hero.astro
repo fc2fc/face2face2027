@@ -68,14 +68,30 @@ const words = hero.h1.split(' ');
     object-position: 30% center;
     will-change: opacity, transform;
   }
-  /* The subject sits centre-frame in the video; shift the frame left so the RTL text column stays clear */
+  /* Scaled-down, left-shifted frame with feathered edges so the RTL text column stays clear of the face */
   .hero__bg--video,
-  .hero__bg--poster { width: 118%; inset-inline: auto; right: 0; left: auto; object-position: center; }
+  .hero__bg--poster {
+    inset: 0;
+    object-position: center;
+    transform: translate3d(-13%, 4%, 0) scale(0.68);
+    transform-origin: center;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%), linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%), linear-gradient(to right, transparent 0, #000 12%, #000 88%, transparent 100%);
+    mask-composite: intersect;
+  }
   .hero__bg--video { opacity: 0; transition: opacity 0.4s; }
   .hero__bg--video.is-ready { opacity: 1; }
   @media (max-width: 768px) {
     .hero__bg--video,
-    .hero__bg--poster { width: 100%; right: 0; object-position: 42% center; }
+    .hero__bg--poster {
+      inset: 56px 0 auto 0;
+      height: 44%;
+      object-position: 30% center;
+      transform: none;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
+    }
   }
   .hero__overlay {
     position: absolute;
