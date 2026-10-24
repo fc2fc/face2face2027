@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from '../lib/content';
+import logo from '../assets/media/brand/logo-light@2x.webp';
 
 const links = site.footer.links as { label: string; old_url: string }[];
 const main = links.filter((l) => !['/terms', '/privacy', '/accessibility'].includes(l.old_url));
@@ -22,7 +24,7 @@ const social = [
     <div class="container footer__grid">
       <!-- עמודה ראשית -->
       <div class="footer__brand">
-        <img src="/assets/media/brand/logo-light@2x.webp" alt="Face2Face" width="160" height="38" class="footer__logo" loading="lazy" />
+        <Image src={logo} alt="Face2Face" width={160} densities={[1, 2]} class="footer__logo" loading="lazy" />
         <p class="footer__tag">
           <strong>נגה מלסה</strong> – צלם ומעצב גרפי, מייסד Face2Face.<br/>
           צילום, וידאו ועיצוב גרפי לעסקים, לאנשי ציבור ולפרטיים.

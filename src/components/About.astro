@@ -1,5 +1,6 @@
 ---
-import { site, size, toParagraphs } from '../lib/content';
+import { Picture } from 'astro:assets';
+import { site, asset, toParagraphs } from '../lib/content';
 
 interface Props {
   headingLevel?: 'h1' | 'h2';
@@ -16,7 +17,16 @@ const paragraphs = toParagraphs(about.paragraphs);
       <span class="ring ring--a" aria-hidden="true"></span>
       <span class="ring ring--b" aria-hidden="true"></span>
       <div class="arch">
-        <img src={about.image} alt={about.image_alt} {...size(about.image)} loading="lazy" />
+        <Picture
+          src={asset(about.image)}
+          alt={about.image_alt}
+          widths={[360, 540, 800]}
+          sizes="(max-width: 760px) 90vw, 420px"
+          formats={['avif']}
+          fallbackFormat="webp"
+          loading={headingLevel === 'h1' ? 'eager' : 'lazy'}
+          fetchpriority={headingLevel === 'h1' ? 'high' : undefined}
+        />
       </div>
       <div class="chip chip--exp" aria-hidden="true">
         <strong>16+</strong>

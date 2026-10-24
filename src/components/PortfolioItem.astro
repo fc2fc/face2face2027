@@ -1,5 +1,6 @@
 ---
-import { site, size, youtubeIdFromThumb } from '../lib/content';
+import { Picture } from 'astro:assets';
+import { site, asset, youtubeIdFromThumb } from '../lib/content';
 
 interface Props {
   page: any;
@@ -32,7 +33,8 @@ for (const c of site.portfolio) {
     <h1>{title}</h1>
     <div class="media">
       {
-        item.images.map((img: any) => {
+        // Site123's decorative play.svg came along on the video pages; the iframe already shows the video.
+        item.images.filter((img: any) => !img.src.startsWith('/assets/media/icons/')).map((img: any, n: number) => {
           const yt = youtubeIdFromThumb(img.src);
           return yt ? (
             <div class="video">
@@ -45,7 +47,16 @@ for (const c of site.portfolio) {
               />
             </div>
           ) : (
-            <img src={img.src} alt={img.alt || title} {...size(img.src)} />
+            <Picture
+              src={asset(img.src)}
+              alt={img.alt || title}
+              widths={[480, 800, 1200, 1600]}
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              formats={['avif']}
+              fallbackFormat="webp"
+              loading={n === 0 ? 'eager' : 'lazy'}
+              fetchpriority={n === 0 ? 'high' : undefined}
+            />
           );
         })
       }

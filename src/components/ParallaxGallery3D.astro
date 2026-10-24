@@ -1,6 +1,7 @@
 ---
 // "הסיפורים שצילמנו" – גלריית parallax תלת-ממדית במסך מלא, צילום סטילס בלבד
-import { site, thumb } from '../lib/content';
+import { Picture } from 'astro:assets';
+import { site, asset } from '../lib/content';
 
 const stillsCat = (site.portfolio as any[]).find((c) => c.category === 'צילום סטילס');
 const stills = ((stillsCat?.items || []) as any[]).filter((i) => i.src).slice(0, 24);
@@ -15,7 +16,16 @@ const double = (arr: any[]) => [...arr, ...arr];
         <div class="p3d__col" id={`col${n + 1}`}>
           {double(col).map((img: any) => (
             <div class="p3d__card">
-              <img src={thumb(img.src)} alt="" width="320" height="400" loading="lazy" decoding="async" />
+              <Picture
+                src={asset(img.src)}
+                alt=""
+                widths={[240, 400, 640]}
+                sizes="(max-width: 600px) 160px, 37vw"
+                formats={['avif']}
+                fallbackFormat="webp"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           ))}
         </div>

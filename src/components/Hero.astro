@@ -1,20 +1,37 @@
 ---
-import { site } from '../lib/content';
+import { Picture, getImage } from 'astro:assets';
+import { site, asset } from '../lib/content';
 
 const hero = site.hero;
 const words = hero.h1.split(' ');
+// The poster image is the LCP element: serve it responsive (AVIF/WebP) and first.
+const poster = asset('/assets/media/uploads/hero-eye-contact.webp');
+const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', quality: 60 });
 ---
 
 <section class="hero">
-  <img class="hero__bg hero__bg--poster" src="/assets/media/uploads/hero-eye-contact.webp" alt="" width="1920" height="1080" fetchpriority="high" />
+  <Picture
+    class="hero__bg hero__bg--poster"
+    src={poster}
+    alt=""
+    widths={[480, 828, 1280, 1920]}
+    sizes="(max-width: 768px) 100vw, 84vw"
+    formats={['avif']}
+    fallbackFormat="webp"
+    loading="eager"
+    fetchpriority="high"
+  />
   <video
     class="hero__bg hero__bg--video"
     id="hero-video"
     data-src="/assets/hero-scroll.mp4"
     data-src-mobile="/assets/hero-scroll-m.mp4"
+    poster={videoPoster.src}
+    width="1920"
+    height="1082"
     muted
     playsinline
-    preload="auto"
+    preload="none"
     disablepictureinpicture
     aria-hidden="true"
     tabindex="-1"
@@ -331,7 +348,6 @@ const words = hero.h1.split(' ');
     const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const small = matchMedia('(max-width: 768px)').matches;
-    video.src = (small ? video.dataset.srcMobile : video.dataset.src) as string;
 
     let duration = 0;
     let cur = 0; // smoothed progress 0..1
@@ -369,6 +385,19 @@ const words = hero.h1.split(' ');
       if (p && p.then) p.then(ready, ready); else ready();
     }, { once: true });
     video.addEventListener('error', () => video.classList.remove('is-ready')); // poster image stays visible
-    video.load();
+
+    // The video (2.6–4.9MB) must not compete with the poster image for bandwidth: start it only
+    // after the page has loaded, and skip it entirely on data-saver connections.
+    const conn = (navigator as any).connection;
+    const start = () => {
+      video.src = (small ? video.dataset.srcMobile : video.dataset.src) as string;
+      video.preload = 'auto';
+      video.load();
+    };
+    const whenIdle = () => ('requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 2000 }) : setTimeout(start, 200));
+    if (!conn?.saveData && !/2g/.test(conn?.effectiveType ?? '')) {
+      if (document.readyState === 'complete') whenIdle();
+      else window.addEventListener('load', whenIdle, { once: true });
+    }
   }
 </script>

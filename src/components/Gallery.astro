@@ -1,5 +1,6 @@
 ---
-import { site, size, thumb } from '../lib/content';
+import { Picture } from 'astro:assets';
+import { site, asset, imageUrl } from '../lib/content';
 
 interface Props {
   limit?: number;
@@ -10,14 +11,16 @@ const { limit, headingLevel = 'h2', pageSize = 24 } = Astro.props;
 const paged = !limit;
 const Heading = headingLevel;
 const categories = site.portfolio as { category: string; items: any[] }[];
+// On the home page the gallery is far below the fold; on /עבודות the first row is on screen.
+const aboveFold = headingLevel === 'h1';
 
-// Build per-category parallax images (stills → face focus, video→ skip, design→ face focus)
-function getCatImages(cat: { category: string; items: any[] }, max = 16) {
-  return cat.items
-    .filter((item: any) => item.src)           // stills/design only (videos have thumbnail)
-    .map((item: any) => ({ src: thumb(item.src), alt: item.alt || item.title || cat.category }))
-    .slice(0, max);
-}
+// Lightbox shows a 1600px WebP instead of the 2000px source.
+const shown = categories.flatMap((c) => (limit ? c.items.slice(0, limit) : c.items)).filter((i) => i.src);
+const fullUrl = new Map(await Promise.all(shown.map(async (i) => [i.src, await imageUrl(i.src, 1600)] as const)));
+
+// Matches the CSS mosaic: every 7th tile (7n + 1) and video tiles span two columns.
+const isWide = (item: any, n: number) => item.type === 'video' || n % 7 === 0;
+const tileSizes = (wide: boolean) => (wide ? '(max-width: 640px) 100vw, 600px' : '(max-width: 640px) 50vw, 300px');
 ---
 
 <section class="section" id="works">
@@ -37,46 +40,8 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
 
     {
       categories.map((c, i) => {
-        const catImages = getCatImages(c);
-        const hasParallax = false; // the big 3D story gallery above replaces the per-tab banner
-        // Split into 4 columns
-        const cols: typeof catImages[] = [[], [], [], []];
-        catImages.forEach((img, idx) => cols[idx % 4].push(img));
-        // Double each column for infinite scroll feel
-        const dcols = cols.map(col => [...col, ...col]);
-
         return (
           <div role="tabpanel" id={`panel-${i}`} aria-labelledby={`tab-${i}`} hidden={i !== 0}>
-
-            {/* 3D Parallax mini-gallery per category */}
-            {hasParallax && (
-              <div class="cat-parallax" data-cat-parallax={i} aria-hidden="true">
-                <div class="cat-parallax__banner">
-                  <div class="cat-parallax__grid">
-                    {dcols.map((col, ci) => (
-                      <div class="cat-parallax__col">
-                        {col.map((img, ii) => (
-                          <div class="cat-parallax__item">
-                            <img
-                              src={img.src}
-                              alt={img.alt}
-                              loading="lazy"
-                              decoding="async"
-                              style={`object-position: ${ci === 0 || ci === 2 ? 'center top' : 'center 20%'};`}
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                  <div class="cat-parallax__overlay">
-                    <span class="cat-parallax__label">{c.category}</span>
-                    <span class="cat-parallax__count">{c.items.length} עבודות</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
             {/* Grid of tiles */}
             <div class="grid">
               {(limit ? c.items.slice(0, limit) : c.items).map((item, n) =>
@@ -86,23 +51,38 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
                     data-youtube={item.youtube_id}
                     data-title={item.title}
                     data-n={n}>
-                    <img src={item.thumbnail} alt={item.title ?? 'סרטון'} loading={n < 6 ? 'eager' : 'lazy'} {...size(item.thumbnail)} />
+                    <Picture
+                      src={asset(item.thumbnail)}
+                      alt={item.title ?? 'סרטון'}
+                      widths={[300, 600, 900, 1200]}
+                      sizes={tileSizes(true)}
+                      formats={['avif']}
+                      fallbackFormat="webp"
+                      loading={aboveFold && i === 0 && n < 4 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
                     <span class="play" aria-hidden="true" />
                     {item.title && <span class="caption">{item.title}</span>}
                     <span class="tile__overlay" aria-hidden="true"></span>
                   </a>
                 ) : (
                   <a class:list={['tile', paged && n >= pageSize && 'is-more']}
-                    href={item.old_item_page ?? item.src}
-                    data-full={item.src}
+                    href={item.old_item_page ?? fullUrl.get(item.src)}
+                    data-full={fullUrl.get(item.src)}
                     data-title={item.title}
                     data-item-page={item.old_item_page}
                     data-n={n}>
-                    <img src={thumb(item.src)}
+                    <Picture
+                      src={asset(item.src)}
                       alt={item.alt || item.title || `${c.category} – Face2Face`}
-                      loading={n < 6 ? 'eager' : 'lazy'}
+                      widths={[300, 450, 600, 900, 1200]}
+                      sizes={tileSizes(isWide(item, n))}
+                      formats={['avif']}
+                      fallbackFormat="webp"
+                      loading={aboveFold && i === 0 && n < 4 ? 'eager' : 'lazy'}
+                      fetchpriority={aboveFold && i === 0 && n === 0 ? 'high' : undefined}
                       decoding="async"
-                      {...size(item.src)} />
+                    />
                     {item.title && <span class="caption">{item.title}</span>}
                     <span class="tile__overlay" aria-hidden="true"></span>
                   </a>

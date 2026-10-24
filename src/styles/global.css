@@ -53,6 +53,11 @@ img {
   display: block;
 }
 
+/* <Picture> wraps the <img>; keep the wrapper out of layout so component CSS still targets the img */
+picture {
+  display: contents;
+}
+
 a {
   color: inherit;
 }

@@ -1,5 +1,6 @@
 ---
-import { site, clientName } from '../lib/content';
+import { Image } from 'astro:assets';
+import { site, asset, clientName } from '../lib/content';
 
 interface Props {
   headingLevel?: 'h1' | 'h2';
@@ -17,7 +18,8 @@ const clients = site.clients as { logo: string; link: string | null; alt?: strin
       {
         clients.map((c, i) => {
           const name = c.alt || clientName(c.link);
-          const img = <img src={c.logo} alt={name} width="120" height="120" loading="lazy" />;
+          // Source logos are 1181px; tiles show them at ~120px, so 1x/2x at 140px is plenty.
+          const img = <Image src={asset(c.logo)} alt={name} width={140} height={140} densities={[1, 2]} format="webp" loading="lazy" />;
           return (
             <li class="tile reveal" style={`--d:${(i % 6) * 70}ms`}>
               {c.link ? (

@@ -1,5 +1,6 @@
 ---
-import { site } from '../lib/content';
+import { Picture } from 'astro:assets';
+import { site, asset } from '../lib/content';
 import LeadForm from './LeadForm.astro';
 
 const popup = site.popup;
@@ -7,7 +8,16 @@ const popup = site.popup;
 
 <dialog class="popup" id="lead-popup" aria-labelledby="popup-title">
   <button class="popup__close" type="button" aria-label="סגירה" data-close>×</button>
-  <img src={popup.image} alt="" width="787" height="694" loading="lazy" class="popup__img" />
+  <Picture
+    src={asset(popup.image)}
+    alt=""
+    widths={[400, 787]}
+    sizes="360px"
+    formats={['avif']}
+    fallbackFormat="webp"
+    loading="lazy"
+    class="popup__img"
+  />
   <div class="popup__body">
     <h2 id="popup-title">{popup.title}</h2>
     <p>{popup.subtitle}</p>

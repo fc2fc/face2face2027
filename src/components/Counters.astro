@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from '../lib/content';
+import logo from '../assets/media/brand/logo-light@2x.webp';
 
 interface Props {
   headingLevel?: 'h1' | 'h2';
@@ -42,7 +44,7 @@ function parseCounter(val: string) {
 
 <section class="section section--dark" id="numbers">
   <div class="container">
-    <Heading class="section-title section-title--logo"><img class="title-logo" src="/assets/media/brand/logo-light@2x.webp" alt="Face2Face" width="200" height="47" /> <span>במספרים</span></Heading>
+    <Heading class="section-title section-title--logo"><Image class="title-logo" src={logo} alt="Face2Face" width={230} densities={[1, 2]} loading="lazy" /> <span>במספרים</span></Heading>
     <ul class="counters">
       {displayCounters.map((c, i) => {
         const { num, suffix } = parseCounter(c.value);

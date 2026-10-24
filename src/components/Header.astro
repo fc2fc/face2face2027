@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { site } from '../lib/content';
+import logo from '../assets/media/brand/logo-light@2x.webp';
 
 interface Props {
   current: string;
@@ -12,7 +14,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="/" class="header__logo" aria-label="Face2Face – דף הבית">
-      <img src="/assets/media/brand/logo-light.webp" srcset="/assets/media/brand/logo-light.webp 1x, /assets/media/brand/logo-light@2x.webp 2x" alt="Face2Face" width="170" height="40" />
+      <Image src={logo} alt="Face2Face" width={170} densities={[1, 2]} loading="eager" />
     </a>
     <button class="header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="visually-hidden">תפריט</span>

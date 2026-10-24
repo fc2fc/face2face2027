@@ -1,7 +1,7 @@
 import content from '../data/site-content.json';
 import dims from '../data/media-dims.json';
-import fs from 'node:fs';
-import nodePath from 'node:path';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 export const site = content.site as any;
 export const pages = content.pages as any[];
@@ -67,10 +67,21 @@ export function clientName(link?: string | null) {
   return key ? CLIENT_NAMES[key] : 'לקוח';
 }
 
-/** 640px WebP thumbnail for a gallery image (generated into /assets/media/thumbs); falls back to the original. */
-export function thumb(src?: string): string | undefined {
-  if (!src) return src;
-  const name = nodePath.basename(src, nodePath.extname(src));
-  const rel = `/assets/media/thumbs/${name}.webp`;
-  return fs.existsSync(nodePath.join(process.cwd(), 'public', rel)) ? rel : src;
+// Images live in src/assets/media so astro:assets can resize them; site-content.json keeps the
+// '/assets/media/...' paths, which map 1:1 onto these imports.
+const mediaFiles = import.meta.glob<{ default: ImageMetadata }>('/src/assets/media/**/*.{webp,jpg,jpeg,png}', {
+  eager: true,
+});
+
+/** Imported image for a '/assets/media/...' path from site-content.json. Throws on unknown paths so a typo fails the build. */
+export function asset(src: string): ImageMetadata {
+  const file = mediaFiles[`/src${src}`];
+  if (!file) throw new Error(`Image not found in src/assets: ${src}`);
+  return file.default;
+}
+
+/** URL of a resized WebP (for the lightbox, video poster and other non-<img> uses). */
+export async function imageUrl(src: string, width: number) {
+  const img = await getImage({ src: asset(src), width, format: 'webp' });
+  return img.src;
 }
