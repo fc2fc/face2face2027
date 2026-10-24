@@ -10,6 +10,14 @@ const { limit, headingLevel = 'h2', pageSize = 24 } = Astro.props;
 const paged = !limit;
 const Heading = headingLevel;
 const categories = site.portfolio as { category: string; items: any[] }[];
+
+// Build per-category parallax images (stills → face focus, video→ skip, design→ face focus)
+function getCatImages(cat: { category: string; items: any[] }, max = 16) {
+  return cat.items
+    .filter((item: any) => item.src)           // stills/design only (videos have thumbnail)
+    .map((item: any) => ({ src: item.src, alt: item.alt || item.title || cat.category }))
+    .slice(0, max);
+}
 ---
 
 <section class="section" id="works">
@@ -26,48 +34,93 @@ const categories = site.portfolio as { category: string; items: any[] }[];
         ))
       }
     </div>
+
     {
-      categories.map((c, i) => (
-        <div class="grid" role="tabpanel" id={`panel-${i}`} aria-labelledby={`tab-${i}`} hidden={i !== 0}>
-          {(limit ? c.items.slice(0, limit) : c.items).map((item, n) =>
-            item.type === 'video' ? (
-              <a class:list={['tile tile--video', paged && n >= pageSize && 'is-more']}
-                href={item.old_item_page ?? item.url}
-                data-youtube={item.youtube_id}
-                data-title={item.title}
-                data-n={n}>
-                <img src={item.thumbnail} alt={item.title ?? 'סרטון'} loading={n < 6 ? 'eager' : 'lazy'} {...size(item.thumbnail)} />
-                <span class="play" aria-hidden="true" />
-                {item.title && <span class="caption">{item.title}</span>}
-                <span class="tile__overlay" aria-hidden="true"></span>
-              </a>
-            ) : (
-              <a class:list={['tile', paged && n >= pageSize && 'is-more']}
-                href={item.old_item_page ?? item.src}
-                data-full={item.src}
-                data-title={item.title}
-                data-item-page={item.old_item_page}
-                data-n={n}>
-                <img src={item.src}
-                  alt={item.alt || item.title || `${c.category} – Face2Face`}
-                  loading={n < 6 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  {...size(item.src)} />
-                {item.title && <span class="caption">{item.title}</span>}
-                <span class="tile__overlay" aria-hidden="true"></span>
-              </a>
-            ),
-          )}
-          {paged && c.items.length > pageSize && (
-            <p class="more more--panel">
-              <button type="button" class="btn btn--ghost" data-more>
-                הצג עוד <span class="more__count">({c.items.length - pageSize})</span>
-              </button>
-            </p>
-          )}
-        </div>
-      ))
+      categories.map((c, i) => {
+        const catImages = getCatImages(c);
+        const hasParallax = catImages.length >= 4;
+        // Split into 4 columns
+        const cols: typeof catImages[] = [[], [], [], []];
+        catImages.forEach((img, idx) => cols[idx % 4].push(img));
+        // Double each column for infinite scroll feel
+        const dcols = cols.map(col => [...col, ...col]);
+
+        return (
+          <div role="tabpanel" id={`panel-${i}`} aria-labelledby={`tab-${i}`} hidden={i !== 0}>
+
+            {/* 3D Parallax mini-gallery per category */}
+            {hasParallax && (
+              <div class="cat-parallax" data-cat-parallax={i} aria-hidden="true">
+                <div class="cat-parallax__banner">
+                  <div class="cat-parallax__grid">
+                    {dcols.map((col, ci) => (
+                      <div class="cat-parallax__col">
+                        {col.map((img, ii) => (
+                          <div class="cat-parallax__item">
+                            <img
+                              src={img.src}
+                              alt={img.alt}
+                              loading="lazy"
+                              decoding="async"
+                              style={`object-position: ${ci === 0 || ci === 2 ? 'center top' : 'center 20%'};`}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                  <div class="cat-parallax__overlay">
+                    <span class="cat-parallax__label">{c.category}</span>
+                    <span class="cat-parallax__count">{c.items.length} עבודות</span>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Grid of tiles */}
+            <div class="grid">
+              {(limit ? c.items.slice(0, limit) : c.items).map((item, n) =>
+                item.type === 'video' ? (
+                  <a class:list={['tile tile--video', paged && n >= pageSize && 'is-more']}
+                    href={item.old_item_page ?? item.url}
+                    data-youtube={item.youtube_id}
+                    data-title={item.title}
+                    data-n={n}>
+                    <img src={item.thumbnail} alt={item.title ?? 'סרטון'} loading={n < 6 ? 'eager' : 'lazy'} {...size(item.thumbnail)} />
+                    <span class="play" aria-hidden="true" />
+                    {item.title && <span class="caption">{item.title}</span>}
+                    <span class="tile__overlay" aria-hidden="true"></span>
+                  </a>
+                ) : (
+                  <a class:list={['tile', paged && n >= pageSize && 'is-more']}
+                    href={item.old_item_page ?? item.src}
+                    data-full={item.src}
+                    data-title={item.title}
+                    data-item-page={item.old_item_page}
+                    data-n={n}>
+                    <img src={item.src}
+                      alt={item.alt || item.title || `${c.category} – Face2Face`}
+                      loading={n < 6 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      {...size(item.src)} />
+                    {item.title && <span class="caption">{item.title}</span>}
+                    <span class="tile__overlay" aria-hidden="true"></span>
+                  </a>
+                ),
+              )}
+              {paged && c.items.length > pageSize && (
+                <p class="more more--panel">
+                  <button type="button" class="btn btn--ghost" data-more>
+                    הצג עוד <span class="more__count">({c.items.length - pageSize})</span>
+                  </button>
+                </p>
+              )}
+            </div>
+          </div>
+        );
+      })
     }
+
     {
       limit && (
         <p class="more">
@@ -97,7 +150,87 @@ const categories = site.portfolio as { category: string; items: any[] }[];
 </dialog>
 
 <script>
-  // Tabs
+  // ── Per-category 3D parallax ─────────────────────────────────────────────
+  function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+  function clamp(v: number, lo: number, hi: number) { return Math.max(lo, Math.min(hi, v)); }
+  function easeInOut(t: number) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  function initCatParallax(wrapper: HTMLElement) {
+    const banner = wrapper.querySelector<HTMLElement>('.cat-parallax__banner')!;
+    const grid   = wrapper.querySelector<HTMLElement>('.cat-parallax__grid')!;
+    const cols   = [...wrapper.querySelectorAll<HTMLElement>('.cat-parallax__col')];
+    if (!banner || !grid) return;
+
+    let progress = 0;
+    let target   = 0;
+    let raf      = 0;
+    let started  = false;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !started) {
+          started = true;
+          tick();
+        }
+      });
+    }, { threshold: 0.05 });
+    io.observe(wrapper);
+
+    function tick() {
+      // Get scroll progress within this section
+      const rect = wrapper.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 0 when banner top hits viewport bottom, 1 when banner bottom leaves viewport top
+      target = clamp((vh - rect.top) / (rect.height + vh), 0, 1);
+      progress = lerp(progress, target, 0.06);
+      const p = easeInOut(progress);
+
+      // Phase 1 (0→0.15): banner open (compact→full)
+      const p1 = clamp(p / 0.15, 0, 1);
+      const bw = lerp(88, 100, p1);
+      const bh = lerp(72, 100, p1);
+      const br = lerp(32, 0, p1);
+      banner.style.width  = `${bw}%`;
+      banner.style.height = `${bh}%`;
+      banner.style.borderRadius = `${br}px`;
+      banner.style.margin = `0 auto`;
+
+      // Phase 2 (0.15→1): 3D rotation
+      const p2 = clamp((p - 0.15) / 0.85, 0, 1);
+      const rY  = lerp(-40, -6, p2);
+      const rX  = lerp(22, 3, p2);
+      const rZ  = lerp(12, 1, p2);
+      const tZ  = lerp(-700, 0, p2);
+      grid.style.transform = `rotateY(${rY}deg) rotateX(${rX}deg) rotateZ(${rZ}deg) translateZ(${tZ}px)`;
+
+      // Column parallax offsets
+      const offsets = [
+        lerp(0, -35, p2),
+        lerp(-30, 8, p2),
+        lerp(0, -40, p2),
+        lerp(-25, 18, p2),
+      ];
+      cols.forEach((col, ci) => {
+        col.style.transform = `translateY(${offsets[ci] ?? 0}%)`;
+      });
+
+      raf = requestAnimationFrame(tick);
+    }
+
+    // Stop when panel becomes hidden
+    const panel = wrapper.closest<HTMLElement>('[role=tabpanel]');
+    if (panel) {
+      const panelObs = new MutationObserver(() => {
+        if (panel.hidden) cancelAnimationFrame(raf);
+        else if (started) tick();
+      });
+      panelObs.observe(panel, { attributes: true, attributeFilter: ['hidden'] });
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-cat-parallax]').forEach(initCatParallax);
+
+  // ── Tabs ─────────────────────────────────────────────────────────────────
   document.querySelectorAll<HTMLElement>('#works').forEach((root) => {
     const tabs = [...root.querySelectorAll<HTMLButtonElement>('[role=tab]')];
     tabs.forEach((tab) =>
@@ -107,13 +240,12 @@ const categories = site.portfolio as { category: string; items: any[] }[];
           t.setAttribute('aria-selected', String(on));
           document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
         });
-        // Trigger reveal for newly visible tiles
         observeVisible();
       }),
     );
   });
 
-  // "הצג עוד"
+  // ── "הצג עוד" ─────────────────────────────────────────────────────────────
   document.querySelectorAll<HTMLButtonElement>('#works [data-more]').forEach((btn) => {
     const panel = btn.closest<HTMLElement>('[role=tabpanel]')!;
     const step = 24;
@@ -128,7 +260,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
     });
   });
 
-  // Scroll reveal
+  // ── Scroll reveal ─────────────────────────────────────────────────────────
   function observeVisible() {
     const revealObs = new IntersectionObserver(
       (entries) => entries.forEach(e => {
@@ -146,7 +278,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
   }
   observeVisible();
 
-  // Lightbox
+  // ── Lightbox ──────────────────────────────────────────────────────────────
   const box = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
   const stage = box.querySelector<HTMLElement>('.lightbox__stage')!;
   const titleEl = box.querySelector<HTMLElement>('.lightbox__title')!;
@@ -197,6 +329,95 @@ const categories = site.portfolio as { category: string; items: any[] }[];
     margin: -0.5rem 0 2rem;
     font-size: 1rem;
   }
+
+  /* ── Per-category parallax ─────────────────────────────────────── */
+  .cat-parallax {
+    perspective: 1200px;
+    perspective-origin: 50% 40%;
+    width: 100%;
+    height: 380px;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-parallax__banner {
+    position: absolute;
+    inset: 0;
+    width: 88%;
+    height: 72%;
+    margin: 0 auto;
+    border-radius: 32px;
+    overflow: hidden;
+    transition: width 0.05s linear, height 0.05s linear, border-radius 0.05s linear;
+    will-change: width, height, border-radius;
+  }
+  .cat-parallax__grid {
+    display: flex;
+    gap: 8px;
+    height: 160%;
+    margin-top: -30%;
+    transform-origin: center center;
+    will-change: transform;
+  }
+  .cat-parallax__col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    will-change: transform;
+  }
+  .cat-parallax__item {
+    flex: none;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg-soft, #1a1725);
+  }
+  .cat-parallax__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cat-parallax__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(
+      to bottom,
+      rgba(15,13,22,0.0) 0%,
+      rgba(15,13,22,0.45) 60%,
+      rgba(15,13,22,0.85) 100%
+    );
+    pointer-events: none;
+  }
+  .cat-parallax__label {
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+    letter-spacing: -0.02em;
+  }
+  .cat-parallax__count {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--brand, #e10085);
+    background: rgba(225,0,133,0.12);
+    border: 1px solid rgba(225,0,133,0.3);
+    border-radius: 999px;
+    padding: 2px 14px;
+  }
+  @media (max-width: 640px) {
+    .cat-parallax { height: 240px; }
+    .cat-parallax__item { height: 130px; }
+    .cat-parallax__grid { gap: 5px; margin-top: -20%; }
+  }
+
+  /* ── Tabs ───────────────────────────────────────────────────────── */
   .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -241,6 +462,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
     background: rgba(255,255,255,0.25);
   }
 
+  /* ── Grid ────────────────────────────────────────────────────────── */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -250,6 +472,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
   .tile.is-more {
     display: none;
   }
+  [role=tabpanel][hidden] { display: none; }
   .more--panel {
     grid-column: 1 / -1;
   }
@@ -276,6 +499,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: transform 0.5s ease;
   }
   .tile:hover img {
@@ -344,7 +568,7 @@ const categories = site.portfolio as { category: string; items: any[] }[];
     margin: 2rem 0 0;
   }
 
-  /* Lightbox */
+  /* ── Lightbox ────────────────────────────────────────────────────── */
   .lightbox {
     width: min(1100px, 100% - 24px);
     max-height: 95vh;

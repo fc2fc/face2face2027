@@ -40,7 +40,8 @@ const schema = {
       email: 'face2faceprint@gmail.com',
       foundingDate: '2016',
       founder: { '@id': `${SITE}/#naga-malasa` },
-      areaServed: { '@type': 'Country', name: 'ישראל' },
+      address: { '@type': 'PostalAddress', addressLocality: 'תל אביב-יפו', addressRegion: 'מחוז תל אביב', addressCountry: 'IL' },
+      areaServed: [{ '@type': 'City', name: 'תל אביב-יפו' }, { '@type': 'City', name: 'גוש דן' }, { '@type': 'Country', name: 'ישראל' }],
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',

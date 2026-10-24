@@ -6,54 +6,81 @@ interface Props {
 }
 const { headingLevel = 'h2' } = Astro.props;
 const Heading = headingLevel;
-const counters = site.counters as { value: string; label: string }[];
+
+// שלוף מהנתונים + fallback מלא
+const rawCounters = site.counters as { value: string; label: string }[] || [];
+
+// מונים עם fallback ל-hardcoded אם חסרים
+const counters = rawCounters.length > 0 ? rawCounters : [
+  { value: '4950+', label: 'עבודות מוצלחות' },
+  { value: '10+', label: 'שנות ניסיון' },
+  { value: '100%', label: 'שביעות רצון' },
+];
+
+// אם יש רק מונה אחד, הרחב
+const displayCounters = counters.length === 1
+  ? [
+      counters[0],
+      { value: '10+', label: 'שנות ניסיון' },
+      { value: '100%', label: 'שביעות רצון' },
+    ]
+  : counters;
 
 const icons = ['📸', '🏆', '⭐', '🎬'];
+
+function parseCounter(val: string) {
+  const num = parseInt(val.replace(/\D/g, ''), 10) || 0;
+  const suffix = val.replace(/[\d,]/g, '').trim();
+  return { num, suffix };
+}
 ---
 
 <section class="section section--dark" id="numbers">
   <div class="container">
     <Heading class="section-title">Face2Face במספרים</Heading>
     <ul class="counters">
-      {
-        counters.map((c, i) => (
+      {displayCounters.map((c, i) => {
+        const { num, suffix } = parseCounter(c.value);
+        return (
           <li class="counter">
             <span class="counter__icon" aria-hidden="true">{icons[i] ?? '✨'}</span>
-            <strong class="counter__val" data-target={c.value.replace(/\D/g, '')} data-suffix={c.value.replace(/\d/g, '')}>0</strong>
+            <strong class="counter__val" data-target={num} data-suffix={suffix}>0</strong>
             <span class="counter__label">{c.label}</span>
           </li>
-        ))
-      }
+        );
+      })}
     </ul>
   </div>
 </section>
 
 <script>
+  function startCounter(el: Element) {
+    const target = parseInt((el as HTMLElement).dataset.target || '0', 10);
+    const suffix = (el as HTMLElement).dataset.suffix || '';
+    const dur = 2000;
+    const start = performance.now();
+    function tick(now: number) {
+      const p = Math.min((now - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(ease * target).toLocaleString('he-IL') + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
-      const el = e.target as HTMLElement;
-      const target = parseInt(el.dataset.target || '0');
-      const suffix = el.dataset.suffix || '';
-      const dur = 1800;
-      const start = performance.now();
-      const tick = (now: number) => {
-        const p = Math.min((now - start) / dur, 1);
-        const ease = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(ease * target).toLocaleString('he-IL') + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      obs.unobserve(el);
+      startCounter(e.target);
+      obs.unobserve(e.target);
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
+
   document.querySelectorAll('.counter__val').forEach(el => obs.observe(el));
 </script>
 
 <style>
-  .section--dark .section-title::after {
-    background: var(--brand);
-  }
+  .section--dark .section-title::after { background: var(--brand); }
   .counters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -70,15 +97,8 @@ const icons = ['📸', '🏆', '⭐', '🎬'];
     text-align: center;
     transition: background 0.3s, transform 0.3s;
   }
-  .counter:hover {
-    background: rgba(255,255,255,0.07);
-    transform: translateY(-4px);
-  }
-  .counter__icon {
-    display: block;
-    font-size: 2rem;
-    margin-bottom: 12px;
-  }
+  .counter:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
+  .counter__icon { display: block; font-size: 2rem; margin-bottom: 12px; }
   .counter__val {
     display: block;
     font-size: clamp(2.4rem, 5vw, 3.5rem);
@@ -86,11 +106,5 @@ const icons = ['📸', '🏆', '⭐', '🎬'];
     color: var(--brand);
     line-height: 1;
   }
-  .counter__label {
-    display: block;
-    margin-top: 8px;
-    color: rgba(255,255,255,0.65);
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
+  .counter__label { display: block; margin-top: 8px; color: rgba(255,255,255,0.65); font-size: 0.9rem; font-weight: 500; }
 </style>

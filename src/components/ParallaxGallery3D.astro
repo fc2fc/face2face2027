@@ -1,26 +1,35 @@
 ---
-// ParallaxGallery3D.astro – גלריית פרלקס תלת-מימדית בסגנון 21st.dev
-// תמונות אמיתיות מתיק העבודות, ללא React/framer-motion
+// ParallaxGallery3D.astro – גלריית 3D parallax, רק צילום סטילס (ללא עיצוב גרפי)
+import { site } from '../lib/content';
+import type { SiteContent } from '../data/site-content.json';
 
-const images = [{"src": "/assets/media/uploads/696ac5cce30db.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"}, {"src": "/assets/media/uploads/696ac5cce7dd5.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"}, {"src": "/assets/media/uploads/696ac5cce9503.webp", "alt": "בצלאל סמוטריץ", "path": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"}, {"src": "/assets/media/uploads/696ac32eac87d.webp", "alt": "דניאל רוט-אבנרי", "path": "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99"}, {"src": "/assets/media/uploads/696ac38eeac63.webp", "alt": "עבודות צילום סטילס מקצועי | Face2Face – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-696ac39138e0f"}, {"src": "/assets/media/uploads/696ac4dab927e.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"}, {"src": "/assets/media/uploads/696ac4dabc7f9.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"}, {"src": "/assets/media/uploads/696ac4dabde12.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"}, {"src": "/assets/media/uploads/696ac4dabb275.webp", "alt": "נרקיס ראובן־נגר", "path": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"}, {"src": "/assets/media/uploads/6967b814b71b6.webp", "alt": "עבודות עיצוב גרפי וצילום | Face2Face – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b816e50d8"}, {"src": "/assets/media/uploads/6967b7f621b9d.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b7f8e187e"}, {"src": "/assets/media/uploads/6967b78f66ede.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b79296ed4"}, {"src": "/assets/media/uploads/6967b78f64d86.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-6967b79275c26"}, {"src": "/assets/media/uploads/68b5ff1eadb9f.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff208136e"}, {"src": "/assets/media/uploads/68b5ff1ed021c.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff22656c7"}, {"src": "/assets/media/uploads/68b5ff1e5f864.webp", "alt": "עבודות – צילום נגה מלסה, Face2Face", "path": "/עבודות/item-id-68b5ff1f8cdb4"}];
+// שליפת כל פריטי הפורטפוליו, סינון לצילום סטילס בלבד
+const allPages = (site as any).__pages || [];
+// ניגש ל-site-content ישירות
+const rawContent = await import('../data/site-content.json');
+const pages = (rawContent as any).default?.pages || (rawContent as any).pages || [];
+const portfolio = pages.filter((p: any) => p.type === 'portfolio-item');
 
-// חלק לארבעה עמודות
-const col1 = images.filter((_, i) => i % 4 === 0);
-const col2 = images.filter((_, i) => i % 4 === 1);
-const col3 = images.filter((_, i) => i % 4 === 2);
-const col4 = images.filter((_, i) => i % 4 === 3);
+const stillsImages = portfolio
+  .filter((p: any) => p.seo?.keywords !== 'עיצוב גרפי')
+  .map((p: any) => p.item?.images?.[0])
+  .filter(Boolean)
+  .slice(0, 20);
 
-// הכפל כל עמודה לאורך אינסופי
-const double = (arr: typeof images) => [...arr, ...arr];
+// חלק ל-4 עמודות
+const col1 = stillsImages.filter((_: any, i: number) => i % 4 === 0);
+const col2 = stillsImages.filter((_: any, i: number) => i % 4 === 1);
+const col3 = stillsImages.filter((_: any, i: number) => i % 4 === 2);
+const col4 = stillsImages.filter((_: any, i: number) => i % 4 === 3);
+
+const double = (arr: any[]) => [...arr, ...arr];
 ---
 
 <section class="parallax3d" id="parallax-gallery" aria-label="גלריית עבודות תלת-מימדית">
   <div class="parallax3d__sticky">
     <div class="parallax3d__banner" id="pBanner">
-      <!-- אפקט צל מסביב -->
       <div class="parallax3d__vignette"></div>
 
-      <!-- כרטיס טקסט מרכזי -->
       <div class="parallax3d__headline" id="pHeadline">
         <span class="parallax3d__badge">🎬 תיק עבודות</span>
         <h2>הסיפורים<br/><em>שצילמנו</em></h2>
@@ -28,33 +37,32 @@ const double = (arr: typeof images) => [...arr, ...arr];
         <a href="/עבודות" class="parallax3d__cta">לכל העבודות ←</a>
       </div>
 
-      <!-- גריד תמונות 3D -->
       <div class="parallax3d__grid" id="pGrid">
         <div class="parallax3d__col" id="col1">
-          {double(col1).map((img) => (
+          {double(col1).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col2">
-          {double(col2).map((img) => (
+          {double(col2).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col3">
-          {double(col3).map((img) => (
+          {double(col3).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center top;" />
             </div>
           ))}
         </div>
         <div class="parallax3d__col" id="col4">
-          {double(col4).map((img) => (
+          {double(col4).map((img: any) => (
             <div class="parallax3d__card">
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img src={img.src} alt={img.alt || 'צילום סטילס – Face2Face'} loading="lazy" style="object-position: center 20%;" />
             </div>
           ))}
         </div>
@@ -89,16 +97,7 @@ const double = (arr: typeof images) => [...arr, ...arr];
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-radius 0.1s linear, width 0.1s linear, height 0.1s linear;
   }
-  .parallax3d__banner.expanded {
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-    border-width: 0;
-  }
-
-  /* צל vignette */
   .parallax3d__vignette {
     position: absolute;
     inset: 0;
@@ -109,8 +108,6 @@ const double = (arr: typeof images) => [...arr, ...arr];
       linear-gradient(to right, #050308 0%, transparent 15%, transparent 85%, #050308 100%);
     pointer-events: none;
   }
-
-  /* כרטיס טקסט */
   .parallax3d__headline {
     position: absolute;
     z-index: 20;
@@ -120,12 +117,6 @@ const double = (arr: typeof images) => [...arr, ...arr];
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    opacity: 1;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
-  .parallax3d__headline.hidden {
-    opacity: 0;
     pointer-events: none;
   }
   .parallax3d__badge {
@@ -165,12 +156,7 @@ const double = (arr: typeof images) => [...arr, ...arr];
     transition: background 0.2s, transform 0.2s;
     margin-top: 8px;
   }
-  .parallax3d__cta:hover {
-    background: #b8006c;
-    transform: scale(1.04);
-  }
-
-  /* גריד 3D */
+  .parallax3d__cta:hover { background: #b8006c; transform: scale(1.04); }
   .parallax3d__grid {
     position: absolute;
     inset: 0;
@@ -185,7 +171,6 @@ const double = (arr: typeof images) => [...arr, ...arr];
     transform-style: preserve-3d;
     transform: rotateY(-45deg) rotateX(25deg) rotateZ(15deg) translateZ(-800px);
     will-change: transform;
-    transition: transform 0.05s linear;
   }
   .parallax3d__col {
     display: flex;
@@ -203,9 +188,8 @@ const double = (arr: typeof images) => [...arr, ...arr];
     overflow: hidden;
     flex-shrink: 0;
     background: #111;
-    transition: transform 0.3s;
   }
-  .parallax3d__card:hover { transform: scale(1.02); }
+  .parallax3d__card:hover { transform: scale(1.02); transition: transform 0.3s; }
   .parallax3d__card img {
     width: 100%;
     height: 100%;
@@ -214,7 +198,6 @@ const double = (arr: typeof images) => [...arr, ...arr];
     transition: opacity 0.3s;
   }
   .parallax3d__card:hover img { opacity: 1; }
-
   @media (max-width: 600px) {
     .parallax3d__grid { gap: 8px; }
     .parallax3d__card { height: 180px; }
@@ -232,76 +215,52 @@ const double = (arr: typeof images) => [...arr, ...arr];
   const col2    = document.getElementById('col2');
   const col3    = document.getElementById('col3');
   const col4    = document.getElementById('col4');
-
   if (!section || !banner || !grid) return;
 
-  function lerp(a, b, t) { return a + (b - a) * t; }
-  function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
-  function easeInOut(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+  function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+  function clamp(v: number, min: number, max: number) { return Math.max(min, Math.min(max, v)); }
+  function easeInOut(t: number) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
 
   let currentProgress = 0;
   let targetProgress  = 0;
-  let rafId = null;
+  let rafId: number | null = null;
 
   function getProgress() {
-    const rect = section.getBoundingClientRect();
-    const total = section.offsetHeight - window.innerHeight;
+    const rect = section!.getBoundingClientRect();
+    const total = section!.offsetHeight - window.innerHeight;
     const scrolled = -rect.top;
     return clamp(scrolled / total, 0, 1);
   }
 
-  function applyStyles(p) {
-    // שלב 1 (0→0.15): הבאנר גדל למלוא המסך
+  function applyStyles(p: number) {
     const phase1 = clamp(p / 0.15, 0, 1);
     const e1 = easeInOut(phase1);
+    banner!.style.width  = lerp(90, 100, e1) + 'vw';
+    banner!.style.height = lerp(82, 100, e1) + 'vh';
+    banner!.style.borderRadius = lerp(40, 0, e1) + 'px';
+    banner!.style.borderWidth  = lerp(3, 0, e1) + 'px';
 
-    const w = lerp(90, 100, e1);
-    const h = lerp(82, 100, e1);
-    const r = lerp(40, 0, e1);
-    const bw = lerp(3, 0, e1);
-
-    banner.style.width  = w + 'vw';
-    banner.style.height = h + 'vh';
-    banner.style.borderRadius = r + 'px';
-    banner.style.borderWidth  = bw + 'px';
-
-    // headline נעלם בשלב 1
     if (headline) {
-      const headOpacity = clamp(1 - phase1 * 2, 0, 1);
-      headline.style.opacity = headOpacity;
-      headline.style.pointerEvents = headOpacity < 0.1 ? 'none' : 'auto';
+      const op = clamp(1 - phase1 * 2, 0, 1);
+      headline.style.opacity = String(op);
+      headline.style.pointerEvents = op < 0.1 ? 'none' : 'auto';
     }
 
-    // שלב 2 (0.15→1): גריד 3D מסתובב ומתקדם
     const phase2 = clamp((p - 0.15) / 0.85, 0, 1);
     const e2 = easeInOut(phase2);
+    grid!.style.transform = `perspective(1000px) rotateY(${lerp(-45,-8,e2)}deg) rotateX(${lerp(25,4,e2)}deg) rotateZ(${lerp(15,2,e2)}deg) translateZ(${lerp(-800,0,e2)}px)`;
 
-    const rotY  = lerp(-45, -8, e2);
-    const rotX  = lerp(25,   4, e2);
-    const rotZ  = lerp(15,   2, e2);
-    const transZ = lerp(-800, 0, e2);
-
-    grid.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg) rotateZ(${rotZ}deg) translateZ(${transZ}px)`;
-    grid.style.perspective = '1000px';
-
-    // עמודות פרלקס
-    const y1 = lerp(0,   -40, e2);
-    const y2 = lerp(-40,  10, e2);
-    const y3 = lerp(0,   -40, e2);
-    const y4 = lerp(-30,  20, e2);
-
-    if (col1) col1.style.transform = `translateY(${y1}%)`;
-    if (col2) col2.style.transform = `translateY(${y2}%)`;
-    if (col3) col3.style.transform = `translateY(${y3}%)`;
-    if (col4) col4.style.transform = `translateY(${y4}%)`;
+    if (col1) col1.style.transform = `translateY(${lerp(0,-40,e2)}%)`;
+    if (col2) col2.style.transform = `translateY(${lerp(-40,10,e2)}%)`;
+    if (col3) col3.style.transform = `translateY(${lerp(0,-40,e2)}%)`;
+    if (col4) col4.style.transform = `translateY(${lerp(-30,20,e2)}%)`;
   }
 
   function tick() {
     targetProgress = getProgress();
     currentProgress = lerp(currentProgress, targetProgress, 0.08);
-
+    applyStyles(currentProgress);
     if (Math.abs(currentProgress - targetProgress) > 0.0005) {
-      applyStyles(currentProgress);
       rafId = requestAnimationFrame(tick);
     } else {
       applyStyles(targetProgress);
@@ -309,11 +268,7 @@ const double = (arr: typeof images) => [...arr, ...arr];
     }
   }
 
-  function onScroll() {
-    if (!rafId) rafId = requestAnimationFrame(tick);
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', () => { if (!rafId) rafId = requestAnimationFrame(tick); }, { passive: true });
   applyStyles(0);
 })();
 </script>
