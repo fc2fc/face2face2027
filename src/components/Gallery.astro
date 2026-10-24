@@ -244,7 +244,20 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
           t.setAttribute('aria-selected', String(on));
           document.getElementById(t.getAttribute('aria-controls')!)!.hidden = !on;
         });
+        tab.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
         observeVisible();
+      }),
+    );
+    // Arrow-key navigation (RTL: right = previous)
+    tabs.forEach((tab, i) =>
+      tab.addEventListener('keydown', (e) => {
+        const k = (e as KeyboardEvent).key;
+        const dir = k === 'ArrowLeft' ? 1 : k === 'ArrowRight' ? -1 : 0;
+        if (!dir) return;
+        e.preventDefault();
+        const next = tabs[(i + dir + tabs.length) % tabs.length];
+        next.focus();
+        next.click();
       }),
     );
   });
@@ -682,5 +695,32 @@ function getCatImages(cat: { category: string; items: any[] }, max = 16) {
   }
   @media (max-width: 380px) {
     .grid { gap: 6px; }
+  }
+
+  /* Sticky, swipeable category tabs */
+  .tabs {
+    position: sticky;
+    top: 70px;
+    z-index: 20;
+    padding: 10px 0;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: top 0.35s cubic-bezier(.2,.7,.2,1);
+  }
+  :global(.hdr-hidden) .tabs { top: 0; }
+  @media (max-width: 640px) {
+    .tabs {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      scrollbar-width: none;
+      top: 60px;
+      margin-inline: -12px;
+      padding-inline: 12px;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tabs button { flex: none; scroll-snap-align: center; white-space: nowrap; }
   }
 </style>
