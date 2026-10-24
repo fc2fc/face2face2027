@@ -82,8 +82,7 @@ const accessKey = String(import.meta.env.PUBLIC_FORM_ENDPOINT ?? '').trim();
         form.reset();
         status.textContent = 'הפרטים נשלחו בהצלחה, נחזור אליך בהקדם!';
         status.dataset.state = 'ok';
-        (window as any).fbq?.('track', 'Lead');
-        (window as any).dataLayer?.push({ event: 'form_submit', form_name: form.dataset.formName });
+        (window as any).f2fTrack?.('generate_lead', { form_name: form.dataset.formName }, 'Lead');
       } catch {
         status.textContent = 'השליחה נכשלה. נסו שוב או פנו ב-WhatsApp.';
         status.dataset.state = 'error';

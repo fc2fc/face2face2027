@@ -94,6 +94,7 @@ const social = [
       <span>© {new Date().getFullYear()} Face2Face – כל הזכויות שמורות</span>
       <ul class="footer__legal">
         {legal.map((l) => <li><a href={l.old_url}>{l.label}</a></li>)}
+        <li><button type="button" class="footer__cookie" data-cookie-settings>הגדרות עוגיות</button></li>
       </ul>
       <button type="button" class="to-top" aria-label="חזרה לראש העמוד" onclick="window.scrollTo({top:0,behavior:'smooth'})">
         <Icon name="arrow-up" size={18} />
@@ -341,6 +342,8 @@ const social = [
   .footer__bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
   .footer__legal { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; }
   .footer__legal a { color: rgba(235,235,235,0.82); text-decoration: none; transition: color 0.2s; }
+  .footer__cookie { background: none; border: 0; padding: 0; font: inherit; color: rgba(235,235,235,0.82); cursor: pointer; transition: color 0.2s; }
+  .footer__cookie:hover { color: var(--fb); }
   .footer__legal a:hover { color: var(--fb); }
   .to-top {
     width: 44px;

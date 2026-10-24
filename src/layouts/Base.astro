@@ -15,6 +15,7 @@ const canonical = SITE_URL + (page.old_path === '/' ? '/' : encodeURI(page.old_p
 const ogImage = absolute(seo.og?.image) ?? absolute(site.og_logo);
 const GTM_ID = 'GTM-PV57PGLL';
 const PIXEL_ID = '130381808053594';
+const GA_ID = 'G-PF16ZQ5HVJ';
 ---
 
 <!doctype html>
@@ -65,12 +66,18 @@ const PIXEL_ID = '130381808053594';
       competed with the Hero image for bandwidth and cost ~2s of LCP on mobile) wait until the page
       has loaded and the browser is idle, or until the visitor first interacts.
     -->
-    <script is:inline define:vars={{ GTM_ID, PIXEL_ID }}>
+    <script is:inline define:vars={{ GTM_ID, PIXEL_ID, GA_ID }}>
       (function (w, d) {
-        // GTM queue
+        // Consent: nothing third-party is downloaded or sent until the visitor accepts (banner at the bottom).
+        function getConsent() {
+          try { return localStorage.getItem('f2f-consent'); } catch (e) { return null; }
+        }
+        // Queues are created immediately (no network), so events keep their order once consent is given.
         w.dataLayer = w.dataLayer || [];
+        w.gtag = function () { w.dataLayer.push(arguments); };
         w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        // Meta Pixel queue (standard stub; fbevents.js drains n.queue when it loads)
+        w.gtag('js', new Date());
+        w.gtag('config', GA_ID);
         if (!w.fbq) {
           var n = (w.fbq = function () {
             n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
@@ -84,6 +91,13 @@ const PIXEL_ID = '130381808053594';
         w.fbq('init', PIXEL_ID);
         w.fbq('track', 'PageView');
 
+        // Conversion events (GA4 + Meta). Silent unless the visitor accepted tracking.
+        w.f2fTrack = function (name, params, fbName) {
+          if (getConsent() !== 'granted') return;
+          try { w.gtag('event', name, params || {}); } catch (e) {}
+          try { if (fbName) w.fbq('track', fbName, params || {}); } catch (e) {}
+        };
+
         var started = false;
         function add(src) {
           var s = d.createElement('script');
@@ -92,11 +106,17 @@ const PIXEL_ID = '130381808053594';
           d.head.appendChild(s);
         }
         function start() {
-          if (started) return;
+          if (started || getConsent() !== 'granted') return;
           started = true;
+          add('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
           add('https://www.googletagmanager.com/gtm.js?id=' + GTM_ID);
           add('https://connect.facebook.net/en_US/fbevents.js');
         }
+        // Called by the consent banner / footer link
+        w.f2fSetConsent = function (v) {
+          try { localStorage.setItem('f2f-consent', v); } catch (e) {}
+          if (v === 'granted') start();
+        };
         var interactions = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
         function onInteract() {
           interactions.forEach(function (e) {
@@ -113,21 +133,20 @@ const PIXEL_ID = '130381808053594';
         }
         if (d.readyState === 'complete') afterLoad();
         else w.addEventListener('load', afterLoad, { once: true });
+
+        // Click conversions: WhatsApp, phone, email
+        d.addEventListener('click', function (e) {
+          var a = e.target && e.target.closest && e.target.closest('a[href]');
+          if (!a) return;
+          var h = a.getAttribute('href') || '';
+          if (/^https?:\/\/(wa\.me|api\.whatsapp\.com)\//.test(h)) w.f2fTrack('whatsapp_click', { link_url: h }, 'Contact');
+          else if (h.indexOf('tel:') === 0) w.f2fTrack('phone_click', { link_url: h }, 'Contact');
+          else if (h.indexOf('mailto:') === 0) w.f2fTrack('email_click', { link_url: h }, 'Contact');
+        });
       })(window, document);
     </script>
   </head>
   <body>
-    <noscript
-      ><iframe
-        src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-        title="Google Tag Manager"></iframe></noscript
-    >
-    <noscript
-      ><img height="1" width="1" style="display:none" alt="" src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`} /></noscript
-    >
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">דילוג לתוכן</a>
     <Header current={page.old_path} />
@@ -151,9 +170,15 @@ const PIXEL_ID = '130381808053594';
       >
     </a>
 
-    <div class="cookie" id="cookie" hidden>
-      <p>{site.cookie_consent.text}</p>
-      <button class="btn" type="button" id="cookie-ok">{site.cookie_consent.button}</button>
+    <div class="cookie" id="cookie" role="region" aria-label="הסכמה לעוגיות" hidden>
+      <p>
+        אנחנו משתמשים בעוגיות ובכלי מעקב (Google Analytics ו-Meta) כדי להבין איך משתמשים באתר ולמדוד פרסום. הם נטענים רק באישורך.
+        <a href="/privacy">מדיניות פרטיות</a>
+      </p>
+      <div class="cookie__actions">
+        <button class="btn" type="button" id="cookie-ok">מאשר/ת</button>
+        <button class="btn btn--ghost" type="button" id="cookie-no">רק הכרחי</button>
+      </div>
     </div>
 
     <Popup />
@@ -188,16 +213,19 @@ const PIXEL_ID = '130381808053594';
 
     <script>
       const banner = document.getElementById('cookie')!;
-      let ok = false;
-      try {
-        ok = localStorage.getItem('f2f-cookie') === '1';
-      } catch {}
-      if (!ok) banner.hidden = false;
-      document.getElementById('cookie-ok')!.addEventListener('click', () => {
+      const w = window as any;
+      let choice: string | null = null;
+      try { choice = localStorage.getItem('f2f-consent'); } catch {}
+      if (!choice) banner.hidden = false;
+      const decide = (v: 'granted' | 'denied') => {
+        w.f2fSetConsent?.(v);
         banner.hidden = true;
-        try {
-          localStorage.setItem('f2f-cookie', '1');
-        } catch {}
+      };
+      document.getElementById('cookie-ok')!.addEventListener('click', () => decide('granted'));
+      document.getElementById('cookie-no')!.addEventListener('click', () => decide('denied'));
+      // footer "הגדרות עוגיות" link reopens the banner
+      document.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).closest?.('[data-cookie-settings]')) banner.hidden = false;
       });
     </script>
   </body>
@@ -269,12 +297,18 @@ const PIXEL_ID = '130381808053594';
   }
   .cookie p {
     margin: 0;
+    line-height: 1.6;
   }
+  .cookie p a { color: #fff; text-decoration: underline; }
+  .cookie__actions { display: flex; gap: 10px; flex: none; }
+  .cookie__actions .btn { min-height: 44px; white-space: nowrap; }
   @media (max-width: 560px) {
     .cookie {
       flex-direction: column;
       text-align: center;
       bottom: 84px;
     }
+    .cookie__actions { width: 100%; }
+    .cookie__actions .btn { flex: 1; justify-content: center; }
   }
 </style>
