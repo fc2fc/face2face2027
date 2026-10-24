@@ -12,7 +12,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
 ---
 
 <header class="header" id="header">
-  <div class="container header__inner">
+  <div class="pill">
     <a href="/" class="header__logo" aria-label="Face2Face – דף הבית">
       <Image src={logo} alt="Face2Face" width={170} densities={[1, 2]} loading="eager" />
     </a>
@@ -22,9 +22,10 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     </button>
     <nav id="site-nav" class="header__nav" aria-label="ניווט ראשי">
       <ul>
+        <li class="nav__ind" aria-hidden="true"></li>
         {
-          nav.map((item) => (
-            <li>
+          nav.map((item, i) => (
+            <li style={`--i:${i}`}>
               <a
                 href={item.old_url}
                 class:list={[isActive(item.old_url) && 'is-active']}
@@ -35,7 +36,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
             </li>
           ))
         }
-        <li class="nav__cta">
+        <li class="nav__cta" style={`--i:${nav.length}`}>
           <a href="/צרו-קשר" class="btn-cta">צרו קשר</a>
         </li>
       </ul>
@@ -51,55 +52,100 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     toggle.setAttribute('aria-expanded', String(!open));
     header.classList.toggle('is-open', !open);
   });
-  // סגירת תפריט בלחיצה על לינק
-  header.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => {
+  header.querySelectorAll('nav a').forEach((a) => a.addEventListener('click', () => {
     toggle.setAttribute('aria-expanded', 'false');
     header.classList.remove('is-open');
   }));
+
+  // Sliding highlight that follows hover/focus and rests on the current page
+  const list = header.querySelector<HTMLElement>('.header__nav ul')!;
+  const ind = list.querySelector<HTMLElement>('.nav__ind')!;
+  const links = [...list.querySelectorAll<HTMLAnchorElement>('li:not(.nav__cta):not(.nav__ind) a')];
+  const place = (a: HTMLElement | null) => {
+    if (!a || getComputedStyle(ind).display === 'none') { ind.style.opacity = '0'; return; }
+    const lr = list.getBoundingClientRect();
+    const r = a.getBoundingClientRect();
+    ind.style.opacity = '1';
+    ind.style.width = `${r.width}px`;
+    ind.style.height = `${r.height}px`;
+    ind.style.transform = `translate(${r.left - lr.left}px, ${r.top - lr.top}px)`;
+  };
+  const rest = () => place(list.querySelector<HTMLElement>('a.is-active'));
+  links.forEach((a) => {
+    a.addEventListener('pointerenter', () => place(a));
+    a.addEventListener('focus', () => place(a));
+  });
+  list.addEventListener('pointerleave', rest);
+  list.addEventListener('focusout', rest);
+  addEventListener('resize', rest);
+  document.fonts?.ready.then(rest);
+  rest();
+  setTimeout(rest, 1300); // re-measure once the entrance animation has settled
+
+  // Float: hide on scroll down, return on scroll up; glass gets denser once the page is scrolled
   let lastY = window.scrollY;
   const onScroll = () => {
     const y = window.scrollY;
-    header.classList.toggle('is-scrolled', y > 20);
+    header.classList.toggle('is-scrolled', y > 40);
     const menuOpen = header.classList.contains('is-open');
-    if (!menuOpen && y > 400 && y > lastY + 6) header.classList.add('is-hidden');
-    else if (y < lastY - 6 || y <= 400 || menuOpen) header.classList.remove('is-hidden');
+    if (!menuOpen && y > 300 && y > lastY + 6) header.classList.add('is-hidden');
+    else if (y < lastY - 6 || y <= 300 || menuOpen) header.classList.remove('is-hidden');
     document.documentElement.classList.toggle('hdr-hidden', header.classList.contains('is-hidden'));
     lastY = y;
   };
   onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('scroll', onScroll, { passive: true });
 </script>
 
 <style>
+  /* Zero-height sticky wrapper: reserves the space of the floating pill without a full-width bar. */
   .header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(14,14,14,0.82);
-    backdrop-filter: blur(16px) saturate(160%);
-    -webkit-backdrop-filter: blur(16px) saturate(160%);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    transition: box-shadow 0.3s, background 0.3s, transform 0.35s cubic-bezier(.2,.7,.2,1);
+    height: var(--hdr-h);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12px;
+    pointer-events: none;
+    transition: transform 0.55s cubic-bezier(.2,.8,.2,1), opacity 0.4s;
   }
-  .header.is-hidden { transform: translateY(-100%); }
-  .header.is-scrolled {
-    background: rgba(14,14,14,0.95);
-    box-shadow: 0 4px 24px rgba(20,20,20, 0.08);
-  }
-  .header__inner {
+  .header.is-hidden { transform: translateY(-130%); opacity: 0; }
+  .pill {
+    pointer-events: auto;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 70px;
+    gap: 28px;
+    padding: 7px 12px 7px 10px;
+    border-radius: 999px;
+    background: rgba(14, 14, 14, 0.5);
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.25);
+    animation: pill-in 0.9s 0.15s cubic-bezier(.2,.8,.2,1) both;
+    transition: background 0.45s, box-shadow 0.45s, border-color 0.45s, padding 0.45s, gap 0.45s;
+  }
+  .is-scrolled .pill {
+    background: rgba(14, 14, 14, 0.86);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
     gap: 20px;
+    padding-block: 5px;
   }
-  .header__logo img {
-    width: 150px;
-    height: auto;
-    transition: opacity 0.2s;
+  @keyframes pill-in {
+    from { opacity: 0; transform: translateY(-22px) scale(0.96); }
+    to { opacity: 1; transform: none; }
   }
+  .header__logo { padding-inline: 10px 4px; display: flex; }
+  .header__logo img { width: 128px; height: auto; transition: width 0.45s cubic-bezier(.2,.8,.2,1), opacity 0.2s; }
+  .is-scrolled .header__logo img { width: 112px; }
   .header__logo:hover img { opacity: 0.85; }
+
   .header__nav ul {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 2px;
@@ -107,45 +153,59 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     margin: 0;
     padding: 0;
   }
+  .header__nav li:not(.nav__ind) { animation: nav-in 0.6s calc(0.45s + var(--i) * 0.06s) cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes nav-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  .nav__ind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(.3,1.2,.4,1), width 0.45s cubic-bezier(.3,1.2,.4,1), height 0.3s, opacity 0.3s;
+  }
   .header__nav a:not(.btn-cta) {
     display: block;
-    padding: 7px 14px;
+    position: relative;
+    padding: 8px 15px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     border-radius: 999px;
-    color: var(--ink);
-    transition: color 0.2s, background 0.2s;
-    position: relative;
-  }
-  .header__nav a:not(.btn-cta):hover {
     color: #fff;
-    background: rgba(208,0,127, 0.06);
   }
-  .header__nav a.is-active {
-    color: #fff;
-    background: rgba(208,0,127, 0.08);
+  .header__nav a.is-active::after {
+    content: '';
+    position: absolute;
+    inset-inline: 50% auto;
+    bottom: 3px;
+    width: 4px;
+    height: 4px;
+    margin-inline-start: -2px;
+    border-radius: 50%;
+    background: var(--brand);
   }
-  .nav__cta {
-    margin-inline-start: 8px;
-  }
+  .nav__cta { margin-inline-start: 6px; }
   .btn-cta {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 9px 20px;
     background: var(--brand-ink);
     color: #fff !important;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     border-radius: 999px;
     text-decoration: none !important;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 3px 14px rgba(208,0,127, 0.3);
+    transition: background 0.2s, transform 0.3s cubic-bezier(.3,1.4,.5,1), box-shadow 0.2s;
+    box-shadow: 0 3px 16px rgba(208, 0, 127, 0.4);
   }
   .btn-cta:hover {
     background: var(--brand-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(208,0,127, 0.4);
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(208, 0, 127, 0.5);
   }
+
   .header__toggle {
     display: none;
     width: 44px;
@@ -154,10 +214,10 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     background: none;
     cursor: pointer;
     position: relative;
-    border-radius: 10px;
+    border-radius: 50%;
     transition: background 0.2s;
   }
-  .header__toggle:hover { background: rgba(208,0,127,0.18); }
+  .header__toggle:hover { background: rgba(255, 255, 255, 0.12); }
   .bars,
   .bars::before,
   .bars::after {
@@ -165,9 +225,9 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
     left: 11px;
     width: 22px;
     height: 2px;
-    background: var(--ink);
+    background: #fff;
     border-radius: 2px;
-    transition: transform 0.25s, opacity 0.25s;
+    transition: transform 0.3s cubic-bezier(.3,1.2,.4,1), opacity 0.25s;
   }
   .bars { top: 21px; }
   .bars::before, .bars::after { content: ''; left: 0; }
@@ -176,53 +236,39 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
   .is-open .bars { background: transparent; }
   .is-open .bars::before { transform: translateY(7px) rotate(45deg); }
   .is-open .bars::after { transform: translateY(-7px) rotate(-45deg); }
+
   @media (max-width: 860px) {
-    .header__toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .header { padding-inline: 12px; }
+    .pill { width: 100%; max-width: 560px; justify-content: space-between; gap: 12px; }
+    .header__toggle { display: flex; align-items: center; justify-content: center; }
     .header__nav {
       position: absolute;
-      top: calc(100% + 1px);
+      top: calc(100% + 10px);
       inset-inline: 0;
-      background: rgba(14,14,14,0.98);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-      display: none;
-      border-radius: 0 0 20px 20px;
-      z-index: 49;
+      background: rgba(14, 14, 14, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 26px;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5);
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+      transform-origin: top center;
+      transition: opacity 0.3s, transform 0.4s cubic-bezier(.2,.8,.2,1), visibility 0s 0.4s;
     }
-    .is-open .header__nav { display: block; }
-    .header__nav ul {
-      flex-direction: column;
-      align-items: stretch;
-      padding: 12px 16px 24px;
-      gap: 4px;
-    }
-    .header__nav a:not(.btn-cta) {
-      padding: 14px 16px;
-      border-radius: 12px;
-      font-size: 1rem;
-      min-height: 48px;
-      display: flex;
-      align-items: center;
-    }
-    .nav__cta { margin-inline-start: 0; margin-top: 8px; }
-    .btn-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 14px;
-      min-height: 52px;
-      font-size: 1rem;
-      border-radius: 14px;
-    }
+    .is-open .header__nav { visibility: visible; opacity: 1; transform: none; transition-delay: 0s; }
+    .header__nav ul { flex-direction: column; align-items: stretch; padding: 12px 14px 16px; gap: 4px; }
+    .nav__ind { display: none; }
+    .header__nav li:not(.nav__ind) { animation: none; }
+    .header__nav a:not(.btn-cta) { padding: 14px 16px; font-size: 1.02rem; min-height: 48px; display: flex; align-items: center; }
+    .header__nav a.is-active { background: rgba(255, 255, 255, 0.12); }
+    .header__nav a.is-active::after { inset-inline: auto 16px; bottom: auto; top: 50%; margin: -2px 0 0; }
+    .nav__cta { margin: 8px 0 0; }
+    .btn-cta { display: flex; align-items: center; justify-content: center; padding: 14px; min-height: 52px; font-size: 1rem; border-radius: 16px; }
   }
-  @media (max-width: 480px) {
-    .header__inner { min-height: 60px; }
-    .header__logo img { width: 130px; }
+  @media (prefers-reduced-motion: reduce) {
+    .pill, .header__nav li:not(.nav__ind) { animation: none; }
+    .nav__ind { transition: none; }
   }
 </style>

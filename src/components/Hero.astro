@@ -67,11 +67,11 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
       </a>
     </div>
     <div class="hero__stats">
-      <div class="stat"><strong>4,950+</strong><span>עבודות</span></div>
+      <div class="stat"><strong class="stat__num" data-to="4950" data-suffix="+">4,950+</strong><span>עבודות</span></div>
       <div class="stat__div" aria-hidden="true"></div>
-      <div class="stat"><strong>16+</strong><span>שנות ניסיון</span></div>
+      <div class="stat"><strong class="stat__num" data-to="16" data-suffix="+">16+</strong><span>שנות ניסיון</span></div>
       <div class="stat__div" aria-hidden="true"></div>
-      <div class="stat"><strong>100%</strong><span>שביעות רצון</span></div>
+      <div class="stat"><strong class="stat__num" data-to="100" data-suffix="%">100%</strong><span>שביעות רצון</span></div>
     </div>
   </div>
   <a href="#services" class="hero__scroll" aria-label="גלול למטה">
@@ -84,8 +84,10 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   .hero {
     position: relative;
     container-type: size;
-    height: clamp(640px, 92vh, 860px);
+    height: calc(clamp(640px, 92vh, 860px) + var(--hdr-h));
     min-height: min(92vh, 860px);
+    margin-top: calc(var(--hdr-h) * -1);
+    padding-top: var(--hdr-h);
     display: flex;
     align-items: center;
     color: #fff;
@@ -167,7 +169,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     .hero__stage { display: contents; }
     .hero__tag { display: none; }
     .hero__stage :global(.hero__bg) {
-      inset: 56px 0 auto 0;
+      inset: 64px 0 auto 0;
       height: 44%;
       object-position: 30% center;
       -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 78%, transparent 100%);
@@ -223,7 +225,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
   .t2 {
     position: absolute;
     inset-inline: 0;
-    top: 50%;
+    top: 43%;
     z-index: 1;
     font-family: 'Fb Melatef', var(--font);
     font-weight: 400;
@@ -308,11 +310,20 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     flex-direction: column;
     gap: 2px;
   }
+  .stat { animation: stat-float 5.5s ease-in-out infinite alternate; }
+  .stat:nth-child(3) { animation-delay: -1.8s; }
+  .stat:nth-child(5) { animation-delay: -3.6s; }
+  @keyframes stat-float { from { translate: 0 0; } to { translate: 0 -4px; } }
   .stat strong {
     font-size: 1.5rem;
     font-weight: 900;
     color: var(--brand);
+    font-variant-numeric: tabular-nums;
+    transform-origin: right center;
+    transform: scale(var(--grow, 1));
+    display: inline-block;
   }
+  @media (prefers-reduced-motion: reduce) { .stat { animation: none; } }
   .stat span {
     font-size: 0.8rem;
     color: rgba(255,255,255,0.65);
@@ -368,6 +379,7 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
     .hero {
       container-type: normal;
       height: auto;
+      min-height: calc(min(85vh, 700px) + var(--hdr-h));
       min-height: min(85vh, 700px);
       align-items: flex-end;
     }
@@ -498,5 +510,28 @@ const videoPoster = await getImage({ src: poster, width: 828, format: 'webp', qu
       if (document.readyState === 'complete') whenIdle();
       else window.addEventListener('load', whenIdle, { once: true });
     }
+  }
+
+  // Stats: count up slowly while growing a touch (reduced motion: final values stay as-is)
+  const nums = document.querySelectorAll<HTMLElement>('.stat__num');
+  if (nums.length && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const DUR = 3600;
+    const fmt = new Intl.NumberFormat('en-US');
+    nums.forEach((el) => {
+      const to = Number(el.dataset.to);
+      const suffix = el.dataset.suffix || '';
+      el.style.minWidth = `${el.textContent!.length * 0.62}em`; // reserve final width: no layout jitter while counting
+      el.textContent = `0${suffix}`;
+      el.style.setProperty('--grow', '0.9');
+      const t0 = performance.now() + 1100; // starts as the stats fade in
+      const step = (now: number) => {
+        const p = Math.min(1, Math.max(0, (now - t0) / DUR));
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = `${fmt.format(Math.round(to * e))}${suffix}`;
+        el.style.setProperty('--grow', String(0.9 + 0.16 * e));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
   }
 </script>
