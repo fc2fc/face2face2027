@@ -4,7 +4,21 @@ import { Picture } from 'astro:assets';
 import { site, asset } from '../lib/content';
 
 const stillsCat = (site.portfolio as any[]).find((c) => c.category === 'צילום סטילס');
-const stills = ((stillsCat?.items || []) as any[]).filter((i) => i.src).slice(0, 24);
+const all = ((stillsCat?.items || []) as any[]).filter((i) => i.src);
+const byId = (id: string) => all.find((i) => i.src.includes(id));
+// Curated wall: first 24 stills, with the award-ceremony stage shot swapped out, plus hand-picked event photos
+const SWAP: Record<string, string> = { '696ac38eeac63': '688b84a344086' };
+const EXTRA = ['688b84a982d97', '688b84aa9eff4', '688b8393f1d69', '688bed6403107', '688b8395959aa'];
+// Per-photo crop focus where the default (center 20%) would cut out what matters
+const FOCUS: Record<string, string> = { '688b8393f1d69': '22% 8%' };
+const focusOf = (src: string) => Object.entries(FOCUS).find(([id]) => src.includes(id))?.[1];
+const stills = [
+  ...all.slice(0, 24).map((i) => {
+    const k = Object.keys(SWAP).find((id) => i.src.includes(id));
+    return (k && byId(SWAP[k])) || i;
+  }),
+  ...EXTRA.map(byId).filter(Boolean),
+];
 const cols = [0, 1, 2, 3].map((n) => stills.filter((_, i) => i % 4 === n));
 const double = (arr: any[]) => [...arr, ...arr];
 ---
@@ -25,6 +39,7 @@ const double = (arr: any[]) => [...arr, ...arr];
                 fallbackFormat="webp"
                 loading="lazy"
                 decoding="async"
+                style={focusOf(img.src) ? `object-position:${focusOf(img.src)}` : undefined}
               />
             </div>
           ))}
