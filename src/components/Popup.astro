@@ -43,36 +43,40 @@ const popup = site.popup;
 </dialog>
 
 <script>
-  // Same rule as the old Site123 popup after the October 2026 fix: open only once the visitor has
-  // scrolled 70% of the page, at most once every 3 days, never on the contact page (it already has
-  // the form) and never over another open dialog. A popup on entry hurts mobile rankings
-  // (Google's "intrusive interstitials" guideline).
-  const KEY = 'f2f-popup-seen';
-  const THREE_DAYS = 3 * 24 * 60 * 60 * 1000;
-  const SCROLL_RATIO = 0.7;
+  // Opens on every visit and every page load (no once-per-N-days limit), as soon as the visitor scrolls to the
+  // "אודות" (About) section. Pages without an About section fall back to 70% scroll depth. Never on the contact
+  // page (it already has the form) and never over another open dialog (e.g. the gallery lightbox).
   const dialog = document.getElementById('lead-popup') as HTMLDialogElement;
   const onContactPage = decodeURI(location.pathname).replace(/\.html$/, '').startsWith('/צרו-קשר');
   const img = dialog.querySelector('img');
-  let last = 0;
-  try {
-    last = Number(localStorage.getItem(KEY) || 0);
-  } catch {}
+  const about = document.getElementById('about');
+  const preload = () => img?.setAttribute('loading', 'eager'); // fetch the photo before the popup opens, so it never appears empty
 
-  if (!onContactPage && Date.now() - last > THREE_DAYS) {
-    const onScroll = () => {
-      const doc = document.documentElement;
-      const scrollable = doc.scrollHeight - window.innerHeight;
-      const seen = (window.scrollY + window.innerHeight) / doc.scrollHeight;
-      if (seen > 0.4) img?.setAttribute('loading', 'eager'); // fetch the photo before the popup opens, so it never appears empty
-      if (scrollable <= 0 || seen < SCROLL_RATIO) return;
-      if (document.querySelector('dialog[open]')) return; // e.g. the gallery lightbox – try again on the next scroll
-      window.removeEventListener('scroll', onScroll);
+  if (!onContactPage) {
+    let done = false;
+    let inView = false;
+    let scrolled = window.scrollY > 80; // never pop up on arrival, only after the visitor has actually scrolled
+    const tryOpen = () => {
+      if (window.scrollY > 80) scrolled = true;
+      if (done || !inView || !scrolled) return;
+      if (document.querySelector('dialog[open]')) return; // retried on the next scroll
+      done = true;
       dialog.showModal();
-      try {
-        localStorage.setItem(KEY, String(Date.now()));
-      } catch {}
     };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    if (about && 'IntersectionObserver' in window) {
+      new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) preload(); }), { rootMargin: '0px 0px 150% 0px' }).observe(about);
+      new IntersectionObserver((es) => es.forEach((e) => { inView = e.isIntersecting; tryOpen(); }), { threshold: 0.2 }).observe(about);
+      window.addEventListener('scroll', tryOpen, { passive: true });
+    } else {
+      const onScroll = () => {
+        const doc = document.documentElement;
+        const seen = (window.scrollY + window.innerHeight) / doc.scrollHeight;
+        if (seen > 0.4) preload();
+        inView = doc.scrollHeight > window.innerHeight && seen >= 0.7;
+        tryOpen();
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
   }
   // Closing plays a short exit animation (skipped for reduced motion); Esc, the × button and a backdrop click all use it.
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
