@@ -1660,7 +1660,7 @@
       "button": "הבנתי!",
       "position": "bottom"
     },
-    "og_logo": "/assets/media/og/f2f-share-2026.jpg",
+    "og_logo": "/assets/media/og/f2f-share-v2.jpg",
     "logo_2x": "/assets/media/brand/logo@2x.webp"
   },
   "pages": [
@@ -1683,14 +1683,14 @@
           "url": "https://www.fc2fc.co.il/",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/f2f-share-2026.jpg",
+          "image": "/assets/media/og/f2f-share-v2.jpg",
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
           "card": "summary",
           "title": "נגה מלסה | צילום, וידאו ועיצוב גרפי – Face2Face",
           "description": "נגה מלסה – צלם ומעצב גרפי, מייסד סטודיו Face2Face. צילום תדמית ופורטרט עסקי, סרטוני תדמית, עריכה ומיתוג לעסקים, לאנשי ציבור ולפרטיים.",
-          "image": "/assets/media/og/f2f-share-2026.jpg"
+          "image": "/assets/media/og/f2f-share-v2.jpg"
         },
         "json_ld": [
           {
@@ -37204,14 +37204,14 @@
           "url": "https://www.fc2fc.co.il/terms",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/f2f-share-2026.jpg",
+          "image": "/assets/media/og/f2f-share-v2.jpg",
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
           "card": "summary",
           "title": "תנאי שימוש - Face2Face",
           "description": "תנאי שימוש - Face2Face",
-          "image": "/assets/media/og/f2f-share-2026.jpg"
+          "image": "/assets/media/og/f2f-share-v2.jpg"
         },
         "json_ld": [
           {
@@ -37456,14 +37456,14 @@
           "url": "https://www.fc2fc.co.il/privacy",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/f2f-share-2026.jpg",
+          "image": "/assets/media/og/f2f-share-v2.jpg",
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
           "card": "summary",
           "title": "מדיניות פרטיות - Face2Face",
           "description": "מדיניות פרטיות - Face2Face",
-          "image": "/assets/media/og/f2f-share-2026.jpg"
+          "image": "/assets/media/og/f2f-share-v2.jpg"
         },
         "json_ld": [
           {
@@ -37787,14 +37787,14 @@
           "url": "https://www.fc2fc.co.il/accessibility",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/f2f-share-2026.jpg",
+          "image": "/assets/media/og/f2f-share-v2.jpg",
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
           "card": "summary",
           "title": "נגישות - Face2Face",
           "description": "נגישות - Face2Face",
-          "image": "/assets/media/og/f2f-share-2026.jpg"
+          "image": "/assets/media/og/f2f-share-v2.jpg"
         },
         "json_ld": [
           {
