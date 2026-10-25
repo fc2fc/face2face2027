@@ -156,6 +156,7 @@ const paragraphs = toParagraphs(about.paragraphs);
   .ring, .chip, .tags, .arch { translate: 0 calc(var(--p, 0) * var(--sp, 0px)); will-change: translate; }
   .arch :global(img) { transform: scale(1.08) translateY(calc(var(--p, 0) * -14px)); }
   .about__text { padding-block: 0 clamp(24px, 6vh, 64px); }
+  @media (max-width: 480px) { .about__text { padding-block-end: 0; } }
   .about__title { text-align: start; }
   .about__title::after { margin-inline: 0; }
   .about__p {

@@ -152,7 +152,7 @@ const double = (arr: any[]) => [...arr, ...arr];
   }
   .p3d__cta:hover { background: var(--brand-dark); transform: scale(1.05); }
   @media (max-width: 600px) {
-    .p3d { height: 260vh; }
+    .p3d { height: 210vh; }
     .p3d__grid { gap: 8px; }
     .p3d__card { height: 190px; }
   }
@@ -172,6 +172,8 @@ const double = (arr: any[]) => [...arr, ...arr];
     const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
     const ease = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
     const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Phones: a closer, flatter starting pose so the photo wall fills the screen from the first frame (desktop pose unchanged)
+    const from = matchMedia('(max-width: 600px)').matches ? [-22, 16, 8, -260] : [-45, 25, 15, -800];
 
     let cur = 0;
     let raf = 0;
@@ -188,7 +190,7 @@ const double = (arr: any[]) => [...arr, ...arr];
       headline.style.pointerEvents = op < 0.2 ? 'none' : 'auto';
       shade.style.opacity = String(lerp(1, 0.05, ease(f)));
       const e = ease(clamp(p / 0.9, 0, 1));
-      grid.style.transform = `perspective(1000px) rotateY(${lerp(-45, -8, e)}deg) rotateX(${lerp(25, 4, e)}deg) rotateZ(${lerp(15, 2, e)}deg) translateZ(${lerp(-800, 0, e)}px)`;
+      grid.style.transform = `perspective(1000px) rotateY(${lerp(from[0], -8, e)}deg) rotateX(${lerp(from[1], 4, e)}deg) rotateZ(${lerp(from[2], 2, e)}deg) translateZ(${lerp(from[3], 0, e)}px)`;
       const move = [[0, -40], [-40, 10], [0, -40], [-30, 20]];
       cols.forEach((c, i) => c && (c.style.transform = `translateY(${lerp(move[i][0], move[i][1], e)}%)`));
     };

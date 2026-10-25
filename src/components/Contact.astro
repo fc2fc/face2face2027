@@ -176,7 +176,10 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
   }
   @media (max-width: 520px) {
     .b { padding: 18px; border-radius: 18px; }
-    .b--loc { flex-direction: column; align-items: flex-start; }
+    .b--loc { flex-direction: row; align-items: flex-start; gap: 14px; }
+    .radar { width: 76px; height: 76px; }
+    .pulse { width: 40px; height: 40px; }
+    .b--loc .b__body { flex: 1; min-width: 0; }
     .city { font-size: 2.2rem; }
     .b--form { padding: 22px 16px; }
     .soc { width: 56px; height: 56px; }
