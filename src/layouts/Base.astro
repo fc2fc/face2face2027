@@ -19,7 +19,10 @@ const GA_ID = 'G-PF16ZQ5HVJ';
 // Sentry error monitoring. The DSN is public by design (it only allows *sending* events). We use Sentry's
 // Loader Script: a ~1KB stub that downloads the full SDK only if an error actually happens, so normal page
 // views pay almost nothing. Replay/tracing are off; IP addresses and other PII are not sent.
-const SENTRY_DSN = String(import.meta.env.PUBLIC_SENTRY_DSN ?? '').trim();
+// Project: face2face / fc2fc-website. Accepts events only from fc2fc.co.il and *.vercel.app; IPs are not stored.
+const SENTRY_DSN = String(
+  import.meta.env.PUBLIC_SENTRY_DSN || 'https://c27d6e9ca682e11b21872c0befa0fce5@o4512323423371264.ingest.us.sentry.io/4512323433791488'
+).trim();
 const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
 ---
 
