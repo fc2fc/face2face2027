@@ -16,6 +16,11 @@ const ogImage = absolute(seo.og?.image) ?? absolute(site.og_logo);
 const GTM_ID = 'GTM-PV57PGLL';
 const PIXEL_ID = '130381808053594';
 const GA_ID = 'G-PF16ZQ5HVJ';
+// Sentry error monitoring. The DSN is public by design (it only allows *sending* events). We use Sentry's
+// Loader Script: a ~1KB stub that downloads the full SDK only if an error actually happens, so normal page
+// views pay almost nothing. Replay/tracing are off; IP addresses and other PII are not sent.
+const SENTRY_DSN = String(import.meta.env.PUBLIC_SENTRY_DSN ?? '').trim();
+const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
 ---
 
 <!doctype html>
@@ -70,6 +75,23 @@ const GA_ID = 'G-PF16ZQ5HVJ';
       competed with the Hero image for bandwidth and cost ~2s of LCP on mobile) wait until the page
       has loaded and the browser is idle, or until the visitor first interacts.
     -->
+    {SENTRY_KEY && (
+      <script is:inline>
+        window.sentryOnLoad = function () {
+          Sentry.init({
+            environment: location.hostname === 'www.fc2fc.co.il' ? 'production' : 'preview',
+            sendDefaultPii: false,
+            tracesSampleRate: 0,
+            replaysSessionSampleRate: 0,
+            replaysOnErrorSampleRate: 0,
+            // Noise from browser extensions / third-party tags is not ours to fix
+            denyUrls: [/extensions\//i, /^chrome(-extension)?:\/\//i, /^moz-extension:\/\//i, /googletagmanager\.com/i, /connect\.facebook\.net/i, /hcaptcha\.com/i],
+          });
+        };
+      </script>
+      <script is:inline src={`https://js.sentry-cdn.com/${SENTRY_KEY}.min.js`} crossorigin="anonymous" async></script>
+    )}
+
     <script is:inline define:vars={{ GTM_ID, PIXEL_ID, GA_ID }}>
       (function (w, d) {
         // Consent: nothing third-party is downloaded or sent until the visitor accepts (banner at the bottom).

@@ -17,6 +17,10 @@ const AUTOCOMPLETE: Record<string, string> = { text: 'name', tel: 'tel', email: 
 // designed to be public (they only allow sending to the mailbox registered with the key).
 const ENDPOINT = 'https://api.web3forms.com/submit';
 const accessKey = String(import.meta.env.PUBLIC_FORM_ENDPOINT ?? '').trim();
+// Spam protection: Web3Forms' free hCaptcha integration. Web3Forms verifies the token on its own server
+// (enable "hCaptcha" for this access key in the Web3Forms dashboard), so a bot that posts straight to the
+// API without solving it is rejected. This is the public sitekey Web3Forms documents for the free plan.
+const HCAPTCHA_SITEKEY = '50b2fe65-b00b-4b9e-ad62-3ba471098be2';
 ---
 
 <form class="lead-form" method="post" action={ENDPOINT} data-endpoint={ENDPOINT} data-has-key={accessKey ? 'true' : 'false'} data-form-name={formName} novalidate>
@@ -52,41 +56,99 @@ const accessKey = String(import.meta.env.PUBLIC_FORM_ENDPOINT ?? '').trim();
   }
   <!-- Web3Forms honeypot: bots tick it, people never see it -->
   <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true" style="display:none" />
+
+  <!-- hCaptcha widget is rendered here when the visitor starts filling the form (not on page load) -->
+  <div class="lead-form__captcha" data-sitekey={HCAPTCHA_SITEKEY}></div>
+
   <button class="btn" type="submit">{submitLabel}</button>
   <p class="lead-form__status" role="status" aria-live="polite"></p>
 </form>
 
 <script>
-  document.querySelectorAll<HTMLFormElement>('form.lead-form').forEach((form) => {
+  type HC = {
+    render: (el: HTMLElement, opts: Record<string, unknown>) => string;
+    getResponse: (id?: string) => string;
+    reset: (id?: string) => void;
+  };
+  const w = window as any;
+  const forms = Array.from(document.querySelectorAll<HTMLFormElement>('form.lead-form'));
+  const widgetIds = new Map<HTMLFormElement, string>();
+
+  // Load hCaptcha only once someone actually interacts with a form: no third-party request and no
+  // extra JS for visitors who never fill it in, and nothing competes with the Hero image for bandwidth.
+  let loading: Promise<HC> | null = null;
+  function loadCaptcha(): Promise<HC> {
+    if (loading) return loading;
+    loading = new Promise<HC>((resolve, reject) => {
+      w.f2fHcaptchaReady = () => resolve(w.hcaptcha as HC);
+      const s = document.createElement('script');
+      s.src = 'https://js.hcaptcha.com/1/api.js?render=explicit&onload=f2fHcaptchaReady&hl=he&recaptchacompat=off';
+      s.async = true;
+      s.onerror = () => { loading = null; reject(new Error('hcaptcha load failed')); };
+      document.head.appendChild(s);
+    });
+    return loading;
+  }
+
+  async function ensureWidget(form: HTMLFormElement): Promise<string | null> {
+    if (widgetIds.has(form)) return widgetIds.get(form)!;
+    const box = form.querySelector<HTMLElement>('.lead-form__captcha');
+    if (!box) return null;
+    try {
+      const hc = await loadCaptcha();
+      if (widgetIds.has(form)) return widgetIds.get(form)!;
+      const id = hc.render(box, { sitekey: box.dataset.sitekey, theme: 'dark', hl: 'he' });
+      widgetIds.set(form, id);
+      return id;
+    } catch {
+      return null;
+    }
+  }
+
+  forms.forEach((form) => {
     const status = form.querySelector<HTMLElement>('.lead-form__status')!;
+    const warm = () => { ensureWidget(form); };
+    form.addEventListener('focusin', warm, { once: true });
+    form.addEventListener('pointerdown', warm, { once: true });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      const endpoint = form.dataset.endpoint!;
       if (form.dataset.hasKey !== 'true') {
         status.textContent = 'הטופס אינו זמין כרגע. אפשר לפנות ב-WhatsApp או במייל face2faceprint@gmail.com';
         status.dataset.state = 'error';
         return;
       }
+
+      const widgetId = await ensureWidget(form);
+      const hc: HC | undefined = w.hcaptcha;
+      if (widgetId !== null && hc && !hc.getResponse(widgetId)) {
+        status.textContent = 'רגע לפני השליחה: סמנו את תיבת האימות שמעל הכפתור.';
+        status.dataset.state = 'error';
+        return;
+      }
+
       const btn = form.querySelector('button')!;
       btn.disabled = true;
       status.textContent = 'שולח…';
       status.dataset.state = '';
       try {
-        const res = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        const res = await fetch(form.dataset.endpoint!, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
         const data = await res.json().catch(() => ({}));
         if (!res.ok || data.success === false) throw new Error(data.message || String(res.status));
         form.reset();
         status.textContent = 'הפרטים נשלחו בהצלחה, נחזור אליך בהקדם!';
         status.dataset.state = 'ok';
-        (window as any).f2fTrack?.('generate_lead', { form_name: form.dataset.formName }, 'Lead');
+        w.f2fTrack?.('generate_lead', { form_name: form.dataset.formName }, 'Lead');
       } catch {
         status.textContent = 'השליחה נכשלה. נסו שוב או פנו ב-WhatsApp.';
         status.dataset.state = 'error';
       } finally {
+        // A captcha token is single-use, so always start fresh for the next attempt
+        if (widgetId !== null && hc) { try { hc.reset(widgetId); } catch {} }
         btn.disabled = false;
       }
     });
@@ -97,6 +159,15 @@ const accessKey = String(import.meta.env.PUBLIC_FORM_ENDPOINT ?? '').trim();
   .lead-form {
     display: grid;
     gap: 14px;
+  }
+  .lead-form__captcha:empty {
+    display: none;
+  }
+  .lead-form__captcha {
+    grid-column: 1 / -1;
+    min-height: 78px; /* hCaptcha checkbox height, so the button doesn't jump when it appears */
+    max-width: 100%;
+    overflow: hidden;
   }
   .field {
     display: grid;
