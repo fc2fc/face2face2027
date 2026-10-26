@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Schema from '../components/Schema.astro';
 import Popup from '../components/Popup.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 import { site, absolute, publicImageSize, SITE_URL } from '../lib/content';
 
 interface Props {
@@ -304,6 +305,8 @@ const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
         if ((e.target as HTMLElement).closest?.('[data-cookie-settings]')) banner.hidden = false;
       });
     </script>
+
+    <SpeedInsights />
   </body>
 </html>
 
