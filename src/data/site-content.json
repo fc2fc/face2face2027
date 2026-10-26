@@ -1715,7 +1715,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נגה מלסה | צילום, וידאו ועיצוב גרפי – Face2Face",
           "description": "נגה מלסה – צלם ומעצב גרפי, מייסד סטודיו Face2Face. צילום תדמית ופורטרט עסקי, סרטוני תדמית, עריכה ומיתוג לעסקים, לאנשי ציבור ולפרטיים.",
           "image": "/assets/media/og/f2f-share-v5.jpg"
@@ -3037,14 +3037,15 @@
           "url": "https://www.fc2fc.co.il/שירותים",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6887d8bdc0cfc.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8bdc0cfc.png"
+          "image": "/assets/media/og/f2f-share-services.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8bdc0cfc.png",
+          "image_alt": "שירותי צילום סטילס, וידאו ועיצוב גרפי – Face2Face"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "שירותי צילום וידאו ועיצוב גרפי | Face2Face",
           "description": "נגה מלסה מציע צילום סטילס, וידאו, עיצוב גרפי ושירותי דיגיטל עם עריכה ומיתוג מקצועיים לעסקים ולפרטיים.",
-          "image": "/assets/media/og/6887d8bdc0cfc.jpg"
+          "image": "/assets/media/og/f2f-share-services.jpg"
         },
         "json_ld": [
           {
@@ -3250,14 +3251,15 @@
           "url": "https://www.fc2fc.co.il/עבודות",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6887d8cb5f011.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8cb5f011.png"
+          "image": "/assets/media/og/f2f-share-works.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8cb5f011.png",
+          "image_alt": "תיק עבודות נבחרות – Face2Face, נגה מלסה"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות צילום וידאו ועיצוב גרפי | Face2Face",
           "description": "גלריית עבודות מקצועית של נגה מלסה: צילום סטילס, וידאו, עיצוב גרפי ומיתוג לעסקים ולפרטיים ברמה גבוהה.",
-          "image": "/assets/media/og/6887d8cb5f011.jpg"
+          "image": "/assets/media/og/f2f-share-works.jpg"
         },
         "json_ld": [
           {
@@ -4010,7 +4012,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac5cce30db.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ | צילום סטילס מקצועי - Face2Face",
           "description": "צילום של נגה מלסה עבור Face2Face: פורטרט איכותי של בצלאל סמוטריץ, עם עריכה מדויקת ושפה חזותית מוקפדת.",
           "image": "/assets/media/og/696ac5cce30db.jpg"
@@ -4205,7 +4207,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac5cce7dd5.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/696ac5cce7dd5.jpg"
@@ -4400,7 +4402,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac5cce9503.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/696ac5cce9503.jpg"
@@ -4595,7 +4597,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac32eac87d.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "דניאל רוט-אבנרי | צילום פורטרט מקצועי - Face2Face",
           "description": "צילום פורטרט של דניאל רוט-אבנרי מאת נגה מלסה, Face2Face: צילום תדמית מקצועי לאנשי ציבור, עם תאורה ועריכה מוקפדות.",
           "image": "/assets/media/og/696ac32eac87d.jpg"
@@ -4790,7 +4792,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac38eeac63.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות צילום סטילס מקצועי | Face2Face",
           "description": "גלריית עבודות צילום סטילס של נגה מלסה: קומפוזיציה חדה, תאורה מדויקת ועריכה מוקפדת לעסקים ולפרטיים.",
           "image": "/assets/media/og/696ac38eeac63.jpg"
@@ -4975,7 +4977,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac4dab927e.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נרקיס ראובן־נגר | צילום תדמית מקצועי - Face2Face",
           "description": "צילום תדמית של נרקיס ראובן־נגר מאת נגה מלסה, Face2Face: פורטרט מקצועי עם שפה חזותית נקייה, תאורה מדויקת ועריכה קפדנית.",
           "image": "/assets/media/og/696ac4dab927e.jpg"
@@ -5170,7 +5172,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac4dabc7f9.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נרקיס ראובן־נגר - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/696ac4dabc7f9.jpg"
@@ -5365,7 +5367,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac4dabde12.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נרקיס ראובן־נגר - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/696ac4dabde12.jpg"
@@ -5560,7 +5562,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_696ac4dabb275.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נרקיס ראובן־נגר - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/696ac4dabb275.jpg"
@@ -5755,7 +5757,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b814b71b6.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות עיצוב גרפי וצילום | Face2Face",
           "description": "צפו בעבודות נבחרות של נגה מלסה: עיצוב גרפי, צילום סטילס, וידאו ופתרונות מיתוג לעסקים ולפרטיים.",
           "image": "/assets/media/og/6967b814b71b6.jpg"
@@ -5940,7 +5942,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b7f621b9d.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b7f621b9d.jpg"
@@ -6125,7 +6127,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b78f66ede.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b78f66ede.jpg"
@@ -6310,7 +6312,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b78f64d86.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b78f64d86.jpg"
@@ -6495,7 +6497,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5ff1eadb9f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5ff1eadb9f.jpg"
@@ -6680,7 +6682,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5ff1ed021c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5ff1ed021c.jpg"
@@ -6865,7 +6867,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5ff1e5f864.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5ff1e5f864.jpg"
@@ -7050,7 +7052,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a564fd.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a564fd.jpg"
@@ -7235,7 +7237,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a4e4ba.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a4e4ba.jpg"
@@ -7420,7 +7422,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fe793d90e.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fe793d90e.jpg"
@@ -7605,7 +7607,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fe3b7417d.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fe3b7417d.jpg"
@@ -7790,7 +7792,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fd0c6699d.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fd0c6699d.jpg"
@@ -7975,7 +7977,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fcd7a3dfa.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fcd7a3dfa.jpg"
@@ -8160,7 +8162,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b85674ef4.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b85674ef4.jpg"
@@ -8345,7 +8347,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fcd7a5413.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fcd7a5413.jpg"
@@ -8530,7 +8532,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fe793696a.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fe793696a.jpg"
@@ -8715,7 +8717,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fcd7a50db.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fcd7a50db.jpg"
@@ -8900,7 +8902,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68a97c7aa6d95.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית נשי – חיוך - תמונה 6 מתוך 172 בגלריה -...",
           "description": "צילום תדמית נשי מקצועי עם חיוך ידידותי, צילום סטודיו נקי ואסתטי.",
           "image": "/assets/media/og/68a97c7aa6d95.jpg"
@@ -9095,7 +9097,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b7b2312.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית עסקי – פורטרט - תמונה 1 מתוך 172 בגלריה -...",
           "description": "צילום תדמית מקצועי – פורטרט של איש עסקים לצרכים שיווקיים ורשתות חברתיות.",
           "image": "/assets/media/og/688b84b7b2312.jpg"
@@ -9290,7 +9292,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68a97c7d49c10.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית עסקי – פורטרט נשי - Face2Face",
           "description": "צילום תדמית נשי עסקי בסטודיו: פורטרט מקצועי עם סטייל אישי, מתאים לאתר, ללינקדאין ולרשתות החברתיות. צילום: נגה מלסה, Face2Face.",
           "image": "/assets/media/og/68a97c7d49c10.jpg"
@@ -9485,7 +9487,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84be560c7.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית נשי – חיוך טבעי - תמונה 7 מתוך 172 בגלריה...",
           "description": "צילום תדמית מקצועי של אישה בוגרת עם חיוך טבעי, מעולה לתדמית לעסקים והדרכה.",
           "image": "/assets/media/og/688b84be560c7.jpg"
@@ -9680,7 +9682,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b09bc3f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית לנציגות – פורטרט ליד דגל ישראל - תמונה 3 מתוך...",
           "description": "צילום פורטרט של אשת ציבור ליד דגל ישראל – יצוגית וסגנון מקצועי.",
           "image": "/assets/media/og/688b84b09bc3f.jpg"
@@ -9875,7 +9877,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b073574.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית נשי – דיוקן עם דגל ישראל - תמונה 4 מתוך...",
           "description": "צילום תדמית מקצועי של אישה ליד דגל ישראל, דגש על נוכחות עסקית ויצוגית.",
           "image": "/assets/media/og/688b84b073574.jpg"
@@ -10070,7 +10072,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b7d1660.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית - תמונה 8 מתוך 172 בגלריה - Face2Face",
           "description": "צילום תדמית מקצועי של אישה בלבוש עסקי יושבת במשרד.",
           "image": "/assets/media/og/688b84b7d1660.jpg"
@@ -10265,7 +10267,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b76d7d9.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום תדמית – פורטרט ליד סמל המדינה - תמונה 5 מתוך 172...",
           "description": "צילום תדמית של אישה עומדת ליד סמל המדינה ודגל ישראל, משדר סמכות ונוכחות רשמית.",
           "image": "/assets/media/og/688b84b76d7d9.jpg"
@@ -10460,7 +10462,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84acd63a0.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צילום קבוצתי – צוות במעמד פורמלי - תמונה 2 מתוך 172 בגלריה...",
           "description": "צילום קבוצתי של צוות אנשים במיקום פורמלי, תדמית עסקית ומקצועית.",
           "image": "/assets/media/og/688b84acd63a0.jpg"
@@ -10655,7 +10657,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed6413324.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed6413324.jpg"
@@ -10840,7 +10842,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c02e9400c6.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c02e9400c6.jpg"
@@ -11025,7 +11027,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b83939b3b1.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "פנינה תמנו שטה | צילום פורטרט מקצועי - Face2Face",
           "description": "פורטרט מקצועי של פנינה תמנו שטה בצילום נגה מלסה, Face2Face: צילום תדמית לנבחרי ציבור ואנשי מקצוע, עם עריכה ברמה גבוהה.",
           "image": "/assets/media/og/688b83939b3b1.jpg"
@@ -11220,7 +11222,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c0048de22f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "פנינה תמנו שטה - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688c0048de22f.jpg"
@@ -11415,7 +11417,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bd4e9824ee.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "פנינה תמנו שטה - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688bd4e9824ee.jpg"
@@ -11610,7 +11612,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839669b27.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "פנינה תמנו שטה - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688b839669b27.jpg"
@@ -11805,7 +11807,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a2cf133.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "פנינה תמנו שטה - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688b84a2cf133.jpg"
@@ -12000,7 +12002,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c004895881.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c004895881.jpg"
@@ -12185,7 +12187,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c01d98a174.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c01d98a174.jpg"
@@ -12370,7 +12372,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c0047528ff.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c0047528ff.jpg"
@@ -12555,7 +12557,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c022896304.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c022896304.jpg"
@@ -12740,7 +12742,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c02128927c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c02128927c.jpg"
@@ -12925,7 +12927,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c01d96376f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c01d96376f.jpg"
@@ -13110,7 +13112,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c0047077b4.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c0047077b4.jpg"
@@ -13295,7 +13297,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bc80a6d.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bc80a6d.jpg"
@@ -13480,7 +13482,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f7ebc4.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f7ebc4.jpg"
@@ -13665,7 +13667,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f9ab14.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f9ab14.jpg"
@@ -13850,7 +13852,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f9d9ea.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f9d9ea.jpg"
@@ -14035,7 +14037,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f7cf9c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f7cf9c.jpg"
@@ -14220,7 +14222,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8395a1ad4.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688b8395a1ad4.jpg"
@@ -14415,7 +14417,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bdee36be43.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688bdee36be43.jpg"
@@ -14610,7 +14612,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bdee390f31.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בצלאל סמוטריץ - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688bdee390f31.jpg"
@@ -14805,7 +14807,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c004291d24.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c004291d24.jpg"
@@ -14990,7 +14992,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c004893227.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c004893227.jpg"
@@ -15175,7 +15177,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed63cffca.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed63cffca.jpg"
@@ -15360,7 +15362,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed6403107.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed6403107.jpg"
@@ -15545,7 +15547,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b1e1676.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b1e1676.jpg"
@@ -15730,7 +15732,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed63f1faa.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed63f1faa.jpg"
@@ -15915,7 +15917,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688c01d9b0647.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688c01d9b0647.jpg"
@@ -16100,7 +16102,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8395959aa.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "מורן אטיאס | צילום תדמית מקצועי - Face2Face",
           "description": "צילום תדמית של מורן אטיאס מאת נגה מלסה, Face2Face: פורטרט מוקפד עם תאורה מדויקת, קומפוזיציה חדה ועריכה מקצועית.",
           "image": "/assets/media/og/688b8395959aa.jpg"
@@ -16295,7 +16297,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bc0f951.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "מורן אטיאס - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688b84bc0f951.jpg"
@@ -16490,7 +16492,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839512442.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "מורן אטיאס - Face2Face",
           "description": "צילום: נגה מלסה",
           "image": "/assets/media/og/688b839512442.jpg"
@@ -16685,7 +16687,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b19a59f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b19a59f.jpg"
@@ -16870,7 +16872,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b83951fc93.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b83951fc93.jpg"
@@ -17055,7 +17057,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393f1d69.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393f1d69.jpg"
@@ -17240,7 +17242,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b83938f222.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b83938f222.jpg"
@@ -17425,7 +17427,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393f1e0a.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393f1e0a.jpg"
@@ -17610,7 +17612,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393eb332.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393eb332.jpg"
@@ -17795,7 +17797,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bf53d94.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bf53d94.jpg"
@@ -17980,7 +17982,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393cfd72.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393cfd72.jpg"
@@ -18165,7 +18167,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b83955f332.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b83955f332.jpg"
@@ -18350,7 +18352,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b849674c71.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b849674c71.jpg"
@@ -18535,7 +18537,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8495e6f61.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8495e6f61.jpg"
@@ -18720,7 +18722,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b849620d21.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b849620d21.jpg"
@@ -18905,7 +18907,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a0bee36.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a0bee36.jpg"
@@ -19090,7 +19092,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393cb804.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393cb804.jpg"
@@ -19275,7 +19277,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8394d279a.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8394d279a.jpg"
@@ -19460,7 +19462,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed630d3bc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed630d3bc.jpg"
@@ -19645,7 +19647,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed629928e.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed629928e.jpg"
@@ -19830,7 +19832,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed62aba0f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed62aba0f.jpg"
@@ -20015,7 +20017,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed62663a5.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed62663a5.jpg"
@@ -20200,7 +20202,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f96d0a.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f96d0a.jpg"
@@ -20385,7 +20387,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed6124ae6.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed6124ae6.jpg"
@@ -20570,7 +20572,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f9e8b3.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f9e8b3.jpg"
@@ -20755,7 +20757,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f7bc62.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f7bc62.jpg"
@@ -20940,7 +20942,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5fa2794.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5fa2794.jpg"
@@ -21125,7 +21127,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839652e3e.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b839652e3e.jpg"
@@ -21310,7 +21312,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed63be0ff.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed63be0ff.jpg"
@@ -21495,7 +21497,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed63c688b.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed63c688b.jpg"
@@ -21680,7 +21682,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84aa9eff4.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84aa9eff4.jpg"
@@ -21865,7 +21867,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84ab7f0c9.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84ab7f0c9.jpg"
@@ -22050,7 +22052,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8393a7e60.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8393a7e60.jpg"
@@ -22235,7 +22237,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839551357.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b839551357.jpg"
@@ -22420,7 +22422,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839541bdc.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b839541bdc.jpg"
@@ -22605,7 +22607,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b839567853.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b839567853.jpg"
@@ -22790,7 +22792,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b849661127.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b849661127.jpg"
@@ -22975,7 +22977,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8495e5896.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8495e5896.jpg"
@@ -23160,7 +23162,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84ab38176.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84ab38176.jpg"
@@ -23345,7 +23347,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84ba4b89c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84ba4b89c.jpg"
@@ -23530,7 +23532,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a28f2ce.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a28f2ce.jpg"
@@ -23715,7 +23717,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b8495e5889.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b8495e5889.jpg"
@@ -23900,7 +23902,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a2e740d.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a2e740d.jpg"
@@ -24085,7 +24087,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84be7ff89.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84be7ff89.jpg"
@@ -24270,7 +24272,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a296516.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a296516.jpg"
@@ -24455,7 +24457,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a0672d0.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a0672d0.jpg"
@@ -24640,7 +24642,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a28b751.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a28b751.jpg"
@@ -24825,7 +24827,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a2c092a.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a2c092a.jpg"
@@ -25010,7 +25012,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a982d97.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a982d97.jpg"
@@ -25195,7 +25197,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b849666c39.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b849666c39.jpg"
@@ -25380,7 +25382,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b5e4985.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b5e4985.jpg"
@@ -25565,7 +25567,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed63c9da2.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed63c9da2.jpg"
@@ -25750,7 +25752,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b1afe26.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b1afe26.jpg"
@@ -25935,7 +25937,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a344086.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a344086.jpg"
@@ -26120,7 +26122,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b849616151.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b849616151.jpg"
@@ -26305,7 +26307,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84aa7a4f7.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84aa7a4f7.jpg"
@@ -26490,7 +26492,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84ab155e0.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84ab155e0.jpg"
@@ -26675,7 +26677,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688bed5f76b61.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688bed5f76b61.jpg"
@@ -26860,7 +26862,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84aac4565.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84aac4565.jpg"
@@ -27045,7 +27047,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84aa53da3.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84aa53da3.jpg"
@@ -27230,7 +27232,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bb0da4b.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bb0da4b.jpg"
@@ -27415,7 +27417,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b24fde9.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b24fde9.jpg"
@@ -27600,7 +27602,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b4cf3b3.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b4cf3b3.jpg"
@@ -27785,7 +27787,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b10b4cc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b10b4cc.jpg"
@@ -27970,7 +27972,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a898bb8.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a898bb8.jpg"
@@ -28155,7 +28157,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b245320.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b245320.jpg"
@@ -28340,7 +28342,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b7d1943.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b7d1943.jpg"
@@ -28525,7 +28527,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84965d500.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84965d500.jpg"
@@ -28710,7 +28712,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bf4f5c9.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bf4f5c9.jpg"
@@ -28895,7 +28897,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bb06163.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bb06163.jpg"
@@ -29080,7 +29082,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b7b2d47.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b7b2d47.jpg"
@@ -29265,7 +29267,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84a2889bb.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84a2889bb.jpg"
@@ -29450,7 +29452,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84b60cf66.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84b60cf66.jpg"
@@ -29635,7 +29637,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_688b84bf26b2c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום סטילס",
           "image": "/assets/media/og/688b84bf26b2c.jpg"
@@ -29820,7 +29822,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a75a07.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a75a07.jpg"
@@ -30005,7 +30007,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a5168c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a5168c.jpg"
@@ -30190,7 +30192,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a791d8.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a791d8.jpg"
@@ -30375,7 +30377,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a73727.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a73727.jpg"
@@ -30560,7 +30562,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a55609.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a55609.jpg"
@@ -30745,7 +30747,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a73814.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a73814.jpg"
@@ -30930,7 +30932,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b85677267.jpg"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b85677267.jpg"
@@ -31115,7 +31117,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a56ee2.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a56ee2.jpg"
@@ -31300,7 +31302,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5f83a7d49c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5f83a7d49c.jpg"
@@ -31485,7 +31487,7 @@
           "image_original": "https://youtu.be/wzrXU7ZEK9M?si=L5kkDxoSpk8Wl5L2"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום וידאו",
           "image": "/assets/media/og/wzrXU7ZEK9M.jpg"
@@ -31682,7 +31684,7 @@
           "image_original": "https://youtu.be/XsQ1tfZkTYE?si=wechVXppmTIQ718W"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום וידאו",
           "image": "/assets/media/og/XsQ1tfZkTYE.jpg"
@@ -31879,7 +31881,7 @@
           "image_original": "https://youtu.be/OiWesq_yTXY?si=JOsPBc-GYl6yo6SC"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום וידאו",
           "image": "/assets/media/og/OiWesq_yTXY.jpg"
@@ -32076,7 +32078,7 @@
           "image_original": "https://youtu.be/ehX3m-ZdliM?si=xS7-YbdI6tDfn5od"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום וידאו",
           "image": "/assets/media/og/ehX3m-ZdliM.jpg"
@@ -32273,7 +32275,7 @@
           "image_original": "https://youtu.be/f_e_Uxa6qxI?si=LsFTPGi-xn1hnxTt"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "צילום וידאו",
           "image": "/assets/media/og/f_e_Uxa6qxI.jpg"
@@ -32470,7 +32472,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf143721.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf143721.jpg"
@@ -32655,7 +32657,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf12a643.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf12a643.jpg"
@@ -32840,7 +32842,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf24b069.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf24b069.jpg"
@@ -33025,7 +33027,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf128897.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf128897.jpg"
@@ -33210,7 +33212,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf129822.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf129822.jpg"
@@ -33395,7 +33397,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf128b9e.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf128b9e.jpg"
@@ -33580,7 +33582,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf275969.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf275969.jpg"
@@ -33765,7 +33767,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf2a3d6b.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf2a3d6b.jpg"
@@ -33950,7 +33952,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf2f1699.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf2f1699.jpg"
@@ -34135,7 +34137,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf14e9d2.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf14e9d2.jpg"
@@ -34320,7 +34322,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf151294.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf151294.jpg"
@@ -34505,7 +34507,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf27d721.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf27d721.jpg"
@@ -34690,7 +34692,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf278ce5.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf278ce5.jpg"
@@ -34875,7 +34877,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf14e6b0.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf14e6b0.jpg"
@@ -35060,7 +35062,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf1483ce.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf1483ce.jpg"
@@ -35245,7 +35247,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf336a73.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf336a73.jpg"
@@ -35430,7 +35432,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf34a24a.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf34a24a.jpg"
@@ -35615,7 +35617,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf32293f.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf32293f.jpg"
@@ -35800,7 +35802,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_68b5fbf14a906.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/68b5fbf14a906.jpg"
@@ -35985,7 +35987,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6967b85678b6c.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "עבודות - Face2Face",
           "description": "עיצוב גרפי",
           "image": "/assets/media/og/6967b85678b6c.jpg"
@@ -36166,14 +36168,15 @@
           "url": "https://www.fc2fc.co.il/אודות",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6a8d8e950afa5.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6a8d8e950afa5.png"
+          "image": "/assets/media/og/f2f-share-about.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6a8d8e950afa5.png",
+          "image_alt": "נגה מלסה – צלם ומעצב גרפי, מייסד Face2Face"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נגה מלסה – צלם ומעצב גרפי | אודות Face2Face",
           "description": "הכירו את נגה מלסה: צלם ומעצב גרפי מאז 2010 ומייסד סטודיו Face2Face (2016). פורטרטים עסקיים, צילום תדמית, תיעוד אירועים וסרטוני תדמית.",
-          "image": "/assets/media/og/6a8d8e950afa5.jpg"
+          "image": "/assets/media/og/f2f-share-about.jpg"
         },
         "json_ld": [
           {
@@ -36352,14 +36355,15 @@
           "url": "https://www.fc2fc.co.il/בין-לקוחותינו",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6887d907af577.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d907af577.png"
+          "image": "/assets/media/og/f2f-share-clients.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d907af577.png",
+          "image_alt": "בין לקוחותינו: משרדי ממשלה, ארגונים ועסקים – Face2Face"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "בין לקוחותינו | Face2Face - צילום, וידאו ועיצוב",
           "description": "הכירו לקוחות ופרויקטים של נגה מלסה: צילום סטילס, וידאו ועיצוב גרפי לעסקים ופרטיים, עם עריכה ומיתוג ברמה גבוהה.",
-          "image": "/assets/media/og/6887d907af577.jpg"
+          "image": "/assets/media/og/f2f-share-clients.jpg"
         },
         "json_ld": [
           {
@@ -36782,14 +36786,15 @@
           "url": "https://www.fc2fc.co.il/במספרים",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6887d91284b13.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d91284b13.png"
+          "image": "/assets/media/og/f2f-share-numbers.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d91284b13.png",
+          "image_alt": "Face2Face במספרים: 16 שנים מאחורי המצלמה"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "Face2Face במספרים | צילום, וידאו ועיצוב גרפי",
           "description": "נתונים והיקף שירותי התדמית של נגה מלסה: צילום סטילס, וידאו, עריכה ומיתוג דיגיטלי לעסקים ולפרטיים.",
-          "image": "/assets/media/og/6887d91284b13.jpg"
+          "image": "/assets/media/og/f2f-share-numbers.jpg"
         },
         "json_ld": [
           {
@@ -36965,14 +36970,15 @@
           "url": "https://www.fc2fc.co.il/צרו-קשר",
           "site_name": "Face2Face",
           "locale": null,
-          "image": "/assets/media/og/6887d91cd0853.jpg",
-          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d91cd0853.png"
+          "image": "/assets/media/og/f2f-share-contact.jpg",
+          "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d91cd0853.png",
+          "image_alt": "צרו קשר עם נגה מלסה – Face2Face"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "צרו קשר עם נגה מלסה | Face2Face צילום ועיצוב",
           "description": "לפגישה והצעת מחיר עם נגה מלסה: צילום סטילס, וידאו, עריכה ומיתוג דיגיטלי לעסקים ולפרטיים.",
-          "image": "/assets/media/og/6887d91cd0853.jpg"
+          "image": "/assets/media/og/f2f-share-contact.jpg"
         },
         "json_ld": [
           {
@@ -37236,7 +37242,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "תנאי שימוש - Face2Face",
           "description": "תנאי שימוש - Face2Face",
           "image": "/assets/media/og/f2f-share-v5.jpg"
@@ -37488,7 +37494,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "מדיניות פרטיות - Face2Face",
           "description": "מדיניות פרטיות - Face2Face",
           "image": "/assets/media/og/f2f-share-v5.jpg"
@@ -37819,7 +37825,7 @@
           "image_original": "https://files.cdn-files-a.com/uploads/2963728/800_6887d8a3748cc.png"
         },
         "twitter": {
-          "card": "summary",
+          "card": "summary_large_image",
           "title": "נגישות - Face2Face",
           "description": "נגישות - Face2Face",
           "image": "/assets/media/og/f2f-share-v5.jpg"

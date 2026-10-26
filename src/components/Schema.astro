@@ -34,7 +34,8 @@ const schema = {
       alternateName: ['נגה מלסה – Face2Face', 'Face2Face – נגה מלסה', 'Face2Face – Naga Malasa', 'פייס טו פייס'],
       description: 'סטודיו לצילום סטילס, צילום וידאו, עריכה, עיצוב גרפי ומיתוג לעסקים, לאנשי ציבור ולפרטיים, בניהולו של נגה מלסה.',
       url: `${SITE}/`,
-      logo: `${SITE}/assets/media/og/6887d8a3748cc.jpg`,
+      // Square logo (Google shows it next to results / in the business panel); was a 1200x630 banner.
+      logo: { '@type': 'ImageObject', url: `${SITE}/logo-square.png`, width: 600, height: 600 },
       image,
       telephone: '+972-52-813-3633',
       email: 'face2faceprint@gmail.com',
