@@ -20,23 +20,23 @@
       },
       {
         "label": "שירותים",
-        "old_url": "/שירותים"
+        "old_url": "/services"
       },
       {
         "label": "עבודות",
-        "old_url": "/עבודות"
+        "old_url": "/portfolio"
       },
       {
         "label": "אודות",
-        "old_url": "/אודות"
+        "old_url": "/about"
       },
       {
         "label": "בין לקוחותינו",
-        "old_url": "/בין-לקוחותינו"
+        "old_url": "/clients"
       },
       {
         "label": "צרו קשר",
-        "old_url": "/צרו-קשר"
+        "old_url": "/contact"
       }
     ],
     "footer": {
@@ -57,23 +57,23 @@
         },
         {
           "label": "שירותים",
-          "old_url": "/שירותים"
+          "old_url": "/services"
         },
         {
           "label": "עבודות",
-          "old_url": "/עבודות"
+          "old_url": "/portfolio"
         },
         {
           "label": "אודות",
-          "old_url": "/אודות"
+          "old_url": "/about"
         },
         {
           "label": "בין לקוחותינו",
-          "old_url": "/בין-לקוחותינו"
+          "old_url": "/clients"
         },
         {
           "label": "צרו קשר",
-          "old_url": "/צרו-קשר"
+          "old_url": "/contact"
         },
         {
           "label": "תנאי שימוש",
@@ -1754,9 +1754,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -1833,9 +1831,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום. עיצוב. נוכחות."
-        ],
+        "h1": ["צילום. עיצוב. נוכחות."],
         "h2": [
           "נוכחות דיגיטלית מנצחת!",
           "שירותים",
@@ -1846,9 +1842,7 @@
           "צרו קשר"
         ],
         "h3": [],
-        "h4": [
-          "צילום סטילס"
-        ]
+        "h4": ["צילום סטילס"]
       },
       "sections": [
         {
@@ -1875,12 +1869,7 @@
           ],
           "videos": [],
           "links": [],
-          "text": [
-            "צילום.",
-            "עיצוב.",
-            "נוכחות.",
-            "נוכחות דיגיטלית מנצחת!"
-          ]
+          "text": ["צילום.", "עיצוב.", "נוכחות.", "נוכחות דיגיטלית מנצחת!"]
         },
         {
           "id": "section-68827b021444b",
@@ -2524,11 +2513,7 @@
               "text": "הצג עוד"
             }
           ],
-          "categories": [
-            "צילום סטילס",
-            "צילום וידאו",
-            "עיצוב גרפי"
-          ],
+          "categories": ["צילום סטילס", "צילום וידאו", "עיצוב גרפי"],
           "text": [
             "עבודות",
             "צילום סטילס",
@@ -2864,9 +2849,7 @@
               "link": "https://www.tefflee.co.il/"
             }
           ],
-          "text": [
-            "בין לקוחותינו"
-          ]
+          "text": ["בין לקוחותינו"]
         },
         {
           "id": "section-5e17cf5384633",
@@ -2894,11 +2877,7 @@
               "label": "עבודות מוצלחות"
             }
           ],
-          "text": [
-            "במספרים",
-            "4950+",
-            "עבודות מוצלחות"
-          ]
+          "text": ["במספרים", "4950+", "עבודות מוצלחות"]
         },
         {
           "id": "section-68833fc84b50a",
@@ -3081,9 +3060,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -3160,14 +3137,10 @@
         ]
       },
       "headings": {
-        "h1": [
-          "שירותים"
-        ],
+        "h1": ["שירותים"],
         "h2": [],
         "h3": [],
-        "h4": [
-          "צילום סטילס"
-        ]
+        "h4": ["צילום סטילס"]
       },
       "sections": [
         {
@@ -3295,9 +3268,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -3374,9 +3345,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "עבודות"
-        ],
+        "h1": ["עבודות"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -3959,11 +3928,7 @@
             }
           ],
           "links": [],
-          "categories": [
-            "צילום סטילס",
-            "צילום וידאו",
-            "עיצוב גרפי"
-          ],
+          "categories": ["צילום סטילס", "צילום וידאו", "עיצוב גרפי"],
           "text": [
             "עבודות",
             "צילום סטילס",
@@ -4051,9 +4016,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -4130,9 +4093,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -4163,10 +4124,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -4179,9 +4137,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -4246,9 +4202,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -4325,9 +4279,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -4358,10 +4310,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -4374,9 +4323,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -4441,9 +4388,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -4520,9 +4465,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -4553,10 +4496,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -4569,9 +4509,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -4636,9 +4574,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -4715,9 +4651,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "דניאל רוט-אבנרי"
-        ],
+        "h1": ["דניאל רוט-אבנרי"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -4748,10 +4682,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "דניאל רוט-אבנרי",
-            "לגלריה המלאה"
-          ]
+          "text": ["דניאל רוט-אבנרי", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -4764,9 +4695,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "דניאל רוט-אבנרי"
-        ]
+        "text": ["דניאל רוט-אבנרי"]
       }
     },
     {
@@ -4831,9 +4760,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -4936,9 +4863,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5016,9 +4941,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -5095,9 +5018,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "נרקיס ראובן־נגר"
-        ],
+        "h1": ["נרקיס ראובן־נגר"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -5128,10 +5049,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "נרקיס ראובן־נגר",
-            "לגלריה המלאה"
-          ]
+          "text": ["נרקיס ראובן־נגר", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5144,9 +5062,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "נרקיס ראובן־נגר"
-        ]
+        "text": ["נרקיס ראובן־נגר"]
       }
     },
     {
@@ -5211,9 +5127,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -5290,9 +5204,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "נרקיס ראובן־נגר"
-        ],
+        "h1": ["נרקיס ראובן־נגר"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -5323,10 +5235,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "נרקיס ראובן־נגר",
-            "לגלריה המלאה"
-          ]
+          "text": ["נרקיס ראובן־נגר", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5339,9 +5248,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "נרקיס ראובן־נגר"
-        ]
+        "text": ["נרקיס ראובן־נגר"]
       }
     },
     {
@@ -5406,9 +5313,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -5485,9 +5390,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "נרקיס ראובן־נגר"
-        ],
+        "h1": ["נרקיס ראובן־נגר"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -5518,10 +5421,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "נרקיס ראובן־נגר",
-            "לגלריה המלאה"
-          ]
+          "text": ["נרקיס ראובן־נגר", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5534,9 +5434,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "נרקיס ראובן־נגר"
-        ]
+        "text": ["נרקיס ראובן־נגר"]
       }
     },
     {
@@ -5601,9 +5499,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -5680,9 +5576,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "נרקיס ראובן־נגר"
-        ],
+        "h1": ["נרקיס ראובן־נגר"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -5713,10 +5607,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "נרקיס ראובן־נגר",
-            "לגלריה המלאה"
-          ]
+          "text": ["נרקיס ראובן־נגר", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5729,9 +5620,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "נרקיס ראובן־נגר"
-        ]
+        "text": ["נרקיס ראובן־נגר"]
       }
     },
     {
@@ -5796,9 +5685,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -5901,9 +5788,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -5981,9 +5866,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -6086,9 +5969,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -6166,9 +6047,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -6271,9 +6150,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -6351,9 +6228,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -6456,9 +6331,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -6536,9 +6409,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -6641,9 +6512,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -6721,9 +6590,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -6826,9 +6693,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -6906,9 +6771,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7011,9 +6874,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -7091,9 +6952,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7196,9 +7055,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -7276,9 +7133,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7381,9 +7236,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -7461,9 +7314,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7566,9 +7417,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -7646,9 +7495,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7751,9 +7598,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -7831,9 +7676,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -7936,9 +7779,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8016,9 +7857,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -8121,9 +7960,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8201,9 +8038,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -8306,9 +8141,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8386,9 +8219,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -8491,9 +8322,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8571,9 +8400,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -8676,9 +8503,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8756,9 +8581,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -8861,9 +8684,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -8941,9 +8762,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9020,9 +8839,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית נשי – חיוך"
-        ],
+        "h1": ["צילום תדמית נשי – חיוך"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -9053,10 +8870,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית נשי – חיוך",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית נשי – חיוך", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -9069,9 +8883,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית נשי – חיוך"
-        ]
+        "text": ["צילום תדמית נשי – חיוך"]
       }
     },
     {
@@ -9136,9 +8948,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9215,9 +9025,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית עסקי – פורטרט"
-        ],
+        "h1": ["צילום תדמית עסקי – פורטרט"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -9248,10 +9056,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית עסקי – פורטרט",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית עסקי – פורטרט", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -9264,9 +9069,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית עסקי – פורטרט"
-        ]
+        "text": ["צילום תדמית עסקי – פורטרט"]
       }
     },
     {
@@ -9331,9 +9134,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9410,9 +9211,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית עסקי – פורטרט נשי"
-        ],
+        "h1": ["צילום תדמית עסקי – פורטרט נשי"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -9443,10 +9242,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית עסקי – פורטרט נשי",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית עסקי – פורטרט נשי", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -9459,9 +9255,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית עסקי – פורטרט נשי"
-        ]
+        "text": ["צילום תדמית עסקי – פורטרט נשי"]
       }
     },
     {
@@ -9526,9 +9320,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9605,9 +9397,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית נשי – חיוך טבעי"
-        ],
+        "h1": ["צילום תדמית נשי – חיוך טבעי"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -9638,10 +9428,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית נשי – חיוך טבעי",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית נשי – חיוך טבעי", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -9654,9 +9441,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית נשי – חיוך טבעי"
-        ]
+        "text": ["צילום תדמית נשי – חיוך טבעי"]
       }
     },
     {
@@ -9721,9 +9506,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9800,9 +9583,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית לנציגות – פורטרט ליד דגל ישראל"
-        ],
+        "h1": ["צילום תדמית לנציגות – פורטרט ליד דגל ישראל"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -9833,10 +9614,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית לנציגות – פורטרט ליד דגל ישראל",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית לנציגות – פורטרט ליד דגל ישראל", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -9849,9 +9627,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית לנציגות – פורטרט ליד דגל ישראל"
-        ]
+        "text": ["צילום תדמית לנציגות – פורטרט ליד דגל ישראל"]
       }
     },
     {
@@ -9916,9 +9692,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -9995,9 +9769,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית נשי – דיוקן עם דגל ישראל"
-        ],
+        "h1": ["צילום תדמית נשי – דיוקן עם דגל ישראל"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -10028,10 +9800,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית נשי – דיוקן עם דגל ישראל",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית נשי – דיוקן עם דגל ישראל", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -10044,9 +9813,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית נשי – דיוקן עם דגל ישראל"
-        ]
+        "text": ["צילום תדמית נשי – דיוקן עם דגל ישראל"]
       }
     },
     {
@@ -10111,9 +9878,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -10190,9 +9955,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית"
-        ],
+        "h1": ["צילום תדמית"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -10223,10 +9986,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -10239,9 +9999,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית"
-        ]
+        "text": ["צילום תדמית"]
       }
     },
     {
@@ -10306,9 +10064,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -10385,9 +10141,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום תדמית – פורטרט ליד סמל המדינה"
-        ],
+        "h1": ["צילום תדמית – פורטרט ליד סמל המדינה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -10418,10 +10172,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום תדמית – פורטרט ליד סמל המדינה",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום תדמית – פורטרט ליד סמל המדינה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -10434,9 +10185,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום תדמית – פורטרט ליד סמל המדינה"
-        ]
+        "text": ["צילום תדמית – פורטרט ליד סמל המדינה"]
       }
     },
     {
@@ -10501,9 +10250,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -10580,9 +10327,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צילום קבוצתי – צוות במעמד פורמלי"
-        ],
+        "h1": ["צילום קבוצתי – צוות במעמד פורמלי"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -10613,10 +10358,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "צילום קבוצתי – צוות במעמד פורמלי",
-            "לגלריה המלאה"
-          ]
+          "text": ["צילום קבוצתי – צוות במעמד פורמלי", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -10629,9 +10371,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "צילום קבוצתי – צוות במעמד פורמלי"
-        ]
+        "text": ["צילום קבוצתי – צוות במעמד פורמלי"]
       }
     },
     {
@@ -10696,9 +10436,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -10801,9 +10539,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -10881,9 +10617,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -10986,9 +10720,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11066,9 +10798,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -11145,9 +10875,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "פנינה תמנו שטה"
-        ],
+        "h1": ["פנינה תמנו שטה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -11178,10 +10906,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "פנינה תמנו שטה",
-            "לגלריה המלאה"
-          ]
+          "text": ["פנינה תמנו שטה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11194,9 +10919,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "פנינה תמנו שטה"
-        ]
+        "text": ["פנינה תמנו שטה"]
       }
     },
     {
@@ -11261,9 +10984,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -11340,9 +11061,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "פנינה תמנו שטה"
-        ],
+        "h1": ["פנינה תמנו שטה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -11373,10 +11092,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "פנינה תמנו שטה",
-            "לגלריה המלאה"
-          ]
+          "text": ["פנינה תמנו שטה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11389,9 +11105,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "פנינה תמנו שטה"
-        ]
+        "text": ["פנינה תמנו שטה"]
       }
     },
     {
@@ -11456,9 +11170,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -11535,9 +11247,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "פנינה תמנו שטה"
-        ],
+        "h1": ["פנינה תמנו שטה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -11568,10 +11278,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "פנינה תמנו שטה",
-            "לגלריה המלאה"
-          ]
+          "text": ["פנינה תמנו שטה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11584,9 +11291,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "פנינה תמנו שטה"
-        ]
+        "text": ["פנינה תמנו שטה"]
       }
     },
     {
@@ -11651,9 +11356,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -11730,9 +11433,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "פנינה תמנו שטה"
-        ],
+        "h1": ["פנינה תמנו שטה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -11763,10 +11464,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "פנינה תמנו שטה",
-            "לגלריה המלאה"
-          ]
+          "text": ["פנינה תמנו שטה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11779,9 +11477,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "פנינה תמנו שטה"
-        ]
+        "text": ["פנינה תמנו שטה"]
       }
     },
     {
@@ -11846,9 +11542,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -11925,9 +11619,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "פנינה תמנו שטה"
-        ],
+        "h1": ["פנינה תמנו שטה"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -11958,10 +11650,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "פנינה תמנו שטה",
-            "לגלריה המלאה"
-          ]
+          "text": ["פנינה תמנו שטה", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -11974,9 +11663,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "פנינה תמנו שטה"
-        ]
+        "text": ["פנינה תמנו שטה"]
       }
     },
     {
@@ -12041,9 +11728,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -12146,9 +11831,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -12226,9 +11909,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -12331,9 +12012,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -12411,9 +12090,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -12516,9 +12193,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -12596,9 +12271,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -12701,9 +12374,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -12781,9 +12452,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -12886,9 +12555,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -12966,9 +12633,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13071,9 +12736,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -13151,9 +12814,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13256,9 +12917,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -13336,9 +12995,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13441,9 +13098,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -13521,9 +13176,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13626,9 +13279,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -13706,9 +13357,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13811,9 +13460,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -13891,9 +13538,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -13996,9 +13641,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -14076,9 +13719,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -14181,9 +13822,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -14261,9 +13900,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -14340,9 +13977,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -14373,10 +14008,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -14389,9 +14021,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -14456,9 +14086,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -14535,9 +14163,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -14568,10 +14194,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -14584,9 +14207,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -14651,9 +14272,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -14730,9 +14349,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בצלאל סמוטריץ"
-        ],
+        "h1": ["בצלאל סמוטריץ"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -14763,10 +14380,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "בצלאל סמוטריץ",
-            "לגלריה המלאה"
-          ]
+          "text": ["בצלאל סמוטריץ", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -14779,9 +14393,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "בצלאל סמוטריץ"
-        ]
+        "text": ["בצלאל סמוטריץ"]
       }
     },
     {
@@ -14846,9 +14458,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -14951,9 +14561,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15031,9 +14639,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -15136,9 +14742,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15216,9 +14820,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -15321,9 +14923,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15401,9 +15001,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -15506,9 +15104,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15586,9 +15182,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -15691,9 +15285,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15771,9 +15363,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -15876,9 +15466,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -15956,9 +15544,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -16061,9 +15647,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -16141,9 +15725,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -16220,9 +15802,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "מורן אטיאס"
-        ],
+        "h1": ["מורן אטיאס"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -16253,10 +15833,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "מורן אטיאס",
-            "לגלריה המלאה"
-          ]
+          "text": ["מורן אטיאס", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -16269,9 +15846,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "מורן אטיאס"
-        ]
+        "text": ["מורן אטיאס"]
       }
     },
     {
@@ -16336,9 +15911,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -16415,9 +15988,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "מורן אטיאס"
-        ],
+        "h1": ["מורן אטיאס"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -16448,10 +16019,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "מורן אטיאס",
-            "לגלריה המלאה"
-          ]
+          "text": ["מורן אטיאס", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -16464,9 +16032,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "מורן אטיאס"
-        ]
+        "text": ["מורן אטיאס"]
       }
     },
     {
@@ -16531,9 +16097,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -16610,9 +16174,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "מורן אטיאס"
-        ],
+        "h1": ["מורן אטיאס"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -16643,10 +16205,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "מורן אטיאס",
-            "לגלריה המלאה"
-          ]
+          "text": ["מורן אטיאס", "לגלריה המלאה"]
         }
       ],
       "item": {
@@ -16659,9 +16218,7 @@
           }
         ],
         "videos": [],
-        "text": [
-          "מורן אטיאס"
-        ]
+        "text": ["מורן אטיאס"]
       }
     },
     {
@@ -16726,9 +16283,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -16831,9 +16386,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -16911,9 +16464,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17016,9 +16567,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -17096,9 +16645,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17201,9 +16748,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -17281,9 +16826,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17386,9 +16929,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -17466,9 +17007,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17571,9 +17110,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -17651,9 +17188,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17756,9 +17291,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -17836,9 +17369,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -17941,9 +17472,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18021,9 +17550,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -18126,9 +17653,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18206,9 +17731,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -18311,9 +17834,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18391,9 +17912,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -18496,9 +18015,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18576,9 +18093,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -18681,9 +18196,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18761,9 +18274,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -18866,9 +18377,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -18946,9 +18455,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19051,9 +18558,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -19131,9 +18636,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19236,9 +18739,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -19316,9 +18817,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19421,9 +18920,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -19501,9 +18998,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19606,9 +19101,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -19686,9 +19179,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19791,9 +19282,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -19871,9 +19360,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -19976,9 +19463,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20056,9 +19541,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -20161,9 +19644,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20241,9 +19722,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -20346,9 +19825,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20426,9 +19903,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -20531,9 +20006,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20611,9 +20084,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -20716,9 +20187,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20796,9 +20265,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -20901,9 +20368,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -20981,9 +20446,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -21086,9 +20549,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -21166,9 +20627,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -21271,9 +20730,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -21351,9 +20808,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -21456,9 +20911,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -21536,9 +20989,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -21641,9 +21092,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -21721,9 +21170,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -21826,9 +21273,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -21906,9 +21351,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22011,9 +21454,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -22091,9 +21532,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22196,9 +21635,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -22276,9 +21713,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22381,9 +21816,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -22461,9 +21894,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22566,9 +21997,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -22646,9 +22075,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22751,9 +22178,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -22831,9 +22256,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -22936,9 +22359,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23016,9 +22437,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -23121,9 +22540,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23201,9 +22618,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -23306,9 +22721,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23386,9 +22799,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -23491,9 +22902,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23571,9 +22980,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -23676,9 +23083,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23756,9 +23161,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -23861,9 +23264,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -23941,9 +23342,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24046,9 +23445,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -24126,9 +23523,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24231,9 +23626,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -24311,9 +23704,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24416,9 +23807,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -24496,9 +23885,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24601,9 +23988,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -24681,9 +24066,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24786,9 +24169,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -24866,9 +24247,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -24971,9 +24350,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25051,9 +24428,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -25156,9 +24531,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25236,9 +24609,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -25341,9 +24712,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25421,9 +24790,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -25526,9 +24893,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25606,9 +24971,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -25711,9 +25074,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25791,9 +25152,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -25896,9 +25255,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -25976,9 +25333,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -26081,9 +25436,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -26161,9 +25514,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -26266,9 +25617,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -26346,9 +25695,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -26451,9 +25798,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -26531,9 +25876,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -26636,9 +25979,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -26716,9 +26057,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -26821,9 +26160,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -26901,9 +26238,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27006,9 +26341,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -27086,9 +26419,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27191,9 +26522,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -27271,9 +26600,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27376,9 +26703,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -27456,9 +26781,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27561,9 +26884,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -27641,9 +26962,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27746,9 +27065,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -27826,9 +27143,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -27931,9 +27246,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28011,9 +27324,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -28116,9 +27427,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28196,9 +27505,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -28301,9 +27608,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28381,9 +27686,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -28486,9 +27789,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28566,9 +27867,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -28671,9 +27970,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28751,9 +28048,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -28856,9 +28151,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -28936,9 +28229,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29041,9 +28332,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -29121,9 +28410,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29226,9 +28513,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -29306,9 +28591,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29411,9 +28694,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -29491,9 +28772,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29596,9 +28875,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -29676,9 +28953,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29781,9 +29056,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -29861,9 +29134,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -29966,9 +29237,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30046,9 +29315,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -30151,9 +29418,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30231,9 +29496,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -30336,9 +29599,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30416,9 +29677,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -30521,9 +29780,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30601,9 +29858,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -30706,9 +29961,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30786,9 +30039,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -30891,9 +30142,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -30971,9 +30220,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -31076,9 +30323,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -31156,9 +30401,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -31261,9 +30504,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -31341,9 +30582,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -31446,9 +30685,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -31526,9 +30763,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -31637,9 +30872,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -31723,9 +30956,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -31834,9 +31065,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -31920,9 +31149,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32031,9 +31258,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -32117,9 +31342,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32228,9 +31451,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -32314,9 +31535,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32425,9 +31644,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -32511,9 +31728,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32616,9 +31831,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -32696,9 +31909,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32801,9 +32012,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -32881,9 +32090,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -32986,9 +32193,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33066,9 +32271,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -33171,9 +32374,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33251,9 +32452,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -33356,9 +32555,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33436,9 +32633,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -33541,9 +32736,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33621,9 +32814,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -33726,9 +32917,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33806,9 +32995,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -33911,9 +33098,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -33991,9 +33176,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -34096,9 +33279,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -34176,9 +33357,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -34281,9 +33460,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -34361,9 +33538,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -34466,9 +33641,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -34546,9 +33719,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -34651,9 +33822,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -34731,9 +33900,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -34836,9 +34003,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -34916,9 +34081,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35021,9 +34184,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -35101,9 +34262,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35206,9 +34365,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -35286,9 +34443,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35391,9 +34546,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -35471,9 +34624,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35576,9 +34727,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -35656,9 +34805,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35761,9 +34908,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -35841,9 +34986,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -35946,9 +35089,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -36026,9 +35167,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -36131,9 +35270,7 @@
             }
           ],
           "categories": [],
-          "text": [
-            "לגלריה המלאה"
-          ]
+          "text": ["לגלריה המלאה"]
         }
       ],
       "item": {
@@ -36212,9 +35349,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -36291,9 +35426,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "אודות"
-        ],
+        "h1": ["אודות"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -36399,9 +35532,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -36478,9 +35609,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "בין לקוחותינו"
-        ],
+        "h1": ["בין לקוחותינו"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -36761,9 +35890,7 @@
               "link": "https://www.tefflee.co.il/"
             }
           ],
-          "text": [
-            "בין לקוחותינו"
-          ]
+          "text": ["בין לקוחותינו"]
         }
       ]
     },
@@ -36830,9 +35957,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -36909,9 +36034,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "במספרים"
-        ],
+        "h1": ["במספרים"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -36943,11 +36066,7 @@
               "label": "עבודות מוצלחות"
             }
           ],
-          "text": [
-            "במספרים",
-            "4950+",
-            "עבודות מוצלחות"
-          ]
+          "text": ["במספרים", "4950+", "עבודות מוצלחות"]
         }
       ]
     },
@@ -37014,9 +36133,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -37093,9 +36210,7 @@
         ]
       },
       "headings": {
-        "h1": [
-          "צרו קשר"
-        ],
+        "h1": ["צרו קשר"],
         "h2": [],
         "h3": [],
         "h4": []
@@ -37281,9 +36396,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -37360,12 +36473,8 @@
         ]
       },
       "headings": {
-        "h1": [
-          "תנאי שימוש"
-        ],
-        "h2": [
-          "תנאי שימוש"
-        ],
+        "h1": ["תנאי שימוש"],
+        "h2": ["תנאי שימוש"],
         "h3": [
           "1. מטרת האתר",
           "2. קניין רוחני",
@@ -37533,9 +36642,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -37612,12 +36719,8 @@
         ]
       },
       "headings": {
-        "h1": [
-          "מדיניות פרטיות"
-        ],
-        "h2": [
-          "מדיניות פרטיות"
-        ],
+        "h1": ["מדיניות פרטיות"],
+        "h2": ["מדיניות פרטיות"],
         "h3": [
           "1. מידע שאנו אוספים",
           "2. כיצד אנו משתמשים במידע",
@@ -37864,9 +36967,7 @@
                   "https://www.instagram.com/face2face.il/",
                   "https://www.youtube.com/channel/UCQiw4Yb63IUjjAmjmKkAG0Q"
                 ],
-                "alternateName": [
-                  "Naga Malasa"
-                ]
+                "alternateName": ["Naga Malasa"]
               },
               {
                 "@type": "ProfessionalService",
@@ -37943,12 +37044,8 @@
         ]
       },
       "headings": {
-        "h1": [
-          "נגישות"
-        ],
-        "h2": [
-          "הצהרת נגישות"
-        ],
+        "h1": ["נגישות"],
+        "h2": ["הצהרת נגישות"],
         "h3": [
           "רמת הנגישות באתר",
           "התאמות הנגישות שבוצעו",
