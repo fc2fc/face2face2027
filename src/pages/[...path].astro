@@ -25,17 +25,12 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const SINGLE: Record<string, any> = {
-  "/services": Services,
-  "/שירותים": Services,
-  "/portfolio": Gallery,
-  "/עבודות": Gallery,
-  "/about": About,
-  "/אודות": About,
-  "/clients": Clients,
-  "/בין-לקוחותינו": Clients,
-  "/counters": Counters,
-  "/contact": Contact,
-  "/צרו-קשר": Contact,
+  '/services': Services,
+  '/portfolio': Gallery,
+  '/about': About,
+  '/clients': Clients,
+  '/counters': Counters,
+  '/contact': Contact,
 };
 const Single = SINGLE[page.old_path];
 ---
