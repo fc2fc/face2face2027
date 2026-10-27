@@ -16,111 +16,15 @@
       "destination": "https://www.fc2fc.co.il/:path",
       "permanent": true
     },
+    { "source": "/שירותים", "destination": "/services", "permanent": true },
+    { "source": "/עבודות", "destination": "/portfolio", "permanent": true },
+    { "source": "/אודות", "destination": "/about", "permanent": true },
     {
-      "source": "/about",
-      "destination": "/%D7%90%D7%95%D7%93%D7%95%D7%AA",
+      "source": "/בין-לקוחותינו",
+      "destination": "/clients",
       "permanent": true
     },
-    {
-      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%9C%D7%95%D7%92%D7%90%D7%95%D7%99%D7%9D",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A8%D7%A9%D7%AA%D7%95%D7%AA-%D7%97%D7%91%D7%A8%D7%AA%D7%99%D7%95%D7%AA",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%9C%D7%95%D7%9D-%D7%A1%D7%98%D7%99%D7%9C%D7%A1",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1/%D7%A4%D7%9C%D7%99%D7%99%D7%A8%D7%99%D7%9D",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%92%D7%A8%D7%A4%D7%99",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6884aa329b455",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%A1%D7%98%D7%99%D7%9C%D7%A1",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6884834ed9cbb",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/face-2-face",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%9E%D7%99%D7%A7%D7%95%D7%9D",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%A0%D7%95",
-      "destination": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%99%D7%A0%D7%95",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "permanent": true
-    },
-    {
-      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C-%D7%95%D7%9E%D7%93%D7%99%D7%94",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/services",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    }
+    { "source": "/צרו-קשר", "destination": "/contact", "permanent": true }
   ],
   "headers": [
     {

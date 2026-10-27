@@ -29,14 +29,7 @@ export default defineConfig({
   // The CSS is ~12KB compressed, so the first visit costs the same bytes but one less round trip
   // (the stylesheet used to block first paint, and fonts were only discovered after it arrived).
   build: { format: "file", inlineStylesheets: "always" },
-  redirects: {
-    ...redirects,
-    "/שירותים": "/services",
-    "/עבודות": "/portfolio",
-    "/אודות": "/about",
-    "/בין-לקוחותינו": "/clients",
-    "/צרו-קשר": "/contact",
-  },
+  redirects,
   integrations: [
     sitemap({
       filter: (url) => {
