@@ -5,6 +5,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    "redirects": [
     {
       "source": "/:path(.*)",
       "has": [
@@ -19,11 +20,7 @@
     { "source": "/שירותים", "destination": "/services", "permanent": true },
     { "source": "/עבודות", "destination": "/portfolio", "permanent": true },
     { "source": "/אודות", "destination": "/about", "permanent": true },
-    {
-      "source": "/בין-לקוחותינו",
-      "destination": "/clients",
-      "permanent": true
-    },
+    { "source": "/בין-לקוחותינו", "destination": "/clients", "permanent": true },
     { "source": "/צרו-קשר", "destination": "/contact", "permanent": true }
   ],
   "headers": [
