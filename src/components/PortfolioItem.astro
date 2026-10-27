@@ -59,13 +59,13 @@ for (const c of site.portfolio) {
               <Picture
                 src={asset(img.src)}
                 alt={img.alt || title}
-                widths={[480, 800, 1200, 1600]}
-                sizes="(max-width: 1000px) 100vw, 1000px"
+                widths={[800, 1200, 1600]}
+                sizes="100vw"
                 formats={["avif"]}
                 fallbackFormat="webp"
                 loading={n === 0 ? "eager" : "lazy"}
                 fetchpriority={n === 0 ? "high" : undefined}
-                class="w-full h-full object-cover object-top"
+                class="w-full h-full object-cover object-center"
               />
             );
           })
