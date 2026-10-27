@@ -16,6 +16,28 @@ export function size(src?: string): { width?: number; height?: number } {
   return d ? { width: d.w, height: d.h } : {};
 }
 
+/** Real pixel size of an image under /public (e.g. an og:image), read at build time and cached. */
+const publicSizes = new Map<string, Promise<{ width: number; height: number } | undefined>>();
+export function publicImageSize(path?: string | null) {
+  if (!path || path.startsWith('http')) return Promise.resolve(undefined);
+  if (!publicSizes.has(path)) {
+    publicSizes.set(
+      path,
+      (async () => {
+        const { default: sharp } = await import('sharp');
+        const { join } = await import('node:path');
+        try {
+          const m = await sharp(join(process.cwd(), 'public', decodeURI(path))).metadata();
+          return m.width && m.height ? { width: m.width, height: m.height } : undefined;
+        } catch {
+          return undefined;
+        }
+      })(),
+    );
+  }
+  return publicSizes.get(path)!;
+}
+
 export function absolute(url?: string | null) {
   if (!url) return undefined;
   return url.startsWith('http') ? url : SITE_URL + encodeURI(url);

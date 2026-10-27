@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Schema from '../components/Schema.astro';
 import Popup from '../components/Popup.astro';
-import { site, absolute, SITE_URL } from '../lib/content';
+import { site, absolute, publicImageSize, SITE_URL } from '../lib/content';
 
 interface Props {
   page: any;
@@ -12,10 +12,23 @@ interface Props {
 const { page } = Astro.props;
 const seo = page.seo;
 const canonical = SITE_URL + (page.old_path === '/' ? '/' : encodeURI(page.old_path));
-const ogImage = absolute(seo.og?.image) ?? absolute(site.og_logo);
+const ogPath: string | undefined = seo.og?.image ?? site.og_logo;
+const ogImage = absolute(ogPath);
+// Declare the image's real size (portfolio photos are 1200x800, the About photo 800x680): apps that trust these
+// numbers crop the preview, and a wrong ratio can cut off heads.
+const ogSize = await publicImageSize(ogPath);
+const ogAlt: string = seo.og?.image_alt ?? 'Face2Face – נגה מלסה: צילום, וידאו ועיצוב גרפי';
 const GTM_ID = 'GTM-PV57PGLL';
 const PIXEL_ID = '130381808053594';
 const GA_ID = 'G-PF16ZQ5HVJ';
+// Sentry error monitoring. The DSN is public by design (it only allows *sending* events). We use Sentry's
+// Loader Script: a ~1KB stub that downloads the full SDK only if an error actually happens, so normal page
+// views pay almost nothing. Replay/tracing are off; IP addresses and other PII are not sent.
+// Project: face2face / fc2fc-website. Accepts events only from fc2fc.co.il and *.vercel.app; IPs are not stored.
+const SENTRY_DSN = String(
+  import.meta.env.PUBLIC_SENTRY_DSN || 'https://c27d6e9ca682e11b21872c0befa0fce5@o4512323423371264.ingest.us.sentry.io/4512323433791488'
+).trim();
+const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
 ---
 
 <!doctype html>
@@ -36,17 +49,54 @@ const GA_ID = 'G-PF16ZQ5HVJ';
     {(seo.og?.description ?? seo.description) && <meta property="og:description" content={seo.og?.description ?? seo.description} />}
     <meta property="og:url" content={canonical} />
     {ogImage && <meta property="og:image" content={ogImage} />}
-    {ogImage && <meta property="og:image:width" content="1200" />}
-    {ogImage && <meta property="og:image:height" content="630" />}
-    {ogImage && <meta property="og:image:alt" content="Face2Face – נגה מלסה: צילום, וידאו ועיצוב גרפי" />}
+    {ogImage && ogPath?.endsWith('.jpg') && <meta property="og:image:type" content="image/jpeg" />}
+    {ogSize && <meta property="og:image:width" content={String(ogSize.width)} />}
+    {ogSize && <meta property="og:image:height" content={String(ogSize.height)} />}
+    {ogImage && <meta property="og:image:alt" content={ogAlt} />}
     <meta name="twitter:card" content={seo.twitter?.card ?? 'summary_large_image'} />
     <meta name="twitter:title" content={seo.twitter?.title ?? seo.title} />
     {(seo.twitter?.description ?? seo.description) && <meta name="twitter:description" content={seo.twitter?.description ?? seo.description} />}
     {ogImage && <meta name="twitter:image" content={ogImage} />}
+    {ogImage && <meta name="twitter:image:alt" content={ogAlt} />}
 
-    <link rel="icon" href="/assets/media/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/media/icons/180_180_63ea95b0eb841.png" />
+    <!-- Favicon: the logo's "2" on the site's dark background (square). .ico holds 16/32/48 for browsers
+         and Google Search; the PNGs are for modern browsers, Android and iOS home screens. -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- "Add to home screen": short name + icons (Android reads the manifest, iOS the apple-* tags) -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="application-name" content="Face2Face" />
+    <meta name="apple-mobile-web-app-title" content="Face2Face" />
     <meta name="theme-color" content="#141414" />
+
+    <!--
+      Instant page loads (Chrome/Edge): when a visitor hovers or starts tapping an internal link, the browser
+      prepares that page in the background, so the click feels immediate. Gallery tiles open the lightbox
+      (not a page), so they are excluded; the home page is only prefetched so its intro animation still plays.
+      Browsers without support ignore this block.
+    -->
+    <script type="speculationrules" is:inline>
+      {
+        "prerender": [{
+          "where": { "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/" } },
+            { "not": { "href_matches": "/*.*" } },
+            { "not": { "selector_matches": ".tile, [target=_blank], [download], [data-no-prerender]" } }
+          ]},
+          "eagerness": "moderate"
+        }],
+        "prefetch": [{
+          "where": { "and": [
+            { "href_matches": "/" },
+            { "not": { "selector_matches": "[target=_blank]" } }
+          ]},
+          "eagerness": "moderate"
+        }]
+      }
+    </script>
     <meta name="google-site-verification" content="5Sw7hDf_lk-VEjnxIwE6X296VZb9XwRbKhzZoAyodig" />
 
     <!-- page-specific hints (e.g. the home page's LCP image preload) -->
@@ -70,6 +120,23 @@ const GA_ID = 'G-PF16ZQ5HVJ';
       competed with the Hero image for bandwidth and cost ~2s of LCP on mobile) wait until the page
       has loaded and the browser is idle, or until the visitor first interacts.
     -->
+    {SENTRY_KEY && (
+      <script is:inline>
+        window.sentryOnLoad = function () {
+          Sentry.init({
+            environment: location.hostname === 'www.fc2fc.co.il' ? 'production' : 'preview',
+            sendDefaultPii: false,
+            tracesSampleRate: 0,
+            replaysSessionSampleRate: 0,
+            replaysOnErrorSampleRate: 0,
+            // Noise from browser extensions / third-party tags is not ours to fix
+            denyUrls: [/extensions\//i, /^chrome(-extension)?:\/\//i, /^moz-extension:\/\//i, /googletagmanager\.com/i, /connect\.facebook\.net/i, /hcaptcha\.com/i],
+          });
+        };
+      </script>
+      <script is:inline src={`https://js.sentry-cdn.com/${SENTRY_KEY}.min.js`} crossorigin="anonymous" async></script>
+    )}
+
     <script is:inline define:vars={{ GTM_ID, PIXEL_ID, GA_ID }}>
       (function (w, d) {
         // Consent: nothing third-party is downloaded or sent until the visitor accepts (banner at the bottom).
@@ -111,6 +178,11 @@ const GA_ID = 'G-PF16ZQ5HVJ';
         }
         function start() {
           if (started || getConsent() !== 'granted') return;
+          // A page prepared in the background (speculation rules) is not a visit yet: wait until it is shown.
+          if (d.prerendering) {
+            d.addEventListener('prerenderingchange', start, { once: true });
+            return;
+          }
           started = true;
           add('https://www.googletagmanager.com/gtag/js?id=' + GA_ID);
           add('https://www.googletagmanager.com/gtm.js?id=' + GTM_ID);

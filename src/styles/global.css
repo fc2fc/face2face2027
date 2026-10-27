@@ -328,3 +328,38 @@ h1, h2, h3, h4 { font-family: var(--font); font-weight: 900; }
 }
 
 .hero__badge { font-family: var(--font); font-weight: 700; }
+
+/* ── Page transitions (View Transitions API, cross-document) ─────────────────────────────────────
+   Chrome/Edge 126+ and Safari 18.2+ cross-fade between pages instead of flashing white; other browsers
+   navigate as before. The header and WhatsApp button are their own layers, so they stay put while the
+   content underneath changes. Turned off for visitors who ask for reduced motion. */
+@view-transition {
+  navigation: auto;
+}
+#header { view-transition-name: site-header; }
+.wa-float { view-transition-name: wa-float; }
+.scroll-progress { view-transition-name: scroll-progress; }
+
+::view-transition-old(root) {
+  animation: 180ms cubic-bezier(0.4, 0, 1, 1) both f2f-vt-out;
+}
+::view-transition-new(root) {
+  animation: 340ms cubic-bezier(0.2, 0.7, 0.2, 1) 60ms both f2f-vt-in;
+}
+@keyframes f2f-vt-out {
+  to { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes f2f-vt-in {
+  from { opacity: 0; transform: translateY(14px); }
+}
+/* The header keeps its place; only its contents change (active link, scrolled state) */
+::view-transition-group(site-header),
+::view-transition-group(wa-float) {
+  animation-duration: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}

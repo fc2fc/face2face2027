@@ -3,6 +3,7 @@ import Icon from './Icon.astro';
 import { Picture } from 'astro:assets';
 import { site, asset, imageUrl } from '../lib/content';
 import focalData from '../data/focal.json';
+import videosData from '../data/videos.json';
 
 interface Props {
   limit?: number;
@@ -47,11 +48,39 @@ function shapeOf(item: any): 'tall' | 'wide' | 'std' {
 }
 const sizesFor = (shape: string) =>
   shape === 'wide' ? '(max-width: 640px) 100vw, 600px' : shape === 'tall' ? '(max-width: 640px) 50vw, 300px' : '(max-width: 640px) 50vw, 300px';
+// VideoObject structured data for the full gallery page (/עבודות), so the videos can show with a thumbnail in Google.
+const SITE = 'https://www.fc2fc.co.il';
+const videoMeta = videosData as Record<string, { name: string; description: string; uploadDate: string; duration: string }>;
+const videoSchema = paged
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': categories
+        .flatMap((c) => c.items)
+        .filter((i) => i.type === 'video' && videoMeta[i.youtube_id])
+        .map((i) => {
+          const v = videoMeta[i.youtube_id];
+          return {
+            '@type': 'VideoObject',
+            name: v.name,
+            description: v.description,
+            uploadDate: v.uploadDate,
+            duration: v.duration,
+            thumbnailUrl: [`https://i.ytimg.com/vi/${i.youtube_id}/hqdefault.jpg`],
+            embedUrl: `https://www.youtube.com/embed/${i.youtube_id}`,
+            url: `${SITE}${encodeURI(i.old_item_page ?? '/עבודות')}`,
+            inLanguage: 'he',
+            creator: { '@id': `${SITE}/#naga-malasa` },
+          };
+        }),
+    }
+  : null;
 const pos = (src?: string) => {
   const f = src ? focal[src] : undefined;
   return f ? `${f.x}% ${f.y}%` : '50% 30%';
 };
 ---
+
+{videoSchema && videoSchema['@graph'].length > 0 && <script type="application/ld+json" set:html={JSON.stringify(videoSchema)} />}
 
 <section class="section works" id="works">
   <div class="container">
