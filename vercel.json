@@ -5,7 +5,6 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    "redirects": [
     {
       "source": "/:path(.*)",
       "has": [
@@ -16,12 +15,7 @@
       ],
       "destination": "https://www.fc2fc.co.il/:path",
       "permanent": true
-    },
-    { "source": "/שירותים", "destination": "/services", "permanent": true },
-    { "source": "/עבודות", "destination": "/portfolio", "permanent": true },
-    { "source": "/אודות", "destination": "/about", "permanent": true },
-    { "source": "/בין-לקוחותינו", "destination": "/clients", "permanent": true },
-    { "source": "/צרו-קשר", "destination": "/contact", "permanent": true }
+    }
   ],
   "headers": [
     {
@@ -42,41 +36,6 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-        },
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin-allow-popups"
-        }
-      ]
-    },
-    {
-      "source": "/_astro/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/fonts/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2592000"
         }
       ]
     }
