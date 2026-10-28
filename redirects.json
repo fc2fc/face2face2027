@@ -1,5 +1,5 @@
 {
-  "readme": "Every URL of the old Site123 site. \"destination\" defaults to the same path, so if the Astro site keeps the same paths nothing is lost. If you rename a page, change its destination and set needs_redirect to true. \"astro\" is ready to paste into the redirects field of astro.config.mjs (only entries that need a redirect).",
+  "readme": "Every URL of the old Site123 site. \"destination\" defaults to the same path, so if the Astro site keeps the same paths nothing is lost. If you rename a page, change its destination and set needs_redirect to true. \"astro\" is ready to paste into the redirects field of astro.config.mjs (only entries that need a redirect). Updated for the Hebrew-to-English URL migration (2026-10): every old Hebrew path now 301s to its new English path (/שירותים→/services, /עבודות→/work, /אודות→/about, /בין-לקוחותינו→/clients, /במספרים→/numbers, /צרו-קשר→/contact; portfolio items moved from /עבודות/* to /work/*).",
   "old_host": "https://www.fc2fc.co.il",
   "redirects": [
     {
@@ -14,1604 +14,1604 @@
     {
       "source": "/שירותים",
       "source_encoded": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
-      "destination": "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
+      "destination": "/work/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-696ac39138e0f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-696ac39138e0f",
-      "destination": "/עבודות/item-id-696ac39138e0f",
+      "destination": "/work/item-id-696ac39138e0f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
-      "destination": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
-      "destination": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
-      "destination": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
-      "destination": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b816e50d8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b816e50d8",
-      "destination": "/עבודות/item-id-6967b816e50d8",
+      "destination": "/work/item-id-6967b816e50d8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b7f8e187e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b7f8e187e",
-      "destination": "/עבודות/item-id-6967b7f8e187e",
+      "destination": "/work/item-id-6967b7f8e187e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b79296ed4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b79296ed4",
-      "destination": "/עבודות/item-id-6967b79296ed4",
+      "destination": "/work/item-id-6967b79296ed4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b79275c26",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b79275c26",
-      "destination": "/עבודות/item-id-6967b79275c26",
+      "destination": "/work/item-id-6967b79275c26",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5ff208136e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff208136e",
-      "destination": "/עבודות/item-id-68b5ff208136e",
+      "destination": "/work/item-id-68b5ff208136e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5ff22656c7",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff22656c7",
-      "destination": "/עבודות/item-id-68b5ff22656c7",
+      "destination": "/work/item-id-68b5ff22656c7",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5ff1f8cdb4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff1f8cdb4",
-      "destination": "/עבודות/item-id-68b5ff1f8cdb4",
+      "destination": "/work/item-id-68b5ff1f8cdb4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83b8f658",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83b8f658",
-      "destination": "/עבודות/item-id-68b5f83b8f658",
+      "destination": "/work/item-id-68b5f83b8f658",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83ba8e5a",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83ba8e5a",
-      "destination": "/עבודות/item-id-68b5f83ba8e5a",
+      "destination": "/work/item-id-68b5f83ba8e5a",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fe7c7deb2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe7c7deb2",
-      "destination": "/עבודות/item-id-68b5fe7c7deb2",
+      "destination": "/work/item-id-68b5fe7c7deb2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fe3d37627",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe3d37627",
-      "destination": "/עבודות/item-id-68b5fe3d37627",
+      "destination": "/work/item-id-68b5fe3d37627",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fd0dc9ced",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fd0dc9ced",
-      "destination": "/עבודות/item-id-68b5fd0dc9ced",
+      "destination": "/work/item-id-68b5fd0dc9ced",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fcd92353b",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd92353b",
-      "destination": "/עבודות/item-id-68b5fcd92353b",
+      "destination": "/work/item-id-68b5fcd92353b",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b858a15d0",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b858a15d0",
-      "destination": "/עבודות/item-id-6967b858a15d0",
+      "destination": "/work/item-id-6967b858a15d0",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fcd8ebe6f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd8ebe6f",
-      "destination": "/עבודות/item-id-68b5fcd8ebe6f",
+      "destination": "/work/item-id-68b5fcd8ebe6f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fe7b8c9d2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe7b8c9d2",
-      "destination": "/עבודות/item-id-68b5fe7b8c9d2",
+      "destination": "/work/item-id-68b5fe7b8c9d2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fcd93763f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd93763f",
-      "destination": "/עבודות/item-id-68b5fcd93763f",
+      "destination": "/work/item-id-68b5fcd93763f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-נשי-חיוך",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%97%D7%99%D7%95%D7%9A",
-      "destination": "/עבודות/צילום-תדמית-נשי-חיוך",
+      "destination": "/work/portrait-woman-smile",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-עסקי-פורטרט",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A2%D7%A1%D7%A7%D7%99-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98",
-      "destination": "/עבודות/צילום-תדמית-עסקי-פורטרט",
+      "destination": "/work/business-portrait",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
-      "destination": "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
+      "destination": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%97%D7%99%D7%95%D7%9A-%D7%98%D7%91%D7%A2%D7%99",
-      "destination": "/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
+      "destination": "/work/portrait-woman-natural-smile",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%9C%D7%A0%D7%A6%D7%99%D7%92%D7%95%D7%AA-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98-%D7%9C%D7%99%D7%93-%D7%93%D7%92%D7%9C-%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
-      "destination": "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
+      "destination": "/work/portrait-delegation-israel-flag",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%93%D7%99%D7%95%D7%A7%D7%9F-%D7%A2%D7%9D-%D7%93%D7%92%D7%9C-%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
-      "destination": "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
+      "destination": "/work/portrait-woman-israel-flag",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA",
-      "destination": "/עבודות/צילום-תדמית",
+      "destination": "/work/portrait",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98-%D7%9C%D7%99%D7%93-%D7%A1%D7%9E%D7%9C-%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94",
-      "destination": "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
+      "destination": "/work/portrait-state-emblem",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99-%D7%A6%D7%95%D7%95%D7%AA-%D7%91%D7%9E%D7%A2%D7%9E%D7%93-%D7%A4%D7%95%D7%A8%D7%9E%D7%9C%D7%99",
-      "destination": "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
+      "destination": "/work/team-group-photo-formal",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed656124c",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed656124c",
-      "destination": "/עבודות/item-id-688bed656124c",
+      "destination": "/work/item-id-688bed656124c",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c02eb8ab7d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c02eb8ab7d",
-      "destination": "/עבודות/item-id-688c02eb8ab7d",
+      "destination": "/work/item-id-688c02eb8ab7d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
-      "destination": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
-      "destination": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
-      "destination": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
-      "destination": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
-      "destination": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c004e5165d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004e5165d",
-      "destination": "/עבודות/item-id-688c004e5165d",
+      "destination": "/work/item-id-688c004e5165d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c01daea16f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01daea16f",
-      "destination": "/עבודות/item-id-688c01daea16f",
+      "destination": "/work/item-id-688c01daea16f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c004bcecc1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004bcecc1",
-      "destination": "/עבודות/item-id-688c004bcecc1",
+      "destination": "/work/item-id-688c004bcecc1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c022c88d01",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c022c88d01",
-      "destination": "/עבודות/item-id-688c022c88d01",
+      "destination": "/work/item-id-688c022c88d01",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c02144b2b0",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c02144b2b0",
-      "destination": "/עבודות/item-id-688c02144b2b0",
+      "destination": "/work/item-id-688c02144b2b0",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c01da9d0bf",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01da9d0bf",
-      "destination": "/עבודות/item-id-688c01da9d0bf",
+      "destination": "/work/item-id-688c01da9d0bf",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c0049c416e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c0049c416e",
-      "destination": "/עבודות/item-id-688c0049c416e",
+      "destination": "/work/item-id-688c0049c416e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84c122054",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c122054",
-      "destination": "/עבודות/item-id-688b84c122054",
+      "destination": "/work/item-id-688b84c122054",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed63443d6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed63443d6",
-      "destination": "/עבודות/item-id-688bed63443d6",
+      "destination": "/work/item-id-688bed63443d6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed6384b72",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6384b72",
-      "destination": "/עבודות/item-id-688bed6384b72",
+      "destination": "/work/item-id-688bed6384b72",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed622d1db",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed622d1db",
-      "destination": "/עבודות/item-id-688bed622d1db",
+      "destination": "/work/item-id-688bed622d1db",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed61e5102",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed61e5102",
-      "destination": "/עבודות/item-id-688bed61e5102",
+      "destination": "/work/item-id-688bed61e5102",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
-      "destination": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c004402d03",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004402d03",
-      "destination": "/עבודות/item-id-688c004402d03",
+      "destination": "/work/item-id-688c004402d03",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c004c90a8e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004c90a8e",
-      "destination": "/עבודות/item-id-688c004c90a8e",
+      "destination": "/work/item-id-688c004c90a8e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed651bcd1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651bcd1",
-      "destination": "/עבודות/item-id-688bed651bcd1",
+      "destination": "/work/item-id-688bed651bcd1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed651440f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651440f",
-      "destination": "/עבודות/item-id-688bed651440f",
+      "destination": "/work/item-id-688bed651440f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b66fde1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b66fde1",
-      "destination": "/עבודות/item-id-688b84b66fde1",
+      "destination": "/work/item-id-688b84b66fde1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed651e738",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651e738",
-      "destination": "/עבודות/item-id-688bed651e738",
+      "destination": "/work/item-id-688bed651e738",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688c01dbb41d6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01dbb41d6",
-      "destination": "/עבודות/item-id-688c01dbb41d6",
+      "destination": "/work/item-id-688c01dbb41d6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
-      "destination": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
-      "destination": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
-      "destination": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b62d622",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b62d622",
-      "destination": "/עבודות/item-id-688b84b62d622",
+      "destination": "/work/item-id-688b84b62d622",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8395ef0ba",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395ef0ba",
-      "destination": "/עבודות/item-id-688b8395ef0ba",
+      "destination": "/work/item-id-688b8395ef0ba",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8395138ad",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395138ad",
-      "destination": "/עבודות/item-id-688b8395138ad",
+      "destination": "/work/item-id-688b8395138ad",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b839487b85",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839487b85",
-      "destination": "/עבודות/item-id-688b839487b85",
+      "destination": "/work/item-id-688b839487b85",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b83952af1b",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83952af1b",
-      "destination": "/עבודות/item-id-688b83952af1b",
+      "destination": "/work/item-id-688b83952af1b",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8394d319e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394d319e",
-      "destination": "/עבודות/item-id-688b8394d319e",
+      "destination": "/work/item-id-688b8394d319e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84c17a2d2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c17a2d2",
-      "destination": "/עבודות/item-id-688b84c17a2d2",
+      "destination": "/work/item-id-688b84c17a2d2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8394be1be",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394be1be",
-      "destination": "/עבודות/item-id-688b8394be1be",
+      "destination": "/work/item-id-688b8394be1be",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b839628070",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839628070",
-      "destination": "/עבודות/item-id-688b839628070",
+      "destination": "/work/item-id-688b839628070",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a103b41",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a103b41",
-      "destination": "/עבודות/item-id-688b84a103b41",
+      "destination": "/work/item-id-688b84a103b41",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b849ea06a7",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849ea06a7",
-      "destination": "/עבודות/item-id-688b849ea06a7",
+      "destination": "/work/item-id-688b849ea06a7",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a00997c",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a00997c",
-      "destination": "/עבודות/item-id-688b84a00997c",
+      "destination": "/work/item-id-688b84a00997c",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84aa1833a",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa1833a",
-      "destination": "/עבודות/item-id-688b84aa1833a",
+      "destination": "/work/item-id-688b84aa1833a",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8394ab2ec",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394ab2ec",
-      "destination": "/עבודות/item-id-688b8394ab2ec",
+      "destination": "/work/item-id-688b8394ab2ec",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8395d7520",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395d7520",
-      "destination": "/עבודות/item-id-688b8395d7520",
+      "destination": "/work/item-id-688b8395d7520",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed65a23ea",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed65a23ea",
-      "destination": "/עבודות/item-id-688bed65a23ea",
+      "destination": "/work/item-id-688bed65a23ea",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed63cd8e4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed63cd8e4",
-      "destination": "/עבודות/item-id-688bed63cd8e4",
+      "destination": "/work/item-id-688bed63cd8e4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed6401bab",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6401bab",
-      "destination": "/עבודות/item-id-688bed6401bab",
+      "destination": "/work/item-id-688bed6401bab",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed639addc",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed639addc",
-      "destination": "/עבודות/item-id-688bed639addc",
+      "destination": "/work/item-id-688bed639addc",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed635a236",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed635a236",
-      "destination": "/עבודות/item-id-688bed635a236",
+      "destination": "/work/item-id-688bed635a236",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed628cb33",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed628cb33",
-      "destination": "/עבודות/item-id-688bed628cb33",
+      "destination": "/work/item-id-688bed628cb33",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed623db00",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed623db00",
-      "destination": "/עבודות/item-id-688bed623db00",
+      "destination": "/work/item-id-688bed623db00",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed60aafb6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed60aafb6",
-      "destination": "/עבודות/item-id-688bed60aafb6",
+      "destination": "/work/item-id-688bed60aafb6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed638b362",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed638b362",
-      "destination": "/עבודות/item-id-688bed638b362",
+      "destination": "/work/item-id-688bed638b362",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b83969d8ff",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83969d8ff",
-      "destination": "/עבודות/item-id-688b83969d8ff",
+      "destination": "/work/item-id-688b83969d8ff",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed65134da",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed65134da",
-      "destination": "/עבודות/item-id-688bed65134da",
+      "destination": "/work/item-id-688bed65134da",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed651a249",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651a249",
-      "destination": "/עבודות/item-id-688bed651a249",
+      "destination": "/work/item-id-688bed651a249",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b1c2908",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b1c2908",
-      "destination": "/עבודות/item-id-688b84b1c2908",
+      "destination": "/work/item-id-688b84b1c2908",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b159ebf",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b159ebf",
-      "destination": "/עבודות/item-id-688b84b159ebf",
+      "destination": "/work/item-id-688b84b159ebf",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b839499705",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839499705",
-      "destination": "/עבודות/item-id-688b839499705",
+      "destination": "/work/item-id-688b839499705",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b83960bb19",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83960bb19",
-      "destination": "/עבודות/item-id-688b83960bb19",
+      "destination": "/work/item-id-688b83960bb19",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b8395f32da",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395f32da",
-      "destination": "/עבודות/item-id-688b8395f32da",
+      "destination": "/work/item-id-688b8395f32da",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b839638527",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839638527",
-      "destination": "/עבודות/item-id-688b839638527",
+      "destination": "/work/item-id-688b839638527",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a022b08",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a022b08",
-      "destination": "/עבודות/item-id-688b84a022b08",
+      "destination": "/work/item-id-688b84a022b08",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b849fe854a",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849fe854a",
-      "destination": "/עבודות/item-id-688b849fe854a",
+      "destination": "/work/item-id-688b849fe854a",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84af98a78",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84af98a78",
-      "destination": "/עבודות/item-id-688b84af98a78",
+      "destination": "/work/item-id-688b84af98a78",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84becec33",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84becec33",
-      "destination": "/עבודות/item-id-688b84becec33",
+      "destination": "/work/item-id-688b84becec33",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84aa75e4a",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa75e4a",
-      "destination": "/עבודות/item-id-688b84aa75e4a",
+      "destination": "/work/item-id-688b84aa75e4a",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b849fe1a0b",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849fe1a0b",
-      "destination": "/עבודות/item-id-688b849fe1a0b",
+      "destination": "/work/item-id-688b849fe1a0b",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a9d4645",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a9d4645",
-      "destination": "/עבודות/item-id-688b84a9d4645",
+      "destination": "/work/item-id-688b84a9d4645",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84c2cec4d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c2cec4d",
-      "destination": "/עבודות/item-id-688b84c2cec4d",
+      "destination": "/work/item-id-688b84c2cec4d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a8dae60",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a8dae60",
-      "destination": "/עבודות/item-id-688b84a8dae60",
+      "destination": "/work/item-id-688b84a8dae60",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a7e7bc3",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a7e7bc3",
-      "destination": "/עבודות/item-id-688b84a7e7bc3",
+      "destination": "/work/item-id-688b84a7e7bc3",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84ab0390d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ab0390d",
-      "destination": "/עבודות/item-id-688b84ab0390d",
+      "destination": "/work/item-id-688b84ab0390d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84ac4bf34",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ac4bf34",
-      "destination": "/עבודות/item-id-688b84ac4bf34",
+      "destination": "/work/item-id-688b84ac4bf34",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b008553",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b008553",
-      "destination": "/עבודות/item-id-688b84b008553",
+      "destination": "/work/item-id-688b84b008553",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a290d01",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a290d01",
-      "destination": "/עבודות/item-id-688b84a290d01",
+      "destination": "/work/item-id-688b84a290d01",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84bb373b6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bb373b6",
-      "destination": "/עבודות/item-id-688b84bb373b6",
+      "destination": "/work/item-id-688b84bb373b6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed6527ba5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6527ba5",
-      "destination": "/עבודות/item-id-688bed6527ba5",
+      "destination": "/work/item-id-688bed6527ba5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b58d94f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b58d94f",
-      "destination": "/עבודות/item-id-688b84b58d94f",
+      "destination": "/work/item-id-688b84b58d94f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84aa9f0a8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa9f0a8",
-      "destination": "/עבודות/item-id-688b84aa9f0a8",
+      "destination": "/work/item-id-688b84aa9f0a8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a0c2624",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a0c2624",
-      "destination": "/עבודות/item-id-688b84a0c2624",
+      "destination": "/work/item-id-688b84a0c2624",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84afee0ae",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84afee0ae",
-      "destination": "/עבודות/item-id-688b84afee0ae",
+      "destination": "/work/item-id-688b84afee0ae",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b1c47d1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b1c47d1",
-      "destination": "/עבודות/item-id-688b84b1c47d1",
+      "destination": "/work/item-id-688b84b1c47d1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688bed635aa2e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed635aa2e",
-      "destination": "/עבודות/item-id-688bed635aa2e",
+      "destination": "/work/item-id-688bed635aa2e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b123ca5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b123ca5",
-      "destination": "/עבודות/item-id-688b84b123ca5",
+      "destination": "/work/item-id-688b84b123ca5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b0891e7",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b0891e7",
-      "destination": "/עבודות/item-id-688b84b0891e7",
+      "destination": "/work/item-id-688b84b0891e7",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84beca816",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84beca816",
-      "destination": "/עבודות/item-id-688b84beca816",
+      "destination": "/work/item-id-688b84beca816",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b6c4b61",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b6c4b61",
-      "destination": "/עבודות/item-id-688b84b6c4b61",
+      "destination": "/work/item-id-688b84b6c4b61",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84ba8ead6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ba8ead6",
-      "destination": "/עבודות/item-id-688b84ba8ead6",
+      "destination": "/work/item-id-688b84ba8ead6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b68898c",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b68898c",
-      "destination": "/עבודות/item-id-688b84b68898c",
+      "destination": "/work/item-id-688b84b68898c",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b12b97f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b12b97f",
-      "destination": "/עבודות/item-id-688b84b12b97f",
+      "destination": "/work/item-id-688b84b12b97f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84b56f232",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b56f232",
-      "destination": "/עבודות/item-id-688b84b56f232",
+      "destination": "/work/item-id-688b84b56f232",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84ba7d0f5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ba7d0f5",
-      "destination": "/עבודות/item-id-688b84ba7d0f5",
+      "destination": "/work/item-id-688b84ba7d0f5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a18d3c8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a18d3c8",
-      "destination": "/עבודות/item-id-688b84a18d3c8",
+      "destination": "/work/item-id-688b84a18d3c8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84c143c63",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c143c63",
-      "destination": "/עבודות/item-id-688b84c143c63",
+      "destination": "/work/item-id-688b84c143c63",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84bee11a0",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bee11a0",
-      "destination": "/עבודות/item-id-688b84bee11a0",
+      "destination": "/work/item-id-688b84bee11a0",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84bcad685",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bcad685",
-      "destination": "/עבודות/item-id-688b84bcad685",
+      "destination": "/work/item-id-688b84bcad685",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84a9b40b6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a9b40b6",
-      "destination": "/עבודות/item-id-688b84a9b40b6",
+      "destination": "/work/item-id-688b84a9b40b6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84bdd40f8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bdd40f8",
-      "destination": "/עבודות/item-id-688b84bdd40f8",
+      "destination": "/work/item-id-688b84bdd40f8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-688b84c1cdc8c",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c1cdc8c",
-      "destination": "/עבודות/item-id-688b84c1cdc8c",
+      "destination": "/work/item-id-688b84c1cdc8c",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83d4f61e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d4f61e",
-      "destination": "/עבודות/item-id-68b5f83d4f61e",
+      "destination": "/work/item-id-68b5f83d4f61e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83bd13d2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83bd13d2",
-      "destination": "/עבודות/item-id-68b5f83bd13d2",
+      "destination": "/work/item-id-68b5f83bd13d2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83d38dae",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d38dae",
-      "destination": "/עבודות/item-id-68b5f83d38dae",
+      "destination": "/work/item-id-68b5f83d38dae",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83d243c5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d243c5",
-      "destination": "/עבודות/item-id-68b5f83d243c5",
+      "destination": "/work/item-id-68b5f83d243c5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83cd6d4e",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83cd6d4e",
-      "destination": "/עבודות/item-id-68b5f83cd6d4e",
+      "destination": "/work/item-id-68b5f83cd6d4e",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83cb55c1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83cb55c1",
-      "destination": "/עבודות/item-id-68b5f83cb55c1",
+      "destination": "/work/item-id-68b5f83cb55c1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b85803e55",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b85803e55",
-      "destination": "/עבודות/item-id-6967b85803e55",
+      "destination": "/work/item-id-6967b85803e55",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83bd81ee",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83bd81ee",
-      "destination": "/עבודות/item-id-68b5f83bd81ee",
+      "destination": "/work/item-id-68b5f83bd81ee",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f83d632cf",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d632cf",
-      "destination": "/עבודות/item-id-68b5f83d632cf",
+      "destination": "/work/item-id-68b5f83d632cf",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f887738c3",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f887738c3",
-      "destination": "/עבודות/item-id-68b5f887738c3",
+      "destination": "/work/item-id-68b5f887738c3",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f8aece585",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f8aece585",
-      "destination": "/עבודות/item-id-68b5f8aece585",
+      "destination": "/work/item-id-68b5f8aece585",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5f8fcb5394",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f8fcb5394",
-      "destination": "/עבודות/item-id-68b5f8fcb5394",
+      "destination": "/work/item-id-68b5f8fcb5394",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fa1481e6a",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fa1481e6a",
-      "destination": "/עבודות/item-id-68b5fa1481e6a",
+      "destination": "/work/item-id-68b5fa1481e6a",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fa2c146d8",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fa2c146d8",
-      "destination": "/עבודות/item-id-68b5fa2c146d8",
+      "destination": "/work/item-id-68b5fa2c146d8",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf237023",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf237023",
-      "destination": "/עבודות/item-id-68b5fbf237023",
+      "destination": "/work/item-id-68b5fbf237023",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf2089e1",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2089e1",
-      "destination": "/עבודות/item-id-68b5fbf2089e1",
+      "destination": "/work/item-id-68b5fbf2089e1",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf335a05",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf335a05",
-      "destination": "/עבודות/item-id-68b5fbf335a05",
+      "destination": "/work/item-id-68b5fbf335a05",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf22bea6",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf22bea6",
-      "destination": "/עבודות/item-id-68b5fbf22bea6",
+      "destination": "/work/item-id-68b5fbf22bea6",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf20186d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf20186d",
-      "destination": "/עבודות/item-id-68b5fbf20186d",
+      "destination": "/work/item-id-68b5fbf20186d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf20f737",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf20f737",
-      "destination": "/עבודות/item-id-68b5fbf20f737",
+      "destination": "/work/item-id-68b5fbf20f737",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf3669b4",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3669b4",
-      "destination": "/עבודות/item-id-68b5fbf3669b4",
+      "destination": "/work/item-id-68b5fbf3669b4",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf3b0b67",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3b0b67",
-      "destination": "/עבודות/item-id-68b5fbf3b0b67",
+      "destination": "/work/item-id-68b5fbf3b0b67",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf3db3c2",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3db3c2",
-      "destination": "/עבודות/item-id-68b5fbf3db3c2",
+      "destination": "/work/item-id-68b5fbf3db3c2",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf320682",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf320682",
-      "destination": "/עבודות/item-id-68b5fbf320682",
+      "destination": "/work/item-id-68b5fbf320682",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf2cca33",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2cca33",
-      "destination": "/עבודות/item-id-68b5fbf2cca33",
+      "destination": "/work/item-id-68b5fbf2cca33",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf3e11c5",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3e11c5",
-      "destination": "/עבודות/item-id-68b5fbf3e11c5",
+      "destination": "/work/item-id-68b5fbf3e11c5",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf422566",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf422566",
-      "destination": "/עבודות/item-id-68b5fbf422566",
+      "destination": "/work/item-id-68b5fbf422566",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf2cd19d",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2cd19d",
-      "destination": "/עבודות/item-id-68b5fbf2cd19d",
+      "destination": "/work/item-id-68b5fbf2cd19d",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf2a8cad",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2a8cad",
-      "destination": "/עבודות/item-id-68b5fbf2a8cad",
+      "destination": "/work/item-id-68b5fbf2a8cad",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf495364",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf495364",
-      "destination": "/עבודות/item-id-68b5fbf495364",
+      "destination": "/work/item-id-68b5fbf495364",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf4bb44f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf4bb44f",
-      "destination": "/עבודות/item-id-68b5fbf4bb44f",
+      "destination": "/work/item-id-68b5fbf4bb44f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf444d80",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf444d80",
-      "destination": "/עבודות/item-id-68b5fbf444d80",
+      "destination": "/work/item-id-68b5fbf444d80",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-68b5fbf2bc8dd",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2bc8dd",
-      "destination": "/עבודות/item-id-68b5fbf2bc8dd",
+      "destination": "/work/item-id-68b5fbf2bc8dd",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/עבודות/item-id-6967b8579227f",
       "source_encoded": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b8579227f",
-      "destination": "/עבודות/item-id-6967b8579227f",
+      "destination": "/work/item-id-6967b8579227f",
       "status": 301,
       "type": "portfolio-item",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/אודות",
       "source_encoded": "/%D7%90%D7%95%D7%93%D7%95%D7%AA",
-      "destination": "/אודות",
+      "destination": "/about",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/בין-לקוחותינו",
       "source_encoded": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%99%D7%A0%D7%95",
-      "destination": "/בין-לקוחותינו",
+      "destination": "/clients",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/במספרים",
       "source_encoded": "/%D7%91%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D",
-      "destination": "/במספרים",
+      "destination": "/numbers",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/צרו-קשר",
       "source_encoded": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
-      "destination": "/צרו-קשר",
+      "destination": "/contact",
       "status": 301,
       "type": "page",
       "origin": "sitemap",
-      "needs_redirect": false
+      "needs_redirect": true
     },
     {
       "source": "/terms",
@@ -1642,15 +1642,15 @@
     },
     {
       "source": "/about",
-      "destination": "/אודות",
+      "destination": "/about",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
-      "needs_redirect": true
+      "needs_redirect": false
     },
     {
       "source": "/שירותים-1/צלום-וידאו?onlycontent=1",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1659,7 +1659,7 @@
     },
     {
       "source": "/שירותים-1/צלום-וידאו",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301 (path only)",
@@ -1667,7 +1667,7 @@
     },
     {
       "source": "/עבודות/לוגאוים",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1675,7 +1675,7 @@
     },
     {
       "source": "/עבודות/רשתות-חברתיות",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1683,7 +1683,7 @@
     },
     {
       "source": "/עבודות/צלום-וידאו",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1691,7 +1691,7 @@
     },
     {
       "source": "/עבודות/צלום-סטילס",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1699,7 +1699,7 @@
     },
     {
       "source": "/עבודות-1/פליירים",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1707,7 +1707,7 @@
     },
     {
       "source": "/שירותים-1/עיצוב-גרפי",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1715,7 +1715,7 @@
     },
     {
       "source": "/שירותים-1/עיצוב-גרפי?onlycontent=1",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1724,7 +1724,7 @@
     },
     {
       "source": "/עבודות/item-id-6884aa329b455",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1732,7 +1732,7 @@
     },
     {
       "source": "/שירותים-1/צילום-סטילס?onlycontent=1",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1741,7 +1741,7 @@
     },
     {
       "source": "/שירותים-1/צילום-סטילס",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301 (path only)",
@@ -1749,7 +1749,7 @@
     },
     {
       "source": "/עבודות/item-id-6884834ed9cbb",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1757,7 +1757,7 @@
     },
     {
       "source": "/שירותים-1/צילום-וידאו",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1765,7 +1765,7 @@
     },
     {
       "source": "/עבודות-1/צילום-וידאו",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1781,15 +1781,15 @@
     },
     {
       "source": "/contact",
-      "destination": "/צרו-קשר",
+      "destination": "/contact",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
-      "needs_redirect": true
+      "needs_redirect": false
     },
     {
       "source": "/צור-קשר",
-      "destination": "/צרו-קשר",
+      "destination": "/contact",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1797,7 +1797,7 @@
     },
     {
       "source": "/מיקום",
-      "destination": "/צרו-קשר",
+      "destination": "/contact",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1805,7 +1805,7 @@
     },
     {
       "source": "/בין-לקוחותנו",
-      "destination": "/בין-לקוחותינו",
+      "destination": "/clients",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1813,7 +1813,7 @@
     },
     {
       "source": "/עבודות-1",
-      "destination": "/עבודות",
+      "destination": "/work",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1821,7 +1821,7 @@
     },
     {
       "source": "/שירותים-1/דיגיטל-ומדיה",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
@@ -1829,97 +1829,809 @@
     },
     {
       "source": "/services",
-      "destination": "/שירותים",
+      "destination": "/services",
       "status": 301,
       "type": "legacy",
       "origin": "site123-admin-301",
-      "needs_redirect": true
+      "needs_redirect": false
     }
   ],
   "astro": {
-    "/about": {
+    "/שירותים": {
       "status": 301,
-      "destination": "/אודות"
+      "destination": "/services"
+    },
+    "/עבודות": {
+      "status": 301,
+      "destination": "/work"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"
+    },
+    "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99": {
+      "status": 301,
+      "destination": "/work/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99"
+    },
+    "/עבודות/item-id-696ac39138e0f": {
+      "status": 301,
+      "destination": "/work/item-id-696ac39138e0f"
+    },
+    "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8": {
+      "status": 301,
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"
+    },
+    "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1": {
+      "status": 301,
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"
+    },
+    "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2": {
+      "status": 301,
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"
+    },
+    "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3": {
+      "status": 301,
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"
+    },
+    "/עבודות/item-id-6967b816e50d8": {
+      "status": 301,
+      "destination": "/work/item-id-6967b816e50d8"
+    },
+    "/עבודות/item-id-6967b7f8e187e": {
+      "status": 301,
+      "destination": "/work/item-id-6967b7f8e187e"
+    },
+    "/עבודות/item-id-6967b79296ed4": {
+      "status": 301,
+      "destination": "/work/item-id-6967b79296ed4"
+    },
+    "/עבודות/item-id-6967b79275c26": {
+      "status": 301,
+      "destination": "/work/item-id-6967b79275c26"
+    },
+    "/עבודות/item-id-68b5ff208136e": {
+      "status": 301,
+      "destination": "/work/item-id-68b5ff208136e"
+    },
+    "/עבודות/item-id-68b5ff22656c7": {
+      "status": 301,
+      "destination": "/work/item-id-68b5ff22656c7"
+    },
+    "/עבודות/item-id-68b5ff1f8cdb4": {
+      "status": 301,
+      "destination": "/work/item-id-68b5ff1f8cdb4"
+    },
+    "/עבודות/item-id-68b5f83b8f658": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83b8f658"
+    },
+    "/עבודות/item-id-68b5f83ba8e5a": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83ba8e5a"
+    },
+    "/עבודות/item-id-68b5fe7c7deb2": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fe7c7deb2"
+    },
+    "/עבודות/item-id-68b5fe3d37627": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fe3d37627"
+    },
+    "/עבודות/item-id-68b5fd0dc9ced": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fd0dc9ced"
+    },
+    "/עבודות/item-id-68b5fcd92353b": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fcd92353b"
+    },
+    "/עבודות/item-id-6967b858a15d0": {
+      "status": 301,
+      "destination": "/work/item-id-6967b858a15d0"
+    },
+    "/עבודות/item-id-68b5fcd8ebe6f": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fcd8ebe6f"
+    },
+    "/עבודות/item-id-68b5fe7b8c9d2": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fe7b8c9d2"
+    },
+    "/עבודות/item-id-68b5fcd93763f": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fcd93763f"
+    },
+    "/עבודות/צילום-תדמית-נשי-חיוך": {
+      "status": 301,
+      "destination": "/work/portrait-woman-smile"
+    },
+    "/עבודות/צילום-תדמית-עסקי-פורטרט": {
+      "status": 301,
+      "destination": "/work/business-portrait"
+    },
+    "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99": {
+      "status": 301,
+      "destination": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99"
+    },
+    "/עבודות/צילום-תדמית-נשי-חיוך-טבעי": {
+      "status": 301,
+      "destination": "/work/portrait-woman-natural-smile"
+    },
+    "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל": {
+      "status": 301,
+      "destination": "/work/portrait-delegation-israel-flag"
+    },
+    "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל": {
+      "status": 301,
+      "destination": "/work/portrait-woman-israel-flag"
+    },
+    "/עבודות/צילום-תדמית": {
+      "status": 301,
+      "destination": "/work/portrait"
+    },
+    "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה": {
+      "status": 301,
+      "destination": "/work/portrait-state-emblem"
+    },
+    "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי": {
+      "status": 301,
+      "destination": "/work/team-group-photo-formal"
+    },
+    "/עבודות/item-id-688bed656124c": {
+      "status": 301,
+      "destination": "/work/item-id-688bed656124c"
+    },
+    "/עבודות/item-id-688c02eb8ab7d": {
+      "status": 301,
+      "destination": "/work/item-id-688c02eb8ab7d"
+    },
+    "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94": {
+      "status": 301,
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94"
+    },
+    "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1": {
+      "status": 301,
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1"
+    },
+    "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2": {
+      "status": 301,
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2"
+    },
+    "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3": {
+      "status": 301,
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3"
+    },
+    "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4": {
+      "status": 301,
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4"
+    },
+    "/עבודות/item-id-688c004e5165d": {
+      "status": 301,
+      "destination": "/work/item-id-688c004e5165d"
+    },
+    "/עבודות/item-id-688c01daea16f": {
+      "status": 301,
+      "destination": "/work/item-id-688c01daea16f"
+    },
+    "/עבודות/item-id-688c004bcecc1": {
+      "status": 301,
+      "destination": "/work/item-id-688c004bcecc1"
+    },
+    "/עבודות/item-id-688c022c88d01": {
+      "status": 301,
+      "destination": "/work/item-id-688c022c88d01"
+    },
+    "/עבודות/item-id-688c02144b2b0": {
+      "status": 301,
+      "destination": "/work/item-id-688c02144b2b0"
+    },
+    "/עבודות/item-id-688c01da9d0bf": {
+      "status": 301,
+      "destination": "/work/item-id-688c01da9d0bf"
+    },
+    "/עבודות/item-id-688c0049c416e": {
+      "status": 301,
+      "destination": "/work/item-id-688c0049c416e"
+    },
+    "/עבודות/item-id-688b84c122054": {
+      "status": 301,
+      "destination": "/work/item-id-688b84c122054"
+    },
+    "/עבודות/item-id-688bed63443d6": {
+      "status": 301,
+      "destination": "/work/item-id-688bed63443d6"
+    },
+    "/עבודות/item-id-688bed6384b72": {
+      "status": 301,
+      "destination": "/work/item-id-688bed6384b72"
+    },
+    "/עבודות/item-id-688bed622d1db": {
+      "status": 301,
+      "destination": "/work/item-id-688bed622d1db"
+    },
+    "/עבודות/item-id-688bed61e5102": {
+      "status": 301,
+      "destination": "/work/item-id-688bed61e5102"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4"
+    },
+    "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5": {
+      "status": 301,
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5"
+    },
+    "/עבודות/item-id-688c004402d03": {
+      "status": 301,
+      "destination": "/work/item-id-688c004402d03"
+    },
+    "/עבודות/item-id-688c004c90a8e": {
+      "status": 301,
+      "destination": "/work/item-id-688c004c90a8e"
+    },
+    "/עבודות/item-id-688bed651bcd1": {
+      "status": 301,
+      "destination": "/work/item-id-688bed651bcd1"
+    },
+    "/עבודות/item-id-688bed651440f": {
+      "status": 301,
+      "destination": "/work/item-id-688bed651440f"
+    },
+    "/עבודות/item-id-688b84b66fde1": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b66fde1"
+    },
+    "/עבודות/item-id-688bed651e738": {
+      "status": 301,
+      "destination": "/work/item-id-688bed651e738"
+    },
+    "/עבודות/item-id-688c01dbb41d6": {
+      "status": 301,
+      "destination": "/work/item-id-688c01dbb41d6"
+    },
+    "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1": {
+      "status": 301,
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1"
+    },
+    "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1": {
+      "status": 301,
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1"
+    },
+    "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2": {
+      "status": 301,
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2"
+    },
+    "/עבודות/item-id-688b84b62d622": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b62d622"
+    },
+    "/עבודות/item-id-688b8395ef0ba": {
+      "status": 301,
+      "destination": "/work/item-id-688b8395ef0ba"
+    },
+    "/עבודות/item-id-688b8395138ad": {
+      "status": 301,
+      "destination": "/work/item-id-688b8395138ad"
+    },
+    "/עבודות/item-id-688b839487b85": {
+      "status": 301,
+      "destination": "/work/item-id-688b839487b85"
+    },
+    "/עבודות/item-id-688b83952af1b": {
+      "status": 301,
+      "destination": "/work/item-id-688b83952af1b"
+    },
+    "/עבודות/item-id-688b8394d319e": {
+      "status": 301,
+      "destination": "/work/item-id-688b8394d319e"
+    },
+    "/עבודות/item-id-688b84c17a2d2": {
+      "status": 301,
+      "destination": "/work/item-id-688b84c17a2d2"
+    },
+    "/עבודות/item-id-688b8394be1be": {
+      "status": 301,
+      "destination": "/work/item-id-688b8394be1be"
+    },
+    "/עבודות/item-id-688b839628070": {
+      "status": 301,
+      "destination": "/work/item-id-688b839628070"
+    },
+    "/עבודות/item-id-688b84a103b41": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a103b41"
+    },
+    "/עבודות/item-id-688b849ea06a7": {
+      "status": 301,
+      "destination": "/work/item-id-688b849ea06a7"
+    },
+    "/עבודות/item-id-688b84a00997c": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a00997c"
+    },
+    "/עבודות/item-id-688b84aa1833a": {
+      "status": 301,
+      "destination": "/work/item-id-688b84aa1833a"
+    },
+    "/עבודות/item-id-688b8394ab2ec": {
+      "status": 301,
+      "destination": "/work/item-id-688b8394ab2ec"
+    },
+    "/עבודות/item-id-688b8395d7520": {
+      "status": 301,
+      "destination": "/work/item-id-688b8395d7520"
+    },
+    "/עבודות/item-id-688bed65a23ea": {
+      "status": 301,
+      "destination": "/work/item-id-688bed65a23ea"
+    },
+    "/עבודות/item-id-688bed63cd8e4": {
+      "status": 301,
+      "destination": "/work/item-id-688bed63cd8e4"
+    },
+    "/עבודות/item-id-688bed6401bab": {
+      "status": 301,
+      "destination": "/work/item-id-688bed6401bab"
+    },
+    "/עבודות/item-id-688bed639addc": {
+      "status": 301,
+      "destination": "/work/item-id-688bed639addc"
+    },
+    "/עבודות/item-id-688bed635a236": {
+      "status": 301,
+      "destination": "/work/item-id-688bed635a236"
+    },
+    "/עבודות/item-id-688bed628cb33": {
+      "status": 301,
+      "destination": "/work/item-id-688bed628cb33"
+    },
+    "/עבודות/item-id-688bed623db00": {
+      "status": 301,
+      "destination": "/work/item-id-688bed623db00"
+    },
+    "/עבודות/item-id-688bed60aafb6": {
+      "status": 301,
+      "destination": "/work/item-id-688bed60aafb6"
+    },
+    "/עבודות/item-id-688bed638b362": {
+      "status": 301,
+      "destination": "/work/item-id-688bed638b362"
+    },
+    "/עבודות/item-id-688b83969d8ff": {
+      "status": 301,
+      "destination": "/work/item-id-688b83969d8ff"
+    },
+    "/עבודות/item-id-688bed65134da": {
+      "status": 301,
+      "destination": "/work/item-id-688bed65134da"
+    },
+    "/עבודות/item-id-688bed651a249": {
+      "status": 301,
+      "destination": "/work/item-id-688bed651a249"
+    },
+    "/עבודות/item-id-688b84b1c2908": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b1c2908"
+    },
+    "/עבודות/item-id-688b84b159ebf": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b159ebf"
+    },
+    "/עבודות/item-id-688b839499705": {
+      "status": 301,
+      "destination": "/work/item-id-688b839499705"
+    },
+    "/עבודות/item-id-688b83960bb19": {
+      "status": 301,
+      "destination": "/work/item-id-688b83960bb19"
+    },
+    "/עבודות/item-id-688b8395f32da": {
+      "status": 301,
+      "destination": "/work/item-id-688b8395f32da"
+    },
+    "/עבודות/item-id-688b839638527": {
+      "status": 301,
+      "destination": "/work/item-id-688b839638527"
+    },
+    "/עבודות/item-id-688b84a022b08": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a022b08"
+    },
+    "/עבודות/item-id-688b849fe854a": {
+      "status": 301,
+      "destination": "/work/item-id-688b849fe854a"
+    },
+    "/עבודות/item-id-688b84af98a78": {
+      "status": 301,
+      "destination": "/work/item-id-688b84af98a78"
+    },
+    "/עבודות/item-id-688b84becec33": {
+      "status": 301,
+      "destination": "/work/item-id-688b84becec33"
+    },
+    "/עבודות/item-id-688b84aa75e4a": {
+      "status": 301,
+      "destination": "/work/item-id-688b84aa75e4a"
+    },
+    "/עבודות/item-id-688b849fe1a0b": {
+      "status": 301,
+      "destination": "/work/item-id-688b849fe1a0b"
+    },
+    "/עבודות/item-id-688b84a9d4645": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a9d4645"
+    },
+    "/עבודות/item-id-688b84c2cec4d": {
+      "status": 301,
+      "destination": "/work/item-id-688b84c2cec4d"
+    },
+    "/עבודות/item-id-688b84a8dae60": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a8dae60"
+    },
+    "/עבודות/item-id-688b84a7e7bc3": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a7e7bc3"
+    },
+    "/עבודות/item-id-688b84ab0390d": {
+      "status": 301,
+      "destination": "/work/item-id-688b84ab0390d"
+    },
+    "/עבודות/item-id-688b84ac4bf34": {
+      "status": 301,
+      "destination": "/work/item-id-688b84ac4bf34"
+    },
+    "/עבודות/item-id-688b84b008553": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b008553"
+    },
+    "/עבודות/item-id-688b84a290d01": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a290d01"
+    },
+    "/עבודות/item-id-688b84bb373b6": {
+      "status": 301,
+      "destination": "/work/item-id-688b84bb373b6"
+    },
+    "/עבודות/item-id-688bed6527ba5": {
+      "status": 301,
+      "destination": "/work/item-id-688bed6527ba5"
+    },
+    "/עבודות/item-id-688b84b58d94f": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b58d94f"
+    },
+    "/עבודות/item-id-688b84aa9f0a8": {
+      "status": 301,
+      "destination": "/work/item-id-688b84aa9f0a8"
+    },
+    "/עבודות/item-id-688b84a0c2624": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a0c2624"
+    },
+    "/עבודות/item-id-688b84afee0ae": {
+      "status": 301,
+      "destination": "/work/item-id-688b84afee0ae"
+    },
+    "/עבודות/item-id-688b84b1c47d1": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b1c47d1"
+    },
+    "/עבודות/item-id-688bed635aa2e": {
+      "status": 301,
+      "destination": "/work/item-id-688bed635aa2e"
+    },
+    "/עבודות/item-id-688b84b123ca5": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b123ca5"
+    },
+    "/עבודות/item-id-688b84b0891e7": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b0891e7"
+    },
+    "/עבודות/item-id-688b84beca816": {
+      "status": 301,
+      "destination": "/work/item-id-688b84beca816"
+    },
+    "/עבודות/item-id-688b84b6c4b61": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b6c4b61"
+    },
+    "/עבודות/item-id-688b84ba8ead6": {
+      "status": 301,
+      "destination": "/work/item-id-688b84ba8ead6"
+    },
+    "/עבודות/item-id-688b84b68898c": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b68898c"
+    },
+    "/עבודות/item-id-688b84b12b97f": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b12b97f"
+    },
+    "/עבודות/item-id-688b84b56f232": {
+      "status": 301,
+      "destination": "/work/item-id-688b84b56f232"
+    },
+    "/עבודות/item-id-688b84ba7d0f5": {
+      "status": 301,
+      "destination": "/work/item-id-688b84ba7d0f5"
+    },
+    "/עבודות/item-id-688b84a18d3c8": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a18d3c8"
+    },
+    "/עבודות/item-id-688b84c143c63": {
+      "status": 301,
+      "destination": "/work/item-id-688b84c143c63"
+    },
+    "/עבודות/item-id-688b84bee11a0": {
+      "status": 301,
+      "destination": "/work/item-id-688b84bee11a0"
+    },
+    "/עבודות/item-id-688b84bcad685": {
+      "status": 301,
+      "destination": "/work/item-id-688b84bcad685"
+    },
+    "/עבודות/item-id-688b84a9b40b6": {
+      "status": 301,
+      "destination": "/work/item-id-688b84a9b40b6"
+    },
+    "/עבודות/item-id-688b84bdd40f8": {
+      "status": 301,
+      "destination": "/work/item-id-688b84bdd40f8"
+    },
+    "/עבודות/item-id-688b84c1cdc8c": {
+      "status": 301,
+      "destination": "/work/item-id-688b84c1cdc8c"
+    },
+    "/עבודות/item-id-68b5f83d4f61e": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83d4f61e"
+    },
+    "/עבודות/item-id-68b5f83bd13d2": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83bd13d2"
+    },
+    "/עבודות/item-id-68b5f83d38dae": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83d38dae"
+    },
+    "/עבודות/item-id-68b5f83d243c5": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83d243c5"
+    },
+    "/עבודות/item-id-68b5f83cd6d4e": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83cd6d4e"
+    },
+    "/עבודות/item-id-68b5f83cb55c1": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83cb55c1"
+    },
+    "/עבודות/item-id-6967b85803e55": {
+      "status": 301,
+      "destination": "/work/item-id-6967b85803e55"
+    },
+    "/עבודות/item-id-68b5f83bd81ee": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83bd81ee"
+    },
+    "/עבודות/item-id-68b5f83d632cf": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f83d632cf"
+    },
+    "/עבודות/item-id-68b5f887738c3": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f887738c3"
+    },
+    "/עבודות/item-id-68b5f8aece585": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f8aece585"
+    },
+    "/עבודות/item-id-68b5f8fcb5394": {
+      "status": 301,
+      "destination": "/work/item-id-68b5f8fcb5394"
+    },
+    "/עבודות/item-id-68b5fa1481e6a": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fa1481e6a"
+    },
+    "/עבודות/item-id-68b5fa2c146d8": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fa2c146d8"
+    },
+    "/עבודות/item-id-68b5fbf237023": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf237023"
+    },
+    "/עבודות/item-id-68b5fbf2089e1": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf2089e1"
+    },
+    "/עבודות/item-id-68b5fbf335a05": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf335a05"
+    },
+    "/עבודות/item-id-68b5fbf22bea6": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf22bea6"
+    },
+    "/עבודות/item-id-68b5fbf20186d": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf20186d"
+    },
+    "/עבודות/item-id-68b5fbf20f737": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf20f737"
+    },
+    "/עבודות/item-id-68b5fbf3669b4": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf3669b4"
+    },
+    "/עבודות/item-id-68b5fbf3b0b67": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf3b0b67"
+    },
+    "/עבודות/item-id-68b5fbf3db3c2": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf3db3c2"
+    },
+    "/עבודות/item-id-68b5fbf320682": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf320682"
+    },
+    "/עבודות/item-id-68b5fbf2cca33": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf2cca33"
+    },
+    "/עבודות/item-id-68b5fbf3e11c5": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf3e11c5"
+    },
+    "/עבודות/item-id-68b5fbf422566": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf422566"
+    },
+    "/עבודות/item-id-68b5fbf2cd19d": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf2cd19d"
+    },
+    "/עבודות/item-id-68b5fbf2a8cad": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf2a8cad"
+    },
+    "/עבודות/item-id-68b5fbf495364": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf495364"
+    },
+    "/עבודות/item-id-68b5fbf4bb44f": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf4bb44f"
+    },
+    "/עבודות/item-id-68b5fbf444d80": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf444d80"
+    },
+    "/עבודות/item-id-68b5fbf2bc8dd": {
+      "status": 301,
+      "destination": "/work/item-id-68b5fbf2bc8dd"
+    },
+    "/עבודות/item-id-6967b8579227f": {
+      "status": 301,
+      "destination": "/work/item-id-6967b8579227f"
+    },
+    "/אודות": {
+      "status": 301,
+      "destination": "/about"
+    },
+    "/בין-לקוחותינו": {
+      "status": 301,
+      "destination": "/clients"
+    },
+    "/במספרים": {
+      "status": 301,
+      "destination": "/numbers"
+    },
+    "/צרו-קשר": {
+      "status": 301,
+      "destination": "/contact"
+    },
+    "/שירותים-1/צלום-וידאו?onlycontent=1": {
+      "status": 301,
+      "destination": "/services"
     },
     "/שירותים-1/צלום-וידאו": {
       "status": 301,
-      "destination": "/שירותים"
+      "destination": "/services"
     },
     "/עבודות/לוגאוים": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/עבודות/רשתות-חברתיות": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/עבודות/צלום-וידאו": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/עבודות/צלום-סטילס": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/עבודות-1/פליירים": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/שירותים-1/עיצוב-גרפי": {
       "status": 301,
-      "destination": "/שירותים"
+      "destination": "/services"
+    },
+    "/שירותים-1/עיצוב-גרפי?onlycontent=1": {
+      "status": 301,
+      "destination": "/services"
     },
     "/עבודות/item-id-6884aa329b455": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
+    },
+    "/שירותים-1/צילום-סטילס?onlycontent=1": {
+      "status": 301,
+      "destination": "/services"
     },
     "/שירותים-1/צילום-סטילס": {
       "status": 301,
-      "destination": "/שירותים"
+      "destination": "/services"
     },
     "/עבודות/item-id-6884834ed9cbb": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/שירותים-1/צילום-וידאו": {
       "status": 301,
-      "destination": "/שירותים"
+      "destination": "/services"
     },
     "/עבודות-1/צילום-וידאו": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/face-2-face": {
       "status": 301,
       "destination": "/"
     },
-    "/contact": {
-      "status": 301,
-      "destination": "/צרו-קשר"
-    },
     "/צור-קשר": {
       "status": 301,
-      "destination": "/צרו-קשר"
+      "destination": "/contact"
     },
     "/מיקום": {
       "status": 301,
-      "destination": "/צרו-קשר"
+      "destination": "/contact"
     },
     "/בין-לקוחותנו": {
       "status": 301,
-      "destination": "/בין-לקוחותינו"
+      "destination": "/clients"
     },
     "/עבודות-1": {
       "status": 301,
-      "destination": "/עבודות"
+      "destination": "/work"
     },
     "/שירותים-1/דיגיטל-ומדיה": {
       "status": 301,
-      "destination": "/שירותים"
-    },
-    "/services": {
-      "status": 301,
-      "destination": "/שירותים"
+      "destination": "/services"
     }
   }
 }

@@ -47,7 +47,7 @@ const popup = site.popup;
   // "אודות" (About) section. Pages without an About section fall back to 70% scroll depth. Never on the contact
   // page (it already has the form) and never over another open dialog (e.g. the gallery lightbox).
   const dialog = document.getElementById('lead-popup') as HTMLDialogElement;
-  const onContactPage = decodeURI(location.pathname).replace(/\.html$/, '').startsWith('/צרו-קשר');
+  const onContactPage = decodeURI(location.pathname).replace(/\.html$/, '').startsWith('/contact');
   const img = dialog.querySelector('img');
   const about = document.getElementById('about');
   const preload = () => img?.setAttribute('loading', 'eager'); // fetch the photo before the popup opens, so it never appears empty

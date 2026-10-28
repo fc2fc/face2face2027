@@ -16,21 +16,21 @@ import { pages } from '../lib/content';
 
 export function getStaticPaths() {
   return pages.map((page) => ({
-    params: { path: page.old_path === '/' ? undefined : page.old_path.slice(1) },
+    params: { path: page.path === '/' ? undefined : page.path.slice(1) },
     props: { page },
   }));
 }
 
 const { page } = Astro.props;
 const SINGLE: Record<string, any> = {
-  '/שירותים': Services,
-  '/עבודות': Gallery,
-  '/אודות': About,
-  '/בין-לקוחותינו': Clients,
-  '/במספרים': Counters,
-  '/צרו-קשר': Contact,
+  '/services': Services,
+  '/work': Gallery,
+  '/about': About,
+  '/clients': Clients,
+  '/numbers': Counters,
+  '/contact': Contact,
 };
-const Single = SINGLE[page.old_path];
+const Single = SINGLE[page.path];
 ---
 
 <Base page={page}>

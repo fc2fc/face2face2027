@@ -17,68 +17,968 @@
       "permanent": true
     },
     {
-      "source": "/about",
-      "destination": "/%D7%90%D7%95%D7%93%D7%95%D7%AA",
+      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
+      "destination": "/work/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-696ac39138e0f",
+      "destination": "/work/item-id-696ac39138e0f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
+      "destination": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b816e50d8",
+      "destination": "/work/item-id-6967b816e50d8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b7f8e187e",
+      "destination": "/work/item-id-6967b7f8e187e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b79296ed4",
+      "destination": "/work/item-id-6967b79296ed4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b79275c26",
+      "destination": "/work/item-id-6967b79275c26",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff208136e",
+      "destination": "/work/item-id-68b5ff208136e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff22656c7",
+      "destination": "/work/item-id-68b5ff22656c7",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5ff1f8cdb4",
+      "destination": "/work/item-id-68b5ff1f8cdb4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83b8f658",
+      "destination": "/work/item-id-68b5f83b8f658",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83ba8e5a",
+      "destination": "/work/item-id-68b5f83ba8e5a",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe7c7deb2",
+      "destination": "/work/item-id-68b5fe7c7deb2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe3d37627",
+      "destination": "/work/item-id-68b5fe3d37627",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fd0dc9ced",
+      "destination": "/work/item-id-68b5fd0dc9ced",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd92353b",
+      "destination": "/work/item-id-68b5fcd92353b",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b858a15d0",
+      "destination": "/work/item-id-6967b858a15d0",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd8ebe6f",
+      "destination": "/work/item-id-68b5fcd8ebe6f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fe7b8c9d2",
+      "destination": "/work/item-id-68b5fe7b8c9d2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fcd93763f",
+      "destination": "/work/item-id-68b5fcd93763f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%97%D7%99%D7%95%D7%9A",
+      "destination": "/work/portrait-woman-smile",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A2%D7%A1%D7%A7%D7%99-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98",
+      "destination": "/work/business-portrait",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
+      "destination": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%97%D7%99%D7%95%D7%9A-%D7%98%D7%91%D7%A2%D7%99",
+      "destination": "/work/portrait-woman-natural-smile",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%9C%D7%A0%D7%A6%D7%99%D7%92%D7%95%D7%AA-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98-%D7%9C%D7%99%D7%93-%D7%93%D7%92%D7%9C-%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
+      "destination": "/work/portrait-delegation-israel-flag",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A0%D7%A9%D7%99-%D7%93%D7%99%D7%95%D7%A7%D7%9F-%D7%A2%D7%9D-%D7%93%D7%92%D7%9C-%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
+      "destination": "/work/portrait-woman-israel-flag",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA",
+      "destination": "/work/portrait",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%A4%D7%95%D7%A8%D7%98%D7%A8%D7%98-%D7%9C%D7%99%D7%93-%D7%A1%D7%9E%D7%9C-%D7%94%D7%9E%D7%93%D7%99%D7%A0%D7%94",
+      "destination": "/work/portrait-state-emblem",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%A7%D7%91%D7%95%D7%A6%D7%AA%D7%99-%D7%A6%D7%95%D7%95%D7%AA-%D7%91%D7%9E%D7%A2%D7%9E%D7%93-%D7%A4%D7%95%D7%A8%D7%9E%D7%9C%D7%99",
+      "destination": "/work/team-group-photo-formal",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed656124c",
+      "destination": "/work/item-id-688bed656124c",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c02eb8ab7d",
+      "destination": "/work/item-id-688c02eb8ab7d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
+      "destination": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004e5165d",
+      "destination": "/work/item-id-688c004e5165d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01daea16f",
+      "destination": "/work/item-id-688c01daea16f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004bcecc1",
+      "destination": "/work/item-id-688c004bcecc1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c022c88d01",
+      "destination": "/work/item-id-688c022c88d01",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c02144b2b0",
+      "destination": "/work/item-id-688c02144b2b0",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01da9d0bf",
+      "destination": "/work/item-id-688c01da9d0bf",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c0049c416e",
+      "destination": "/work/item-id-688c0049c416e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c122054",
+      "destination": "/work/item-id-688b84c122054",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed63443d6",
+      "destination": "/work/item-id-688bed63443d6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6384b72",
+      "destination": "/work/item-id-688bed6384b72",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed622d1db",
+      "destination": "/work/item-id-688bed622d1db",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed61e5102",
+      "destination": "/work/item-id-688bed61e5102",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
+      "destination": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004402d03",
+      "destination": "/work/item-id-688c004402d03",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c004c90a8e",
+      "destination": "/work/item-id-688c004c90a8e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651bcd1",
+      "destination": "/work/item-id-688bed651bcd1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651440f",
+      "destination": "/work/item-id-688bed651440f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b66fde1",
+      "destination": "/work/item-id-688b84b66fde1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651e738",
+      "destination": "/work/item-id-688bed651e738",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688c01dbb41d6",
+      "destination": "/work/item-id-688c01dbb41d6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
+      "destination": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b62d622",
+      "destination": "/work/item-id-688b84b62d622",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395ef0ba",
+      "destination": "/work/item-id-688b8395ef0ba",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395138ad",
+      "destination": "/work/item-id-688b8395138ad",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839487b85",
+      "destination": "/work/item-id-688b839487b85",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83952af1b",
+      "destination": "/work/item-id-688b83952af1b",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394d319e",
+      "destination": "/work/item-id-688b8394d319e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c17a2d2",
+      "destination": "/work/item-id-688b84c17a2d2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394be1be",
+      "destination": "/work/item-id-688b8394be1be",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839628070",
+      "destination": "/work/item-id-688b839628070",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a103b41",
+      "destination": "/work/item-id-688b84a103b41",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849ea06a7",
+      "destination": "/work/item-id-688b849ea06a7",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a00997c",
+      "destination": "/work/item-id-688b84a00997c",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa1833a",
+      "destination": "/work/item-id-688b84aa1833a",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8394ab2ec",
+      "destination": "/work/item-id-688b8394ab2ec",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395d7520",
+      "destination": "/work/item-id-688b8395d7520",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed65a23ea",
+      "destination": "/work/item-id-688bed65a23ea",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed63cd8e4",
+      "destination": "/work/item-id-688bed63cd8e4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6401bab",
+      "destination": "/work/item-id-688bed6401bab",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed639addc",
+      "destination": "/work/item-id-688bed639addc",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed635a236",
+      "destination": "/work/item-id-688bed635a236",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed628cb33",
+      "destination": "/work/item-id-688bed628cb33",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed623db00",
+      "destination": "/work/item-id-688bed623db00",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed60aafb6",
+      "destination": "/work/item-id-688bed60aafb6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed638b362",
+      "destination": "/work/item-id-688bed638b362",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83969d8ff",
+      "destination": "/work/item-id-688b83969d8ff",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed65134da",
+      "destination": "/work/item-id-688bed65134da",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed651a249",
+      "destination": "/work/item-id-688bed651a249",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b1c2908",
+      "destination": "/work/item-id-688b84b1c2908",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b159ebf",
+      "destination": "/work/item-id-688b84b159ebf",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839499705",
+      "destination": "/work/item-id-688b839499705",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b83960bb19",
+      "destination": "/work/item-id-688b83960bb19",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b8395f32da",
+      "destination": "/work/item-id-688b8395f32da",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b839638527",
+      "destination": "/work/item-id-688b839638527",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a022b08",
+      "destination": "/work/item-id-688b84a022b08",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849fe854a",
+      "destination": "/work/item-id-688b849fe854a",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84af98a78",
+      "destination": "/work/item-id-688b84af98a78",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84becec33",
+      "destination": "/work/item-id-688b84becec33",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa75e4a",
+      "destination": "/work/item-id-688b84aa75e4a",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b849fe1a0b",
+      "destination": "/work/item-id-688b849fe1a0b",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a9d4645",
+      "destination": "/work/item-id-688b84a9d4645",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c2cec4d",
+      "destination": "/work/item-id-688b84c2cec4d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a8dae60",
+      "destination": "/work/item-id-688b84a8dae60",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a7e7bc3",
+      "destination": "/work/item-id-688b84a7e7bc3",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ab0390d",
+      "destination": "/work/item-id-688b84ab0390d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ac4bf34",
+      "destination": "/work/item-id-688b84ac4bf34",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b008553",
+      "destination": "/work/item-id-688b84b008553",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a290d01",
+      "destination": "/work/item-id-688b84a290d01",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bb373b6",
+      "destination": "/work/item-id-688b84bb373b6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed6527ba5",
+      "destination": "/work/item-id-688bed6527ba5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b58d94f",
+      "destination": "/work/item-id-688b84b58d94f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84aa9f0a8",
+      "destination": "/work/item-id-688b84aa9f0a8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a0c2624",
+      "destination": "/work/item-id-688b84a0c2624",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84afee0ae",
+      "destination": "/work/item-id-688b84afee0ae",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b1c47d1",
+      "destination": "/work/item-id-688b84b1c47d1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688bed635aa2e",
+      "destination": "/work/item-id-688bed635aa2e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b123ca5",
+      "destination": "/work/item-id-688b84b123ca5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b0891e7",
+      "destination": "/work/item-id-688b84b0891e7",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84beca816",
+      "destination": "/work/item-id-688b84beca816",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b6c4b61",
+      "destination": "/work/item-id-688b84b6c4b61",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ba8ead6",
+      "destination": "/work/item-id-688b84ba8ead6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b68898c",
+      "destination": "/work/item-id-688b84b68898c",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b12b97f",
+      "destination": "/work/item-id-688b84b12b97f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84b56f232",
+      "destination": "/work/item-id-688b84b56f232",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84ba7d0f5",
+      "destination": "/work/item-id-688b84ba7d0f5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a18d3c8",
+      "destination": "/work/item-id-688b84a18d3c8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c143c63",
+      "destination": "/work/item-id-688b84c143c63",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bee11a0",
+      "destination": "/work/item-id-688b84bee11a0",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bcad685",
+      "destination": "/work/item-id-688b84bcad685",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84a9b40b6",
+      "destination": "/work/item-id-688b84a9b40b6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84bdd40f8",
+      "destination": "/work/item-id-688b84bdd40f8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-688b84c1cdc8c",
+      "destination": "/work/item-id-688b84c1cdc8c",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d4f61e",
+      "destination": "/work/item-id-68b5f83d4f61e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83bd13d2",
+      "destination": "/work/item-id-68b5f83bd13d2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d38dae",
+      "destination": "/work/item-id-68b5f83d38dae",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d243c5",
+      "destination": "/work/item-id-68b5f83d243c5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83cd6d4e",
+      "destination": "/work/item-id-68b5f83cd6d4e",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83cb55c1",
+      "destination": "/work/item-id-68b5f83cb55c1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b85803e55",
+      "destination": "/work/item-id-6967b85803e55",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83bd81ee",
+      "destination": "/work/item-id-68b5f83bd81ee",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f83d632cf",
+      "destination": "/work/item-id-68b5f83d632cf",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f887738c3",
+      "destination": "/work/item-id-68b5f887738c3",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f8aece585",
+      "destination": "/work/item-id-68b5f8aece585",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5f8fcb5394",
+      "destination": "/work/item-id-68b5f8fcb5394",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fa1481e6a",
+      "destination": "/work/item-id-68b5fa1481e6a",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fa2c146d8",
+      "destination": "/work/item-id-68b5fa2c146d8",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf237023",
+      "destination": "/work/item-id-68b5fbf237023",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2089e1",
+      "destination": "/work/item-id-68b5fbf2089e1",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf335a05",
+      "destination": "/work/item-id-68b5fbf335a05",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf22bea6",
+      "destination": "/work/item-id-68b5fbf22bea6",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf20186d",
+      "destination": "/work/item-id-68b5fbf20186d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf20f737",
+      "destination": "/work/item-id-68b5fbf20f737",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3669b4",
+      "destination": "/work/item-id-68b5fbf3669b4",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3b0b67",
+      "destination": "/work/item-id-68b5fbf3b0b67",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3db3c2",
+      "destination": "/work/item-id-68b5fbf3db3c2",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf320682",
+      "destination": "/work/item-id-68b5fbf320682",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2cca33",
+      "destination": "/work/item-id-68b5fbf2cca33",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf3e11c5",
+      "destination": "/work/item-id-68b5fbf3e11c5",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf422566",
+      "destination": "/work/item-id-68b5fbf422566",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2cd19d",
+      "destination": "/work/item-id-68b5fbf2cd19d",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2a8cad",
+      "destination": "/work/item-id-68b5fbf2a8cad",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf495364",
+      "destination": "/work/item-id-68b5fbf495364",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf4bb44f",
+      "destination": "/work/item-id-68b5fbf4bb44f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf444d80",
+      "destination": "/work/item-id-68b5fbf444d80",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-68b5fbf2bc8dd",
+      "destination": "/work/item-id-68b5fbf2bc8dd",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6967b8579227f",
+      "destination": "/work/item-id-6967b8579227f",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%90%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%99%D7%A0%D7%95",
+      "destination": "/clients",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%91%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D",
+      "destination": "/numbers",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95%3Fonlycontent%3D1",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%9C%D7%95%D7%92%D7%90%D7%95%D7%99%D7%9D",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A8%D7%A9%D7%AA%D7%95%D7%AA-%D7%97%D7%91%D7%A8%D7%AA%D7%99%D7%95%D7%AA",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/%D7%A6%D7%9C%D7%95%D7%9D-%D7%A1%D7%98%D7%99%D7%9C%D7%A1",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1/%D7%A4%D7%9C%D7%99%D7%99%D7%A8%D7%99%D7%9D",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%92%D7%A8%D7%A4%D7%99",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%92%D7%A8%D7%A4%D7%99%3Fonlycontent%3D1",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6884aa329b455",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%A1%D7%98%D7%99%D7%9C%D7%A1%3Fonlycontent%3D1",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%A1%D7%98%D7%99%D7%9C%D7%A1",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA/item-id-6884834ed9cbb",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1/%D7%A6%D7%99%D7%9C%D7%95%D7%9D-%D7%95%D7%99%D7%93%D7%90%D7%95",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
@@ -87,38 +987,28 @@
       "permanent": true
     },
     {
-      "source": "/contact",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
-      "permanent": true
-    },
-    {
       "source": "/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/%D7%9E%D7%99%D7%A7%D7%95%D7%9D",
-      "destination": "/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8",
+      "destination": "/contact",
       "permanent": true
     },
     {
       "source": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%A0%D7%95",
-      "destination": "/%D7%91%D7%99%D7%9F-%D7%9C%D7%A7%D7%95%D7%97%D7%95%D7%AA%D7%99%D7%A0%D7%95",
+      "destination": "/clients",
       "permanent": true
     },
     {
       "source": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA-1",
-      "destination": "/%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA",
+      "destination": "/work",
       "permanent": true
     },
     {
       "source": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-1/%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C-%D7%95%D7%9E%D7%93%D7%99%D7%94",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
-      "permanent": true
-    },
-    {
-      "source": "/services",
-      "destination": "/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D",
+      "destination": "/services",
       "permanent": true
     }
   ],

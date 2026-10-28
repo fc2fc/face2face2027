@@ -14,8 +14,8 @@ let category: string | undefined;
 let prev: string | undefined;
 let next: string | undefined;
 for (const c of site.portfolio) {
-  const list = c.items.map((i: any) => i.old_item_page).filter(Boolean);
-  const idx = list.indexOf(page.old_path);
+  const list = c.items.map((i: any) => i.item_page).filter(Boolean);
+  const idx = list.indexOf(page.path);
   if (idx !== -1) {
     category = c.category;
     prev = list[idx - 1];
@@ -28,7 +28,7 @@ for (const c of site.portfolio) {
 <section class="section item">
   <div class="container">
     <nav class="crumbs" aria-label="פירורי לחם">
-      <a href="/">בית</a> / <a href="/עבודות">עבודות</a>{category && <> / <span>{category}</span></>}
+      <a href="/">בית</a> / <a href="/work">עבודות</a>{category && <> / <span>{category}</span></>}
     </nav>
     <h1>{title}</h1>
     <div class="media">
@@ -63,7 +63,7 @@ for (const c of site.portfolio) {
     </div>
     <div class="pager">
       {prev ? <a class="btn btn--ghost" href={prev} rel="prev">→ הקודם</a> : <span />}
-      <a class="btn" href="/עבודות">לגלריה המלאה</a>
+      <a class="btn" href="/work">לגלריה המלאה</a>
       {next ? <a class="btn btn--ghost" href={next} rel="next">הבא ←</a> : <span />}
     </div>
   </div>

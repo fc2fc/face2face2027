@@ -16,7 +16,7 @@ export const GET: APIRoute = () => {
   const urls = pages
     .filter((p: any) => !['legal', 'not-found'].includes(p.type) && !String(p.seo?.robots ?? '').includes('noindex'))
     .map((p: any) => {
-      const path = p.old_path === '/' ? '' : p.old_path;
+      const path = p.path === '/' ? '' : p.path;
       const { priority, freq } = meta(p);
       return `  <url>
     <loc>${SITE}${path}</loc>

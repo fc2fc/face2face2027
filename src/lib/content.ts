@@ -8,7 +8,7 @@ export const pages = content.pages as any[];
 export const SITE_URL = 'https://www.fc2fc.co.il';
 
 export function pageByPath(path: string) {
-  return pages.find((p) => p.old_path === path);
+  return pages.find((p) => p.path === path);
 }
 
 export function size(src?: string): { width?: number; height?: number } {

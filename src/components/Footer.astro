@@ -4,9 +4,9 @@ import { Image } from 'astro:assets';
 import { site } from '../lib/content';
 import logo from '../assets/media/brand/logo-light@2x.webp';
 
-const links = site.footer.links as { label: string; old_url: string }[];
-const main = links.filter((l) => !['/terms', '/privacy', '/accessibility'].includes(l.old_url));
-const legal = links.filter((l) => ['/terms', '/privacy', '/accessibility'].includes(l.old_url));
+const links = site.footer.links as { label: string; url: string }[];
+const main = links.filter((l) => !['/terms', '/privacy', '/accessibility'].includes(l.url));
+const legal = links.filter((l) => ['/terms', '/privacy', '/accessibility'].includes(l.url));
 const social = [
   { href: 'https://www.facebook.com/Face2FaceNM', label: 'Facebook', icon: 'facebook-logo' },
   { href: 'https://www.instagram.com/face2face.il/', label: 'Instagram', icon: 'instagram-logo' },
@@ -57,7 +57,7 @@ const social = [
           <ul class="footer__links">
             {main.map((l) => (
               <li>
-                <a href={l.old_url}><span>{l.label}</span></a>
+                <a href={l.url}><span>{l.label}</span></a>
               </li>
             ))}
           </ul>
@@ -93,7 +93,7 @@ const social = [
     <div class="container footer__bottom-inner">
       <span>© {new Date().getFullYear()} Face2Face – כל הזכויות שמורות</span>
       <ul class="footer__legal">
-        {legal.map((l) => <li><a href={l.old_url}>{l.label}</a></li>)}
+        {legal.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
         <li><button type="button" class="footer__cookie" data-cookie-settings>הגדרות עוגיות</button></li>
       </ul>
       <button type="button" class="to-top" aria-label="חזרה לראש העמוד" onclick="window.scrollTo({top:0,behavior:'smooth'})">

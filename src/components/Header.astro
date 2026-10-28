@@ -7,7 +7,7 @@ interface Props {
   current: string;
 }
 const { current } = Astro.props;
-const nav = site.navigation as { label: string; old_url: string }[];
+const nav = site.navigation as { label: string; url: string }[];
 const isActive = (url: string) => (url === '/' ? current === '/' : current === url || current.startsWith(url + '/'));
 ---
 
@@ -27,9 +27,9 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
           nav.map((item, i) => (
             <li style={`--i:${i}`}>
               <a
-                href={item.old_url}
-                class:list={[isActive(item.old_url) && 'is-active']}
-                aria-current={isActive(item.old_url) ? 'page' : undefined}
+                href={item.url}
+                class:list={[isActive(item.url) && 'is-active']}
+                aria-current={isActive(item.url) ? 'page' : undefined}
               >
                 {item.label}
               </a>
@@ -37,7 +37,7 @@ const isActive = (url: string) => (url === '/' ? current === '/' : current === u
           ))
         }
         <li class="nav__cta" style={`--i:${nav.length}`}>
-          <a href="/צרו-קשר" class="btn-cta">צרו קשר</a>
+          <a href="/contact" class="btn-cta">צרו קשר</a>
         </li>
       </ul>
     </nav>

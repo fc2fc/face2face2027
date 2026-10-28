@@ -16,27 +16,33 @@
     "navigation": [
       {
         "label": "בית",
-        "old_url": "/"
+        "old_url": "/",
+        "url": "/"
       },
       {
         "label": "שירותים",
-        "old_url": "/שירותים"
+        "old_url": "/שירותים",
+        "url": "/services"
       },
       {
         "label": "עבודות",
-        "old_url": "/עבודות"
+        "old_url": "/עבודות",
+        "url": "/work"
       },
       {
         "label": "אודות",
-        "old_url": "/אודות"
+        "old_url": "/אודות",
+        "url": "/about"
       },
       {
         "label": "בין לקוחותינו",
-        "old_url": "/בין-לקוחותינו"
+        "old_url": "/בין-לקוחותינו",
+        "url": "/clients"
       },
       {
         "label": "צרו קשר",
-        "old_url": "/צרו-קשר"
+        "old_url": "/צרו-קשר",
+        "url": "/contact"
       }
     ],
     "footer": {
@@ -53,39 +59,48 @@
       "links": [
         {
           "label": "בית",
-          "old_url": "/"
+          "old_url": "/",
+          "url": "/"
         },
         {
           "label": "שירותים",
-          "old_url": "/שירותים"
+          "old_url": "/שירותים",
+          "url": "/services"
         },
         {
           "label": "עבודות",
-          "old_url": "/עבודות"
+          "old_url": "/עבודות",
+          "url": "/work"
         },
         {
           "label": "אודות",
-          "old_url": "/אודות"
+          "old_url": "/אודות",
+          "url": "/about"
         },
         {
           "label": "בין לקוחותינו",
-          "old_url": "/בין-לקוחותינו"
+          "old_url": "/בין-לקוחותינו",
+          "url": "/clients"
         },
         {
           "label": "צרו קשר",
-          "old_url": "/צרו-קשר"
+          "old_url": "/צרו-קשר",
+          "url": "/contact"
         },
         {
           "label": "תנאי שימוש",
-          "old_url": "/terms"
+          "old_url": "/terms",
+          "url": "/terms"
         },
         {
           "label": "מדיניות פרטיות",
-          "old_url": "/privacy"
+          "old_url": "/privacy",
+          "url": "/privacy"
         },
         {
           "label": "נגישות",
-          "old_url": "/accessibility"
+          "old_url": "/accessibility",
+          "url": "/accessibility"
         }
       ]
     },
@@ -201,847 +216,968 @@
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/696ac5cce30db.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד הדוכן מול מסך מצגת עם דגל ישראל"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד הדוכן מול מסך מצגת עם דגל ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"
           },
           {
             "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/696ac5cce7dd5.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס עיתונאים ליד דוכן עם סמל המדינה"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס עיתונאים ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"
           },
           {
             "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/696ac5cce9503.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם סמל המדינה ודגלי ישראל"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם סמל המדינה ודגלי ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"
           },
           {
             "type": "image",
             "title": "דניאל רוט-אבנרי",
             "src": "/assets/media/uploads/696ac32eac87d.webp",
             "old_item_page": "/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
-            "alt": "צילום אירוע: דניאל רוט-אבנרי מדברת מול מיקרופון על רקע מסך כחול"
+            "alt": "צילום אירוע: דניאל רוט-אבנרי מדברת מול מיקרופון על רקע מסך כחול",
+            "item_page": "/work/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/696ac38eeac63.webp",
             "old_item_page": "/עבודות/item-id-696ac39138e0f",
-            "alt": "אשה נואמת על במה בכנס לקידום שוויון הזדמנויות ומעמד נשים בישראל"
+            "alt": "אשה נואמת על במה בכנס לקידום שוויון הזדמנויות ומעמד נשים בישראל",
+            "item_page": "/work/item-id-696ac39138e0f"
           },
           {
             "type": "image",
             "title": "נרקיס ראובן־נגר",
             "src": "/assets/media/uploads/696ac4dab927e.webp",
             "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
-            "alt": "צילום הופעה: נרקיס שרה על במה באורות אדומים"
+            "alt": "צילום הופעה: נרקיס שרה על במה באורות אדומים",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"
           },
           {
             "type": "image",
             "title": "נרקיס ראובן־נגר",
             "src": "/assets/media/uploads/696ac4dabc7f9.webp",
             "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
-            "alt": "צילום הופעה: נרקיס שרה מול מיקרופון על במה צבעונית"
+            "alt": "צילום הופעה: נרקיס שרה מול מיקרופון על במה צבעונית",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"
           },
           {
             "type": "image",
             "title": "נרקיס ראובן־נגר",
             "src": "/assets/media/uploads/696ac4dabde12.webp",
             "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
-            "alt": "צילום הופעה: נרקיס שרה על במה לצד נגן קלידים ודגל ישראל"
+            "alt": "צילום הופעה: נרקיס שרה על במה לצד נגן קלידים ודגל ישראל",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"
           },
           {
             "type": "image",
             "title": "נרקיס ראובן־נגר",
             "src": "/assets/media/uploads/696ac4dabb275.webp",
             "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
-            "alt": "צילום הופעה: נרקיס בתאורה דרמטית על במה חשוכה"
+            "alt": "צילום הופעה: נרקיס בתאורה דרמטית על במה חשוכה",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"
           },
           {
             "type": "image",
             "title": "צילום תדמית נשי – חיוך",
             "src": "/assets/media/uploads/68a97c7aa6d95.webp",
             "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך",
-            "alt": "צילום תדמית: פורטרט נשי מחויך בחולצה לבנה על רקע בהיר"
+            "alt": "צילום תדמית: פורטרט נשי מחויך בחולצה לבנה על רקע בהיר",
+            "item_page": "/work/portrait-woman-smile"
           },
           {
             "type": "image",
             "title": "צילום תדמית עסקי – פורטרט",
             "src": "/assets/media/uploads/688b84b7b2312.webp",
             "old_item_page": "/עבודות/צילום-תדמית-עסקי-פורטרט",
-            "alt": "צילום תדמית עסקי: פורטרט גבר בחולצה ירוקה על רקע בהיר"
+            "alt": "צילום תדמית עסקי: פורטרט גבר בחולצה ירוקה על רקע בהיר",
+            "item_page": "/work/business-portrait"
           },
           {
             "type": "image",
             "title": "צילום תדמית עסקי – פורטרט נשי",
             "src": "/assets/media/uploads/68a97c7d49c10.webp",
             "old_item_page": "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
-            "alt": "צילום תדמית: פורטרט אישה עם שיער מתולתל על רקע בהיר"
+            "alt": "צילום תדמית: פורטרט אישה עם שיער מתולתל על רקע בהיר",
+            "item_page": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99"
           },
           {
             "type": "image",
             "title": "צילום תדמית נשי – חיוך טבעי",
             "src": "/assets/media/uploads/688b84be560c7.webp",
             "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
-            "alt": "צילום תדמית: פורטרט אישה מחייכת בשחור עם סיכת סרט צהוב"
+            "alt": "צילום תדמית: פורטרט אישה מחייכת בשחור עם סיכת סרט צהוב",
+            "item_page": "/work/portrait-woman-natural-smile"
           },
           {
             "type": "image",
             "title": "צילום תדמית לנציגות – פורטרט ליד דגל ישראל",
             "src": "/assets/media/uploads/688b84b09bc3f.webp",
             "old_item_page": "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
-            "alt": "צילום תדמית: אישה בחליפה שחורה וידיים שלובות ליד דגל ישראל"
+            "alt": "צילום תדמית: אישה בחליפה שחורה וידיים שלובות ליד דגל ישראל",
+            "item_page": "/work/portrait-delegation-israel-flag"
           },
           {
             "type": "image",
             "title": "צילום תדמית נשי – דיוקן עם דגל ישראל",
             "src": "/assets/media/uploads/688b84b073574.webp",
             "old_item_page": "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
-            "alt": "צילום תדמית: דיוקן אישה בחליפה שחורה על רקע דגל ישראל"
+            "alt": "צילום תדמית: דיוקן אישה בחליפה שחורה על רקע דגל ישראל",
+            "item_page": "/work/portrait-woman-israel-flag"
           },
           {
             "type": "image",
             "title": "צילום תדמית",
             "src": "/assets/media/uploads/688b84b7d1660.webp",
             "old_item_page": "/עבודות/צילום-תדמית",
-            "alt": "צילום תדמית: אישה עם צמות יושבת ליד שולחן ודגל ישראל"
+            "alt": "צילום תדמית: אישה עם צמות יושבת ליד שולחן ודגל ישראל",
+            "item_page": "/work/portrait"
           },
           {
             "type": "image",
             "title": "צילום תדמית – פורטרט ליד סמל המדינה",
             "src": "/assets/media/uploads/688b84b76d7d9.webp",
             "old_item_page": "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
-            "alt": "צילום תדמית: אישה בלבוש בהיר עומדת ליד סמל המדינה ודגל ישראל במשכן הכנסת"
+            "alt": "צילום תדמית: אישה בלבוש בהיר עומדת ליד סמל המדינה ודגל ישראל במשכן הכנסת",
+            "item_page": "/work/portrait-state-emblem"
           },
           {
             "type": "image",
             "title": "צילום קבוצתי – צוות במעמד פורמלי",
             "src": "/assets/media/uploads/688b84acd63a0.webp",
             "old_item_page": "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
-            "alt": "צילום קבוצתי של נשים במעמד פורמלי מול הכנסת"
+            "alt": "צילום קבוצתי של נשים במעמד פורמלי מול הכנסת",
+            "item_page": "/work/team-group-photo-formal"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6413324.webp",
             "old_item_page": "/עבודות/item-id-688bed656124c",
-            "alt": "תמונה קבוצתית של נשים בשורה מול בניין הכנסת"
+            "alt": "תמונה קבוצתית של נשים בשורה מול בניין הכנסת",
+            "item_page": "/work/item-id-688bed656124c"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c02e9400c6.webp",
             "old_item_page": "/עבודות/item-id-688c02eb8ab7d",
-            "alt": "אשה בז'קט לבן יושבת בחוץ באירוע עם מטריה ואנשים ברקע"
+            "alt": "אשה בז'קט לבן יושבת בחוץ באירוע עם מטריה ואנשים ברקע",
+            "item_page": "/work/item-id-688c02eb8ab7d"
           },
           {
             "type": "image",
             "title": "פנינה תמנו שטה",
             "src": "/assets/media/uploads/688b83939b3b1.webp",
             "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
-            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט אפור יושבת ליד שולחן עם דגל ישראל"
+            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט אפור יושבת ליד שולחן עם דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94"
           },
           {
             "type": "image",
             "title": "פנינה תמנו שטה",
             "src": "/assets/media/uploads/688c0048de22f.webp",
             "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
-            "alt": "צילום תדמית: פנינה תמנו שטה יושבת במשרד בז'קט אפור לצד דגל ישראל"
+            "alt": "צילום תדמית: פנינה תמנו שטה יושבת במשרד בז'קט אפור לצד דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1"
           },
           {
             "type": "image",
             "title": "פנינה תמנו שטה",
             "src": "/assets/media/uploads/688bd4e9824ee.webp",
             "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
-            "alt": "צילום תדמית: פנינה תמנו שטה ליד שולחן העבודה במשרד"
+            "alt": "צילום תדמית: פנינה תמנו שטה ליד שולחן העבודה במשרד",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2"
           },
           {
             "type": "image",
             "title": "פנינה תמנו שטה",
             "src": "/assets/media/uploads/688b839669b27.webp",
             "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
-            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט כתום לצד דגל ישראל"
+            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט כתום לצד דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3"
           },
           {
             "type": "image",
             "title": "פנינה תמנו שטה",
             "src": "/assets/media/uploads/688b84a2cf133.webp",
             "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
-            "alt": "צילום אירוע: פנינה תמנו שטה נואמת ליד דוכן עם סמל המדינה"
+            "alt": "צילום אירוע: פנינה תמנו שטה נואמת ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004895881.webp",
             "old_item_page": "/עבודות/item-id-688c004e5165d",
-            "alt": "פורטרט חיצוני של אשה צעירה מחייכת עם תג כנס, ברקע מטושטש בצבעי כחול"
+            "alt": "פורטרט חיצוני של אשה צעירה מחייכת עם תג כנס, ברקע מטושטש בצבעי כחול",
+            "item_page": "/work/item-id-688c004e5165d"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d98a174.webp",
             "old_item_page": "/עבודות/item-id-688c01daea16f",
-            "alt": "פורטרט של אשה צעירה מחייכת בחולצה לבנה על רקע כחול"
+            "alt": "פורטרט של אשה צעירה מחייכת בחולצה לבנה על רקע כחול",
+            "item_page": "/work/item-id-688c01daea16f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c0047528ff.webp",
             "old_item_page": "/עבודות/item-id-688c004bcecc1",
-            "alt": "פורטרט עסקי של גבר בחליפה כחולה ליד שולחן ודגל ישראל"
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה ליד שולחן ודגל ישראל",
+            "item_page": "/work/item-id-688c004bcecc1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c022896304.webp",
             "old_item_page": "/עבודות/item-id-688c022c88d01",
-            "alt": "פורטרט עסקי של גבר בחליפה כחולה וכיפה, יושב ליד שולחן עם דגל ישראל"
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה וכיפה, יושב ליד שולחן עם דגל ישראל",
+            "item_page": "/work/item-id-688c022c88d01"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c02128927c.webp",
             "old_item_page": "/עבודות/item-id-688c02144b2b0",
-            "alt": "פורטרט עסקי של גבר עם משקפיים וזקן בחליפה כחולה ליד שולחן ודגל ישראל"
+            "alt": "פורטרט עסקי של גבר עם משקפיים וזקן בחליפה כחולה ליד שולחן ודגל ישראל",
+            "item_page": "/work/item-id-688c02144b2b0"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d96376f.webp",
             "old_item_page": "/עבודות/item-id-688c01da9d0bf",
-            "alt": "גבר עם זקן ותג כנס מסדר את הז'קט על רקע דגל ישראל גדול"
+            "alt": "גבר עם זקן ותג כנס מסדר את הז'קט על רקע דגל ישראל גדול",
+            "item_page": "/work/item-id-688c01da9d0bf"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c0047077b4.webp",
             "old_item_page": "/עבודות/item-id-688c0049c416e",
-            "alt": "אשה בחליפה שחורה יושבת על במה בפאנל של מועצה אמריקאית-ישראלית"
+            "alt": "אשה בחליפה שחורה יושבת על במה בפאנל של מועצה אמריקאית-ישראלית",
+            "item_page": "/work/item-id-688c0049c416e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bc80a6d.webp",
             "old_item_page": "/עבודות/item-id-688b84c122054",
-            "alt": "ישיבה סביב שולחן עגול בחדר עם דגלים וחלונות"
+            "alt": "ישיבה סביב שולחן עגול בחדר עם דגלים וחלונות",
+            "item_page": "/work/item-id-688b84c122054"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7ebc4.webp",
             "old_item_page": "/עבודות/item-id-688bed63443d6",
-            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה, ברקע שלט בעברית ובאמהרית"
+            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה, ברקע שלט בעברית ובאמהרית",
+            "item_page": "/work/item-id-688bed63443d6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9ab14.webp",
             "old_item_page": "/עבודות/item-id-688bed6384b72",
-            "alt": "אדם מניח זר פרחים בטקס רשמי, ברקע חיילים ומשתתפים"
+            "alt": "אדם מניח זר פרחים בטקס רשמי, ברקע חיילים ומשתתפים",
+            "item_page": "/work/item-id-688bed6384b72"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9d9ea.webp",
             "old_item_page": "/עבודות/item-id-688bed622d1db",
-            "alt": "קהל רב בטקס ממלכתי תחת כיפת שמיים, אנשים עומדים בצורה חגיגית"
+            "alt": "קהל רב בטקס ממלכתי תחת כיפת שמיים, אנשים עומדים בצורה חגיגית",
+            "item_page": "/work/item-id-688bed622d1db"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7cf9c.webp",
             "old_item_page": "/עבודות/item-id-688bed61e5102",
-            "alt": "אנשים עומדים בטקס זיכרון ליד כלי הדלקת אש בצורת מגן דוד"
+            "alt": "אנשים עומדים בטקס זיכרון ליד כלי הדלקת אש בצורת מגן דוד",
+            "item_page": "/work/item-id-688bed61e5102"
           },
           {
             "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/688b8395a1ad4.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם דגלי ישראל"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם דגלי ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3"
           },
           {
             "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/688bdee36be43.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס ליד דוכן עם סמל המדינה"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4"
           },
           {
             "type": "image",
             "title": "בצלאל סמוטריץ",
             "src": "/assets/media/uploads/688bdee390f31.webp",
             "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם מול מצגת, ליד דוכן עם סמל המדינה"
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם מול מצגת, ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004291d24.webp",
             "old_item_page": "/עבודות/item-id-688c004402d03",
-            "alt": "אשה במעיל אדום צועדת על המסלול בשדה תעופה, מטוס ברקע"
+            "alt": "אשה במעיל אדום צועדת על המסלול בשדה תעופה, מטוס ברקע",
+            "item_page": "/work/item-id-688c004402d03"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c004893227.webp",
             "old_item_page": "/עבודות/item-id-688c004c90a8e",
-            "alt": "אשה בכובע וחולצה לבנה עם תיק חום צועדת ליד מטוס אל על"
+            "alt": "אשה בכובע וחולצה לבנה עם תיק חום צועדת ליד מטוס אל על",
+            "item_page": "/work/item-id-688c004c90a8e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63cffca.webp",
             "old_item_page": "/עבודות/item-id-688bed651bcd1",
-            "alt": "שתי דמויות עם דגלים קטנים ליד מנוע מטוס בנמל תעופה"
+            "alt": "שתי דמויות עם דגלים קטנים ליד מנוע מטוס בנמל תעופה",
+            "item_page": "/work/item-id-688bed651bcd1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6403107.webp",
             "old_item_page": "/עבודות/item-id-688bed651440f",
-            "alt": "סלפי של קבוצת אנשים עם דגלי ישראל ליד מטוס"
+            "alt": "סלפי של קבוצת אנשים עם דגלי ישראל ליד מטוס",
+            "item_page": "/work/item-id-688bed651440f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b1e1676.webp",
             "old_item_page": "/עבודות/item-id-688b84b66fde1",
-            "alt": "עולים חדשים יורדים בגרם מדרגות ממטוס אל על, משפחות עם ילדים"
+            "alt": "עולים חדשים יורדים בגרם מדרגות ממטוס אל על, משפחות עם ילדים",
+            "item_page": "/work/item-id-688b84b66fde1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63f1faa.webp",
             "old_item_page": "/עבודות/item-id-688bed651e738",
-            "alt": "אשה מחייכת עם דגל ישראל על מדרגות מטוס אל על, עולים יורדים מאחוריה"
+            "alt": "אשה מחייכת עם דגל ישראל על מדרגות מטוס אל על, עולים יורדים מאחוריה",
+            "item_page": "/work/item-id-688bed651e738"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688c01d9b0647.webp",
             "old_item_page": "/עבודות/item-id-688c01dbb41d6",
-            "alt": "אדם כורע ברך ומנשק את האדמה בנחיתה בישראל, אנשים עם דגלים סביבו"
+            "alt": "אדם כורע ברך ומנשק את האדמה בנחיתה בישראל, אנשים עם דגלים סביבו",
+            "item_page": "/work/item-id-688c01dbb41d6"
           },
           {
             "type": "image",
             "title": "מורן אטיאס",
             "src": "/assets/media/uploads/688b8395959aa.webp",
             "old_item_page": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
-            "alt": "צילום תדמית: מורן אטיאס עומדת בחליפה שחורה מול בניין הכנסת"
+            "alt": "צילום תדמית: מורן אטיאס עומדת בחליפה שחורה מול בניין הכנסת",
+            "item_page": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1"
           },
           {
             "type": "image",
             "title": "מורן אטיאס",
             "src": "/assets/media/uploads/688b84bc0f951.webp",
             "old_item_page": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
-            "alt": "צילום תדמית: מורן אטיאס בחליפה שחורה במסדרון משרדי"
+            "alt": "צילום תדמית: מורן אטיאס בחליפה שחורה במסדרון משרדי",
+            "item_page": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1"
           },
           {
             "type": "image",
             "title": "מורן אטיאס",
             "src": "/assets/media/uploads/688b839512442.webp",
             "old_item_page": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
-            "alt": "צילום אירוע: מורן אטיאס ליד דוכן באולם עם דגלי ישראל"
+            "alt": "צילום אירוע: מורן אטיאס ליד דוכן באולם עם דגלי ישראל",
+            "item_page": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b19a59f.webp",
             "old_item_page": "/עבודות/item-id-688b84b62d622",
-            "alt": "שתי נשים מקיימות שיחה באולם עם דגלי ישראל וסמל המדינה"
+            "alt": "שתי נשים מקיימות שיחה באולם עם דגלי ישראל וסמל המדינה",
+            "item_page": "/work/item-id-688b84b62d622"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83951fc93.webp",
             "old_item_page": "/עבודות/item-id-688b8395ef0ba",
-            "alt": "פאנל נשים באולם הרצאות, מסך עם כותרת על נושא החטופים"
+            "alt": "פאנל נשים באולם הרצאות, מסך עם כותרת על נושא החטופים",
+            "item_page": "/work/item-id-688b8395ef0ba"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393f1d69.webp",
             "old_item_page": "/עבודות/item-id-688b8395138ad",
-            "alt": "מצעד ברחוב בניו יורק, משתתפים עם דגלי ישראל וסרטים כחולים"
+            "alt": "מצעד ברחוב בניו יורק, משתתפים עם דגלי ישראל וסרטים כחולים",
+            "item_page": "/work/item-id-688b8395138ad"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83938f222.webp",
             "old_item_page": "/עבודות/item-id-688b839487b85",
-            "alt": "קהל במצעד חגיגי ברחוב בניו יורק עם דגלי ישראל"
+            "alt": "קהל במצעד חגיגי ברחוב בניו יורק עם דגלי ישראל",
+            "item_page": "/work/item-id-688b839487b85"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393f1e0a.webp",
             "old_item_page": "/עבודות/item-id-688b83952af1b",
-            "alt": "נואמת על במה בכנס חוץ עם מסך צבעוני וקהל יושב"
+            "alt": "נואמת על במה בכנס חוץ עם מסך צבעוני וקהל יושב",
+            "item_page": "/work/item-id-688b83952af1b"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393eb332.webp",
             "old_item_page": "/עבודות/item-id-688b8394d319e",
-            "alt": "שלושה אנשים מצטלמים עם גביע וכדורסל באירוע ספורט"
+            "alt": "שלושה אנשים מצטלמים עם גביע וכדורסל באירוע ספורט",
+            "item_page": "/work/item-id-688b8394d319e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf53d94.webp",
             "old_item_page": "/עבודות/item-id-688b84c17a2d2",
-            "alt": "גזירת סרט חגיגית במסדרון עם קבוצת אנשים ואדם בכיסא גלגלים"
+            "alt": "גזירת סרט חגיגית במסדרון עם קבוצת אנשים ואדם בכיסא גלגלים",
+            "item_page": "/work/item-id-688b84c17a2d2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393cfd72.webp",
             "old_item_page": "/עבודות/item-id-688b8394be1be",
-            "alt": "שולחן ראשי בכנס על חינוך בריאותי עם זר פרחים וצוות מרצים"
+            "alt": "שולחן ראשי בכנס על חינוך בריאותי עם זר פרחים וצוות מרצים",
+            "item_page": "/work/item-id-688b8394be1be"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b83955f332.webp",
             "old_item_page": "/עבודות/item-id-688b839628070",
-            "alt": "גבר מבוגר בחליפה מדבר בכנס עם שלט ועדה ודגל ישראל"
+            "alt": "גבר מבוגר בחליפה מדבר בכנס עם שלט ועדה ודגל ישראל",
+            "item_page": "/work/item-id-688b839628070"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849674c71.webp",
             "old_item_page": "/עבודות/item-id-688b84a103b41",
-            "alt": "אשה שחורת שיער בחולצה לבנה מקשיבה בכנס עם אנשים סביבה"
+            "alt": "אשה שחורת שיער בחולצה לבנה מקשיבה בכנס עם אנשים סביבה",
+            "item_page": "/work/item-id-688b84a103b41"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e6f61.webp",
             "old_item_page": "/עבודות/item-id-688b849ea06a7",
-            "alt": "גבר בחליפה מדבר בכנס ממול דוכנים של רשות הכנסת הלאומית"
+            "alt": "גבר בחליפה מדבר בכנס ממול דוכנים של רשות הכנסת הלאומית",
+            "item_page": "/work/item-id-688b849ea06a7"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849620d21.webp",
             "old_item_page": "/עבודות/item-id-688b84a00997c",
-            "alt": "גבר בחליפה וחולצה כחולה יושב בקהל בכנס"
+            "alt": "גבר בחליפה וחולצה כחולה יושב בקהל בכנס",
+            "item_page": "/work/item-id-688b84a00997c"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a0bee36.webp",
             "old_item_page": "/עבודות/item-id-688b84aa1833a",
-            "alt": "ישיבת ועדה בחדר ישיבות מעוגל עם דגלי ישראל"
+            "alt": "ישיבת ועדה בחדר ישיבות מעוגל עם דגלי ישראל",
+            "item_page": "/work/item-id-688b84aa1833a"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393cb804.webp",
             "old_item_page": "/עבודות/item-id-688b8394ab2ec",
-            "alt": "אשה במעיל לבן ומשקפיים עומדת במסדרון ליד שלטי ועדות"
+            "alt": "אשה במעיל לבן ומשקפיים עומדת במסדרון ליד שלטי ועדות",
+            "item_page": "/work/item-id-688b8394ab2ec"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8394d279a.webp",
             "old_item_page": "/עבודות/item-id-688b8395d7520",
-            "alt": "אשה במעיל צועדת במסדרון רחב עם קירות אבן"
+            "alt": "אשה במעיל צועדת במסדרון רחב עם קירות אבן",
+            "item_page": "/work/item-id-688b8395d7520"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed630d3bc.webp",
             "old_item_page": "/עבודות/item-id-688bed65a23ea",
-            "alt": "אשה בחליפה כחולה מחזיקה מסמך ופוסעת ליד דגלי ישראל"
+            "alt": "אשה בחליפה כחולה מחזיקה מסמך ופוסעת ליד דגלי ישראל",
+            "item_page": "/work/item-id-688bed65a23ea"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed629928e.webp",
             "old_item_page": "/עבודות/item-id-688bed63cd8e4",
-            "alt": "אשה בחליפה כחולה נואמת מאחורי דוכן באירוע לציון יום האשה הבינלאומי"
+            "alt": "אשה בחליפה כחולה נואמת מאחורי דוכן באירוע לציון יום האשה הבינלאומי",
+            "item_page": "/work/item-id-688bed63cd8e4"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed62aba0f.webp",
             "old_item_page": "/עבודות/item-id-688bed6401bab",
-            "alt": "פורטרט של אשה בחליפה כחולה על רקע עץ ודגל"
+            "alt": "פורטרט של אשה בחליפה כחולה על רקע עץ ודגל",
+            "item_page": "/work/item-id-688bed6401bab"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed62663a5.webp",
             "old_item_page": "/עבודות/item-id-688bed639addc",
-            "alt": "זמרת שחורת שיער שרה לתוך מיקרופון באירוע בהשתתפות תמונות חטופים"
+            "alt": "זמרת שחורת שיער שרה לתוך מיקרופון באירוע בהשתתפות תמונות חטופים",
+            "item_page": "/work/item-id-688bed639addc"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f96d0a.webp",
             "old_item_page": "/עבודות/item-id-688bed635a236",
-            "alt": "זמרת עם מיקרופון באירוע לציון יום האשה, תמונות חטופים ברקע"
+            "alt": "זמרת עם מיקרופון באירוע לציון יום האשה, תמונות חטופים ברקע",
+            "item_page": "/work/item-id-688bed635a236"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed6124ae6.webp",
             "old_item_page": "/עבודות/item-id-688bed628cb33",
-            "alt": "זמרת שרה בהתלהבות עם מיקרופון, דגלי ישראל מאחוריה"
+            "alt": "זמרת שרה בהתלהבות עם מיקרופון, דגלי ישראל מאחוריה",
+            "item_page": "/work/item-id-688bed628cb33"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f9e8b3.webp",
             "old_item_page": "/עבודות/item-id-688bed623db00",
-            "alt": "שיחה בכנס מדיני בין שני אנשים על במה אדומה"
+            "alt": "שיחה בכנס מדיני בין שני אנשים על במה אדומה",
+            "item_page": "/work/item-id-688bed623db00"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f7bc62.webp",
             "old_item_page": "/עבודות/item-id-688bed60aafb6",
-            "alt": "במה גדולה בכנס בינלאומי עם מסכי וידאו וקהל"
+            "alt": "במה גדולה בכנס בינלאומי עם מסכי וידאו וקהל",
+            "item_page": "/work/item-id-688bed60aafb6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5fa2794.webp",
             "old_item_page": "/עבודות/item-id-688bed638b362",
-            "alt": "גבר בחליפה מדבר למיקרופון בכנס עם רקע אדום"
+            "alt": "גבר בחליפה מדבר למיקרופון בכנס עם רקע אדום",
+            "item_page": "/work/item-id-688bed638b362"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839652e3e.webp",
             "old_item_page": "/עבודות/item-id-688b83969d8ff",
-            "alt": "קבוצה של אנשים בחליפות עומדת ליד דוכן ועדת הבחירות המרכזית"
+            "alt": "קבוצה של אנשים בחליפות עומדת ליד דוכן ועדת הבחירות המרכזית",
+            "item_page": "/work/item-id-688b83969d8ff"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63be0ff.webp",
             "old_item_page": "/עבודות/item-id-688bed65134da",
-            "alt": "שתי נשים בחליפות מדברות לתקשורת באירוע מול מיקרופונים"
+            "alt": "שתי נשים בחליפות מדברות לתקשורת באירוע מול מיקרופונים",
+            "item_page": "/work/item-id-688bed65134da"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63c688b.webp",
             "old_item_page": "/עבודות/item-id-688bed651a249",
-            "alt": "שלושה אנשים בחליפות מצטלמים ליד דוכן ועדת הבחירות המרכזית"
+            "alt": "שלושה אנשים בחליפות מצטלמים ליד דוכן ועדת הבחירות המרכזית",
+            "item_page": "/work/item-id-688bed651a249"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa9eff4.webp",
             "old_item_page": "/עבודות/item-id-688b84b1c2908",
-            "alt": "שלט כנס על גנטיקה ותכנון משפחה בחברה הערבית"
+            "alt": "שלט כנס על גנטיקה ותכנון משפחה בחברה הערבית",
+            "item_page": "/work/item-id-688b84b1c2908"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab7f0c9.webp",
             "old_item_page": "/עבודות/item-id-688b84b159ebf",
-            "alt": "אשה עם תג כנס מחזיקה דפים בלובי כנס ובו קהל"
+            "alt": "אשה עם תג כנס מחזיקה דפים בלובי כנס ובו קהל",
+            "item_page": "/work/item-id-688b84b159ebf"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8393a7e60.webp",
             "old_item_page": "/עבודות/item-id-688b839499705",
-            "alt": "אשה בחולצה צהובה מדברת בכנס עם מיקרופון"
+            "alt": "אשה בחולצה צהובה מדברת בכנס עם מיקרופון",
+            "item_page": "/work/item-id-688b839499705"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839551357.webp",
             "old_item_page": "/עבודות/item-id-688b83960bb19",
-            "alt": "בכירים בצבא ובמשטרה עומדים בטקס חיצוני"
+            "alt": "בכירים בצבא ובמשטרה עומדים בטקס חיצוני",
+            "item_page": "/work/item-id-688b83960bb19"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839541bdc.webp",
             "old_item_page": "/עבודות/item-id-688b8395f32da",
-            "alt": "חיילת במדים ובכומתה עם אוזניית מיקרופון בטקס צבאי"
+            "alt": "חיילת במדים ובכומתה עם אוזניית מיקרופון בטקס צבאי",
+            "item_page": "/work/item-id-688b8395f32da"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b839567853.webp",
             "old_item_page": "/עבודות/item-id-688b839638527",
-            "alt": "פורטרט של גבר מבוגר במשקפי שמש בחליפה בטקס"
+            "alt": "פורטרט של גבר מבוגר במשקפי שמש בחליפה בטקס",
+            "item_page": "/work/item-id-688b839638527"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849661127.webp",
             "old_item_page": "/עבודות/item-id-688b84a022b08",
-            "alt": "תערוכת מידע על מדינות בכנס מסחר חוץ, שלטים צבעוניים"
+            "alt": "תערוכת מידע על מדינות בכנס מסחר חוץ, שלטים צבעוניים",
+            "item_page": "/work/item-id-688b84a022b08"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e5896.webp",
             "old_item_page": "/עבודות/item-id-688b849fe854a",
-            "alt": "קבוצת אנשים משוחחת בכנס עסקי לצד דגל טורקיה"
+            "alt": "קבוצת אנשים משוחחת בכנס עסקי לצד דגל טורקיה",
+            "item_page": "/work/item-id-688b849fe854a"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab38176.webp",
             "old_item_page": "/עבודות/item-id-688b84af98a78",
-            "alt": "אולם כנס עם שולחנות עגולים ואנשים יושבים"
+            "alt": "אולם כנס עם שולחנות עגולים ואנשים יושבים",
+            "item_page": "/work/item-id-688b84af98a78"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ba4b89c.webp",
             "old_item_page": "/עבודות/item-id-688b84becec33",
-            "alt": "אנשים בחליפות צועדים על רצפה מוארת בצבעים באירוע"
+            "alt": "אנשים בחליפות צועדים על רצפה מוארת בצבעים באירוע",
+            "item_page": "/work/item-id-688b84becec33"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a28f2ce.webp",
             "old_item_page": "/עבודות/item-id-688b84aa75e4a",
-            "alt": "קהל באולם אירוע חגיגי עם שלט ברוכים הבאים"
+            "alt": "קהל באולם אירוע חגיגי עם שלט ברוכים הבאים",
+            "item_page": "/work/item-id-688b84aa75e4a"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b8495e5889.webp",
             "old_item_page": "/עבודות/item-id-688b849fe1a0b",
-            "alt": "אדם מצטלם עם אשה בלבן-כחול ליד נציג האו\"ם"
+            "alt": "אדם מצטלם עם אשה בלבן-כחול ליד נציג האו\"ם",
+            "item_page": "/work/item-id-688b849fe1a0b"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2e740d.webp",
             "old_item_page": "/עבודות/item-id-688b84a9d4645",
-            "alt": "שני גברים לוחצים ידיים ליד דגלי גרמניה וישראל"
+            "alt": "שני גברים לוחצים ידיים ליד דגלי גרמניה וישראל",
+            "item_page": "/work/item-id-688b84a9d4645"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84be7ff89.webp",
             "old_item_page": "/עבודות/item-id-688b84c2cec4d",
-            "alt": "אנשים בחליפות עומדים בשורה בבניין מדינה"
+            "alt": "אנשים בחליפות עומדים בשורה בבניין מדינה",
+            "item_page": "/work/item-id-688b84c2cec4d"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a296516.webp",
             "old_item_page": "/עבודות/item-id-688b84a8dae60",
-            "alt": "משלחת בחליפות עומדת בגן מול דגלים בינלאומיים"
+            "alt": "משלחת בחליפות עומדת בגן מול דגלים בינלאומיים",
+            "item_page": "/work/item-id-688b84a8dae60"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a0672d0.webp",
             "old_item_page": "/עבודות/item-id-688b84a7e7bc3",
-            "alt": "אדם בחליפה עומד לבד בגן מול תורן דגלים בינלאומיים"
+            "alt": "אדם בחליפה עומד לבד בגן מול תורן דגלים בינלאומיים",
+            "item_page": "/work/item-id-688b84a7e7bc3"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a28b751.webp",
             "old_item_page": "/עבודות/item-id-688b84ab0390d",
-            "alt": "שני אנשים צועדים בשביל גינה מטופח ליד בניין ממשלתי"
+            "alt": "שני אנשים צועדים בשביל גינה מטופח ליד בניין ממשלתי",
+            "item_page": "/work/item-id-688b84ab0390d"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2c092a.webp",
             "old_item_page": "/עבודות/item-id-688b84ac4bf34",
-            "alt": "משלחת רשמית צועדת על שטיח אדום בבניין הכנסת"
+            "alt": "משלחת רשמית צועדת על שטיח אדום בבניין הכנסת",
+            "item_page": "/work/item-id-688b84ac4bf34"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a982d97.webp",
             "old_item_page": "/עבודות/item-id-688b84b008553",
-            "alt": "לחיצת יד וחתימה בספר אורחים מול דגלי ישראל וארגנטינה"
+            "alt": "לחיצת יד וחתימה בספר אורחים מול דגלי ישראל וארגנטינה",
+            "item_page": "/work/item-id-688b84b008553"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849666c39.webp",
             "old_item_page": "/עבודות/item-id-688b84a290d01",
-            "alt": "מליאת הכנסת בישיבה חגיגית, חברי הכנסת עומדים"
+            "alt": "מליאת הכנסת בישיבה חגיגית, חברי הכנסת עומדים",
+            "item_page": "/work/item-id-688b84a290d01"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b5e4985.webp",
             "old_item_page": "/עבודות/item-id-688b84bb373b6",
-            "alt": "שתי צעירות עם חולצות מתנדבים בבסיס אירוע לחיילים בודדים"
+            "alt": "שתי צעירות עם חולצות מתנדבים בבסיס אירוע לחיילים בודדים",
+            "item_page": "/work/item-id-688b84bb373b6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed63c9da2.webp",
             "old_item_page": "/עבודות/item-id-688bed6527ba5",
-            "alt": "קבוצת מתנדבים עם חולצות זהות מצטלמת עם אורח רשמי"
+            "alt": "קבוצת מתנדבים עם חולצות זהות מצטלמת עם אורח רשמי",
+            "item_page": "/work/item-id-688bed6527ba5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b1afe26.webp",
             "old_item_page": "/עבודות/item-id-688b84b58d94f",
-            "alt": "משפחה ומתנדבת מצטלמות ליד שלט של עמותת חיילים בודדים"
+            "alt": "משפחה ומתנדבת מצטלמות ליד שלט של עמותת חיילים בודדים",
+            "item_page": "/work/item-id-688b84b58d94f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a344086.webp",
             "old_item_page": "/עבודות/item-id-688b84aa9f0a8",
-            "alt": "אם ובתה מצטלמות עם מתנדבת ליד שלט האירוע"
+            "alt": "אם ובתה מצטלמות עם מתנדבת ליד שלט האירוע",
+            "item_page": "/work/item-id-688b84aa9f0a8"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b849616151.webp",
             "old_item_page": "/עבודות/item-id-688b84a0c2624",
-            "alt": "אולם ענק מלא קהל באירוע הוקרה לחיילים בודדים"
+            "alt": "אולם ענק מלא קהל באירוע הוקרה לחיילים בודדים",
+            "item_page": "/work/item-id-688b84a0c2624"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa7a4f7.webp",
             "old_item_page": "/עבודות/item-id-688b84afee0ae",
-            "alt": "במה בכנס ארגונים בינלאומיים עם דגלי מדינות ושני מנחים"
+            "alt": "במה בכנס ארגונים בינלאומיים עם דגלי מדינות ושני מנחים",
+            "item_page": "/work/item-id-688b84afee0ae"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84ab155e0.webp",
             "old_item_page": "/עבודות/item-id-688b84b1c47d1",
-            "alt": "קהל בכנס פוליטי באולם, במה עם דגלי ישראל"
+            "alt": "קהל בכנס פוליטי באולם, במה עם דגלי ישראל",
+            "item_page": "/work/item-id-688b84b1c47d1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688bed5f76b61.webp",
             "old_item_page": "/עבודות/item-id-688bed635aa2e",
-            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה על רקע שלט בעברית"
+            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה על רקע שלט בעברית",
+            "item_page": "/work/item-id-688bed635aa2e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aac4565.webp",
             "old_item_page": "/עבודות/item-id-688b84b123ca5",
-            "alt": "במה גדולה בכנס בהשתתפות קהל רב ושני נואמים"
+            "alt": "במה גדולה בכנס בהשתתפות קהל רב ושני נואמים",
+            "item_page": "/work/item-id-688b84b123ca5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84aa53da3.webp",
             "old_item_page": "/עבודות/item-id-688b84b0891e7",
-            "alt": "אולם כנס מלא בקהל מעל במה כחולה עם נואמים"
+            "alt": "אולם כנס מלא בקהל מעל במה כחולה עם נואמים",
+            "item_page": "/work/item-id-688b84b0891e7"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bb0da4b.webp",
             "old_item_page": "/עבודות/item-id-688b84beca816",
-            "alt": "מוזיקאית וזמרים מובילים שירה משותפת על במה, מילות שיר על מסך"
+            "alt": "מוזיקאית וזמרים מובילים שירה משותפת על במה, מילות שיר על מסך",
+            "item_page": "/work/item-id-688b84beca816"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b24fde9.webp",
             "old_item_page": "/עבודות/item-id-688b84b6c4b61",
-            "alt": "אנשים שרים ומנופפים על במה בסיום כנס"
+            "alt": "אנשים שרים ומנופפים על במה בסיום כנס",
+            "item_page": "/work/item-id-688b84b6c4b61"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b4cf3b3.webp",
             "old_item_page": "/עבודות/item-id-688b84ba8ead6",
-            "alt": "אדם עם כובע מחזיק דגלי ישראל קטנים בבית קברות צבאי"
+            "alt": "אדם עם כובע מחזיק דגלי ישראל קטנים בבית קברות צבאי",
+            "item_page": "/work/item-id-688b84ba8ead6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b10b4cc.webp",
             "old_item_page": "/עבודות/item-id-688b84b68898c",
-            "alt": "אדם עומד בין קברים מעוטרים בפרחים ודגלים"
+            "alt": "אדם עומד בין קברים מעוטרים בפרחים ודגלים",
+            "item_page": "/work/item-id-688b84b68898c"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a898bb8.webp",
             "old_item_page": "/עבודות/item-id-688b84b12b97f",
-            "alt": "גבר ואשה מחזיקים תעודה מוסגרת ליד דגל ישראל"
+            "alt": "גבר ואשה מחזיקים תעודה מוסגרת ליד דגל ישראל",
+            "item_page": "/work/item-id-688b84b12b97f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b245320.webp",
             "old_item_page": "/עבודות/item-id-688b84b56f232",
-            "alt": "מסיבת עיתונאים של בכירים מאחורי שולחן עם דגלי ישראל"
+            "alt": "מסיבת עיתונאים של בכירים מאחורי שולחן עם דגלי ישראל",
+            "item_page": "/work/item-id-688b84b56f232"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b7d1943.webp",
             "old_item_page": "/עבודות/item-id-688b84ba7d0f5",
-            "alt": "שתי דמויות מצטלמות על שטיח אדום מול קיר חסויות עולים"
+            "alt": "שתי דמויות מצטלמות על שטיח אדום מול קיר חסויות עולים",
+            "item_page": "/work/item-id-688b84ba7d0f5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84965d500.webp",
             "old_item_page": "/עבודות/item-id-688b84a18d3c8",
-            "alt": "עולים מאתיופיה לבושים לבן יורדים מהמטוס, שלט צור ישראל"
+            "alt": "עולים מאתיופיה לבושים לבן יורדים מהמטוס, שלט צור ישראל",
+            "item_page": "/work/item-id-688b84a18d3c8"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf4f5c9.webp",
             "old_item_page": "/עבודות/item-id-688b84c143c63",
-            "alt": "עולים מצטלמים בירידה ממטוס עם שרשרת קבלת פנים"
+            "alt": "עולים מצטלמים בירידה ממטוס עם שרשרת קבלת פנים",
+            "item_page": "/work/item-id-688b84c143c63"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bb06163.webp",
             "old_item_page": "/עבודות/item-id-688b84bee11a0",
-            "alt": "קהל עולים מנופף בדגלי ישראל ליד מטוס אל על"
+            "alt": "קהל עולים מנופף בדגלי ישראל ליד מטוס אל על",
+            "item_page": "/work/item-id-688b84bee11a0"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b7b2d47.webp",
             "old_item_page": "/עבודות/item-id-688b84bcad685",
-            "alt": "אשה עולה עם צעיף צבעוני ומנופפת בשמחה על רקע מטוס אל על"
+            "alt": "אשה עולה עם צעיף צבעוני ומנופפת בשמחה על רקע מטוס אל על",
+            "item_page": "/work/item-id-688b84bcad685"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84a2889bb.webp",
             "old_item_page": "/עבודות/item-id-688b84a9b40b6",
-            "alt": "קהל מתפלל בלבוש לבן עם ספרים ביד"
+            "alt": "קהל מתפלל בלבוש לבן עם ספרים ביד",
+            "item_page": "/work/item-id-688b84a9b40b6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84b60cf66.webp",
             "old_item_page": "/עבודות/item-id-688b84bdd40f8",
-            "alt": "אדם תוקע בשופר ליד קיר האבן בירושלים"
+            "alt": "אדם תוקע בשופר ליד קיר האבן בירושלים",
+            "item_page": "/work/item-id-688b84bdd40f8"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/688b84bf26b2c.webp",
             "old_item_page": "/עבודות/item-id-688b84c1cdc8c",
-            "alt": "בניין עם שלט ברוכים הבאים לילדי בר ובת מצווה"
+            "alt": "בניין עם שלט ברוכים הבאים לילדי בר ובת מצווה",
+            "item_page": "/work/item-id-688b84c1cdc8c"
           }
         ]
       },
@@ -1056,7 +1192,8 @@
             "url": "https://youtu.be/wzrXU7ZEK9M",
             "embed": "https://www.youtube.com/embed/wzrXU7ZEK9M",
             "thumbnail": "/assets/media/youtube/wzrXU7ZEK9M.webp",
-            "old_item_page": "/עבודות/item-id-68b5f887738c3"
+            "old_item_page": "/עבודות/item-id-68b5f887738c3",
+            "item_page": "/work/item-id-68b5f887738c3"
           },
           {
             "type": "video",
@@ -1066,7 +1203,8 @@
             "url": "https://youtu.be/XsQ1tfZkTYE",
             "embed": "https://www.youtube.com/embed/XsQ1tfZkTYE",
             "thumbnail": "/assets/media/youtube/XsQ1tfZkTYE.webp",
-            "old_item_page": "/עבודות/item-id-68b5f8aece585"
+            "old_item_page": "/עבודות/item-id-68b5f8aece585",
+            "item_page": "/work/item-id-68b5f8aece585"
           },
           {
             "type": "video",
@@ -1076,7 +1214,8 @@
             "url": "https://youtu.be/OiWesq_yTXY",
             "embed": "https://www.youtube.com/embed/OiWesq_yTXY",
             "thumbnail": "/assets/media/youtube/OiWesq_yTXY.webp",
-            "old_item_page": "/עבודות/item-id-68b5f8fcb5394"
+            "old_item_page": "/עבודות/item-id-68b5f8fcb5394",
+            "item_page": "/work/item-id-68b5f8fcb5394"
           },
           {
             "type": "video",
@@ -1086,7 +1225,8 @@
             "url": "https://youtu.be/ehX3m-ZdliM",
             "embed": "https://www.youtube.com/embed/ehX3m-ZdliM",
             "thumbnail": "/assets/media/youtube/ehX3m-ZdliM.webp",
-            "old_item_page": "/עבודות/item-id-68b5fa1481e6a"
+            "old_item_page": "/עבודות/item-id-68b5fa1481e6a",
+            "item_page": "/work/item-id-68b5fa1481e6a"
           },
           {
             "type": "video",
@@ -1096,7 +1236,8 @@
             "url": "https://youtu.be/f_e_Uxa6qxI",
             "embed": "https://www.youtube.com/embed/f_e_Uxa6qxI",
             "thumbnail": "/assets/media/youtube/f_e_Uxa6qxI.webp",
-            "old_item_page": "/עבודות/item-id-68b5fa2c146d8"
+            "old_item_page": "/עבודות/item-id-68b5fa2c146d8",
+            "item_page": "/work/item-id-68b5fa2c146d8"
           }
         ]
       },
@@ -1108,322 +1249,368 @@
             "title": "",
             "src": "/assets/media/uploads/6967b814b71b6.webp",
             "old_item_page": "/עבודות/item-id-6967b816e50d8",
-            "alt": "עיצוב גרפי: פוסט למודעות לסרטן השד עם סרט ורוד"
+            "alt": "עיצוב גרפי: פוסט למודעות לסרטן השד עם סרט ורוד",
+            "item_page": "/work/item-id-6967b816e50d8"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b7f621b9d.webp",
             "old_item_page": "/עבודות/item-id-6967b7f8e187e",
-            "alt": "אינפוגרפיקה: עלייה חדה ברצח נשים בישראל לפי שנים"
+            "alt": "אינפוגרפיקה: עלייה חדה ברצח נשים בישראל לפי שנים",
+            "item_page": "/work/item-id-6967b7f8e187e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b78f66ede.webp",
             "old_item_page": "/עבודות/item-id-6967b79296ed4",
-            "alt": "עיצוב גרפי: פלייר למרכז טיפול ותמיכה בשפה האמהרית"
+            "alt": "עיצוב גרפי: פלייר למרכז טיפול ותמיכה בשפה האמהרית",
+            "item_page": "/work/item-id-6967b79296ed4"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b78f64d86.webp",
             "old_item_page": "/עבודות/item-id-6967b79275c26",
-            "alt": "עיצוב גרפי: פלייר מרכז לפסיכותרפיה מותאמת תרבות"
+            "alt": "עיצוב גרפי: פלייר מרכז לפסיכותרפיה מותאמת תרבות",
+            "item_page": "/work/item-id-6967b79275c26"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1eadb9f.webp",
             "old_item_page": "/עבודות/item-id-68b5ff208136e",
-            "alt": "עיצוב גרפי: פלייר מטפלת רגשית עם רשימת טיפולים וכיסאות רכים"
+            "alt": "עיצוב גרפי: פלייר מטפלת רגשית עם רשימת טיפולים וכיסאות רכים",
+            "item_page": "/work/item-id-68b5ff208136e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1ed021c.webp",
             "old_item_page": "/עבודות/item-id-68b5ff22656c7",
-            "alt": "עיצוב גרפי: באנר רחב למטפלת רגשית עם כיסאות ווילון"
+            "alt": "עיצוב גרפי: באנר רחב למטפלת רגשית עם כיסאות ווילון",
+            "item_page": "/work/item-id-68b5ff22656c7"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5ff1e5f864.webp",
             "old_item_page": "/עבודות/item-id-68b5ff1f8cdb4",
-            "alt": "עיצוב לוגו של מטפלת רגשית עם סמל ראש ולב"
+            "alt": "עיצוב לוגו של מטפלת רגשית עם סמל ראש ולב",
+            "item_page": "/work/item-id-68b5ff1f8cdb4"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a564fd.webp",
             "old_item_page": "/עבודות/item-id-68b5f83b8f658",
-            "alt": "עיצוב גרפי: באנר קבלת פנים ברוכים הבאים לישראל – מבצע צור ישראל"
+            "alt": "עיצוב גרפי: באנר קבלת פנים ברוכים הבאים לישראל – מבצע צור ישראל",
+            "item_page": "/work/item-id-68b5f83b8f658"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a4e4ba.webp",
             "old_item_page": "/עבודות/item-id-68b5f83ba8e5a",
-            "alt": "עיצוב גרפי: באנר ברוכים הבאים לבני המנשה"
+            "alt": "עיצוב גרפי: באנר ברוכים הבאים לבני המנשה",
+            "item_page": "/work/item-id-68b5f83ba8e5a"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe793d90e.webp",
             "old_item_page": "/עבודות/item-id-68b5fe7c7deb2",
-            "alt": "עיצוב גרפי: כרטיס ברכה לראש השנה עם רימונים ודבש"
+            "alt": "עיצוב גרפי: כרטיס ברכה לראש השנה עם רימונים ודבש",
+            "item_page": "/work/item-id-68b5fe7c7deb2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe3b7417d.webp",
             "old_item_page": "/עבודות/item-id-68b5fe3d37627",
-            "alt": "עיצוב גרפי: מודעת מרכז מסחרי בבניין עזריאלי עם דגם בנייני תל אביב"
+            "alt": "עיצוב גרפי: מודעת מרכז מסחרי בבניין עזריאלי עם דגם בנייני תל אביב",
+            "item_page": "/work/item-id-68b5fe3d37627"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fd0c6699d.webp",
             "old_item_page": "/עבודות/item-id-68b5fd0dc9ced",
-            "alt": "עיצוב גרפי: פוסט יום הזיכרון הבינלאומי לשואה, #WeRemember"
+            "alt": "עיצוב גרפי: פוסט יום הזיכרון הבינלאומי לשואה, #WeRemember",
+            "item_page": "/work/item-id-68b5fd0dc9ced"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a3dfa.webp",
             "old_item_page": "/עבודות/item-id-68b5fcd92353b",
-            "alt": "עיצוב גרפי: ברכת גמר חתימה טובה עם שופר וטלית"
+            "alt": "עיצוב גרפי: ברכת גמר חתימה טובה עם שופר וטלית",
+            "item_page": "/work/item-id-68b5fcd92353b"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85674ef4.webp",
             "old_item_page": "/עבודות/item-id-6967b858a15d0",
-            "alt": "עיצוב גרפי: הזמנה לאירוע יום האשה הבינלאומי בכנסת"
+            "alt": "עיצוב גרפי: הזמנה לאירוע יום האשה הבינלאומי בכנסת",
+            "item_page": "/work/item-id-6967b858a15d0"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a5413.webp",
             "old_item_page": "/עבודות/item-id-68b5fcd8ebe6f",
-            "alt": "עיצוב גרפי: ברכת שבת שלום עם אשה מחזיקה דגלים קטנים"
+            "alt": "עיצוב גרפי: ברכת שבת שלום עם אשה מחזיקה דגלים קטנים",
+            "item_page": "/work/item-id-68b5fcd8ebe6f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fe793696a.webp",
             "old_item_page": "/עבודות/item-id-68b5fe7b8c9d2",
-            "alt": "עיצוב גרפי: ברכת יום ירושלים עם חומות העיר העתיקה"
+            "alt": "עיצוב גרפי: ברכת יום ירושלים עם חומות העיר העתיקה",
+            "item_page": "/work/item-id-68b5fe7b8c9d2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fcd7a50db.webp",
             "old_item_page": "/עבודות/item-id-68b5fcd93763f",
-            "alt": "עיצוב גרפי: ברכת פורים שמח עם מסיכה וקונפטי"
+            "alt": "עיצוב גרפי: ברכת פורים שמח עם מסיכה וקונפטי",
+            "item_page": "/work/item-id-68b5fcd93763f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a75a07.webp",
             "old_item_page": "/עבודות/item-id-68b5f83d4f61e",
-            "alt": "עיצוב גרפי: לוגו וברכה ל-30 שנה למבצע שלמה"
+            "alt": "עיצוב גרפי: לוגו וברכה ל-30 שנה למבצע שלמה",
+            "item_page": "/work/item-id-68b5f83d4f61e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a5168c.webp",
             "old_item_page": "/עבודות/item-id-68b5f83bd13d2",
-            "alt": "עיצוב גרפי: פוסט קמפיין בחירות עם דגלי ישראל וארצות הברית"
+            "alt": "עיצוב גרפי: פוסט קמפיין בחירות עם דגלי ישראל וארצות הברית",
+            "item_page": "/work/item-id-68b5f83bd13d2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a791d8.webp",
             "old_item_page": "/עבודות/item-id-68b5f83d38dae",
-            "alt": "עיצוב גרפי: פוסט ביקור בארצות הברית על רקע דגלים"
+            "alt": "עיצוב גרפי: פוסט ביקור בארצות הברית על רקע דגלים",
+            "item_page": "/work/item-id-68b5f83d38dae"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a73727.webp",
             "old_item_page": "/עבודות/item-id-68b5f83d243c5",
-            "alt": "עיצוב גרפי: ברכה לשנת לימודים מוצלחת עם עפרונות ומחדד"
+            "alt": "עיצוב גרפי: ברכה לשנת לימודים מוצלחת עם עפרונות ומחדד",
+            "item_page": "/work/item-id-68b5f83d243c5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a55609.webp",
             "old_item_page": "/עבודות/item-id-68b5f83cd6d4e",
-            "alt": "עיצוב גרפי: באנר מבצע צור ישראל לצד סמל מזל טוב"
+            "alt": "עיצוב גרפי: באנר מבצע צור ישראל לצד סמל מזל טוב",
+            "item_page": "/work/item-id-68b5f83cd6d4e"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a73814.webp",
             "old_item_page": "/עבודות/item-id-68b5f83cb55c1",
-            "alt": "עיצוב גרפי: ברכת יום העצמאות 74 עם פילם ותמונות עולים"
+            "alt": "עיצוב גרפי: ברכת יום העצמאות 74 עם פילם ותמונות עולים",
+            "item_page": "/work/item-id-68b5f83cb55c1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85677267.webp",
             "old_item_page": "/עבודות/item-id-6967b85803e55",
-            "alt": "עיצוב גרפי: מבצע ערבות ישראל לחילוץ יהודי אוקראינה"
+            "alt": "עיצוב גרפי: מבצע ערבות ישראל לחילוץ יהודי אוקראינה",
+            "item_page": "/work/item-id-6967b85803e55"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a56ee2.webp",
             "old_item_page": "/עבודות/item-id-68b5f83bd81ee",
-            "alt": "עיצוב גרפי: באנר יום הזיכרון ליהודי אתיופיה עם להבה"
+            "alt": "עיצוב גרפי: באנר יום הזיכרון ליהודי אתיופיה עם להבה",
+            "item_page": "/work/item-id-68b5f83bd81ee"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5f83a7d49c.webp",
             "old_item_page": "/עבודות/item-id-68b5f83d632cf",
-            "alt": "עיצוב גרפי: פוסט יום הזיכרון ליהודי אתיופיה, אשה בתפילה"
+            "alt": "עיצוב גרפי: פוסט יום הזיכרון ליהודי אתיופיה, אשה בתפילה",
+            "item_page": "/work/item-id-68b5f83d632cf"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf143721.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf237023",
-            "alt": "עיצוב גרפי: הזמנת חתונה דו-לשונית עם עלים ופרחים"
+            "alt": "עיצוב גרפי: הזמנת חתונה דו-לשונית עם עלים ופרחים",
+            "item_page": "/work/item-id-68b5fbf237023"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf12a643.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2089e1",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק לעסק, מוקאפ"
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק לעסק, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf2089e1"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf24b069.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf335a05",
-            "alt": "עיצוב גרפי: סט לוגואים בצורת פקקי בקבוק לבירה"
+            "alt": "עיצוב גרפי: סט לוגואים בצורת פקקי בקבוק לבירה",
+            "item_page": "/work/item-id-68b5fbf335a05"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf128897.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf22bea6",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג מוזיקה, מוקאפ"
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג מוזיקה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf22bea6"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf129822.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf20186d",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של עמותה, מוקאפ"
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של עמותה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf20186d"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf128b9e.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf20f737",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג חיות מחמד, מוקאפ"
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג חיות מחמד, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf20f737"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf275969.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf3669b4",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מסעדה, מוקאפ"
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מסעדה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf3669b4"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf2a3d6b.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf3b0b67",
-            "alt": "עיצוב גרפי: מיתוג עסקי – כרטיסי ביקור, מעטפות ונייר מכתבים"
+            "alt": "עיצוב גרפי: מיתוג עסקי – כרטיסי ביקור, מעטפות ונייר מכתבים",
+            "item_page": "/work/item-id-68b5fbf3b0b67"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf2f1699.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf3db3c2",
-            "alt": "עיצוב גרפי: לוגו למועדון מוזיקה"
+            "alt": "עיצוב גרפי: לוגו למועדון מוזיקה",
+            "item_page": "/work/item-id-68b5fbf3db3c2"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14e9d2.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf320682",
-            "alt": "עיצוב גרפי: מודעת עצרת זיכרון ליוסף מחבק את אחיו"
+            "alt": "עיצוב גרפי: מודעת עצרת זיכרון ליוסף מחבק את אחיו",
+            "item_page": "/work/item-id-68b5fbf320682"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf151294.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2cca33",
-            "alt": "עיצוב גרפי: עיתון חומר מחאה עם כותרות ודמויות"
+            "alt": "עיצוב גרפי: עיתון חומר מחאה עם כותרות ודמויות",
+            "item_page": "/work/item-id-68b5fbf2cca33"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf27d721.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf3e11c5",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דמות ושלט"
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דמות ושלט",
+            "item_page": "/work/item-id-68b5fbf3e11c5"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf278ce5.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf422566",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם סמל כרזה"
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם סמל כרזה",
+            "item_page": "/work/item-id-68b5fbf422566"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14e6b0.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2cd19d",
-            "alt": "עיצוב גרפי: שני רולאפים לאירוע זיכרון עם תמונות ונרות"
+            "alt": "עיצוב גרפי: שני רולאפים לאירוע זיכרון עם תמונות ונרות",
+            "item_page": "/work/item-id-68b5fbf2cd19d"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf1483ce.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2a8cad",
-            "alt": "עיצוב גרפי: מודעת הזמנה לאירוע זיכרון עם שמות הנופלים"
+            "alt": "עיצוב גרפי: מודעת הזמנה לאירוע זיכרון עם שמות הנופלים",
+            "item_page": "/work/item-id-68b5fbf2a8cad"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf336a73.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf495364",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דיוקן גבר"
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דיוקן גבר",
+            "item_page": "/work/item-id-68b5fbf495364"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf34a24a.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf4bb44f",
-            "alt": "עיצוב גרפי: עמוד כפול בעיתון מחאה"
+            "alt": "עיצוב גרפי: עמוד כפול בעיתון מחאה",
+            "item_page": "/work/item-id-68b5fbf4bb44f"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf32293f.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf444d80",
-            "alt": "עיצוב גרפי: איור דיוקן עם סרט אבל"
+            "alt": "עיצוב גרפי: איור דיוקן עם סרט אבל",
+            "item_page": "/work/item-id-68b5fbf444d80"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/68b5fbf14a906.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2bc8dd",
-            "alt": "עיצוב גרפי: מודעת קמפיין גיוס להצלה, פלייר כחול"
+            "alt": "עיצוב גרפי: מודעת קמפיין גיוס להצלה, פלייר כחול",
+            "item_page": "/work/item-id-68b5fbf2bc8dd"
           },
           {
             "type": "image",
             "title": "",
             "src": "/assets/media/uploads/6967b85678b6c.webp",
             "old_item_page": "/עבודות/item-id-6967b8579227f",
-            "alt": "עיצוב גרפי: מיתוג וחבילת אתר, לוגו, אתר ורשתות חברתיות"
+            "alt": "עיצוב גרפי: מיתוג וחבילת אתר, לוגו, אתר ורשתות חברתיות",
+            "item_page": "/work/item-id-6967b8579227f"
           }
         ]
       }
@@ -3016,7 +3203,8 @@
             "הודעה"
           ]
         }
-      ]
+      ],
+      "path": "/"
     },
     {
       "old_url": "https://www.fc2fc.co.il/שירותים",
@@ -3230,7 +3418,8 @@
             "אני מציע צילום סטילס מקצועי המתמקד בצילום תדמית לעסקים, מוצרים, אירועים וצוותים. כל צילום מותאם למטרות הלקוח ומבוצע עם שימוש בציוד מתקדם, תאורה איכותית ועיבוד מקצועי. אני מתחייב לתוצאות חדות ואסתטיות עם דגש על חוויית שירות אישי והתאמה מלאה לשימוש דיגיטלי."
           ]
         }
-      ]
+      ],
+      "path": "/services"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות",
@@ -3987,7 +4176,8 @@
             "layout Customize"
           ]
         }
-      ]
+      ],
+      "path": "/work"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
@@ -4182,7 +4372,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
@@ -4377,7 +4568,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
@@ -4572,7 +4764,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99",
@@ -4767,7 +4960,8 @@
         "text": [
           "דניאל רוט-אבנרי"
         ]
-      }
+      },
+      "path": "/work/d7-93-d7-a0-d7-99-d7-90-d7-9c-d7-a8-d7-95-d7-98-d7-90-d7-91-d7-a0-d7-a8-d7-99"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-696ac39138e0f",
@@ -4952,7 +5146,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-696ac39138e0f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
@@ -5147,7 +5342,8 @@
         "text": [
           "נרקיס ראובן־נגר"
         ]
-      }
+      },
+      "path": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
@@ -5342,7 +5538,8 @@
         "text": [
           "נרקיס ראובן־נגר"
         ]
-      }
+      },
+      "path": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
@@ -5537,7 +5734,8 @@
         "text": [
           "נרקיס ראובן־נגר"
         ]
-      }
+      },
+      "path": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
@@ -5732,7 +5930,8 @@
         "text": [
           "נרקיס ראובן־נגר"
         ]
-      }
+      },
+      "path": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b816e50d8",
@@ -5917,7 +6116,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b816e50d8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b7f8e187e",
@@ -6102,7 +6302,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b7f8e187e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b79296ed4",
@@ -6287,7 +6488,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b79296ed4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b79275c26",
@@ -6472,7 +6674,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b79275c26"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5ff208136e",
@@ -6657,7 +6860,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5ff208136e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5ff22656c7",
@@ -6842,7 +7046,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5ff22656c7"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5ff1f8cdb4",
@@ -7027,7 +7232,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5ff1f8cdb4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83b8f658",
@@ -7212,7 +7418,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83b8f658"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83ba8e5a",
@@ -7397,7 +7604,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83ba8e5a"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fe7c7deb2",
@@ -7582,7 +7790,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fe7c7deb2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fe3d37627",
@@ -7767,7 +7976,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fe3d37627"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fd0dc9ced",
@@ -7952,7 +8162,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fd0dc9ced"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fcd92353b",
@@ -8137,7 +8348,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fcd92353b"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b858a15d0",
@@ -8322,7 +8534,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b858a15d0"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fcd8ebe6f",
@@ -8507,7 +8720,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fcd8ebe6f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fe7b8c9d2",
@@ -8692,7 +8906,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fe7b8c9d2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fcd93763f",
@@ -8877,7 +9092,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fcd93763f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-נשי-חיוך",
@@ -9072,7 +9288,8 @@
         "text": [
           "צילום תדמית נשי – חיוך"
         ]
-      }
+      },
+      "path": "/work/portrait-woman-smile"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-עסקי-פורטרט",
@@ -9267,7 +9484,8 @@
         "text": [
           "צילום תדמית עסקי – פורטרט"
         ]
-      }
+      },
+      "path": "/work/business-portrait"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
@@ -9462,7 +9680,8 @@
         "text": [
           "צילום תדמית עסקי – פורטרט נשי"
         ]
-      }
+      },
+      "path": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
@@ -9657,7 +9876,8 @@
         "text": [
           "צילום תדמית נשי – חיוך טבעי"
         ]
-      }
+      },
+      "path": "/work/portrait-woman-natural-smile"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
@@ -9852,7 +10072,8 @@
         "text": [
           "צילום תדמית לנציגות – פורטרט ליד דגל ישראל"
         ]
-      }
+      },
+      "path": "/work/portrait-delegation-israel-flag"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
@@ -10047,7 +10268,8 @@
         "text": [
           "צילום תדמית נשי – דיוקן עם דגל ישראל"
         ]
-      }
+      },
+      "path": "/work/portrait-woman-israel-flag"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית",
@@ -10242,7 +10464,8 @@
         "text": [
           "צילום תדמית"
         ]
-      }
+      },
+      "path": "/work/portrait"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
@@ -10437,7 +10660,8 @@
         "text": [
           "צילום תדמית – פורטרט ליד סמל המדינה"
         ]
-      }
+      },
+      "path": "/work/portrait-state-emblem"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
@@ -10632,7 +10856,8 @@
         "text": [
           "צילום קבוצתי – צוות במעמד פורמלי"
         ]
-      }
+      },
+      "path": "/work/team-group-photo-formal"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed656124c",
@@ -10817,7 +11042,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed656124c"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c02eb8ab7d",
@@ -11002,7 +11228,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c02eb8ab7d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
@@ -11197,7 +11424,8 @@
         "text": [
           "פנינה תמנו שטה"
         ]
-      }
+      },
+      "path": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
@@ -11392,7 +11620,8 @@
         "text": [
           "פנינה תמנו שטה"
         ]
-      }
+      },
+      "path": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
@@ -11587,7 +11816,8 @@
         "text": [
           "פנינה תמנו שטה"
         ]
-      }
+      },
+      "path": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
@@ -11782,7 +12012,8 @@
         "text": [
           "פנינה תמנו שטה"
         ]
-      }
+      },
+      "path": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
@@ -11977,7 +12208,8 @@
         "text": [
           "פנינה תמנו שטה"
         ]
-      }
+      },
+      "path": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c004e5165d",
@@ -12162,7 +12394,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c004e5165d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c01daea16f",
@@ -12347,7 +12580,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c01daea16f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c004bcecc1",
@@ -12532,7 +12766,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c004bcecc1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c022c88d01",
@@ -12717,7 +12952,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c022c88d01"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c02144b2b0",
@@ -12902,7 +13138,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c02144b2b0"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c01da9d0bf",
@@ -13087,7 +13324,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c01da9d0bf"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c0049c416e",
@@ -13272,7 +13510,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c0049c416e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84c122054",
@@ -13457,7 +13696,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84c122054"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed63443d6",
@@ -13642,7 +13882,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed63443d6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed6384b72",
@@ -13827,7 +14068,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed6384b72"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed622d1db",
@@ -14012,7 +14254,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed622d1db"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed61e5102",
@@ -14197,7 +14440,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed61e5102"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
@@ -14392,7 +14636,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
@@ -14587,7 +14832,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
@@ -14782,7 +15028,8 @@
         "text": [
           "בצלאל סמוטריץ"
         ]
-      }
+      },
+      "path": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c004402d03",
@@ -14967,7 +15214,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c004402d03"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c004c90a8e",
@@ -15152,7 +15400,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c004c90a8e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed651bcd1",
@@ -15337,7 +15586,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed651bcd1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed651440f",
@@ -15522,7 +15772,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed651440f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b66fde1",
@@ -15707,7 +15958,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b66fde1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed651e738",
@@ -15892,7 +16144,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed651e738"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688c01dbb41d6",
@@ -16077,7 +16330,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688c01dbb41d6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1",
@@ -16272,7 +16526,8 @@
         "text": [
           "מורן אטיאס"
         ]
-      }
+      },
+      "path": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
@@ -16467,7 +16722,8 @@
         "text": [
           "מורן אטיאס"
         ]
-      }
+      },
+      "path": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
@@ -16662,7 +16918,8 @@
         "text": [
           "מורן אטיאס"
         ]
-      }
+      },
+      "path": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b62d622",
@@ -16847,7 +17104,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b62d622"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8395ef0ba",
@@ -17032,7 +17290,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8395ef0ba"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8395138ad",
@@ -17217,7 +17476,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8395138ad"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b839487b85",
@@ -17402,7 +17662,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b839487b85"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b83952af1b",
@@ -17587,7 +17848,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b83952af1b"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8394d319e",
@@ -17772,7 +18034,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8394d319e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84c17a2d2",
@@ -17957,7 +18220,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84c17a2d2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8394be1be",
@@ -18142,7 +18406,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8394be1be"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b839628070",
@@ -18327,7 +18592,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b839628070"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a103b41",
@@ -18512,7 +18778,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a103b41"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b849ea06a7",
@@ -18697,7 +18964,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b849ea06a7"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a00997c",
@@ -18882,7 +19150,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a00997c"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84aa1833a",
@@ -19067,7 +19336,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84aa1833a"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8394ab2ec",
@@ -19252,7 +19522,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8394ab2ec"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8395d7520",
@@ -19437,7 +19708,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8395d7520"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed65a23ea",
@@ -19622,7 +19894,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed65a23ea"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed63cd8e4",
@@ -19807,7 +20080,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed63cd8e4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed6401bab",
@@ -19992,7 +20266,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed6401bab"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed639addc",
@@ -20177,7 +20452,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed639addc"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed635a236",
@@ -20362,7 +20638,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed635a236"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed628cb33",
@@ -20547,7 +20824,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed628cb33"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed623db00",
@@ -20732,7 +21010,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed623db00"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed60aafb6",
@@ -20917,7 +21196,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed60aafb6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed638b362",
@@ -21102,7 +21382,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed638b362"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b83969d8ff",
@@ -21287,7 +21568,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b83969d8ff"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed65134da",
@@ -21472,7 +21754,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed65134da"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed651a249",
@@ -21657,7 +21940,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed651a249"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b1c2908",
@@ -21842,7 +22126,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b1c2908"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b159ebf",
@@ -22027,7 +22312,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b159ebf"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b839499705",
@@ -22212,7 +22498,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b839499705"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b83960bb19",
@@ -22397,7 +22684,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b83960bb19"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b8395f32da",
@@ -22582,7 +22870,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b8395f32da"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b839638527",
@@ -22767,7 +23056,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b839638527"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a022b08",
@@ -22952,7 +23242,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a022b08"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b849fe854a",
@@ -23137,7 +23428,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b849fe854a"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84af98a78",
@@ -23322,7 +23614,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84af98a78"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84becec33",
@@ -23507,7 +23800,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84becec33"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84aa75e4a",
@@ -23692,7 +23986,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84aa75e4a"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b849fe1a0b",
@@ -23877,7 +24172,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b849fe1a0b"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a9d4645",
@@ -24062,7 +24358,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a9d4645"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84c2cec4d",
@@ -24247,7 +24544,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84c2cec4d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a8dae60",
@@ -24432,7 +24730,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a8dae60"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a7e7bc3",
@@ -24617,7 +24916,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a7e7bc3"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84ab0390d",
@@ -24802,7 +25102,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84ab0390d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84ac4bf34",
@@ -24987,7 +25288,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84ac4bf34"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b008553",
@@ -25172,7 +25474,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b008553"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a290d01",
@@ -25357,7 +25660,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a290d01"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84bb373b6",
@@ -25542,7 +25846,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84bb373b6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed6527ba5",
@@ -25727,7 +26032,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed6527ba5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b58d94f",
@@ -25912,7 +26218,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b58d94f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84aa9f0a8",
@@ -26097,7 +26404,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84aa9f0a8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a0c2624",
@@ -26282,7 +26590,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a0c2624"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84afee0ae",
@@ -26467,7 +26776,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84afee0ae"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b1c47d1",
@@ -26652,7 +26962,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b1c47d1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688bed635aa2e",
@@ -26837,7 +27148,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688bed635aa2e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b123ca5",
@@ -27022,7 +27334,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b123ca5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b0891e7",
@@ -27207,7 +27520,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b0891e7"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84beca816",
@@ -27392,7 +27706,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84beca816"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b6c4b61",
@@ -27577,7 +27892,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b6c4b61"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84ba8ead6",
@@ -27762,7 +28078,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84ba8ead6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b68898c",
@@ -27947,7 +28264,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b68898c"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b12b97f",
@@ -28132,7 +28450,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b12b97f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84b56f232",
@@ -28317,7 +28636,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84b56f232"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84ba7d0f5",
@@ -28502,7 +28822,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84ba7d0f5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a18d3c8",
@@ -28687,7 +29008,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a18d3c8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84c143c63",
@@ -28872,7 +29194,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84c143c63"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84bee11a0",
@@ -29057,7 +29380,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84bee11a0"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84bcad685",
@@ -29242,7 +29566,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84bcad685"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84a9b40b6",
@@ -29427,7 +29752,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84a9b40b6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84bdd40f8",
@@ -29612,7 +29938,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84bdd40f8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-688b84c1cdc8c",
@@ -29797,7 +30124,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-688b84c1cdc8c"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83d4f61e",
@@ -29982,7 +30310,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83d4f61e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83bd13d2",
@@ -30167,7 +30496,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83bd13d2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83d38dae",
@@ -30352,7 +30682,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83d38dae"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83d243c5",
@@ -30537,7 +30868,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83d243c5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83cd6d4e",
@@ -30722,7 +31054,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83cd6d4e"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83cb55c1",
@@ -30907,7 +31240,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83cb55c1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b85803e55",
@@ -31092,7 +31426,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b85803e55"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83bd81ee",
@@ -31277,7 +31612,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83bd81ee"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f83d632cf",
@@ -31462,7 +31798,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f83d632cf"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f887738c3",
@@ -31659,7 +31996,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f887738c3"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f8aece585",
@@ -31856,7 +32194,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f8aece585"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5f8fcb5394",
@@ -32053,7 +32392,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5f8fcb5394"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fa1481e6a",
@@ -32250,7 +32590,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fa1481e6a"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fa2c146d8",
@@ -32447,7 +32788,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fa2c146d8"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf237023",
@@ -32632,7 +32974,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf237023"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf2089e1",
@@ -32817,7 +33160,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf2089e1"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf335a05",
@@ -33002,7 +33346,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf335a05"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf22bea6",
@@ -33187,7 +33532,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf22bea6"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf20186d",
@@ -33372,7 +33718,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf20186d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf20f737",
@@ -33557,7 +33904,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf20f737"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf3669b4",
@@ -33742,7 +34090,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf3669b4"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf3b0b67",
@@ -33927,7 +34276,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf3b0b67"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf3db3c2",
@@ -34112,7 +34462,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf3db3c2"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf320682",
@@ -34297,7 +34648,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf320682"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf2cca33",
@@ -34482,7 +34834,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf2cca33"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf3e11c5",
@@ -34667,7 +35020,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf3e11c5"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf422566",
@@ -34852,7 +35206,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf422566"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf2cd19d",
@@ -35037,7 +35392,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf2cd19d"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf2a8cad",
@@ -35222,7 +35578,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf2a8cad"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf495364",
@@ -35407,7 +35764,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf495364"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf4bb44f",
@@ -35592,7 +35950,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf4bb44f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf444d80",
@@ -35777,7 +36136,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf444d80"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-68b5fbf2bc8dd",
@@ -35962,7 +36322,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-68b5fbf2bc8dd"
     },
     {
       "old_url": "https://www.fc2fc.co.il/עבודות/item-id-6967b8579227f",
@@ -36147,7 +36508,8 @@
         ],
         "videos": [],
         "text": []
-      }
+      },
+      "path": "/work/item-id-6967b8579227f"
     },
     {
       "old_url": "https://www.fc2fc.co.il/אודות",
@@ -36334,7 +36696,8 @@
             "סטודיו FACE 2 FACE פועל מתוך מחויבות לדיוק, ליצירתיות ולראייה שיווקית רחבה, במטרה להוביל תוצאות ולתרום להצלחת לקוחותינו."
           ]
         }
-      ]
+      ],
+      "path": "/about"
     },
     {
       "old_url": "https://www.fc2fc.co.il/בין-לקוחותינו",
@@ -36765,7 +37128,8 @@
             "בין לקוחותינו"
           ]
         }
-      ]
+      ],
+      "path": "/clients"
     },
     {
       "old_url": "https://www.fc2fc.co.il/במספרים",
@@ -36949,7 +37313,8 @@
             "עבודות מוצלחות"
           ]
         }
-      ]
+      ],
+      "path": "/numbers"
     },
     {
       "old_url": "https://www.fc2fc.co.il/צרו-קשר",
@@ -37217,7 +37582,8 @@
             "הודעה"
           ]
         }
-      ]
+      ],
+      "path": "/contact"
     },
     {
       "old_url": "https://www.fc2fc.co.il/terms",
@@ -37469,7 +37835,8 @@
             "עודכן לאחרונה: אוקטובר 2026"
           ]
         }
-      ]
+      ],
+      "path": "/terms"
     },
     {
       "old_url": "https://www.fc2fc.co.il/privacy",
@@ -37800,7 +38167,8 @@
             "', 'תבנית מלאה של מדיניות פרטיות הכוללת איסוף מידע, שימוש, קובצי Cookie, שיתוף מידע, שמירה, אבטחה וזכויות משתמש"
           ]
         }
-      ]
+      ],
+      "path": "/privacy"
     },
     {
       "old_url": "https://www.fc2fc.co.il/accessibility",
@@ -38012,7 +38380,8 @@
             "תאריך עדכון הצהרת הנגישות: אוקטובר 2026"
           ]
         }
-      ]
+      ],
+      "path": "/accessibility"
     }
   ]
 }

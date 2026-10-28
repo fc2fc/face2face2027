@@ -11,7 +11,7 @@ interface Props {
 }
 const { page } = Astro.props;
 const seo = page.seo;
-const canonical = SITE_URL + (page.old_path === '/' ? '/' : encodeURI(page.old_path));
+const canonical = SITE_URL + (page.path === '/' ? '/' : encodeURI(page.path));
 const ogPath: string | undefined = seo.og?.image ?? site.og_logo;
 const ogImage = absolute(ogPath);
 // Declare the image's real size (portfolio photos are 1200x800, the About photo 800x680): apps that trust these
@@ -225,7 +225,7 @@ const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
   <body>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">דילוג לתוכן</a>
-    <Header current={page.old_path} />
+    <Header current={page.path} />
     <main id="main">
       <slot />
     </main>

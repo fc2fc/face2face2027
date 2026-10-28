@@ -67,7 +67,7 @@ const videoSchema = paged
             duration: v.duration,
             thumbnailUrl: [`https://i.ytimg.com/vi/${i.youtube_id}/hqdefault.jpg`],
             embedUrl: `https://www.youtube.com/embed/${i.youtube_id}`,
-            url: `${SITE}${encodeURI(i.old_item_page ?? '/עבודות')}`,
+            url: `${SITE}${encodeURI(i.item_page ?? '/work')}`,
             inLanguage: 'he',
             creator: { '@id': `${SITE}/#naga-malasa` },
           };
@@ -116,11 +116,11 @@ const pos = (src?: string) => {
                 return (
                   <a
                     class:list={['tile', `tile--${shape}`, shape === 'std' && n % 6 === 4 && 'tile--bento', isVideo && 'tile--video', paged && n >= pageSize && 'is-more']}
-                    href={isVideo ? item.old_item_page ?? item.url : item.old_item_page ?? fullUrl.get(item.src)}
+                    href={isVideo ? item.item_page ?? item.url : item.item_page ?? fullUrl.get(item.src)}
                     data-full={isVideo ? undefined : fullUrl.get(item.src)}
                     data-youtube={isVideo ? item.youtube_id : undefined}
                     data-title={item.title}
-                    data-item-page={item.old_item_page}
+                    data-item-page={item.item_page}
                     data-n={n}
                     style={`--fx:${f ? f.x : 50}%;--fy:${f ? f.y : 30}%;--z:${isVideo ? 1 : zoomOf(src)}`}
                   >
@@ -176,7 +176,7 @@ const pos = (src?: string) => {
     {
       limit && (
         <p class="more">
-          <a class="btn btn--ghost" href="/עבודות">
+          <a class="btn btn--ghost" href="/work">
             לכל העבודות
           </a>
         </p>
