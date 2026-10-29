@@ -183,57 +183,11 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/f2f-new-02.webp",
-            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים מדברת בטלפון ומהלכת במסדרון בהיר"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/f2f-new-03.webp",
-            "alt": "פורטרט רשמי של אשה בחליפה שחורה מאחורי מיקרופון, לצד דגל ישראל ודגל הכנסת"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/f2f-new-04.webp",
-            "alt": "פורטרט של אשה בחליפה שחורה על רקע וילון כחול כהה"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/f2f-new-05.webp",
-            "feature": true,
-            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים בין דגלי ישראל באולם עם שטיח"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/f2f-new-06.webp",
-            "alt": "פורטרט של אשה בז'קט לבן ליד שולחן עבודה, יד אל הסנטר, ודגל ישראל מאחוריה"
-          },
-          {
-            "type": "image",
-            "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/696ac5cce30db.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד הדוכן מול מסך מצגת עם דגל ישראל",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"
-          },
-          {
-            "type": "image",
-            "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/696ac5cce7dd5.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס עיתונאים ליד דוכן עם סמל המדינה",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"
-          },
-          {
-            "type": "image",
-            "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/696ac5cce9503.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם סמל המדינה ודגלי ישראל",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"
+            "src": "/assets/media/uploads/688c01d9b0647.webp",
+            "old_item_page": "/עבודות/item-id-688c01dbb41d6",
+            "alt": "אדם כורע ברך ומנשק את האדמה בנחיתה בישראל, אנשים עם דגלים סביבו",
+            "item_page": "/work/item-id-688c01dbb41d6",
+            "feature": true
           },
           {
             "type": "image",
@@ -245,291 +199,11 @@
           },
           {
             "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/696ac38eeac63.webp",
-            "old_item_page": "/עבודות/item-id-696ac39138e0f",
-            "alt": "אשה נואמת על במה בכנס לקידום שוויון הזדמנויות ומעמד נשים בישראל",
-            "item_page": "/work/item-id-696ac39138e0f"
-          },
-          {
-            "type": "image",
-            "title": "נרקיס ראובן־נגר",
-            "src": "/assets/media/uploads/696ac4dab927e.webp",
-            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
-            "alt": "צילום הופעה: נרקיס שרה על במה באורות אדומים",
-            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"
-          },
-          {
-            "type": "image",
-            "title": "נרקיס ראובן־נגר",
-            "src": "/assets/media/uploads/696ac4dabc7f9.webp",
-            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
-            "alt": "צילום הופעה: נרקיס שרה מול מיקרופון על במה צבעונית",
-            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"
-          },
-          {
-            "type": "image",
-            "title": "נרקיס ראובן־נגר",
-            "src": "/assets/media/uploads/696ac4dabde12.webp",
-            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
-            "alt": "צילום הופעה: נרקיס שרה על במה לצד נגן קלידים ודגל ישראל",
-            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"
-          },
-          {
-            "type": "image",
-            "title": "נרקיס ראובן־נגר",
-            "src": "/assets/media/uploads/696ac4dabb275.webp",
-            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
-            "alt": "צילום הופעה: נרקיס בתאורה דרמטית על במה חשוכה",
-            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית נשי – חיוך",
-            "src": "/assets/media/uploads/68a97c7aa6d95.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך",
-            "alt": "צילום תדמית: פורטרט נשי מחויך בחולצה לבנה על רקע בהיר",
-            "item_page": "/work/portrait-woman-smile"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית עסקי – פורטרט",
-            "src": "/assets/media/uploads/688b84b7b2312.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-עסקי-פורטרט",
-            "alt": "צילום תדמית עסקי: פורטרט גבר בחולצה ירוקה על רקע בהיר",
-            "item_page": "/work/business-portrait"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית עסקי – פורטרט נשי",
-            "src": "/assets/media/uploads/68a97c7d49c10.webp",
-            "old_item_page": "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
-            "alt": "צילום תדמית: פורטרט אישה עם שיער מתולתל על רקע בהיר",
-            "item_page": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית נשי – חיוך טבעי",
-            "src": "/assets/media/uploads/688b84be560c7.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
-            "alt": "צילום תדמית: פורטרט אישה מחייכת בשחור עם סיכת סרט צהוב",
-            "item_page": "/work/portrait-woman-natural-smile"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית לנציגות – פורטרט ליד דגל ישראל",
-            "src": "/assets/media/uploads/688b84b09bc3f.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
-            "alt": "צילום תדמית: אישה בחליפה שחורה וידיים שלובות ליד דגל ישראל",
-            "item_page": "/work/portrait-delegation-israel-flag"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית נשי – דיוקן עם דגל ישראל",
-            "src": "/assets/media/uploads/688b84b073574.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
-            "alt": "צילום תדמית: דיוקן אישה בחליפה שחורה על רקע דגל ישראל",
-            "item_page": "/work/portrait-woman-israel-flag"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית",
-            "src": "/assets/media/uploads/688b84b7d1660.webp",
-            "old_item_page": "/עבודות/צילום-תדמית",
-            "alt": "צילום תדמית: אישה עם צמות יושבת ליד שולחן ודגל ישראל",
-            "item_page": "/work/portrait"
-          },
-          {
-            "type": "image",
-            "title": "צילום תדמית – פורטרט ליד סמל המדינה",
-            "src": "/assets/media/uploads/688b84b76d7d9.webp",
-            "old_item_page": "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
-            "alt": "צילום תדמית: אישה בלבוש בהיר עומדת ליד סמל המדינה ודגל ישראל במשכן הכנסת",
-            "item_page": "/work/portrait-state-emblem"
-          },
-          {
-            "type": "image",
-            "title": "צילום קבוצתי – צוות במעמד פורמלי",
-            "src": "/assets/media/uploads/688b84acd63a0.webp",
-            "old_item_page": "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
-            "alt": "צילום קבוצתי של נשים במעמד פורמלי מול הכנסת",
-            "item_page": "/work/team-group-photo-formal"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed6413324.webp",
-            "old_item_page": "/עבודות/item-id-688bed656124c",
-            "alt": "תמונה קבוצתית של נשים בשורה מול בניין הכנסת",
-            "item_page": "/work/item-id-688bed656124c"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c02e9400c6.webp",
-            "old_item_page": "/עבודות/item-id-688c02eb8ab7d",
-            "alt": "אשה בז'קט לבן יושבת בחוץ באירוע עם מטריה ואנשים ברקע",
-            "item_page": "/work/item-id-688c02eb8ab7d"
-          },
-          {
-            "type": "image",
-            "title": "פנינה תמנו שטה",
-            "src": "/assets/media/uploads/688b83939b3b1.webp",
-            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
-            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט אפור יושבת ליד שולחן עם דגל ישראל",
-            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94"
-          },
-          {
-            "type": "image",
-            "title": "פנינה תמנו שטה",
-            "src": "/assets/media/uploads/688c0048de22f.webp",
-            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
-            "alt": "צילום תדמית: פנינה תמנו שטה יושבת במשרד בז'קט אפור לצד דגל ישראל",
-            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1"
-          },
-          {
-            "type": "image",
-            "title": "פנינה תמנו שטה",
-            "src": "/assets/media/uploads/688bd4e9824ee.webp",
-            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
-            "alt": "צילום תדמית: פנינה תמנו שטה ליד שולחן העבודה במשרד",
-            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2"
-          },
-          {
-            "type": "image",
-            "title": "פנינה תמנו שטה",
-            "src": "/assets/media/uploads/688b839669b27.webp",
-            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
-            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט כתום לצד דגל ישראל",
-            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3"
-          },
-          {
-            "type": "image",
-            "title": "פנינה תמנו שטה",
-            "src": "/assets/media/uploads/688b84a2cf133.webp",
-            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
-            "alt": "צילום אירוע: פנינה תמנו שטה נואמת ליד דוכן עם סמל המדינה",
-            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c004895881.webp",
-            "old_item_page": "/עבודות/item-id-688c004e5165d",
-            "alt": "פורטרט חיצוני של אשה צעירה מחייכת עם תג כנס, ברקע מטושטש בצבעי כחול",
-            "item_page": "/work/item-id-688c004e5165d"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c01d98a174.webp",
-            "old_item_page": "/עבודות/item-id-688c01daea16f",
-            "alt": "פורטרט של אשה צעירה מחייכת בחולצה לבנה על רקע כחול",
-            "item_page": "/work/item-id-688c01daea16f"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c0047528ff.webp",
-            "old_item_page": "/עבודות/item-id-688c004bcecc1",
-            "alt": "פורטרט עסקי של גבר בחליפה כחולה ליד שולחן ודגל ישראל",
-            "item_page": "/work/item-id-688c004bcecc1"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c022896304.webp",
-            "old_item_page": "/עבודות/item-id-688c022c88d01",
-            "alt": "פורטרט עסקי של גבר בחליפה כחולה וכיפה, יושב ליד שולחן עם דגל ישראל",
-            "item_page": "/work/item-id-688c022c88d01"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c02128927c.webp",
-            "old_item_page": "/עבודות/item-id-688c02144b2b0",
-            "alt": "פורטרט עסקי של גבר עם משקפיים וזקן בחליפה כחולה ליד שולחן ודגל ישראל",
-            "item_page": "/work/item-id-688c02144b2b0"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c01d96376f.webp",
-            "old_item_page": "/עבודות/item-id-688c01da9d0bf",
-            "alt": "גבר עם זקן ותג כנס מסדר את הז'קט על רקע דגל ישראל גדול",
-            "item_page": "/work/item-id-688c01da9d0bf"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688c0047077b4.webp",
-            "old_item_page": "/עבודות/item-id-688c0049c416e",
-            "alt": "אשה בחליפה שחורה יושבת על במה בפאנל של מועצה אמריקאית-ישראלית",
-            "item_page": "/work/item-id-688c0049c416e"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84bc80a6d.webp",
-            "old_item_page": "/עבודות/item-id-688b84c122054",
-            "alt": "ישיבה סביב שולחן עגול בחדר עם דגלים וחלונות",
-            "item_page": "/work/item-id-688b84c122054"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed5f7ebc4.webp",
-            "old_item_page": "/עבודות/item-id-688bed63443d6",
-            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה, ברקע שלט בעברית ובאמהרית",
-            "item_page": "/work/item-id-688bed63443d6"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed5f9ab14.webp",
-            "old_item_page": "/עבודות/item-id-688bed6384b72",
-            "alt": "אדם מניח זר פרחים בטקס רשמי, ברקע חיילים ומשתתפים",
-            "item_page": "/work/item-id-688bed6384b72"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed5f9d9ea.webp",
-            "old_item_page": "/עבודות/item-id-688bed622d1db",
-            "alt": "קהל רב בטקס ממלכתי תחת כיפת שמיים, אנשים עומדים בצורה חגיגית",
-            "item_page": "/work/item-id-688bed622d1db"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed5f7cf9c.webp",
-            "old_item_page": "/עבודות/item-id-688bed61e5102",
-            "alt": "אנשים עומדים בטקס זיכרון ליד כלי הדלקת אש בצורת מגן דוד",
-            "item_page": "/work/item-id-688bed61e5102"
-          },
-          {
-            "type": "image",
             "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/688b8395a1ad4.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם דגלי ישראל",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3"
-          },
-          {
-            "type": "image",
-            "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/688bdee36be43.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס ליד דוכן עם סמל המדינה",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4"
-          },
-          {
-            "type": "image",
-            "title": "בצלאל סמוטריץ",
-            "src": "/assets/media/uploads/688bdee390f31.webp",
-            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
-            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם מול מצגת, ליד דוכן עם סמל המדינה",
-            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5"
+            "src": "/assets/media/uploads/696ac5cce30db.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד הדוכן מול מסך מצגת עם דגל ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5"
           },
           {
             "type": "image",
@@ -582,10 +256,104 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/688c01d9b0647.webp",
-            "old_item_page": "/עבודות/item-id-688c01dbb41d6",
-            "alt": "אדם כורע ברך ומנשק את האדמה בנחיתה בישראל, אנשים עם דגלים סביבו",
-            "item_page": "/work/item-id-688c01dbb41d6"
+            "src": "/assets/media/uploads/f2f-new-02.webp",
+            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים מדברת בטלפון ומהלכת במסדרון בהיר"
+          },
+          {
+            "type": "image",
+            "title": "פנינה תמנו שטה",
+            "src": "/assets/media/uploads/688b83939b3b1.webp",
+            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94",
+            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט אפור יושבת ליד שולחן עם דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94"
+          },
+          {
+            "type": "image",
+            "title": "נרקיס ראובן־נגר",
+            "src": "/assets/media/uploads/696ac4dab927e.webp",
+            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8",
+            "alt": "צילום הופעה: נרקיס שרה על במה באורות אדומים",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c0047528ff.webp",
+            "old_item_page": "/עבודות/item-id-688c004bcecc1",
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה ליד שולחן ודגל ישראל",
+            "item_page": "/work/item-id-688c004bcecc1"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית לנציגות – פורטרט ליד דגל ישראל",
+            "src": "/assets/media/uploads/688b84b09bc3f.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-לנציגות-פורטרט-ליד-דגל-ישראל",
+            "alt": "צילום תדמית: אישה בחליפה שחורה וידיים שלובות ליד דגל ישראל",
+            "item_page": "/work/portrait-delegation-israel-flag"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84965d500.webp",
+            "old_item_page": "/עבודות/item-id-688b84a18d3c8",
+            "alt": "עולים מאתיופיה לבושים לבן יורדים מהמטוס, שלט צור ישראל",
+            "item_page": "/work/item-id-688b84a18d3c8"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84bf4f5c9.webp",
+            "old_item_page": "/עבודות/item-id-688b84c143c63",
+            "alt": "עולים מצטלמים בירידה ממטוס עם שרשרת קבלת פנים",
+            "item_page": "/work/item-id-688b84c143c63"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84bb06163.webp",
+            "old_item_page": "/עבודות/item-id-688b84bee11a0",
+            "alt": "קהל עולים מנופף בדגלי ישראל ליד מטוס אל על",
+            "item_page": "/work/item-id-688b84bee11a0"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84b7b2d47.webp",
+            "old_item_page": "/עבודות/item-id-688b84bcad685",
+            "alt": "אשה עולה עם צעיף צבעוני ומנופפת בשמחה על רקע מטוס אל על",
+            "item_page": "/work/item-id-688b84bcad685"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84a28b751.webp",
+            "old_item_page": "/עבודות/item-id-688b84ab0390d",
+            "alt": "שני אנשים צועדים בשביל גינה מטופח ליד בניין ממשלתי",
+            "item_page": "/work/item-id-688b84ab0390d"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84a2c092a.webp",
+            "old_item_page": "/עבודות/item-id-688b84ac4bf34",
+            "alt": "משלחת רשמית צועדת על שטיח אדום בבניין הכנסת",
+            "item_page": "/work/item-id-688b84ac4bf34"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84a982d97.webp",
+            "old_item_page": "/עבודות/item-id-688b84b008553",
+            "alt": "לחיצת יד וחתימה בספר אורחים מול דגלי ישראל וארגנטינה",
+            "item_page": "/work/item-id-688b84b008553"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b849666c39.webp",
+            "old_item_page": "/עבודות/item-id-688b84a290d01",
+            "alt": "מליאת הכנסת בישיבה חגיגית, חברי הכנסת עומדים",
+            "item_page": "/work/item-id-688b84a290d01"
           },
           {
             "type": "image",
@@ -597,6 +365,68 @@
           },
           {
             "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed62663a5.webp",
+            "old_item_page": "/עבודות/item-id-688bed639addc",
+            "alt": "זמרת שחורת שיער שרה לתוך מיקרופון באירוע בהשתתפות תמונות חטופים",
+            "item_page": "/work/item-id-688bed639addc"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/696ac38eeac63.webp",
+            "old_item_page": "/עבודות/item-id-696ac39138e0f",
+            "alt": "אשה נואמת על במה בכנס לקידום שוויון הזדמנויות ומעמד נשים בישראל",
+            "item_page": "/work/item-id-696ac39138e0f"
+          },
+          {
+            "type": "image",
+            "title": "בצלאל סמוטריץ",
+            "src": "/assets/media/uploads/696ac5cce7dd5.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס עיתונאים ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-1"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-03.webp",
+            "alt": "פורטרט רשמי של אשה בחליפה שחורה מאחורי מיקרופון, לצד דגל ישראל ודגל הכנסת"
+          },
+          {
+            "type": "image",
+            "title": "פנינה תמנו שטה",
+            "src": "/assets/media/uploads/688c0048de22f.webp",
+            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1",
+            "alt": "צילום תדמית: פנינה תמנו שטה יושבת במשרד בז'קט אפור לצד דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-1"
+          },
+          {
+            "type": "image",
+            "title": "נרקיס ראובן־נגר",
+            "src": "/assets/media/uploads/696ac4dabc7f9.webp",
+            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1",
+            "alt": "צילום הופעה: נרקיס שרה מול מיקרופון על במה צבעונית",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-1"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c022896304.webp",
+            "old_item_page": "/עבודות/item-id-688c022c88d01",
+            "alt": "פורטרט עסקי של גבר בחליפה כחולה וכיפה, יושב ליד שולחן עם דגל ישראל",
+            "item_page": "/work/item-id-688c022c88d01"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית נשי – דיוקן עם דגל ישראל",
+            "src": "/assets/media/uploads/688b84b073574.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-נשי-דיוקן-עם-דגל-ישראל",
+            "alt": "צילום תדמית: דיוקן אישה בחליפה שחורה על רקע דגל ישראל",
+            "item_page": "/work/portrait-woman-israel-flag"
+          },
+          {
+            "type": "image",
             "title": "מורן אטיאס",
             "src": "/assets/media/uploads/688b84bc0f951.webp",
             "old_item_page": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-1",
@@ -605,11 +435,269 @@
           },
           {
             "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed5f96d0a.webp",
+            "old_item_page": "/עבודות/item-id-688bed635a236",
+            "alt": "זמרת עם מיקרופון באירוע לציון יום האשה, תמונות חטופים ברקע",
+            "item_page": "/work/item-id-688bed635a236"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית נשי – חיוך",
+            "src": "/assets/media/uploads/68a97c7aa6d95.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך",
+            "alt": "צילום תדמית: פורטרט נשי מחויך בחולצה לבנה על רקע בהיר",
+            "item_page": "/work/portrait-woman-smile"
+          },
+          {
+            "type": "image",
+            "title": "בצלאל סמוטריץ",
+            "src": "/assets/media/uploads/696ac5cce9503.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם סמל המדינה ודגלי ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-2"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-04.webp",
+            "alt": "פורטרט של אשה בחליפה שחורה על רקע וילון כחול כהה"
+          },
+          {
+            "type": "image",
+            "title": "פנינה תמנו שטה",
+            "src": "/assets/media/uploads/688bd4e9824ee.webp",
+            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2",
+            "alt": "צילום תדמית: פנינה תמנו שטה ליד שולחן העבודה במשרד",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-2"
+          },
+          {
+            "type": "image",
+            "title": "נרקיס ראובן־נגר",
+            "src": "/assets/media/uploads/696ac4dabde12.webp",
+            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2",
+            "alt": "צילום הופעה: נרקיס שרה על במה לצד נגן קלידים ודגל ישראל",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-2"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c02128927c.webp",
+            "old_item_page": "/עבודות/item-id-688c02144b2b0",
+            "alt": "פורטרט עסקי של גבר עם משקפיים וזקן בחליפה כחולה ליד שולחן ודגל ישראל",
+            "item_page": "/work/item-id-688c02144b2b0"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית",
+            "src": "/assets/media/uploads/688b84b7d1660.webp",
+            "old_item_page": "/עבודות/צילום-תדמית",
+            "alt": "צילום תדמית: אישה עם צמות יושבת ליד שולחן ודגל ישראל",
+            "item_page": "/work/portrait"
+          },
+          {
+            "type": "image",
             "title": "מורן אטיאס",
             "src": "/assets/media/uploads/688b839512442.webp",
             "old_item_page": "/עבודות/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2",
             "alt": "צילום אירוע: מורן אטיאס ליד דוכן באולם עם דגלי ישראל",
             "item_page": "/work/d7-9e-d7-95-d7-a8-d7-9f-d7-90-d7-98-d7-99-d7-90-d7-a1-2"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed6124ae6.webp",
+            "old_item_page": "/עבודות/item-id-688bed628cb33",
+            "alt": "זמרת שרה בהתלהבות עם מיקרופון, דגלי ישראל מאחוריה",
+            "item_page": "/work/item-id-688bed628cb33"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית עסקי – פורטרט",
+            "src": "/assets/media/uploads/688b84b7b2312.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-עסקי-פורטרט",
+            "alt": "צילום תדמית עסקי: פורטרט גבר בחולצה ירוקה על רקע בהיר",
+            "item_page": "/work/business-portrait"
+          },
+          {
+            "type": "image",
+            "title": "בצלאל סמוטריץ",
+            "src": "/assets/media/uploads/688b8395a1ad4.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם ליד דוכן עם דגלי ישראל",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-3"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-05.webp",
+            "alt": "צילום תדמית של אשה בחליפה שחורה ומכנסיים לבנים בין דגלי ישראל באולם עם שטיח"
+          },
+          {
+            "type": "image",
+            "title": "פנינה תמנו שטה",
+            "src": "/assets/media/uploads/688b839669b27.webp",
+            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3",
+            "alt": "צילום תדמית: פנינה תמנו שטה בז'קט כתום לצד דגל ישראל",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-3"
+          },
+          {
+            "type": "image",
+            "title": "נרקיס ראובן־נגר",
+            "src": "/assets/media/uploads/696ac4dabb275.webp",
+            "old_item_page": "/עבודות/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3",
+            "alt": "צילום הופעה: נרקיס בתאורה דרמטית על במה חשוכה",
+            "item_page": "/work/d7-a0-d7-a8-d7-a7-d7-99-d7-a1-d7-a8-d7-90-d7-95-d7-91-d7-9f-d7-a0-d7-92-d7-a8-3"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c01d96376f.webp",
+            "old_item_page": "/עבודות/item-id-688c01da9d0bf",
+            "alt": "גבר עם זקן ותג כנס מסדר את הז'קט על רקע דגל ישראל גדול",
+            "item_page": "/work/item-id-688c01da9d0bf"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית – פורטרט ליד סמל המדינה",
+            "src": "/assets/media/uploads/688b84b76d7d9.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-פורטרט-ליד-סמל-המדינה",
+            "alt": "צילום תדמית: אישה בלבוש בהיר עומדת ליד סמל המדינה ודגל ישראל במשכן הכנסת",
+            "item_page": "/work/portrait-state-emblem"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית עסקי – פורטרט נשי",
+            "src": "/assets/media/uploads/68a97c7d49c10.webp",
+            "old_item_page": "/עבודות/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99",
+            "alt": "צילום תדמית: פורטרט אישה עם שיער מתולתל על רקע בהיר",
+            "item_page": "/work/d7-a6-d7-99-d7-9c-d7-95-d7-9d-d7-aa-d7-93-d7-9e-d7-99-d7-aa-d7-a2-d7-a1-d7-a7-d7-99-d7-a4-d7-95-d7-a8-d7-98-d7-a8-d7-98-d7-a0-d7-a9-d7-99"
+          },
+          {
+            "type": "image",
+            "title": "בצלאל סמוטריץ",
+            "src": "/assets/media/uploads/688bdee36be43.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' בכנס ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-4"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/f2f-new-06.webp",
+            "alt": "פורטרט של אשה בז'קט לבן ליד שולחן עבודה, יד אל הסנטר, ודגל ישראל מאחוריה"
+          },
+          {
+            "type": "image",
+            "title": "פנינה תמנו שטה",
+            "src": "/assets/media/uploads/688b84a2cf133.webp",
+            "old_item_page": "/עבודות/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4",
+            "alt": "צילום אירוע: פנינה תמנו שטה נואמת ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-a4-d7-a0-d7-99-d7-a0-d7-94-d7-aa-d7-9e-d7-a0-d7-95-d7-a9-d7-98-d7-94-4"
+          },
+          {
+            "type": "image",
+            "title": "צילום תדמית נשי – חיוך טבעי",
+            "src": "/assets/media/uploads/688b84be560c7.webp",
+            "old_item_page": "/עבודות/צילום-תדמית-נשי-חיוך-טבעי",
+            "alt": "צילום תדמית: פורטרט אישה מחייכת בשחור עם סיכת סרט צהוב",
+            "item_page": "/work/portrait-woman-natural-smile"
+          },
+          {
+            "type": "image",
+            "title": "בצלאל סמוטריץ",
+            "src": "/assets/media/uploads/688bdee390f31.webp",
+            "old_item_page": "/עבודות/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5",
+            "alt": "צילום אירוע: בצלאל סמוטריץ' נואם מול מצגת, ליד דוכן עם סמל המדינה",
+            "item_page": "/work/d7-91-d7-a6-d7-9c-d7-90-d7-9c-d7-a1-d7-9e-d7-95-d7-98-d7-a8-d7-99-d7-a5-5"
+          },
+          {
+            "type": "image",
+            "title": "צילום קבוצתי – צוות במעמד פורמלי",
+            "src": "/assets/media/uploads/688b84acd63a0.webp",
+            "old_item_page": "/עבודות/צילום-קבוצתי-צוות-במעמד-פורמלי",
+            "alt": "צילום קבוצתי של נשים במעמד פורמלי מול הכנסת",
+            "item_page": "/work/team-group-photo-formal"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed6413324.webp",
+            "old_item_page": "/עבודות/item-id-688bed656124c",
+            "alt": "תמונה קבוצתית של נשים בשורה מול בניין הכנסת",
+            "item_page": "/work/item-id-688bed656124c"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c02e9400c6.webp",
+            "old_item_page": "/עבודות/item-id-688c02eb8ab7d",
+            "alt": "אשה בז'קט לבן יושבת בחוץ באירוע עם מטריה ואנשים ברקע",
+            "item_page": "/work/item-id-688c02eb8ab7d"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c004895881.webp",
+            "old_item_page": "/עבודות/item-id-688c004e5165d",
+            "alt": "פורטרט חיצוני של אשה צעירה מחייכת עם תג כנס, ברקע מטושטש בצבעי כחול",
+            "item_page": "/work/item-id-688c004e5165d"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c01d98a174.webp",
+            "old_item_page": "/עבודות/item-id-688c01daea16f",
+            "alt": "פורטרט של אשה צעירה מחייכת בחולצה לבנה על רקע כחול",
+            "item_page": "/work/item-id-688c01daea16f"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688c0047077b4.webp",
+            "old_item_page": "/עבודות/item-id-688c0049c416e",
+            "alt": "אשה בחליפה שחורה יושבת על במה בפאנל של מועצה אמריקאית-ישראלית",
+            "item_page": "/work/item-id-688c0049c416e"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688b84bc80a6d.webp",
+            "old_item_page": "/עבודות/item-id-688b84c122054",
+            "alt": "ישיבה סביב שולחן עגול בחדר עם דגלים וחלונות",
+            "item_page": "/work/item-id-688b84c122054"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed5f7ebc4.webp",
+            "old_item_page": "/עבודות/item-id-688bed63443d6",
+            "alt": "נואם בחליפה ליד דוכן עם סמל המדינה, ברקע שלט בעברית ובאמהרית",
+            "item_page": "/work/item-id-688bed63443d6"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed5f9ab14.webp",
+            "old_item_page": "/עבודות/item-id-688bed6384b72",
+            "alt": "אדם מניח זר פרחים בטקס רשמי, ברקע חיילים ומשתתפים",
+            "item_page": "/work/item-id-688bed6384b72"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed5f9d9ea.webp",
+            "old_item_page": "/עבודות/item-id-688bed622d1db",
+            "alt": "קהל רב בטקס ממלכתי תחת כיפת שמיים, אנשים עומדים בצורה חגיגית",
+            "item_page": "/work/item-id-688bed622d1db"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/688bed5f7cf9c.webp",
+            "old_item_page": "/עבודות/item-id-688bed61e5102",
+            "alt": "אנשים עומדים בטקס זיכרון ליד כלי הדלקת אש בצורת מגן דוד",
+            "item_page": "/work/item-id-688bed61e5102"
           },
           {
             "type": "image",
@@ -754,30 +842,6 @@
             "old_item_page": "/עבודות/item-id-688bed6401bab",
             "alt": "פורטרט של אשה בחליפה כחולה על רקע עץ ודגל",
             "item_page": "/work/item-id-688bed6401bab"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed62663a5.webp",
-            "old_item_page": "/עבודות/item-id-688bed639addc",
-            "alt": "זמרת שחורת שיער שרה לתוך מיקרופון באירוע בהשתתפות תמונות חטופים",
-            "item_page": "/work/item-id-688bed639addc"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed5f96d0a.webp",
-            "old_item_page": "/עבודות/item-id-688bed635a236",
-            "alt": "זמרת עם מיקרופון באירוע לציון יום האשה, תמונות חטופים ברקע",
-            "item_page": "/work/item-id-688bed635a236"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688bed6124ae6.webp",
-            "old_item_page": "/עבודות/item-id-688bed628cb33",
-            "alt": "זמרת שרה בהתלהבות עם מיקרופון, דגלי ישראל מאחוריה",
-            "item_page": "/work/item-id-688bed628cb33"
           },
           {
             "type": "image",
@@ -958,38 +1022,6 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/688b84a28b751.webp",
-            "old_item_page": "/עבודות/item-id-688b84ab0390d",
-            "alt": "שני אנשים צועדים בשביל גינה מטופח ליד בניין ממשלתי",
-            "item_page": "/work/item-id-688b84ab0390d"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84a2c092a.webp",
-            "old_item_page": "/עבודות/item-id-688b84ac4bf34",
-            "alt": "משלחת רשמית צועדת על שטיח אדום בבניין הכנסת",
-            "item_page": "/work/item-id-688b84ac4bf34"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84a982d97.webp",
-            "old_item_page": "/עבודות/item-id-688b84b008553",
-            "alt": "לחיצת יד וחתימה בספר אורחים מול דגלי ישראל וארגנטינה",
-            "item_page": "/work/item-id-688b84b008553"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b849666c39.webp",
-            "old_item_page": "/עבודות/item-id-688b84a290d01",
-            "alt": "מליאת הכנסת בישיבה חגיגית, חברי הכנסת עומדים",
-            "item_page": "/work/item-id-688b84a290d01"
-          },
-          {
-            "type": "image",
-            "title": "",
             "src": "/assets/media/uploads/688b84b5e4985.webp",
             "old_item_page": "/עבודות/item-id-688b84bb373b6",
             "alt": "שתי צעירות עם חולצות מתנדבים בבסיס אירוע לחיילים בודדים",
@@ -1126,38 +1158,6 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/688b84965d500.webp",
-            "old_item_page": "/עבודות/item-id-688b84a18d3c8",
-            "alt": "עולים מאתיופיה לבושים לבן יורדים מהמטוס, שלט צור ישראל",
-            "item_page": "/work/item-id-688b84a18d3c8"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84bf4f5c9.webp",
-            "old_item_page": "/עבודות/item-id-688b84c143c63",
-            "alt": "עולים מצטלמים בירידה ממטוס עם שרשרת קבלת פנים",
-            "item_page": "/work/item-id-688b84c143c63"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84bb06163.webp",
-            "old_item_page": "/עבודות/item-id-688b84bee11a0",
-            "alt": "קהל עולים מנופף בדגלי ישראל ליד מטוס אל על",
-            "item_page": "/work/item-id-688b84bee11a0"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/688b84b7b2d47.webp",
-            "old_item_page": "/עבודות/item-id-688b84bcad685",
-            "alt": "אשה עולה עם צעיף צבעוני ומנופפת בשמחה על רקע מטוס אל על",
-            "item_page": "/work/item-id-688b84bcad685"
-          },
-          {
-            "type": "image",
-            "title": "",
             "src": "/assets/media/uploads/688b84a2889bb.webp",
             "old_item_page": "/עבודות/item-id-688b84a9b40b6",
             "alt": "קהל מתפלל בלבוש לבן עם ספרים ביד",
@@ -1255,10 +1255,58 @@
           {
             "type": "image",
             "title": "",
+            "src": "/assets/media/uploads/68b5fbf12a643.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf2089e1",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק לעסק, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf2089e1"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf27d721.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf3e11c5",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דמות ושלט",
+            "item_page": "/work/item-id-68b5fbf3e11c5"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5f83a56ee2.webp",
+            "old_item_page": "/עבודות/item-id-68b5f83bd81ee",
+            "alt": "עיצוב גרפי: באנר יום הזיכרון ליהודי אתיופיה עם להבה",
+            "item_page": "/work/item-id-68b5f83bd81ee"
+          },
+          {
+            "type": "image",
+            "title": "",
             "src": "/assets/media/uploads/6967b7f621b9d.webp",
             "old_item_page": "/עבודות/item-id-6967b7f8e187e",
             "alt": "אינפוגרפיקה: עלייה חדה ברצח נשים בישראל לפי שנים",
             "item_page": "/work/item-id-6967b7f8e187e"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf128897.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf22bea6",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג מוזיקה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf22bea6"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf278ce5.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf422566",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם סמל כרזה",
+            "item_page": "/work/item-id-68b5fbf422566"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5f83a7d49c.webp",
+            "old_item_page": "/עבודות/item-id-68b5f83d632cf",
+            "alt": "עיצוב גרפי: פוסט יום הזיכרון ליהודי אתיופיה, אשה בתפילה",
+            "item_page": "/work/item-id-68b5f83d632cf"
           },
           {
             "type": "image",
@@ -1271,6 +1319,22 @@
           {
             "type": "image",
             "title": "",
+            "src": "/assets/media/uploads/68b5fbf129822.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf20186d",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של עמותה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf20186d"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf336a73.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf495364",
+            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דיוקן גבר",
+            "item_page": "/work/item-id-68b5fbf495364"
+          },
+          {
+            "type": "image",
+            "title": "",
             "src": "/assets/media/uploads/6967b78f64d86.webp",
             "old_item_page": "/עבודות/item-id-6967b79275c26",
             "alt": "עיצוב גרפי: פלייר מרכז לפסיכותרפיה מותאמת תרבות",
@@ -1279,10 +1343,34 @@
           {
             "type": "image",
             "title": "",
+            "src": "/assets/media/uploads/68b5fbf128b9e.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf20f737",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג חיות מחמד, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf20f737"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf34a24a.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf4bb44f",
+            "alt": "עיצוב גרפי: עמוד כפול בעיתון מחאה",
+            "item_page": "/work/item-id-68b5fbf4bb44f"
+          },
+          {
+            "type": "image",
+            "title": "",
             "src": "/assets/media/uploads/68b5ff1eadb9f.webp",
             "old_item_page": "/עבודות/item-id-68b5ff208136e",
             "alt": "עיצוב גרפי: פלייר מטפלת רגשית עם רשימת טיפולים וכיסאות רכים",
             "item_page": "/work/item-id-68b5ff208136e"
+          },
+          {
+            "type": "image",
+            "title": "",
+            "src": "/assets/media/uploads/68b5fbf275969.webp",
+            "old_item_page": "/עבודות/item-id-68b5fbf3669b4",
+            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מסעדה, מוקאפ",
+            "item_page": "/work/item-id-68b5fbf3669b4"
           },
           {
             "type": "image",
@@ -1439,22 +1527,6 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/68b5f83a56ee2.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83bd81ee",
-            "alt": "עיצוב גרפי: באנר יום הזיכרון ליהודי אתיופיה עם להבה",
-            "item_page": "/work/item-id-68b5f83bd81ee"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5f83a7d49c.webp",
-            "old_item_page": "/עבודות/item-id-68b5f83d632cf",
-            "alt": "עיצוב גרפי: פוסט יום הזיכרון ליהודי אתיופיה, אשה בתפילה",
-            "item_page": "/work/item-id-68b5f83d632cf"
-          },
-          {
-            "type": "image",
-            "title": "",
             "src": "/assets/media/uploads/68b5fbf143721.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf237023",
             "alt": "עיצוב גרפי: הזמנת חתונה דו-לשונית עם עלים ופרחים",
@@ -1463,50 +1535,10 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/68b5fbf12a643.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf2089e1",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק לעסק, מוקאפ",
-            "item_page": "/work/item-id-68b5fbf2089e1"
-          },
-          {
-            "type": "image",
-            "title": "",
             "src": "/assets/media/uploads/68b5fbf24b069.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf335a05",
             "alt": "עיצוב גרפי: סט לוגואים בצורת פקקי בקבוק לבירה",
             "item_page": "/work/item-id-68b5fbf335a05"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf128897.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf22bea6",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג מוזיקה, מוקאפ",
-            "item_page": "/work/item-id-68b5fbf22bea6"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf129822.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf20186d",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של עמותה, מוקאפ",
-            "item_page": "/work/item-id-68b5fbf20186d"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf128b9e.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf20f737",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מותג חיות מחמד, מוקאפ",
-            "item_page": "/work/item-id-68b5fbf20f737"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf275969.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3669b4",
-            "alt": "עיצוב גרפי: עיצוב עמוד פייסבוק של מסעדה, מוקאפ",
-            "item_page": "/work/item-id-68b5fbf3669b4"
           },
           {
             "type": "image",
@@ -1543,22 +1575,6 @@
           {
             "type": "image",
             "title": "",
-            "src": "/assets/media/uploads/68b5fbf27d721.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf3e11c5",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דמות ושלט",
-            "item_page": "/work/item-id-68b5fbf3e11c5"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf278ce5.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf422566",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם סמל כרזה",
-            "item_page": "/work/item-id-68b5fbf422566"
-          },
-          {
-            "type": "image",
-            "title": "",
             "src": "/assets/media/uploads/68b5fbf14e6b0.webp",
             "old_item_page": "/עבודות/item-id-68b5fbf2cd19d",
             "alt": "עיצוב גרפי: שני רולאפים לאירוע זיכרון עם תמונות ונרות",
@@ -1571,22 +1587,6 @@
             "old_item_page": "/עבודות/item-id-68b5fbf2a8cad",
             "alt": "עיצוב גרפי: מודעת הזמנה לאירוע זיכרון עם שמות הנופלים",
             "item_page": "/work/item-id-68b5fbf2a8cad"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf336a73.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf495364",
-            "alt": "עיצוב גרפי: עמוד עיתון מחאה עם דיוקן גבר",
-            "item_page": "/work/item-id-68b5fbf495364"
-          },
-          {
-            "type": "image",
-            "title": "",
-            "src": "/assets/media/uploads/68b5fbf34a24a.webp",
-            "old_item_page": "/עבודות/item-id-68b5fbf4bb44f",
-            "alt": "עיצוב גרפי: עמוד כפול בעיתון מחאה",
-            "item_page": "/work/item-id-68b5fbf4bb44f"
           },
           {
             "type": "image",
