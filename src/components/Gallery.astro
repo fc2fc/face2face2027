@@ -46,8 +46,19 @@ function shapeOf(item: any): 'tall' | 'wide' | 'std' {
   if (f && f.n >= 2) return 'wide';
   return 'std';
 }
-const sizesFor = (shape: string) =>
-  shape === 'wide' ? '(max-width: 640px) 100vw, 600px' : shape === 'tall' ? '(max-width: 640px) 50vw, 300px' : '(max-width: 640px) 50vw, 300px';
+// The face pre-zoom above scales the rendered <img> with a CSS transform, so a tile showing
+// at e.g. 300px CSS width but zoomed ×1.6 is really displaying ~480px of image content.
+// `sizes` only describes the box, not the transform, so without this the browser picks a
+// srcset candidate sized for the box and the zoom stretches it soft. Scaling the sizes
+// value by the same zoom factor makes the browser request a correspondingly larger image —
+// extra resolution only for the tiles that are actually zoomed, not across the board.
+const sizesFor = (shape: string, zoom = 1) => {
+  const mobileVw = shape === 'wide' ? 100 : 50;
+  const desktopPx = shape === 'wide' ? 600 : 300;
+  return zoom <= 1.01
+    ? `(max-width: 640px) ${mobileVw}vw, ${desktopPx}px`
+    : `(max-width: 640px) ${Math.round(mobileVw * zoom)}vw, ${Math.round(desktopPx * zoom)}px`;
+};
 // VideoObject structured data for the full gallery page (/עבודות), so the videos can show with a thumbnail in Google.
 const SITE = 'https://www.fc2fc.co.il';
 const videoMeta = videosData as Record<string, { name: string; description: string; uploadDate: string; duration: string }>;
@@ -113,6 +124,7 @@ const pos = (src?: string) => {
                 const src = isVideo ? item.thumbnail : item.src;
                 const f = focal[src];
                 const eager = aboveFold && i === 0 && n < 4;
+                const zoom = isVideo ? 1 : parseFloat(zoomOf(src));
                 return (
                   <a
                     class:list={['tile', `tile--${shape}`, shape === 'std' && n % 6 === 4 && 'tile--bento', isVideo && 'tile--video', paged && n >= pageSize && 'is-more']}
@@ -127,8 +139,8 @@ const pos = (src?: string) => {
                     <Picture
                       src={asset(src)}
                       alt={item.alt || item.title || (isVideo ? 'סרטון' : `${c.category} – Face2Face`)}
-                      widths={[300, 450, 600, 900, 1200]}
-                      sizes={sizesFor(shape)}
+                      widths={zoom > 1.01 ? [300, 450, 600, 900, 1200, 1600] : [300, 450, 600, 900, 1200]}
+                      sizes={sizesFor(shape, zoom)}
                       formats={['avif']}
                       fallbackFormat="webp"
                       loading={eager ? 'eager' : 'lazy'}
@@ -304,7 +316,7 @@ const pos = (src?: string) => {
   }
   observeVisible();
 
-  // ── Lightbox with prev / next, keyboard and swipe ─────────────────────────
+  // ── Lightbox with prev / next, keyboard, swipe, morph transition and zoom ──
   const box = document.querySelector<HTMLDialogElement>('dialog.lightbox')!;
   const stage = box.querySelector<HTMLElement>('.lightbox__stage')!;
   const titleEl = box.querySelector<HTMLElement>('.lightbox__title')!;
@@ -313,40 +325,360 @@ const pos = (src?: string) => {
   let list: HTMLAnchorElement[] = [];
   let idx = 0;
 
-  function show(i: number, dir = 0) {
-    idx = (i + list.length) % list.length;
-    const tile = list[idx];
-    const title = tile.dataset.title || '';
-    stage.innerHTML = '';
-    let el: HTMLElement;
+  // ── Morph dissolve between slides: one WebGL pass over two textures, lazily
+  // compiled on the first next/prev click so the gallery page itself never
+  // pays for it. Letterboxed like the resting <img> (object-fit: contain) so
+  // the frame doesn't jump when the transition hands off to the real <img>.
+  // Falls back to the existing crossfade for video, first open, reduced
+  // motion, or when WebGL just isn't there.
+  const MORPH_VERT = `
+attribute vec2 a_position;
+varying vec2 v_uv;
+void main() {
+  v_uv = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}
+`;
+  const MORPH_FRAG = `
+precision highp float;
+uniform sampler2D u_from;
+uniform sampler2D u_to;
+uniform float u_progress;
+uniform vec2 u_resolution;
+uniform float u_fromAspect;
+uniform float u_toAspect;
+uniform float u_direction;
+uniform vec3 u_bg;
+varying vec2 v_uv;
+
+vec3 permute(vec3 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
+float snoise(vec2 v) {
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+  vec2 i  = floor(v + dot(v, C.yy));
+  vec2 x0 = v - i + dot(i, C.xx);
+  vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0)) + i.x + vec3(0.0, i1.x, 1.0));
+  vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy), dot(x12.zw, x12.zw)), 0.0);
+  m = m * m; m = m * m;
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 ox = floor(x + 0.5);
+  vec3 a0 = x - ox;
+  m *= 1.79284291400159 - 0.85373472095314 * (a0 * a0 + h * h);
+  vec3 g;
+  g.x = a0.x * x0.x + h.x * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+float fbm(vec2 v) {
+  float value = 0.0; float amp = 0.5;
+  for (int i = 0; i < 5; i++) { value += amp * snoise(v); v *= 2.0; amp *= 0.5; }
+  return value;
+}
+// object-fit: contain, expressed as a UV window; outside [0,1] reads as background.
+vec2 containUV(vec2 uv, float imgAspect) {
+  float canvasAspect = u_resolution.x / u_resolution.y;
+  vec2 inv = (canvasAspect > imgAspect) ? vec2(canvasAspect / imgAspect, 1.0) : vec2(1.0, imgAspect / canvasAspect);
+  return (uv - 0.5) * inv + 0.5;
+}
+bool inBounds(vec2 uv) { return uv.x >= 0.0 && uv.x <= 1.0 && uv.y >= 0.0 && uv.y <= 1.0; }
+
+void main() {
+  float edge = 0.14;
+  float drift = 0.035;
+  float adjusted = u_progress * (1.0 + 2.0 * edge) - edge;
+
+  vec2 fromUV = containUV(v_uv + vec2(0.0, fbm(v_uv * 2.0) * u_progress * drift * u_direction), u_fromAspect);
+  vec2 toUV = containUV(v_uv + vec2(0.0, fbm(v_uv * 2.0 + 4.0) * (1.0 - u_progress) * -0.5 * drift * u_direction), u_toAspect);
+
+  vec3 fromColor = inBounds(fromUV) ? texture2D(u_from, fromUV).rgb : u_bg;
+  vec3 toColor = inBounds(toUV) ? texture2D(u_to, toUV).rgb : u_bg;
+
+  // The threshold is biased by the incoming frame's own brightness, so its lit
+  // areas burn through the outgoing frame first rather than dissolving evenly.
+  float noise = fbm(v_uv * 3.4 + vec2(0.0, u_progress * u_direction)) * 0.5 + 0.5;
+  noise = smoothstep(0.0, 2.0, length(toColor) + noise);
+  float mixFactor = 1.0 - smoothstep(adjusted - edge, adjusted + edge, noise);
+
+  gl_FragColor = vec4(mix(fromColor, toColor, mixFactor), 1.0);
+}
+`;
+  const BG: readonly [number, number, number] = [8 / 255, 8 / 255, 8 / 255];
+  let glCanvas: HTMLCanvasElement | null = null;
+  let gl: WebGLRenderingContext | null = null;
+  let glProgram: WebGLProgram | null = null;
+  let glUniforms: Record<string, WebGLUniformLocation | null> = {};
+  let glSupported: boolean | null = null;
+
+  function compileShader(ctx: WebGLRenderingContext, type: number, src: string) {
+    const sh = ctx.createShader(type);
+    if (!sh) return null;
+    ctx.shaderSource(sh, src);
+    ctx.compileShader(sh);
+    if (!ctx.getShaderParameter(sh, ctx.COMPILE_STATUS)) { ctx.deleteShader(sh); return null; }
+    return sh;
+  }
+
+  function ensureGL(): boolean {
+    if (glSupported !== null) return glSupported;
+    try {
+      glCanvas = document.createElement('canvas');
+      glCanvas.className = 'lightbox__gl';
+      glCanvas.setAttribute('aria-hidden', 'true');
+      const ctx = (glCanvas.getContext('webgl', { alpha: false, antialias: false }) ??
+        glCanvas.getContext('experimental-webgl')) as WebGLRenderingContext | null;
+      if (!ctx) throw new Error('no webgl');
+      const vert = compileShader(ctx, ctx.VERTEX_SHADER, MORPH_VERT);
+      const frag = compileShader(ctx, ctx.FRAGMENT_SHADER, MORPH_FRAG);
+      if (!vert || !frag) throw new Error('shader compile failed');
+      const prog = ctx.createProgram();
+      if (!prog) throw new Error('no program');
+      ctx.attachShader(prog, vert);
+      ctx.attachShader(prog, frag);
+      ctx.linkProgram(prog);
+      ctx.deleteShader(vert);
+      ctx.deleteShader(frag);
+      if (!ctx.getProgramParameter(prog, ctx.LINK_STATUS)) throw new Error('link failed');
+      ctx.useProgram(prog);
+      const buf = ctx.createBuffer();
+      ctx.bindBuffer(ctx.ARRAY_BUFFER, buf);
+      ctx.bufferData(ctx.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), ctx.STATIC_DRAW);
+      const loc = ctx.getAttribLocation(prog, 'a_position');
+      ctx.enableVertexAttribArray(loc);
+      ctx.vertexAttribPointer(loc, 2, ctx.FLOAT, false, 0, 0);
+      const u: Record<string, WebGLUniformLocation | null> = {};
+      ['from', 'to', 'progress', 'resolution', 'fromAspect', 'toAspect', 'direction', 'bg'].forEach((n) => {
+        u['u_' + n] = ctx.getUniformLocation(prog, 'u_' + n);
+      });
+      gl = ctx; glProgram = prog; glUniforms = u;
+      glSupported = true;
+    } catch { glSupported = false; }
+    return glSupported;
+  }
+
+  function makeTexture(ctx: WebGLRenderingContext, source: TexImageSource) {
+    const tex = ctx.createTexture()!;
+    ctx.bindTexture(ctx.TEXTURE_2D, tex);
+    ctx.pixelStorei(ctx.UNPACK_FLIP_Y_WEBGL, true);
+    ctx.texImage2D(ctx.TEXTURE_2D, 0, ctx.RGBA, ctx.RGBA, ctx.UNSIGNED_BYTE, source);
+    ctx.texParameteri(ctx.TEXTURE_2D, ctx.TEXTURE_WRAP_S, ctx.CLAMP_TO_EDGE);
+    ctx.texParameteri(ctx.TEXTURE_2D, ctx.TEXTURE_WRAP_T, ctx.CLAMP_TO_EDGE);
+    ctx.texParameteri(ctx.TEXTURE_2D, ctx.TEXTURE_MIN_FILTER, ctx.LINEAR);
+    ctx.texParameteri(ctx.TEXTURE_2D, ctx.TEXTURE_MAG_FILTER, ctx.LINEAR);
+    return tex;
+  }
+
+  function loadImageEl(src: string) {
+    return new Promise<HTMLImageElement>((resolve, reject) => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error('load failed'));
+      img.src = src;
+    });
+  }
+
+  function easeInOutQuint(t: number) {
+    const x = Math.min(Math.max(t, 0), 1);
+    return x < 0.5 ? 16 * x ** 5 : 1 - (-2 * x + 2) ** 5 / 2;
+  }
+
+  function runMorph(fromEl: HTMLImageElement, toImg: HTMLImageElement, direction: number, duration: number): Promise<void> {
+    return new Promise((resolve) => {
+      if (!ensureGL() || !gl || !glProgram || !glCanvas) { resolve(); return; }
+      const ctx = gl;
+      stage.appendChild(glCanvas);
+      const rect = glCanvas.getBoundingClientRect(); // the inset CSS box, same area the <img> sits in
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.max(1, Math.round(rect.width * dpr));
+      const h = Math.max(1, Math.round(rect.height * dpr));
+      glCanvas.width = w;
+      glCanvas.height = h;
+      fromEl.style.visibility = 'hidden'; // keeps its box (and layout) while the canvas plays over it
+      ctx.viewport(0, 0, w, h);
+      ctx.useProgram(glProgram);
+      const fromTex = makeTexture(ctx, fromEl);
+      const toTex = makeTexture(ctx, toImg);
+      const fromAspect = fromEl.naturalWidth / Math.max(fromEl.naturalHeight, 1);
+      const toAspect = toImg.naturalWidth / Math.max(toImg.naturalHeight, 1);
+      const start = performance.now();
+      const dur = Math.max(duration, 1);
+      const finish = () => {
+        ctx.deleteTexture(fromTex);
+        ctx.deleteTexture(toTex);
+        glCanvas?.remove();
+        fromEl.style.visibility = '';
+        resolve();
+      };
+      const frame = (now: number) => {
+        if (!box.open) { finish(); return; }
+        const p = easeInOutQuint((now - start) / dur);
+        ctx.activeTexture(ctx.TEXTURE0); ctx.bindTexture(ctx.TEXTURE_2D, fromTex); ctx.uniform1i(glUniforms.u_from, 0);
+        ctx.activeTexture(ctx.TEXTURE1); ctx.bindTexture(ctx.TEXTURE_2D, toTex); ctx.uniform1i(glUniforms.u_to, 1);
+        ctx.uniform1f(glUniforms.u_progress, p);
+        ctx.uniform2f(glUniforms.u_resolution, w, h);
+        ctx.uniform1f(glUniforms.u_fromAspect, fromAspect);
+        ctx.uniform1f(glUniforms.u_toAspect, toAspect);
+        ctx.uniform1f(glUniforms.u_direction, direction);
+        ctx.uniform3f(glUniforms.u_bg, BG[0], BG[1], BG[2]);
+        ctx.drawArrays(ctx.TRIANGLE_STRIP, 0, 4);
+        if (now - start < dur) requestAnimationFrame(frame);
+        else finish();
+      };
+      requestAnimationFrame(frame);
+    });
+  }
+
+  // ── Pinch / wheel / drag zoom on the open image, reset on every navigation ──
+  const zoomCtl = new WeakMap<HTMLImageElement, { reset: () => void; step: (dir: number) => void }>();
+  function attachZoomPan(img: HTMLImageElement) {
+    let scale = 1, panX = 0, panY = 0;
+    const MIN = 1, MAX = 4;
+    const apply = () => {
+      img.style.transform = scale > 1.001 ? `translate(${panX}px, ${panY}px) scale(${scale})` : '';
+      img.style.touchAction = scale > 1.001 ? 'none' : 'pan-y';
+      img.classList.toggle('is-zoomed', scale > 1.001);
+    };
+    const clampPan = () => {
+      const r = img.getBoundingClientRect();
+      const baseW = r.width / scale, baseH = r.height / scale;
+      const maxX = Math.max(0, (baseW * scale - baseW) / 2);
+      const maxY = Math.max(0, (baseH * scale - baseH) / 2);
+      panX = Math.min(maxX, Math.max(-maxX, panX));
+      panY = Math.min(maxY, Math.max(-maxY, panY));
+    };
+    const zoomAt = (clientX: number, clientY: number, next: number) => {
+      const r = img.getBoundingClientRect();
+      const cx = clientX - (r.left + r.width / 2);
+      const cy = clientY - (r.top + r.height / 2);
+      const ratio = next / scale;
+      panX = cx - (cx - panX) * ratio;
+      panY = cy - (cy - panY) * ratio;
+      scale = next;
+      clampPan();
+      apply();
+    };
+    img.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      zoomAt(e.clientX, e.clientY, Math.min(MAX, Math.max(MIN, scale * (e.deltaY < 0 ? 1.18 : 1 / 1.18))));
+    }, { passive: false });
+    img.addEventListener('dblclick', (e) => zoomAt(e.clientX, e.clientY, scale > 1.001 ? 1 : 2.5));
+
+    const pointers = new Map<number, { x: number; y: number }>();
+    let pinchStartDist = 0, pinchStartScale = 1;
+    let dragStart: { x: number; y: number; panX: number; panY: number } | null = null;
+    let suppressBubble = false;
+    img.addEventListener('pointerdown', (e) => {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size >= 2 || scale > 1.001) {
+        suppressBubble = true;
+        e.stopPropagation();
+        img.setPointerCapture(e.pointerId);
+      }
+      if (pointers.size === 1 && scale > 1.001) dragStart = { x: e.clientX, y: e.clientY, panX, panY };
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        pinchStartDist = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+        pinchStartScale = scale;
+        dragStart = null;
+      }
+    });
+    img.addEventListener('pointermove', (e) => {
+      if (!pointers.has(e.pointerId)) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        const dist = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+        const mid = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+        zoomAt(mid.x, mid.y, Math.min(MAX, Math.max(MIN, pinchStartScale * (dist / pinchStartDist))));
+      } else if (dragStart) {
+        panX = dragStart.panX + (e.clientX - dragStart.x);
+        panY = dragStart.panY + (e.clientY - dragStart.y);
+        clampPan();
+        apply();
+      }
+    });
+    const release = (e: PointerEvent) => {
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) pinchStartDist = 0;
+      if (pointers.size === 0) { dragStart = null; if (suppressBubble) { e.stopPropagation(); suppressBubble = false; } }
+    };
+    img.addEventListener('pointerup', release);
+    img.addEventListener('pointercancel', release);
+    zoomCtl.set(img, {
+      reset: () => { scale = 1; panX = 0; panY = 0; apply(); },
+      step: (dir: number) => zoomAt(innerWidth / 2, innerHeight / 2, Math.min(MAX, Math.max(MIN, scale + dir * 0.6))),
+    });
+    apply();
+  }
+
+  let restingImg: HTMLImageElement | null = null;
+  let transitioning = false;
+
+  function makeSlideEl(tile: HTMLAnchorElement, title: string): HTMLElement {
     if (tile.dataset.youtube) {
       const f = document.createElement('iframe');
       f.src = `https://www.youtube-nocookie.com/embed/${tile.dataset.youtube}?autoplay=1&rel=0`;
       f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
       f.allowFullscreen = true;
       f.title = title || 'סרטון';
-      el = f;
+      restingImg = null;
+      return f;
+    }
+    const img = document.createElement('img');
+    img.src = tile.dataset.full!;
+    img.alt = title;
+    img.decoding = 'async';
+    attachZoomPan(img);
+    restingImg = img;
+    return img;
+  }
+
+  async function show(i: number, dir = 0) {
+    if (transitioning) return; // a morph is already mid-flight; ignore the repeat click
+    const nextIdx = (i + list.length) % list.length;
+    const tile = list[nextIdx];
+    const title = tile.dataset.title || '';
+    const isVideo = !!tile.dataset.youtube;
+    const canMorph = dir !== 0 && !isVideo && restingImg && !reduce && tile.dataset.full && ensureGL();
+
+    if (canMorph) {
+      transitioning = true;
+      try {
+        const toImg = await loadImageEl(tile.dataset.full!);
+        if (!box.open) return; // closed while the next image was loading
+        await runMorph(restingImg!, toImg, dir, 650);
+        restingImg!.remove();
+        stage.appendChild(makeSlideEl(tile, title));
+      } finally {
+        transitioning = false;
+      }
     } else {
-      const img = document.createElement('img');
-      img.src = tile.dataset.full!;
-      img.alt = title;
-      img.decoding = 'async';
-      el = img;
-      // warm the neighbours
-      [1, -1].forEach((d) => {
-        const n = list[(idx + d + list.length) % list.length];
-        if (n?.dataset.full) { const p = new Image(); p.src = n.dataset.full; }
-      });
+      stage.innerHTML = '';
+      const el = makeSlideEl(tile, title);
+      if (dir && !reduce) {
+        el.style.animation = `lb-in 0.4s cubic-bezier(.2,.7,.2,1)`;
+        el.style.setProperty('--from', dir > 0 ? '-40px' : '40px');
+      }
+      stage.append(el);
     }
-    if (dir && !reduce) {
-      el.style.animation = `lb-in 0.4s cubic-bezier(.2,.7,.2,1)`;
-      el.style.setProperty('--from', dir > 0 ? '-40px' : '40px');
-    }
-    stage.append(el);
+
+    idx = nextIdx;
     titleEl.textContent = title;
     countEl.textContent = `${idx + 1} / ${list.length}`;
     const itemPage = tile.dataset.itemPage;
     if (itemPage) { linkEl.href = itemPage; linkEl.style.display = ''; } else linkEl.style.display = 'none';
+
+    // warm the neighbours
+    if (!isVideo) {
+      [1, -1].forEach((d) => {
+        const n = list[(idx + d + list.length) % list.length];
+        if (!n.dataset.youtube && n.dataset.full) { const p = new Image(); p.src = n.dataset.full; }
+      });
+    }
   }
 
   root.querySelectorAll<HTMLAnchorElement>('.tile').forEach((tile) =>
@@ -364,10 +696,14 @@ const pos = (src?: string) => {
   box.querySelector('.lightbox__nav--prev')!.addEventListener('click', () => show(idx - 1, -1));
   box.querySelector('.lightbox__close')!.addEventListener('click', () => box.close());
   box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
-  box.addEventListener('close', () => { stage.innerHTML = ''; });
+  box.addEventListener('close', () => { stage.innerHTML = ''; restingImg = null; transitioning = false; });
   box.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx + 1, 1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); show(idx - 1, -1); }
+    if (!restingImg) return;
+    if (e.key === '+' || e.key === '=') { e.preventDefault(); zoomCtl.get(restingImg)?.step(1); }
+    if (e.key === '-') { e.preventDefault(); zoomCtl.get(restingImg)?.step(-1); }
+    if (e.key === '0') { e.preventDefault(); zoomCtl.get(restingImg)?.reset(); }
   });
   let sx = 0;
   stage.addEventListener('pointerdown', (e) => { sx = e.clientX; });
@@ -902,11 +1238,13 @@ const pos = (src?: string) => {
   .lightbox__nav--prev { right: clamp(10px, 2.5vw, 28px); }
   .lightbox__nav--next { left: clamp(10px, 2.5vw, 28px); }
   .lightbox__stage {
+    position: relative;
     display: grid;
     place-items: center;
     min-height: 0;
     padding: 0 clamp(64px, 8vw, 120px) clamp(14px, 3vw, 28px);
     touch-action: pan-y;
+    overflow: hidden;
   }
   .lightbox__stage :global(img) {
     max-width: 100%;
@@ -918,6 +1256,17 @@ const pos = (src?: string) => {
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
     user-select: none;
     -webkit-user-drag: none;
+    cursor: zoom-in;
+    touch-action: pan-y;
+  }
+  .lightbox__stage :global(img.is-zoomed) { cursor: grab; }
+  .lightbox__stage :global(img:active.is-zoomed) { cursor: grabbing; }
+  /* Transition canvas: fills the stage's content box only while a morph plays,
+     letterboxed by the shader itself to match object-fit: contain. */
+  .lightbox__gl {
+    position: absolute;
+    inset: 0 clamp(64px, 8vw, 120px) clamp(14px, 3vw, 28px);
+    pointer-events: none;
   }
   .lightbox__stage :global(iframe) {
     width: min(1100px, 100%);
