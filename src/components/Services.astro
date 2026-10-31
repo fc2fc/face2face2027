@@ -148,10 +148,16 @@ const accents = ['var(--brand)', 'var(--blue)', 'var(--yellow)', 'var(--brand)']
     .card--2, .card--3 { grid-column: span 1; }
   }
   @media (max-width: 600px) {
-    .bento { grid-template-columns: 1fr; gap: 14px; }
-    .card--1, .card--2, .card--3, .card--4 { grid-column: auto; }
-    .card { padding: 28px 22px 22px; border-radius: 18px; }
-    .card__num { font-size: 2rem; }
+    /* stays 2-up side-by-side instead of stacking to one card per row */
+    .bento { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .card--1, .card--2, .card--3, .card--4 { grid-column: span 1; }
+    .card { padding: 18px 14px 16px; border-radius: 16px; gap: 8px; }
+    .card__num { font-size: 1.4rem; top: 8px; inset-inline-end: 14px; }
+    .card__icon { width: 44px; height: 44px; border-radius: 13px; margin-bottom: 4px; }
+    .card__icon :global(svg) { width: 22px; height: 22px; }
+    .card h3 { font-size: 1.05rem; }
+    .card p { font-size: 0.82rem; line-height: 1.45; }
+    .card__link { font-size: 0.82rem; padding-top: 8px; min-height: 36px; }
   }
 </style>
 

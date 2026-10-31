@@ -355,10 +355,13 @@ const social = [
     .footer__brand { grid-column: 1 / -1; }
   }
   @media (max-width: 480px) {
-    .footer__grid { grid-template-columns: 1fr; gap: 28px; }
+    /* "דפים" and "צרו קשר" stay side-by-side instead of stacking into one column */
+    .footer__grid { gap: 22px 16px; }
+    .footer__heading { font-size: 0.74rem; margin-bottom: 12px; }
+    .footer__links, .footer__contact { font-size: 0.86rem; }
+    .footer__contact li svg, .footer__links a svg { width: 14px; height: 14px; }
     .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
     .footer__legal { flex-wrap: wrap; gap: 10px 16px; }
-    .footer__links { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; }
     .footer__bottom-inner { padding-bottom: 76px; }
     .to-top { align-self: flex-end; }
   }
