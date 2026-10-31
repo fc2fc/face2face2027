@@ -138,7 +138,7 @@ const paragraphs = toParagraphs(about.paragraphs);
   @media (max-width: 760px) {
     /* side-by-side on mobile too: photo stays on the right (start of the RTL grid), text to its left */
     .about { grid-template-columns: minmax(110px, 38%) 1fr; gap: 18px; align-items: start; }
-    .about__visual { max-width: none; width: 100%; position: relative; top: 0; padding: 6px; }
+    .about__visual { max-width: none; width: 100%; position: sticky; top: 96px; padding: 6px; }
     .chip { padding: 5px 8px; border-radius: 8px; gap: 0; }
     .chip strong { font-size: 0.82rem; }
     .chip span { font-size: 0.56rem; }
