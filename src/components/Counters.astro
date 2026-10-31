@@ -110,22 +110,19 @@ function parseCounter(val: string) {
   }
   .counter__label { display: block; margin-top: 8px; color: rgba(255,255,255,0.65); font-size: 0.9rem; font-weight: 500; }
   @media (max-width: 640px) {
+    /* stays side-by-side (3-up) instead of stacking to full-width rows */
     .counters {
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 8px;
     }
     .counter {
-      padding: 20px 12px;
+      padding: 14px 6px;
       border-radius: 12px;
     }
-    .counter__icon { font-size: 1.5rem; margin-bottom: 8px; }
-    .counter__val { font-size: clamp(1.6rem, 6vw, 2.4rem); }
-    .counter__label { font-size: 0.78rem; }
-  }
-  @media (max-width: 380px) {
-    .counters { grid-template-columns: 1fr; gap: 10px; }
-    .counter { padding: 18px 16px; flex-direction: row; align-items: center; text-align: right; gap: 12px; display: flex; }
-    .counter__icon { margin-bottom: 0; }
+    .counter__icon { width: 34px; height: 34px; border-radius: 10px; margin: 0 auto 6px; }
+    .counter__icon :global(svg) { width: 16px; height: 16px; }
+    .counter__val { font-size: clamp(1.15rem, 5.5vw, 1.6rem); }
+    .counter__label { font-size: 0.64rem; line-height: 1.25; margin-top: 4px; }
   }
   .counter:nth-child(2) .counter__icon { background: rgba(4,168,241,0.16); color: var(--blue); }
   .counter:nth-child(2) .counter__val { color: var(--blue); }

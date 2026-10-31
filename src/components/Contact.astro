@@ -170,9 +170,11 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
 
   @media (max-width: 860px) {
     .grid { grid-template-columns: repeat(2, 1fr); }
-    .b--wa, .b--tel, .b--loc, .b--form { grid-column: 1 / -1; }
+    /* side-by-side pairs instead of one full-width card per row */
+    .b--wa, .b--tel { grid-column: span 1; }
+    .b--mail, .b--hours { grid-column: span 1; }
+    .b--loc, .b--social, .b--form { grid-column: 1 / -1; }
     .b--loc { grid-row: auto; }
-    .b--mail, .b--hours, .b--social { grid-column: span 2; }
   }
   @media (max-width: 520px) {
     .b { padding: 18px; border-radius: 18px; }
@@ -183,6 +185,16 @@ const regions = ['הדרום', 'השפלה', 'גוש דן', 'השרון', 'יר�
     .city { font-size: 2.2rem; }
     .b--form { padding: 22px 16px; }
     .soc { width: 56px; height: 56px; }
+    /* paired cards are now half-width: stack icon above text and tighten type so they still fit */
+    .b--wa, .b--tel, .b--mail, .b--hours {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px;
+    }
+    .b--wa .b__ico, .b--tel .b__ico, .b--mail .b__ico, .b--hours .b__ico { width: 40px; height: 40px; border-radius: 12px; }
+    .b--wa .b__t strong, .b--tel .b__t strong, .b--mail .b__t strong, .b--hours .b__t strong { font-size: 0.88rem; }
+    .b--wa .b__t span, .b--tel .b__t span, .b--mail .b__t span, .b--hours .b__t span { font-size: 0.78rem; }
   }
   @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
 </style>
