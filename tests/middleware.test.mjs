@@ -4,8 +4,15 @@ import middleware, { config } from '../middleware.js';
 
 const HOME_MD = '# נגה מלסה | צילום, וידאו ועיצוב גרפי – Face2Face\n\ncontent';
 
-/** Fake origin: serves the Markdown twins in `files`, answers HEAD probes with `probe` (status / location). */
-function fakeFetch({ files = { '/index.html.md': HOME_MD }, probe = { status: 404 } } = {}) {
+/**
+ * Fake origin: serves the Markdown twins in `files` as text/markdown, answers HEAD probes with `probe`
+ * (status / location). `fallback` is what a missing .md returns (Vercel's 404 page by default).
+ */
+function fakeFetch({
+  files = { '/index.html.md': HOME_MD },
+  probe = { status: 404 },
+  fallback = () => new Response('<html>404</html>', { status: 404, headers: { 'content-type': 'text/html; charset=utf-8' } }),
+} = {}) {
   const calls = [];
   const impl = async (input, init = {}) => {
     const url = new URL(input);
@@ -14,14 +21,19 @@ function fakeFetch({ files = { '/index.html.md': HOME_MD }, probe = { status: 40
       return new Response(null, { status: probe.status, headers: probe.location ? { location: probe.location } : {} });
     }
     const body = files[decodeURIComponent(url.pathname)];
-    return body === undefined ? new Response('Not found', { status: 404 }) : new Response(body, { status: 200 });
+    return body === undefined
+      ? fallback()
+      : new Response(body, { status: 200, headers: { 'content-type': 'text/markdown; charset=utf-8' } });
   };
   impl.calls = calls;
   return impl;
 }
 
-const req = (path, accept, { method = 'GET', host = 'www.fc2fc.co.il' } = {}) =>
-  new Request(`https://${host}${path}`, { method, headers: accept ? { accept } : {} });
+const req = (path, accept, { method = 'GET', host = 'www.fc2fc.co.il', cookie } = {}) =>
+  new Request(`https://${host}${path}`, {
+    method,
+    headers: { ...(accept ? { accept } : {}), ...(cookie ? { cookie } : {}) },
+  });
 
 const isPassThrough = (res) => res.headers.get('x-middleware-next') === '1';
 
@@ -100,4 +112,35 @@ test('the matcher covers pages only, never files or build assets', () => {
   for (const p of ['/', '/services', '/work/item-id-1', '/__ora-404-probe-n8gszl9m']) assert.ok(re.test(p), p);
   for (const p of ['/llms.txt', '/index.html.md', '/_astro/a.css', '/assets/x', '/fonts/a', '/_vercel/insights/script.js', '/favicon.ico'])
     assert.ok(!re.test(p), p);
+});
+
+test('a login page or any non-Markdown 200 is never served as the page (protected previews)', async () => {
+  // Vercel deployment protection answers unauthenticated sub-requests with an HTML login page.
+  const login = () => new Response('<html>Log in to Vercel</html>', { status: 200, headers: { 'content-type': 'text/html' } });
+  const fetchImpl = fakeFetch({ files: {}, fallback: login, probe: { status: 404 } });
+  const res = await middleware(req('/no-such-page', 'text/markdown'), { fetchImpl });
+  assert.equal(res.status, 404);
+  assert.doesNotMatch(await res.text(), /Log in/);
+});
+
+test('sub-requests carry the visitor cookies and never follow redirects', async () => {
+  const fetchImpl = fakeFetch();
+  await middleware(req('/', 'text/markdown', { cookie: '_vercel_jwt=abc' }), { fetchImpl });
+  assert.equal(fetchImpl.calls[0].init.headers.cookie, '_vercel_jwt=abc');
+  assert.equal(fetchImpl.calls[0].init.redirect, 'manual');
+
+  const fetch404 = fakeFetch({ files: {}, probe: { status: 404 } });
+  await middleware(req('/x', 'text/markdown', { cookie: 'a=1' }), { fetchImpl: fetch404 });
+  assert.ok(fetch404.calls.every((c) => c.init.headers.cookie === 'a=1'));
+
+  const noCookie = fakeFetch();
+  await middleware(req('/', 'text/markdown'), { fetchImpl: noCookie });
+  assert.equal('cookie' in noCookie.calls[0].init.headers, false);
+});
+
+test('a redirect on the .md fetch is not followed into some other page', async () => {
+  const redirect = () => new Response(null, { status: 307, headers: { location: 'https://vercel.com/login' } });
+  const fetchImpl = fakeFetch({ files: {}, fallback: redirect, probe: { status: 404 } });
+  const res = await middleware(req('/', 'text/markdown'), { fetchImpl });
+  assert.equal(res.status, 404);
 });
