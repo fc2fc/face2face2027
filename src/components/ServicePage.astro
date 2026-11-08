@@ -1,0 +1,320 @@
+---
+// Dedicated service page (src/data/service-pages.json): one page per service for search.
+// Text comes from the data file; images and videos are looked up in the existing portfolio by path / YouTube id.
+import { Picture } from 'astro:assets';
+import Icon from './Icon.astro';
+import { site, asset, SITE_URL } from '../lib/content';
+import serviceData from '../data/service-pages.json';
+
+interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const sp = page.service;
+const c = site.contact;
+const phoneHref = `tel:${c.phone.replace(/[^+\d]/g, '')}`;
+
+const items: any[] = (site.portfolio as any[]).flatMap((cat) => cat.items);
+const altBySrc = new Map<string, string>(items.filter((i) => i.src).map((i) => [i.src, i.alt || '']));
+const gallery: { src: string; alt: string }[] = (sp.gallery?.srcs ?? []).map((src: string) => ({
+  src,
+  alt: altBySrc.get(src) || sp.h1,
+}));
+const videoById = new Map<string, any>(items.filter((i) => i.type === 'video').map((i) => [i.youtube_id, i]));
+const videos: any[] = (sp.videos?.ids ?? []).map((id: string) => videoById.get(id)).filter(Boolean);
+
+const related = (sp.related as string[])
+  .map((slug) => (serviceData as any).pages.find((p: any) => p.slug === slug))
+  .filter(Boolean);
+
+const url = SITE_URL + sp.path;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: sp.h1,
+      description: sp.description,
+      url,
+      serviceType: sp.label,
+      provider: { '@id': `${SITE_URL}/#business` },
+      areaServed: { '@type': 'Country', name: 'ישראל' },
+      inLanguage: 'he',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'בית', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'שירותים', item: `${SITE_URL}/services` },
+        { '@type': 'ListItem', position: 3, name: sp.h1, item: url },
+      ],
+    },
+  ],
+};
+---
+
+<section class="section svc">
+  <div class="container svc__wrap">
+    <nav class="crumbs" aria-label="פירורי לחם">
+      <a href="/">בית</a> / <a href="/services">שירותים</a> / <span>{sp.h1}</span>
+    </nav>
+    <h1 class="svc__title">{sp.h1}</h1>
+    <p class="svc__lead">{sp.lead}</p>
+    <div class="svc__cta">
+      <a class="btn" href={c.whatsapp} target="_blank" rel="noopener" data-cta="whatsapp">
+        <Icon name="whatsapp-logo" size={20} />
+        לתיאום והצעת מחיר בוואטסאפ
+      </a>
+      <a class="btn btn--ghost" href={phoneHref}>
+        <Icon name="phone-call" size={20} />
+        <span dir="ltr">{c.phone}</span>
+      </a>
+    </div>
+
+    {
+      sp.sections.map((s: any) => (
+        <section class="svc__block">
+          <h2>{s.h2}</h2>
+          {s.paragraphs?.map((t: string) => <p>{t}</p>)}
+          {s.bullets && (
+            <ul>
+              {s.bullets.map((b: string) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          )}
+          {s.link && (
+            <p>
+              <a class="svc__more" href={s.link.href}>
+                {s.link.label}
+              </a>
+            </p>
+          )}
+        </section>
+      ))
+    }
+
+    {
+      gallery.length > 0 && (
+        <section class="svc__block">
+          <h2>{sp.gallery.heading}</h2>
+          <ul class="svc__grid">
+            {gallery.map((g) => (
+              <li>
+                <Picture
+                  src={asset(g.src)}
+                  alt={g.alt}
+                  widths={[360, 600, 900]}
+                  sizes="(max-width: 700px) 50vw, 320px"
+                  formats={['avif']}
+                  fallbackFormat="webp"
+                  loading="lazy"
+                />
+              </li>
+            ))}
+          </ul>
+          <p>
+            <a class="svc__more" href="/work">
+              לכל העבודות
+            </a>
+          </p>
+        </section>
+      )
+    }
+
+    {
+      videos.length > 0 && (
+        <section class="svc__block">
+          <h2>{sp.videos.heading}</h2>
+          <ul class="svc__grid svc__grid--video">
+            {videos.map((v) => (
+              <li>
+                <a href={v.url} target="_blank" rel="noopener" aria-label={`צפייה בסרטון: ${v.title}`}>
+                  <Picture
+                    src={asset(v.thumbnail)}
+                    alt={`סרטון: ${v.title}`}
+                    widths={[360, 600, 900]}
+                    sizes="(max-width: 700px) 100vw, 360px"
+                    formats={['avif']}
+                    fallbackFormat="webp"
+                    loading="lazy"
+                  />
+                  <span>{v.title}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p>
+            <a class="svc__more" href="/work">
+              לכל העבודות
+            </a>
+          </p>
+        </section>
+      )
+    }
+
+    <section class="svc__block">
+      <h2>שאלות נפוצות</h2>
+      {
+        sp.faq.map((f: any) => (
+          <div class="svc__faq">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))
+      }
+    </section>
+
+    <section class="svc__block svc__contact">
+      <h2>רוצים לתאם?</h2>
+      <p>
+        שלחו הודעה בוואטסאפ או התקשרו, ואחזור אליכם בהקדם. שעות פעילות:
+        {c.hours.map((h: any, i: number) => <span>{i ? ' · ' : ' '}{h.days} {h.hours}</span>)}.
+      </p>
+      <div class="svc__cta">
+        <a class="btn" href={c.whatsapp} target="_blank" rel="noopener" data-cta="whatsapp">
+          <Icon name="whatsapp-logo" size={20} />
+          וואטסאפ
+        </a>
+        <a class="btn btn--ghost" href="/contact">טופס יצירת קשר</a>
+      </div>
+    </section>
+
+    <nav class="svc__block" aria-label="שירותים נוספים">
+      <h2>שירותים נוספים</h2>
+      <ul class="svc__related">
+        {
+          related.map((r: any) => (
+            <li>
+              <a href={r.path}>{r.h1}</a>
+            </li>
+          ))
+        }
+        <li><a href="/services">כל השירותים</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<style>
+  .svc__wrap {
+    max-width: 920px;
+  }
+  .crumbs {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .crumbs a {
+    text-decoration: none;
+  }
+  .crumbs a:hover {
+    color: var(--brand-ink);
+  }
+  .svc__title {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 0.4em;
+  }
+  .svc__lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 760px;
+  }
+  .svc__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0 8px;
+  }
+  .svc__block {
+    margin-top: clamp(32px, 5vw, 56px);
+  }
+  .svc__block h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    margin-bottom: 0.6em;
+  }
+  .svc__block p,
+  .svc__block li {
+    line-height: 1.7;
+  }
+  .svc__block ul:not(.svc__grid):not(.svc__related) {
+    padding-inline-start: 1.2em;
+  }
+  .svc__block li + li {
+    margin-top: 0.35em;
+  }
+  .svc__grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: 12px;
+  }
+  .svc__grid li + li {
+    margin-top: 0;
+  }
+  .svc__grid :global(img) {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    background: var(--surface);
+  }
+  .svc__grid--video :global(img) {
+    aspect-ratio: 16 / 9;
+  }
+  .svc__grid--video a {
+    display: block;
+    text-decoration: none;
+  }
+  .svc__grid--video span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .svc__faq {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .svc__faq h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3em;
+  }
+  .svc__more {
+    color: var(--brand-ink);
+    font-weight: 700;
+  }
+  .svc__contact {
+    padding: 24px;
+    border-radius: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+  .svc__related {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .svc__related a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    text-decoration: none;
+  }
+  .svc__related a:hover {
+    border-color: var(--brand);
+  }
+</style>

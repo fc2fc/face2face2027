@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import TurndownService from 'turndown';
+import { servicePageEntries } from '../src/lib/service-pages.mjs';
 import { markdownPathFor, SITE_URL } from '../src/lib/markdown-negotiation.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -107,8 +108,14 @@ export function pageToMarkdown(page, html, nav, converter = createConverter()) {
     .join('\n');
 }
 
-export function buildMarkdown({ distDir = join(ROOT, 'dist'), contentFile = join(ROOT, 'src/data/site-content.json') } = {}) {
+export function buildMarkdown({
+  distDir = join(ROOT, 'dist'),
+  contentFile = join(ROOT, 'src/data/site-content.json'),
+  serviceFile = join(ROOT, 'src/data/service-pages.json'),
+} = {}) {
   const content = JSON.parse(readFileSync(contentFile, 'utf-8'));
+  // Dedicated service pages live in their own data file (same page shape as the migrated pages).
+  if (existsSync(serviceFile)) content.pages = [...content.pages, ...servicePageEntries(JSON.parse(readFileSync(serviceFile, 'utf-8')))];
   const nav = content.site.navigation;
   const converter = createConverter();
   const written = [];
