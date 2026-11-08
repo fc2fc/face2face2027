@@ -13,6 +13,7 @@ import Contact from '../components/Contact.astro';
 import Legal from '../components/Legal.astro';
 import PortfolioItem from '../components/PortfolioItem.astro';
 import ServicePage from '../components/ServicePage.astro';
+import GuidePage from '../components/GuidePage.astro';
 import { pages } from '../lib/content';
 
 export function getStaticPaths() {
@@ -54,4 +55,5 @@ const Single = SINGLE[page.path];
   {page.type === 'legal' && <Legal page={page} />}
   {page.type === 'portfolio-item' && <PortfolioItem page={page} />}
   {page.type === 'service' && <ServicePage page={page} />}
+  {(page.type === 'guide' || page.type === 'guides-index') && <GuidePage page={page} />}
 </Base>
