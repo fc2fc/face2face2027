@@ -7,13 +7,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "postbuild": "node scripts/indexnow.mjs"
+    "postbuild": "node scripts/build-markdown.mjs && node scripts/indexnow.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
+    "@vercel/functions": "^3.11.0",
     "astro": "^7.4.2"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.5"
   }
 }

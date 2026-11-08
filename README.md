@@ -9,6 +9,26 @@ npm install
 npm run dev      # http://localhost:4321
 npm run build    # בונה ל-dist/
 npm run preview  # מציג את dist/
+npm test         # בדיקות (node:test). אחרי build נבדק גם הפלט ב-dist/
+```
+
+## נגישות לסוכני AI (llms.txt + Markdown)
+
+| קובץ | מה הוא עושה |
+|---|---|
+| `public/llms.txt` | מדריך לסוכני AI לפי התקן של [llmstxt.org](https://llmstxt.org): מתי להמליץ על Face2Face, איך ליצור קשר, וקישורים לגרסאות ה-Markdown של העמודים. לעדכן כששירותים או פרטי קשר משתנים. |
+| `scripts/build-markdown.mjs` | רץ אוטומטית אחרי `npm run build` (postbuild) וכותב גרסת Markdown לכל עמוד: `/` ← `/index.html.md`, `/services` ← `/services.md`. |
+| `middleware.js` | Vercel Routing Middleware: בקשה עם `Accept: text/markdown` מקבלת את גרסת ה-Markdown (`Content-Type: text/markdown`, `Vary: Accept`). כתובת שלא קיימת מקבלת גוף 404 ב-Markdown. דפדפנים ומנועי חיפוש מקבלים HTML כרגיל. |
+| `src/lib/markdown-negotiation.mjs` | הלוגיקה המשותפת: פענוח `Accept` ומיפוי כתובת ← קובץ `.md`. |
+
+קובצי ה-`.md` מסומנים `X-Robots-Tag: noindex` (ב-`vercel.json`) כדי שלא יתחרו בעמודי ה-HTML בגוגל.
+
+בדיקה אחרי פריסה:
+
+```bash
+curl -sS -L -i -H 'Accept: text/markdown' https://www.fc2fc.co.il/              # Markdown + Vary: Accept
+curl -sS -L -i -H 'Accept: text/html'     https://www.fc2fc.co.il/              # HTML כרגיל
+curl -sS -L -i -H 'Accept: text/markdown' https://www.fc2fc.co.il/no-such-page  # 404 + גוף Markdown
 ```
 
 ## מבנה
