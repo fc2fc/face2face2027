@@ -6,6 +6,7 @@ import { readFileSync, existsSync } from 'node:fs';
 const llms = readFileSync(new URL('../public/llms.txt', import.meta.url), 'utf-8');
 const vercel = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf-8'));
 const content = JSON.parse(readFileSync(new URL('../src/data/site-content.json', import.meta.url), 'utf-8'));
+const serviceSlugs = JSON.parse(readFileSync(new URL('../src/data/service-pages.json', import.meta.url), 'utf-8')).pages.map((p) => p.path);
 
 test('llms.txt follows the llmstxt.org structure', () => {
   const lines = llms.split('\n');
@@ -37,7 +38,7 @@ test('llms.txt tells agents when to use Face2Face and how to reach it', () => {
 });
 
 test('every page linked from llms.txt is a real page with a Markdown twin', () => {
-  const paths = new Set(content.pages.map((p) => p.path));
+  const paths = new Set([...content.pages.map((p) => p.path), ...serviceSlugs]);
   const md = [...llms.matchAll(/\(https:\/\/www\.fc2fc\.co\.il(\/[^)]*)\.md\)/g)].map((m) => m[1]);
   assert.ok(md.length >= 6);
   for (const p of md) assert.ok(paths.has(p === '/index.html' ? '/' : p), p);
