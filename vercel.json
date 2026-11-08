@@ -1039,6 +1039,10 @@
         {
           "key": "Cross-Origin-Opener-Policy",
           "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.sentry-cdn.com https://browser.sentry-cdn.com https://www.googletagmanager.com https://connect.facebook.net https://js.hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://*.hcaptcha.com; img-src 'self' data: https://i.ytimg.com https://www.facebook.com https://www.googletagmanager.com https://*.google-analytics.com https://stats.g.doubleclick.net https://*.hcaptcha.com; font-src 'self'; media-src 'self'; connect-src 'self' https://api.web3forms.com https://*.ingest.us.sentry.io https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://*.hcaptcha.com; frame-src https://www.youtube-nocookie.com https://*.hcaptcha.com https://www.facebook.com; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self' https://api.web3forms.com; report-uri https://o4512323423371264.ingest.us.sentry.io/api/4512323433791488/security/?sentry_key=c27d6e9ca682e11b21872c0befa0fce5&sentry_environment=production"
         }
       ]
     },

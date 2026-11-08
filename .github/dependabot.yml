@@ -1,0 +1,15 @@
+# Weekly pull requests for outdated npm packages (Astro, sitemap, build tools).
+# Security alerts/fixes are separate: GitHub > Settings > Code security > Dependabot.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: sunday
+      time: "08:00"
+      timezone: Asia/Jerusalem
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
