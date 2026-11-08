@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Schema from '../components/Schema.astro';
 import Popup from '../components/Popup.astro';
 import { site, absolute, publicImageSize, SITE_URL } from '../lib/content';
+import { markdownPathFor } from '../lib/markdown-negotiation.mjs';
 
 interface Props {
   page: any;
@@ -12,6 +13,9 @@ interface Props {
 const { page } = Astro.props;
 const seo = page.seo;
 const canonical = SITE_URL + (page.path === '/' ? '/' : encodeURI(page.path));
+// Markdown twin for AI agents (written by scripts/build-markdown.mjs); the 404 page has none.
+const markdownPath = page.type === 'not-found' ? null : markdownPathFor(page.path);
+const markdownUrl = markdownPath ? SITE_URL + encodeURI(markdownPath) : undefined;
 const ogPath: string | undefined = seo.og?.image ?? site.og_logo;
 const ogImage = absolute(ogPath);
 // Declare the image's real size (portfolio photos are 1200x800, the About photo 800x680): apps that trust these
@@ -41,6 +45,7 @@ const SENTRY_KEY = SENTRY_DSN.match(/^https:\/\/([0-9a-f]+)@/)?.[1] ?? '';
     {seo.description && <meta name="description" content={seo.description} />}
     <meta name="robots" content={seo.robots ?? 'index, follow'} />
     <link rel="canonical" href={canonical} />
+    {markdownUrl && <link rel="alternate" type="text/markdown" href={markdownUrl} />}
 
     <meta property="og:type" content={seo.og?.type ?? 'website'} />
     <meta property="og:locale" content="he_IL" />
