@@ -1,0 +1,167 @@
+---
+// Guides (src/data/guides.json): an index page (/guides) and one short how-to article per guide.
+import Icon from './Icon.astro';
+import { site, SITE_URL } from '../lib/content';
+import guideData from '../data/guides.json';
+import serviceData from '../data/service-pages.json';
+
+interface Props {
+  page: any;
+}
+const { page } = Astro.props;
+const c = site.contact;
+const phoneHref = `tel:${c.phone.replace(/[^+\d]/g, '')}`;
+const all: any[] = (guideData as any).guides;
+const services: any[] = (serviceData as any).pages;
+
+const isIndex = page.type === 'guides-index';
+const g = isIndex ? null : page.guide;
+const idx = (guideData as any).index;
+const heading = isIndex ? idx.h1 : g.h1;
+const lead = isIndex ? idx.lead : g.lead;
+const service = g ? services.find((s) => s.slug === g.service) : null;
+const related = g ? (g.related as string[]).map((slug) => all.find((x) => x.slug === slug)).filter(Boolean) : [];
+
+const url = SITE_URL + page.path;
+const crumbs = isIndex
+  ? [{ name: 'בית', item: `${SITE_URL}/` }, { name: 'מדריכים', item: url }]
+  : [{ name: 'בית', item: `${SITE_URL}/` }, { name: 'מדריכים', item: `${SITE_URL}/guides` }, { name: g.h1, item: url }];
+const graph: any[] = [
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.name, item: x.item })),
+  },
+];
+if (g) {
+  graph.push({
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: g.h1,
+    description: g.description,
+    url,
+    inLanguage: 'he',
+    datePublished: g.published,
+    author: { '@id': `${SITE_URL}/#naga-malasa` },
+    publisher: { '@id': `${SITE_URL}/#business` },
+    mainEntityOfPage: url,
+  });
+}
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+<section class="section gd">
+  <div class="container gd__wrap">
+    <nav class="crumbs" aria-label="פירורי לחם">
+      <a href="/">בית</a> / {isIndex ? <span>מדריכים</span> : <><a href="/guides">מדריכים</a> / <span>{g.h1}</span></>}
+    </nav>
+    <h1 class="gd__title">{heading}</h1>
+    <p class="gd__lead">{lead}</p>
+
+    {
+      isIndex && (
+        <ul class="gd__list">
+          {all.map((x) => (
+            <li>
+              <a href={x.path}>
+                <strong>{x.h1}</strong>
+                <span>{x.lead}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+
+    {
+      g &&
+        g.sections.map((s: any) => (
+          <section class="gd__block">
+            <h2>{s.h2}</h2>
+            {s.paragraphs?.map((t: string) => <p>{t}</p>)}
+            {s.bullets && (
+              <ul>
+                {s.bullets.map((b: string) => (
+                  <li>{b}</li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+    }
+
+    {
+      g?.faq && (
+        <section class="gd__block">
+          <h2>שאלות נפוצות</h2>
+          {g.faq.map((f: any) => (
+            <div class="gd__faq">
+              <h3>{f.q}</h3>
+              <p>{f.a}</p>
+            </div>
+          ))}
+        </section>
+      )
+    }
+
+    <section class="gd__block gd__contact">
+      <h2>{service ? `רוצים לתאם ${service.label}?` : 'רוצים לתאם צילום?'}</h2>
+      <p>
+        שלחו הודעה בוואטסאפ או התקשרו, ואחזור אליכם בהקדם.
+        {service && <> לפרטים על השירות: <a class="gd__more" href={service.path}>{service.h1}</a>.</>}
+      </p>
+      <div class="gd__cta">
+        <a class="btn" href={c.whatsapp} target="_blank" rel="noopener" data-cta="whatsapp">
+          <Icon name="whatsapp-logo" size={20} />
+          וואטסאפ
+        </a>
+        <a class="btn btn--ghost" href={phoneHref}>
+          <Icon name="phone-call" size={20} />
+          <span dir="ltr">{c.phone}</span>
+        </a>
+      </div>
+    </section>
+
+    {
+      related.length > 0 && (
+        <nav class="gd__block" aria-label="מדריכים נוספים">
+          <h2>מדריכים נוספים</h2>
+          <ul class="gd__related">
+            {related.map((r: any) => (
+              <li><a href={r.path}>{r.h1}</a></li>
+            ))}
+            <li><a href="/guides">כל המדריכים</a></li>
+          </ul>
+        </nav>
+      )
+    }
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<style>
+  .gd__wrap { max-width: 820px; }
+  .crumbs { color: var(--muted); font-size: 0.95rem; margin-bottom: 12px; }
+  .crumbs a { text-decoration: none; }
+  .crumbs a:hover { color: var(--brand-ink); }
+  .gd__title { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.12; margin-bottom: 0.4em; }
+  .gd__lead { font-size: 1.15rem; line-height: 1.7; color: var(--ink); max-width: 720px; }
+  .gd__block { margin-top: clamp(28px, 5vw, 48px); }
+  .gd__block h2 { font-size: clamp(1.35rem, 3vw, 1.75rem); margin-bottom: 0.55em; }
+  .gd__block p, .gd__block li { line-height: 1.75; }
+  .gd__block ul:not(.gd__related) { padding-inline-start: 1.2em; }
+  .gd__block li + li { margin-top: 0.4em; }
+  .gd__faq { padding: 16px 0; border-top: 1px solid var(--line); }
+  .gd__faq h3 { font-size: 1.1rem; margin-bottom: 0.3em; }
+  .gd__more { color: var(--brand-ink); font-weight: 700; }
+  .gd__contact { padding: 24px; border-radius: 18px; background: var(--surface); border: 1px solid var(--line); }
+  .gd__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .gd__list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+  .gd__list a { display: block; padding: 20px 22px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; }
+  .gd__list a:hover { border-color: var(--brand); }
+  .gd__list strong { display: block; font-size: 1.2rem; margin-bottom: 6px; }
+  .gd__list span { display: block; color: var(--muted); line-height: 1.6; }
+  .gd__related { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .gd__related a { display: inline-block; padding: 8px 16px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; }
+  .gd__related a:hover { border-color: var(--brand); }
+</style>

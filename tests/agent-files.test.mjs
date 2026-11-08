@@ -6,7 +6,13 @@ import { readFileSync, existsSync } from 'node:fs';
 const llms = readFileSync(new URL('../public/llms.txt', import.meta.url), 'utf-8');
 const vercel = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf-8'));
 const content = JSON.parse(readFileSync(new URL('../src/data/site-content.json', import.meta.url), 'utf-8'));
-const serviceSlugs = JSON.parse(readFileSync(new URL('../src/data/service-pages.json', import.meta.url), 'utf-8')).pages.map((p) => p.path);
+const serviceSlugs = [
+  ...JSON.parse(readFileSync(new URL('../src/data/service-pages.json', import.meta.url), 'utf-8')).pages.map((p) => p.path),
+  ...(() => {
+    const g = JSON.parse(readFileSync(new URL('../src/data/guides.json', import.meta.url), 'utf-8'));
+    return [g.index.path, ...g.guides.map((x) => x.path)];
+  })(),
+];
 
 test('llms.txt follows the llmstxt.org structure', () => {
   const lines = llms.split('\n');

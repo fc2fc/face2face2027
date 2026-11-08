@@ -2,12 +2,14 @@ import content from '../data/site-content.json';
 import dims from '../data/media-dims.json';
 import serviceData from '../data/service-pages.json';
 import { servicePageEntries } from './service-pages.mjs';
+import guideData from '../data/guides.json';
+import { guideEntries } from './guides.mjs';
 import { getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
 export const site = content.site as any;
 // Site123 pages (migrated) + the dedicated service pages added for SEO.
-export const pages = [...(content.pages as any[]), ...servicePageEntries(serviceData)];
+export const pages = [...(content.pages as any[]), ...servicePageEntries(serviceData), ...guideEntries(guideData)];
 export const SITE_URL = 'https://www.fc2fc.co.il';
 
 export function pageByPath(path: string) {

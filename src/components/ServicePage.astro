@@ -5,6 +5,7 @@ import { Picture } from 'astro:assets';
 import Icon from './Icon.astro';
 import { site, asset, SITE_URL } from '../lib/content';
 import serviceData from '../data/service-pages.json';
+import guideData from '../data/guides.json';
 
 interface Props {
   page: any;
@@ -26,6 +27,8 @@ const videos: any[] = (sp.videos?.ids ?? []).map((id: string) => videoById.get(i
 const related = (sp.related as string[])
   .map((slug) => (serviceData as any).pages.find((p: any) => p.slug === slug))
   .filter(Boolean);
+
+const guides: any[] = (guideData as any).guides.filter((g: any) => g.service === sp.slug);
 
 const url = SITE_URL + sp.path;
 const jsonLd = {
@@ -180,6 +183,19 @@ const jsonLd = {
         <a class="btn btn--ghost" href="/contact">טופס יצירת קשר</a>
       </div>
     </section>
+
+    {
+      guides.length > 0 && (
+        <nav class="svc__block" aria-label="מדריכים קשורים">
+          <h2>מדריכים קשורים</h2>
+          <ul class="svc__related">
+            {guides.map((g: any) => (
+              <li><a href={g.path}>{g.h1}</a></li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
 
     <nav class="svc__block" aria-label="שירותים נוספים">
       <h2>שירותים נוספים</h2>
