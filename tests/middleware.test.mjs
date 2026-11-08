@@ -144,3 +144,18 @@ test('a redirect on the .md fetch is not followed into some other page', async (
   const res = await middleware(req('/', 'text/markdown'), { fetchImpl });
   assert.equal(res.status, 404);
 });
+
+test('SSRF: paths that would resolve to another host never trigger a fetch', async () => {
+  for (const path of ['//evil.example/x', '/%2F%2Fevil.example/x', '/%5Cevil.example/x', '/\\evil.example/x', '/a//evil.example']) {
+    const fetchImpl = fakeFetch();
+    const res = await middleware(req(path, 'text/markdown', { cookie: 'secret=1' }), { fetchImpl });
+    assert.ok(isPassThrough(res), path);
+    assert.equal(fetchImpl.calls.length, 0, `no sub-request for ${path}`);
+  }
+});
+
+test('sub-requests always stay on the requested origin', async () => {
+  const fetchImpl = fakeFetch({ files: { '/שירותים.md': '# s' } });
+  await middleware(req('/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D', 'text/markdown'), { fetchImpl });
+  for (const c of fetchImpl.calls) assert.equal(new URL(c.url).origin, 'https://www.fc2fc.co.il');
+});

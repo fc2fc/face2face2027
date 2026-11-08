@@ -40,6 +40,9 @@ export default async function middleware(request, { fetchImpl = fetch } = {}) {
 
   const mdPath = markdownPathFor(url.pathname);
   if (!mdPath) return next();
+  // Defence in depth: sub-requests (which may carry the visitor's cookies) only ever go to this same origin.
+  const mdUrl = new URL(encodeURI(mdPath), url.origin);
+  if (mdUrl.origin !== url.origin) return next();
 
   // Sub-requests go back to this same deployment. Pass the visitor's cookies along so they work behind
   // Vercel deployment protection (previews), and never follow redirects: a login page or any other
@@ -47,7 +50,7 @@ export default async function middleware(request, { fetchImpl = fetch } = {}) {
   const cookie = request.headers.get('cookie');
   const subHeaders = (accept) => (cookie ? { accept, cookie } : { accept });
 
-  const md = await fetchImpl(new URL(mdPath, url.origin), { redirect: 'manual', headers: subHeaders('text/markdown') });
+  const md = await fetchImpl(mdUrl, { redirect: 'manual', headers: subHeaders('text/markdown') });
   if (md.status === 200 && isMarkdown(md.headers.get('content-type'))) {
     return markdownResponse(await md.text(), 200, request.method);
   }

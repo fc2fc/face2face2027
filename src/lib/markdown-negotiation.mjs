@@ -66,7 +66,10 @@ export function markdownPathFor(pathname) {
   } catch {
     return null;
   }
-  if (!path.startsWith('/') || path.includes('..') || path.includes('\0')) return null;
+  // Only plain site paths. "//host/x" or "/\host/x" would make `new URL(path, origin)` point at another host
+  // (the middleware fetches the result), so empty segments, backslashes and control characters are rejected.
+  if (!path.startsWith('/') || path.includes('..') || /[\\\u0000-\u001f\u007f]/.test(path)) return null;
+  if (/\/\/./.test(path)) return null;
   path = path.replace(/\/+$/, '') || '/';
   if (path === '/') return '/index.html.md';
   const last = path.split('/').pop();
