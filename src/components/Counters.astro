@@ -17,7 +17,6 @@ const rawCounters = site.counters as { value: string; label: string }[] || [];
 const counters = rawCounters.length > 0 ? rawCounters : [
   { value: '4950+', label: 'עבודות מוצלחות' },
   { value: '16+', label: 'שנות ניסיון' },
-  { value: '100%', label: 'שביעות רצון' },
 ];
 
 // אם יש רק מונה אחד, הרחב
@@ -25,7 +24,6 @@ const displayCounters = counters.length === 1
   ? [
       counters[0],
       { value: '16+', label: 'שנות ניסיון' },
-      { value: '100%', label: 'שביעות רצון' },
     ]
   : counters;
 
@@ -110,9 +108,9 @@ function parseCounter(val: string) {
   }
   .counter__label { display: block; margin-top: 8px; color: rgba(255,255,255,0.65); font-size: 0.9rem; font-weight: 500; }
   @media (max-width: 640px) {
-    /* stays side-by-side (3-up) instead of stacking to full-width rows */
+    /* stays side-by-side (2-up) instead of stacking to full-width rows */
     .counters {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 8px;
     }
     .counter {
