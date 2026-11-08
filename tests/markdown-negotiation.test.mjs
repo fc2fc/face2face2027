@@ -62,3 +62,10 @@ test('the Markdown 404 body explains the error and links to llms.txt and the sit
   assert.match(md, /\(https:\/\/www\.fc2fc\.co\.il\/sitemap-index\.xml\)/);
   assert.doesNotMatch(notFoundMarkdown('/a`b\nc'), /a`b/, 'path cannot break out of the code span');
 });
+
+test('paths that could escape to another host are rejected', () => {
+  for (const p of ['//evil.example/x', '/%2F%2Fevil.example/x', '/\\evil.example/x', '/%5Cevil.example/x', '/a//b', '/a%00b', '/a%0Ab']) {
+    assert.equal(markdownPathFor(p), null, p);
+  }
+  assert.equal(markdownPathFor('/services/'), '/services.md', 'a single trailing slash is still fine');
+});

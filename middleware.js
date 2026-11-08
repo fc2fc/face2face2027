@@ -15,6 +15,8 @@ export const config = {
 
 const APEX_HOST = 'fc2fc.co.il';
 
+const isMarkdown = (contentType) => /^text\/markdown\b/i.test(contentType || '');
+
 function markdownResponse(body, status, method) {
   return new Response(method === 'HEAD' ? null : body, {
     status,
@@ -38,13 +40,24 @@ export default async function middleware(request, { fetchImpl = fetch } = {}) {
 
   const mdPath = markdownPathFor(url.pathname);
   if (!mdPath) return next();
+  // Defence in depth: sub-requests (which may carry the visitor's cookies) only ever go to this same origin.
+  const mdUrl = new URL(encodeURI(mdPath), url.origin);
+  if (mdUrl.origin !== url.origin) return next();
 
-  const md = await fetchImpl(new URL(mdPath, url.origin), { headers: { accept: 'text/markdown' } });
-  if (md.ok) return markdownResponse(await md.text(), 200, request.method);
+  // Sub-requests go back to this same deployment. Pass the visitor's cookies along so they work behind
+  // Vercel deployment protection (previews), and never follow redirects: a login page or any other
+  // non-Markdown answer must not be served as if it were the page's content.
+  const cookie = request.headers.get('cookie');
+  const subHeaders = (accept) => (cookie ? { accept, cookie } : { accept });
+
+  const md = await fetchImpl(mdUrl, { redirect: 'manual', headers: subHeaders('text/markdown') });
+  if (md.status === 200 && isMarkdown(md.headers.get('content-type'))) {
+    return markdownResponse(await md.text(), 200, request.method);
+  }
 
   // No Markdown twin: either an old URL that vercel.json redirects, or a page that does not exist.
   // Ask for the HTML version (which skips this branch) without following redirects to tell them apart.
-  const probe = await fetchImpl(url, { method: 'HEAD', redirect: 'manual', headers: { accept: 'text/html' } });
+  const probe = await fetchImpl(url, { method: 'HEAD', redirect: 'manual', headers: subHeaders('text/html') });
   if (probe.status >= 300 && probe.status < 400 && probe.headers.get('location')) {
     return new Response(null, {
       status: probe.status,
